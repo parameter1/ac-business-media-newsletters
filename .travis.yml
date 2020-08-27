@@ -1,0 +1,44 @@
+language: node_js
+node_js: "10.15"
+cache: yarn
+
+stages:
+  - name: test
+
+  - name: production-started
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+  - name: production
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+  - name: production-finished
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+
+jobs:
+  include:
+    - stage: test
+      env: [NODE_ENV=test]
+
+    - stage: production-started
+      name: Deployment Started
+      script: npx @base-cms/newsletter-deployment-tool notify-started
+      install: skip
+      env: [ENVIRONMENT=production]
+
+    #############################
+    # vvv ADD SERVICES HERE vvv #
+    #############################
+
+    - stage: production
+      name: For Construction Pros
+      script: npx @base-cms/newsletter-deployment-tool deploy fcp newsletters
+      install: skip
+      env: [ENVIRONMENT=production]
+
+    #############################
+    # ^^^ ADD SERVICES HERE ^^^ #
+    #############################
+
+    - stage: production-finished
+      name: Deployment Finished
+      script: npx @base-cms/newsletter-deployment-tool notify-finished
+      install: skip
+      env: [ENVIRONMENT=production]
