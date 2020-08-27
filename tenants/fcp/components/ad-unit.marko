@@ -1,0 +1,13 @@
+import emailX from "../config/email-x";
+
+$ const { name, newsletter, date } = input;
+$ const { alias } = newsletter;
+$ const adUnit = emailX.getAdUnit({ name, alias });
+
+<if(adUnit.path || adUnit.id)>
+  <marko-newsletters-email-x-display decoded-params=["email", "send"]>
+    <@ad-unit ...adUnit />
+    <@params date=date email="%%emailaddr%%" send="%%jobid%%" />
+    <@image class="scaleAd" />
+  </marko-newsletters-email-x-display>
+</if>
