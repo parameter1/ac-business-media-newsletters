@@ -9,6 +9,9 @@
     "@newsletter": "object",
     "@date": "date"
   },
+  "<common-head-styles>": {
+    "template": "./head-styles.marko"
+  },
   "<common-static-styles>": {
     "template": "./static-styles.marko"
   },
