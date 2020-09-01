@@ -3,5 +3,8 @@
     "template": "./index.marko",
     "@bg-color": "string",
     "@footer-text": "object"
+  },
+  "<common-dss-footer-block>": {
+    "template": "./dss.marko"
   }
 }
