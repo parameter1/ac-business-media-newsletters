@@ -6,5 +6,8 @@
   },
   "<common-dss-footer-block>": {
     "template": "./dss.marko"
+  },
+  "<common-gip-footer-block>": {
+    "template": "./gip.marko"
   }
 }
