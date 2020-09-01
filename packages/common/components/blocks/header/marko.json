@@ -21,5 +21,14 @@
     "@image-src": "string",
     "@image-width": "number",
     "@bg-color": "string"
+  },
+  "<common-header-image-block>": {
+    "template": "./image.marko",
+    "@date": "object",
+    "@date-style": "object",
+    "@name": "string",
+    "@href": "string",
+    "@image-src": "string",
+    "@image-width": "number"
   }
 }

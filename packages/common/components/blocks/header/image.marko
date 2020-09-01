@@ -1,0 +1,36 @@
+import defaultValue from "@base-cms/marko-core/utils/default-value";
+
+$ const dateFormat = defaultValue(input.dateFormat, "MMMM D, YYYY");
+
+<common-table width="630" border="0" cellspacing="0" cellpadding="0" align="center" class="main">
+  <tr style="background-color:#ffffff">
+    <td valign="center" align="left">
+
+      <!--left-->
+      <common-table border="0" cellspacing="0" valign="center" cellpadding="2" align="left" class="main" style="margin: 2px 0; mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;">
+        <tr>
+          <td>
+            <a href=input.href style="line-height:0 !important;" target="_blank">
+              <img border="0" src=input.imageSrc align="left" style="display:block" alt=input.name />
+            </a>
+          </td>
+        </tr>
+      </common-table>
+
+      <!--right-->
+      <common-table border="0" valign="center" cellspacing="0" cellpadding="10" align="right" class="mobileHide">
+        <tr>
+          <td align="right" valign="center">
+            <common-table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="right" style="font-family:Helvetica, sans-serif; font-weight: bold; font-size:12px;color:#231f20;">
+                  &nbsp;${input.date.format(dateFormat)}
+                </td>
+              </tr>
+            </common-table>
+          </td>
+        </tr>
+      </common-table>
+    </td>
+  </tr>
+</common-table>
