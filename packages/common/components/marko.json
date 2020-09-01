@@ -20,6 +20,7 @@
     "@cellspacing": "number",
     "@cellpadding": "number",
     "@align": "string",
+    "@valign": "string",
     "@style": "string",
     "@attrs": "object"
   }
