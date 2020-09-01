@@ -1,0 +1,80 @@
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import defaultValue from "@base-cms/marko-core/utils/default-value";
+
+$ const {
+  newsletter,
+  date,
+  sectionName,
+  title,
+  limit,
+  skip,
+  hrBelow,
+  featured
+} = input;
+
+$ const primaryColor = defaultValue(input.primaryColor, "#83b93a");
+
+$ const nameWrapperStyle = {
+  "text-align": "left",
+  "border-left": "3px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
+}
+
+$ const nameStyle = {
+  "text-decoration": "none !important",
+  "font-size": "16px",
+  "font-family": "Trebuchet MS, Helvetica, sans-serif",
+  "font-weight": "bold",
+  "text-decoration": "none",
+  "text-align": "left",
+  "color": "#222222",
+}
+
+$ const featuredNameStyle = {
+  ...nameStyle,
+  "font-size": "24px"
+}
+
+<marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
+  date: date.valueOf(),
+  newsletterId: newsletter.id,
+  sectionName: sectionName,
+  limit: limit,
+  skip: skip,
+  queryFragment: contentList,
+}>
+  <common-table width="630" border="0" cellspacing="0" cellpadding="0" align="center" style="border-collapse:collapse;" class="main">
+    <tr>
+      <td>
+        <common-table width="630" border="0" cellspacing="0" cellpadding="0" align="center" class="main">
+          <for|node, index| of=nodes>
+            <common-table-spacer-element />
+            <tr>
+              <td>
+                <div class="main">
+                  <div style=nameWrapperStyle>
+                    <div style="margin-left: 5px;">
+                      $ const style = (featured && index === 0) ? featuredNameStyle : nameStyle;
+                      <a href=node.siteContext.url target="_blank" style=style>
+                        ${node.name}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr width="630" class="main">
+              <td>
+                <div class="main" style="margin-left: 10px; text-decoration: none !important; font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #666666; font-weight: normal;; text-align: left; margin-top:7px !important; line-height:1.4em; letter-spacing: 1px;">
+                    ${node.teaser}
+                </div>
+              </td>
+            </tr>
+            <common-table-spacer-element />
+          </for>
+        </common-table>
+      </td>
+    </tr>
+  </common-table>
+</marko-web-query>
