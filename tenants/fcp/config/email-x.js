@@ -1,6 +1,6 @@
 const EmailXConfiguration = require('@base-cms/marko-newsletters-email-x/config');
 
-const config = new EmailXConfiguration('https://acbm.serve.email-x.io');
+const config = new EmailXConfiguration('https://acbm.serve.email-x.parameter1.com');
 
 config
   .setAdUnits('openings-news-views', [
