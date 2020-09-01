@@ -39,6 +39,46 @@
       "default-value": false
     }
   },
+  "<common-content-sponsored-list-block>": {
+    "template": "./sponsored-list.marko",
+    "@name": "string",
+    "@href": "string",
+    "@image-src": "string",
+    "@date": {
+      "type": "object",
+      "required": true
+    },
+    "@newsletter": {
+      "type": "object",
+      "required": true
+    },
+    "@section-name": {
+      "type": "string",
+      "required": true
+    },
+    "@limit": {
+      "type": "number",
+      "default-value": 0
+    },
+    "@skip": {
+      "type": "number",
+      "default-value": 0
+    },
+    "@title": "string",
+    "@content-link-style": "object",
+    "@name-style": "object",
+    "@teaser-style": "object",
+    "@body-style": "object",
+    "@hr-below": "bool",
+    "@primary-color": {
+      "type" : "string",
+      "default-value" : "#eb1b2c"
+    },
+    "@featured": {
+      "type": "boolean",
+      "default-value": false
+    }
+  },
   "<common-grid-block>": {
     "template": "./grid.marko",
     "@name": "string",
