@@ -14,5 +14,8 @@
     "@type": "string",
     "@provider": "string",
     "@href": "string"
+  "<common-table-spacer-element>": {
+    "template": "./spacer.marko"
+  },
   }
 }
