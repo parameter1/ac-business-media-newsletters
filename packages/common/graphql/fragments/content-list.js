@@ -13,7 +13,7 @@ fragment NewsletterContentListFragment on Content {
     alt
   }
   published
-  ... on ContentTextAd {
+  ... on ContentPromotion {
     body(input: { mutation: Email })
     linkText
   }
