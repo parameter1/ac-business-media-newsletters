@@ -17,8 +17,8 @@
     "@border": "number",
     "@width": "string",
     "@class": "string",
-    "@spacing": "number",
-    "@padding": "number",
+    "@cellspacing": "number",
+    "@cellpadding": "number",
     "@align": "string",
     "@style": "string",
     "@attrs": "object"
