@@ -22,6 +22,10 @@
     "@image-width": "number",
     "@bg-color": "string"
   },
+  "<common-header-view-online-block>": {
+    "template": "./view-online.marko",
+    "@mobile-text": "string"
+  },
   "<common-header-image-block>": {
     "template": "./image.marko",
     "@date": "object",
