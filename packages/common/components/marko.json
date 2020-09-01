@@ -13,7 +13,7 @@
     "template": "./static-styles.marko"
   },
   "<common-table>": {
-    "template": "./core-table.marko",
+    "template": "./common-table.marko",
     "@border": "number",
     "@width": "string",
     "@class": "string",
