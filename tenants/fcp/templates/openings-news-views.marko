@@ -1,8 +1,9 @@
 import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import emailX from "../config/email-x";
 
 $ const { website } = out.global;
 $ const { newsletter, date, dateInfo } = data;
-$ const primaryColor = "#ee0228";
+$ const primaryColor = "#004f75";
 
 <marko-newsletter-root
   title=newsletter.name
@@ -10,80 +11,84 @@ $ const primaryColor = "#ee0228";
   date=date
 >
   <@head>
-    <common-static-styles />
+    <common-head-styles color=primaryColor />
   </@head>
   <@body style="margin: 0px !important; padding: 0 !important; mso-line-height-rule: exactly;">
-    <tenant-banner-element
-      newsletter=newsletter
-      date=date
-      date-info=dateInfo
-    />
 
-<!-- Header -->
+    <!--leaderboard-->
+    <!-- end leaderboard -->
 
-    <common-default-header-block
-      name=newsletter.name
-      href=website.get("origin")
-      image-src="/files/base/indm/ien/image/2020/03/today.5e6a9734444ee.png"
-      image-width=420
-      bg-color="#ffffff"
-    >
-      <@wrapper date=date separator-type="date"/>
-    </common-default-header-block>
-
-<!-- Content -->
-
-    <common-table width="630" style="border-collapse:collapse;" align="center" class="main" padding=0 spacing=0>
+    <common-table width="630" border="0" align="center" class="main">
       <tr>
         <td>
-          <common-grid-block
-            section-id=65326,
-            limit=4,
-            date=date,
-            newsletter=newsletter,
-            primary-color=primaryColor,
+          <!-- Header View Online -->
+          <common-header-view-online-block
+            mobile-text="Providing landscape contractors with the latest industry news, trends and insight"
           />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <tenant-ad-unit name="banner-1" newsletter=newsletter date=date />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <common-grid-block
-            section-id=65327,
-            limit=4,
-            date=date,
-            newsletter=newsletter,
-            primary-color=primaryColor,
+
+          <!-- Header Image -->
+          <common-header-image-block
+            date=date
+            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/static/dss-enl-header.jpg`
+            href=newsletter.site.origin
+            name=newsletter.name
           />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <tenant-ad-unit name="banner-1" newsletter=newsletter date=date />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <common-grid-block
-            section-id=65328,
-            limit=4,
-            date=date,
-            newsletter=newsletter,
-            primary-color=primaryColor,
+
+          <!-- Horizontal Rule -->
+          <common-hr-element height="2" bgcolor=primaryColor />
+
+          <!-- "Featured" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Featured"
+            featured=true
+            primary-color=primaryColor
           />
+
+          <!-- "Banner 1" Advertisement -->
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          />
+
+          <!-- "Mid" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Mid"
+            primary-color=primaryColor
+          />
+
+          <!-- "Sponsored" Content Section -->
+          <!-- <common-hr-element height="1" bgcolor=primaryColor />
+          <common-content-sponsored-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored"
+          />
+          <common-hr-element height="1" bgcolor=primaryColor /> -->
+
+          <!-- "Lower" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Lower"
+            primary-color=primaryColor
+          />
+
+          <!-- "Banner 2" Advertisement -->
+          <!-- <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
+          /> -->
+
+          <common-read-more-button-element href="https://www.greenindustrypros.com" value="Read More News" />
         </td>
       </tr>
     </common-table>
 
-<!-- Footer/OptOut -->
-
-    <common-default-footer-block />
-
-    <marko-newsletters-mc-open-counter />
+    <common-dss-footer-block newsletter=newsletter primary-color=primaryColor />
 
   </@body>
 </marko-newsletter-root>
