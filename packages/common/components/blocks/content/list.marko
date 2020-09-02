@@ -56,9 +56,9 @@ $ const featuredNameStyle = {
                   <div style=nameWrapperStyle>
                     <div style="margin-left: 5px;">
                       $ const style = (featured && index === 0) ? featuredNameStyle : nameStyle;
-                      <a href=node.siteContext.url target="_blank" style=style>
-                        ${node.name}
-                      </a>
+                      <marko-core-obj-text obj=node field="name">
+                        <@link href=node.siteContext.url target="_blank" attrs={ style } />
+                      </marko-core-obj-text>
                     </div>
                   </div>
                 </div>
@@ -66,9 +66,12 @@ $ const featuredNameStyle = {
             </tr>
             <tr width="630" class="main">
               <td>
-                <div class="main" style="margin-left: 10px; text-decoration: none !important; font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #666666; font-weight: normal;; text-align: left; margin-top:7px !important; line-height:1.4em; letter-spacing: 1px;">
-                    ${node.teaser}
-                </div>
+                <marko-core-obj-text
+                  obj=node
+                  field="teaser"
+                  class="main"
+                  attrs={ style: "margin-left: 10px; text-decoration: none !important; font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #666666; font-weight: normal; text-align: left; margin-top:7px !important; line-height:1.4em; letter-spacing: 1px;" }
+                />
               </td>
             </tr>
             <common-table-spacer-element />
