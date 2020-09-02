@@ -14,5 +14,16 @@
     "@type": "string",
     "@provider": "string",
     "@href": "string"
+  },
+  "<common-hr-element>": {
+    "template": "./hr.marko",
+    "@bgcolor": "string",
+    "@height": "string"
+  },
+  "<common-table-spacer-element>": {
+    "template": "./spacer.marko"
+  },
+  "<common-read-more-button-element>": {
+    "template": "./read-more-button.marko"
   }
 }

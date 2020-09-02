@@ -9,17 +9,21 @@
     "@newsletter": "object",
     "@date": "date"
   },
+  "<common-head-styles>": {
+    "template": "./head-styles.marko"
+  },
   "<common-static-styles>": {
     "template": "./static-styles.marko"
   },
   "<common-table>": {
-    "template": "./core-table.marko",
+    "template": "./common-table.marko",
     "@border": "number",
     "@width": "string",
     "@class": "string",
-    "@spacing": "number",
-    "@padding": "number",
+    "@cellspacing": "number",
+    "@cellpadding": "number",
     "@align": "string",
+    "@valign": "string",
     "@style": "string",
     "@attrs": "object"
   }

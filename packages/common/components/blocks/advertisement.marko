@@ -1,0 +1,19 @@
+import { getAsObject } from "@base-cms/object-path";
+
+$ const adUnit = getAsObject(input, "adUnit");
+$ const newsletter = getAsObject(input, "newsletter");
+$ const { date } = input;
+
+<common-table width="300" class="center" border="0" cellspacing="0" cellpadding="0" valign="center" align="center">
+    <tr>
+        <td>
+          <div class="advertisement inline ad-600x100">
+            <marko-newsletters-email-x-display decoded-params=["email", "send"]>
+              <@ad-unit ...adUnit />
+              <@params date=date email="@{email name}@"/>
+            </marko-newsletters-email-x-display>
+          </div>
+        </td>
+    </tr>
+    <common-table-spacer-element />
+</common-table>
