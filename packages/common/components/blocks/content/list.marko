@@ -1,3 +1,4 @@
+import { getAsObject } from "@base-cms/object-path";
 import contentList from "@ac-business-media/common/graphql/fragments/content-list";
 import defaultValue from "@base-cms/marko-core/utils/default-value";
 
@@ -9,7 +10,8 @@ $ const {
   limit,
   skip,
   hrBelow,
-  featured
+  featured,
+  displayPrimarySection,
 } = input;
 
 $ const primaryColor = defaultValue(input.primaryColor, "#83b93a");
@@ -35,6 +37,24 @@ $ const featuredNameStyle = {
   ...nameStyle,
   "font-size": "24px"
 }
+
+$ const primarySectionWrapperStyle = {
+  "text-align": "left",
+  "color": primaryColor,
+};
+
+$ const primarySectionStyle = {
+  ...nameStyle,
+  "font-size": "14px",
+  "color": primaryColor,
+};
+
+$ const getPrimarySectionUrl = (node) => {
+  const section = getAsObject(node, "primarySection");
+  const site = getAsObject(node, "primarySection.site");
+  if (!site.host || !section.canonicalPath) return false;
+  return `https://${site.host}${section.canonicalPath}`;
+};
 
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
   date: date.valueOf(),
@@ -64,6 +84,24 @@ $ const featuredNameStyle = {
                 </div>
               </td>
             </tr>
+
+            $ const url = getPrimarySectionUrl(node);
+            <if(displayPrimarySection && url)>
+              <tr>
+                <td>
+                  <div class="main">
+                    <div style=primarySectionWrapperStyle>
+                      <div style="margin-left: 8px;">
+                        <marko-core-obj-text obj=node.primarySection field="name">
+                          <@link href=url target="_blank" attrs={ style: primarySectionStyle } />
+                        </marko-core-obj-text>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </if>
+
             <tr width="630" class="main">
               <td>
                 <marko-core-obj-text
