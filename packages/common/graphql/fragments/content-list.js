@@ -12,6 +12,15 @@ fragment NewsletterContentListFragment on Content {
     src
     alt
   }
+  primarySection {
+    id
+    name
+    canonicalPath
+    site {
+      id
+      host
+    }
+  }
   published
   ... on ContentPromotion {
     body(input: { mutation: Email })
