@@ -18,112 +18,113 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@base-cms/cli-utils@^1.13.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/cli-utils/-/cli-utils-1.13.0.tgz#4d11ac591f4d34e9f477ec04ae7ee9bad011fb15"
-  integrity sha512-jTeVdmykLqH5VlZjYpQJ6l1O5QmWrDBzWLqAF8hr4raQsio5RK9B457t2zyaU6c7SBG24KveZabpykor6vkwxQ==
+"@base-cms/cli-utils@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/cli-utils/-/cli-utils-1.37.0.tgz#beb121b62d686e5e02ece44d8d690480eee25251"
+  integrity sha512-gS5sWE/c5PIiPrB3YVEqOgqRvDPtxmyT50wJaDr+3f0MiIu9Vzcu4b2cjkceN9QtWjHQwcPIQd8WZY0c+Y/aQg==
   dependencies:
     chalk "^2.4.2"
     fancy-log "^1.3.3"
     mkdirp "^0.5.1"
 
-"@base-cms/express-apollo@^1.36.3":
-  version "1.36.3"
-  resolved "https://registry.yarnpkg.com/@base-cms/express-apollo/-/express-apollo-1.36.3.tgz#e3c5ad174b5040f5323bb56412b22a49103bfc88"
-  integrity sha512-omN2/JEW9W6400zyhyDEmHgq7O/Sw/aHYDrRHaGz+RcYNePxyNYC/Ql7gVwCp/YdTe43WjzrYtEDiGVARITyiw==
+"@base-cms/express-apollo@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/express-apollo/-/express-apollo-1.37.0.tgz#95f8385d1e1b3c6aa2d55a0f4fd0cfa07f5fdc66"
+  integrity sha512-jMYlUNCDy2O59USQdO9Dn2DX+WOhpEVa2Qo0bXhTDsOnpw3di4y1na4pTYvGygh31YWs1FPwwOaj9q0mRM+n+A==
   dependencies:
-    "@base-cms/graphql-fragment-types" "^1.36.3"
+    "@base-cms/graphql-fragment-types" "^1.37.0"
     apollo-cache-inmemory "^1.6.3"
     apollo-client "^2.6.4"
     apollo-link-http "^1.5.16"
-    node-fetch "^2.6.0"
+    node-fetch "^2.6.1"
 
-"@base-cms/graphql-fragment-types@^1.36.3":
-  version "1.36.3"
-  resolved "https://registry.yarnpkg.com/@base-cms/graphql-fragment-types/-/graphql-fragment-types-1.36.3.tgz#1f73ff6c6f99eb1b7eebdba726940de80eb51ae2"
-  integrity sha512-41UM6ck7C0ylfmJi0NhPI8LGN5pqaT4G9n78njbZc+6+RFkGpKjvYXMpI1gte1HAODr2hriVmTYTzMQ0ABJgvQ==
+"@base-cms/graphql-fragment-types@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/graphql-fragment-types/-/graphql-fragment-types-1.37.0.tgz#04b2d121709bce0c020c4413200d14bcbddbadca"
+  integrity sha512-glThaXa+zA/ioOS3UP7eOL8MdCNyDJGzlDHAozNjx7ULst/DUp4kk01CbgTnrIziFfkl6vgb975989PT6qcVRQ==
   dependencies:
-    node-fetch "^2.6.0"
+    node-fetch "^2.6.1"
 
-"@base-cms/html@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/html/-/html-1.0.0.tgz#21eb8a8a5d03db8272bc99588564325f3fe10914"
-  integrity sha512-13Q7YZogqPR9cUX80aORWO1aXc3Sd0VJywSpiTS3jd3G6GqffaVuLFak/3bzs5uY8t+g/tV0HC2a+ZfH+64kew==
+"@base-cms/html@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/html/-/html-1.37.0.tgz#502ae8d9effa13966a6287a091596d4853c91c7d"
+  integrity sha512-Km7A+jNWk+Q1HT8EVvsbfqCLzQcqrCaMBk/AJgJbDEnc9QHR/qQ0vSdi3hgxtN7owFMYyLm6Lldj5cDJ7KWWjQ==
   dependencies:
     html-entities "^1.2.1"
     html2plaintext "^2.1.2"
     striptags "^3.1.1"
 
-"@base-cms/image@^1.34.0":
-  version "1.34.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/image/-/image-1.34.0.tgz#5c7ff80c5247dfe5e99e5ad36fc1fdae4a94fdd8"
-  integrity sha512-HzS1mL8yUztnima/KlYOP76CUCzLO+cxg9cL32Esm0jjaUjIfYjRqiXweKTN6roA4dBjwJflcrkoSlQYOymVvw==
+"@base-cms/image@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/image/-/image-1.37.0.tgz#55817720f29d3ee701cc130dd9d0629fd7a158b1"
+  integrity sha512-Tkn3sJ64zS/IldBGXSUd/bhyAxUWUWCaRqkHE/NuRjP/4A8zh2CnyIxvRVD8ynyDGuCqop7vwShebidtu9MB7A==
   dependencies:
-    "@base-cms/html" "^1.0.0"
-    "@base-cms/inflector" "^1.34.0"
+    "@base-cms/html" "^1.37.0"
+    "@base-cms/inflector" "^1.37.0"
 
-"@base-cms/inflector@^1.34.0":
-  version "1.34.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/inflector/-/inflector-1.34.0.tgz#95285a40c6d80398f2e9d5a2ce9992b298de2a5f"
-  integrity sha512-miuCdB9wX3QpFjMXHhbsMdCUDzX4ubEN8dceNOtCiz9UFpm7lNRYRSwbulOztcSbDbnQXKrjUomkviLFAaHgWw==
+"@base-cms/inflector@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/inflector/-/inflector-1.37.0.tgz#e40c4bac785792d0ac4dd028ed0ee89dea9b601b"
+  integrity sha512-7a+Dwv/e7kLusQXWSUD3JZmxLDbKqjbC1U3PBVo7Ul1jFUZT9WjDCZ91PPYd6vQKxcjhCDAXqi+msAduhVVkYg==
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-compiler@^1.36.0":
-  version "1.36.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-compiler/-/marko-compiler-1.36.0.tgz#e3ec424b7523f37aa60a1299860b5e0ad959c640"
-  integrity sha512-iNYZitlXgRfRqZab8dbiWp9c82LfVkGbQvNFXwscFFXKYEza9DX6uR3gVWqk6HyOPUi46WIkT3N2ROA8H3gq3A==
+"@base-cms/marko-compiler@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-compiler/-/marko-compiler-1.37.0.tgz#51ae9c333862f9b6ddb5828f0aafc6cfde379a39"
+  integrity sha512-tG86rAtEGK5Zw9pp01fAzi850N6N5WQQlVtMY3jSexheDvV+1HXo+MXrdVg6VizB0RIq0X46bqnoL7jIYOhtSw==
   dependencies:
     glob "^7.1.4"
     marko "~4.20.0"
     yargs "^14.1.0"
 
-"@base-cms/marko-core@^1.36.1":
-  version "1.36.1"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-core/-/marko-core-1.36.1.tgz#e1c6540406cf31f4aaa1022c22b31f921f6935f9"
-  integrity sha512-M9Hsa7BCgZAd7/VBjNPtBnF1nuQbqShb4bI9ubSoKpAWQ/zBmiQFjvrfd+SiQTYxL500mPYDBCUOcvlVMSmusg==
+"@base-cms/marko-core@^1.38.0":
+  version "1.38.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-core/-/marko-core-1.38.0.tgz#9f5ea88fa5103ef852296553b56857354c764496"
+  integrity sha512-sFKhIXFeaRrV0oyEdYCVSUJTLGnPHzQeU4hsx/HzfjigSWX+i7EaI7IMtri65PL0NHKWhkHVXlm8rNxqOTI04A==
   dependencies:
-    "@base-cms/object-path" "^1.25.0"
-    "@base-cms/utils" "^1.25.0"
-    "@base-cms/web-common" "^1.34.0"
+    "@base-cms/object-path" "^1.37.0"
+    "@base-cms/utils" "^1.37.0"
+    "@base-cms/web-common" "^1.37.0"
     marko "~4.20.0"
     moment "^2.24.0"
     moment-timezone "^0.5.26"
 
-"@base-cms/marko-newsletters-email-x@^1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-newsletters-email-x/-/marko-newsletters-email-x-1.25.0.tgz#395d4f61749982e1839eb7e9aa1d718d743d37ce"
-  integrity sha512-RpjdUQX6KyJf6sMdUG7HbWkYZvVcU8MDcpeZxCE7q6ace4AFf787WbHUomDV3z+xgtDHWbrQs1bIxg4ApB0aqg==
+"@base-cms/marko-newsletters-email-x@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-newsletters-email-x/-/marko-newsletters-email-x-1.37.0.tgz#1cad1189711f0f5acc498b09c7c08c2760b1c4ae"
+  integrity sha512-oiMhmAHsFLomyBpIV6I6RRx8mQOSMwSl8oBw+prmONWp7GLLtVUqDlzGyywQ7t0BCCQ+ptrAlr/CL06ZM9vXKw==
   dependencies:
-    "@base-cms/object-path" "^1.25.0"
-    "@base-cms/utils" "^1.25.0"
+    "@base-cms/object-path" "^1.37.0"
+    "@base-cms/utils" "^1.37.0"
+    moment "^2.24.0"
+    node-fetch "^2.6.1"
+
+"@base-cms/marko-newsletters-gam@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-newsletters-gam/-/marko-newsletters-gam-1.37.0.tgz#758f3b3519b58000db6d93087e47bc8ba25e7d9c"
+  integrity sha512-xwCTjAyN/de50sOQqBXDQwb4dgUKHdgmRzL929HRoyxBTpqqWYsmC3zwSjvQkT/j9cqvbukIm0LZI3WnEMk5aA==
+  dependencies:
+    "@base-cms/object-path" "^1.37.0"
+    "@base-cms/utils" "^1.37.0"
     moment "^2.24.0"
 
-"@base-cms/marko-newsletters-gam@^1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-newsletters-gam/-/marko-newsletters-gam-1.25.0.tgz#9c28e3c94837434650346a3316e4ffe15096cb3b"
-  integrity sha512-dGap/o8QIJnAYstTHXrssAeM/81eWrw1HZztOpy0olVBPqH5UEBa63US4sfJSM8iDx+6kziG9ZRx+oJ5K5dJ6g==
-  dependencies:
-    "@base-cms/object-path" "^1.25.0"
-    "@base-cms/utils" "^1.25.0"
-    moment "^2.24.0"
+"@base-cms/marko-newsletters-mc@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-newsletters-mc/-/marko-newsletters-mc-1.37.0.tgz#01717972522233205993f36ddc72faf68ff29746"
+  integrity sha512-OMaviYgTgzpkKVht3B9Ev/L0p5xcTVjmh5IZCX3xAcF83UxLkYRoNw7B5A/5xnKnOUpcK5JhVHYDLXZ+sFIPyg==
 
-"@base-cms/marko-newsletters-mc@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-newsletters-mc/-/marko-newsletters-mc-1.0.1.tgz#27f7cdc7fe80f4bd09ad529d99e507aca0a70ce9"
-  integrity sha512-JguxG6GCVDuEJ6dM/cufX6O3WfpHlAI97FvHUwB3wIypSb1E5D97eWps0LklaQgCqbyw++I10hZlmDBZD0LJiw==
-
-"@base-cms/marko-newsletters@^1.36.3":
-  version "1.36.3"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-newsletters/-/marko-newsletters-1.36.3.tgz#8a15c2b860af8927c64dac79ab8b899935a879aa"
-  integrity sha512-co7zfdFxU7AhcLRH+BKjZBg+x4marKQtQQeBqLhqKEMh+9CFfNYMG5Ez6yaKJkpH9VeGk9lE2Pq4x2NJk1vvPw==
+"@base-cms/marko-newsletters@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-newsletters/-/marko-newsletters-1.37.0.tgz#79d877888b1912ad1158b8f612923632c19d337c"
+  integrity sha512-2oYapA40cPNF8k4pREn6KWXCyB1KmQI3+s1NSlkdAKfC2CdcbHBHtRZCZlxgM2L+66DVdRyQSNTdntolzfowiA==
   dependencies:
-    "@base-cms/express-apollo" "^1.36.3"
-    "@base-cms/image" "^1.34.0"
-    "@base-cms/object-path" "^1.25.0"
-    "@base-cms/tenant-context" "^1.0.0"
-    "@base-cms/utils" "^1.25.0"
-    "@base-cms/web-common" "^1.34.0"
+    "@base-cms/express-apollo" "^1.37.0"
+    "@base-cms/image" "^1.37.0"
+    "@base-cms/object-path" "^1.37.0"
+    "@base-cms/tenant-context" "^1.37.0"
+    "@base-cms/utils" "^1.37.0"
+    "@base-cms/web-common" "^1.37.0"
     "@godaddy/terminus" "^4.2.0"
     express "^4.17.1"
     graphql "^14.5.4"
@@ -133,16 +134,16 @@
     marko "~4.20.0"
     moment "^2.24.0"
     moment-timezone "^0.5.26"
-    node-fetch "^2.6.0"
+    node-fetch "^2.6.1"
     pretty "^2.0.0"
     recursive-readdir "^2.2.2"
 
-"@base-cms/newsletter-cli@^1.13.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/newsletter-cli/-/newsletter-cli-1.13.0.tgz#139755a3b8f9cc6b70134563eacbc10bfa82b9e5"
-  integrity sha512-zx1TlsCLvVIe30l2ZigbJzPwcPLOyS99ribeNzCFjRLJ1mVydY5V0mDOKS5pXUWZnZloUCGxWj5iYz7Hg8CR5w==
+"@base-cms/newsletter-cli@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/newsletter-cli/-/newsletter-cli-1.37.0.tgz#97c75dcadd1f5423475f9be3230ffb629299fbae"
+  integrity sha512-zUw25HQ6g9+eMcE7xnqODJNLKxHXm6+8FleVMgQsjYED+3Yj3f4biBQfJh9bvuulAsa+jVcIuurdTKqJHm+P3A==
   dependencies:
-    "@base-cms/cli-utils" "^1.13.0"
+    "@base-cms/cli-utils" "^1.37.0"
     chalk "^2.4.2"
     fancy-log "^1.3.3"
     gulp "^4.0.2"
@@ -152,32 +153,32 @@
     pump "^3.0.0"
     yargs "^14.1.0"
 
-"@base-cms/object-path@^1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/object-path/-/object-path-1.25.0.tgz#cfcfc57cd2d98fc0f04ea3373a7d554168d1a7bc"
-  integrity sha512-mHu8GJGeK4rTKBWiY5uh/wncfElCjWv5EpA1BMaWPL7Z1rkKLKamppEVRmTrEpgebwHzViVKwaOGGMlgdhkXgA==
+"@base-cms/object-path@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/object-path/-/object-path-1.37.0.tgz#3cd3cfc0c619741e233cb9dfdee324a9d578de32"
+  integrity sha512-wMemkkTZRoBBiv8g3mgGH7bB288ekM3mRuyx4au5xvwtR3CXBp05fjuqldpMxVZ5Zv6vDfrkUXvI8JOkpSK17g==
   dependencies:
-    "@base-cms/utils" "^1.25.0"
+    "@base-cms/utils" "^1.37.0"
     object-path "^0.11.4"
 
-"@base-cms/tenant-context@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/tenant-context/-/tenant-context-1.0.0.tgz#4083d9011d444e124947ce1e3276ff5a38fc04eb"
-  integrity sha512-Z5ymn5S42r1YQgPjQLxykf0n5ACOynYTSJHVqRHRBLq5CmM6fxqnXfeU0mMD48U/wZFfSBkVjDYzW8YiO9kEpQ==
+"@base-cms/tenant-context@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/tenant-context/-/tenant-context-1.37.0.tgz#e156d4f0371350ada69af07a1353d9d247141644"
+  integrity sha512-FH0x10WmyE1+9H/1kBf/Ps53Hi5WiKIctfN/6Uqs8t4qMwmvPkWBWgBe2KvnRTwh1sRcyqPxT8srbJgc1VdS1g==
 
-"@base-cms/utils@^1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-1.25.0.tgz#84658dc9da247046e35d7c3ad6f56a0a0670497e"
-  integrity sha512-gHFztvnOJ31+31Tu4tjFDwLPvpxyHSxbIFW2ibjNbrEAbKHtbvZLxbirWklEu0RZ3Vh8tgJ4YrcmbH1Ok2Cjnw==
+"@base-cms/utils@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-1.37.0.tgz#c2ac887615b9b5007bae6d6fae102bff3662b706"
+  integrity sha512-YVNnlziwb/MdSjt8oywqgXmCwmK/7y3V8niF0GxWYggqLPHRqWWI5ZKO/lq3ZaBv6szSxqfNS/b+B3MNfj1h3Q==
 
-"@base-cms/web-common@^1.34.0":
-  version "1.34.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-common/-/web-common-1.34.0.tgz#87bcdd3e2c5a5e6d02cf5485f24f073051fb75db"
-  integrity sha512-u0oVU8zSexVU5uDiqBStdxDg1S+rChNOJqxzG+mfPM5Ngcbu44aT4Gmgig+zaqQGh3xmaEuWM/HOoiY7i/yRMg==
+"@base-cms/web-common@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-common/-/web-common-1.37.0.tgz#6da0a7079f0e8a9d8e7679350209510a2791882a"
+  integrity sha512-oP9rs1z97mO97VPYrFuTwxdF+DQmVSa+SNmDIs7AOp5akzerTRAbqvikSPYcJy7ACeI7DE4ulrVeQZfXYJgvlA==
   dependencies:
-    "@base-cms/inflector" "^1.34.0"
-    "@base-cms/object-path" "^1.25.0"
-    "@base-cms/utils" "^1.25.0"
+    "@base-cms/inflector" "^1.37.0"
+    "@base-cms/object-path" "^1.37.0"
+    "@base-cms/utils" "^1.37.0"
     graphql "^14.5.4"
     graphql-tag "^2.10.1"
     http-errors "^1.7.3"
@@ -5196,10 +5197,15 @@ node-fetch-npm@^2.0.2:
     json-parse-better-errors "^1.0.0"
     safe-buffer "^5.1.1"
 
-node-fetch@^2.3.0, node-fetch@^2.5.0, node-fetch@^2.6.0:
+node-fetch@^2.3.0, node-fetch@^2.5.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+
+node-fetch@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 node-gyp@^5.0.2:
   version "5.0.5"
