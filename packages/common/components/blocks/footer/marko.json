@@ -7,6 +7,11 @@
   "<common-dss-footer-block>": {
     "template": "./dss.marko"
   },
+  "<common-sso-footer-block>": {
+    "template": "./sso.marko",
+    "@newsletter": "object",
+    "@primary-color": "string"
+  },
   "<common-gip-footer-block>": {
     "template": "./gip.marko"
   }
