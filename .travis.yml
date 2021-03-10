@@ -19,7 +19,7 @@ jobs:
 
     - stage: production-started
       name: Deployment Started
-      script: npx @base-cms/newsletter-deployment-tool notify-started
+      script: npx @parameter1/base-cms-newsletter-deployment-tool notify-started
       install: skip
       env: [ENVIRONMENT=production]
 
@@ -29,7 +29,7 @@ jobs:
 
     - stage: production
       name: For Construction Pros
-      script: npx @base-cms/newsletter-deployment-tool deploy fcp newsletters
+      script: npx @parameter1/base-cms-newsletter-deployment-tool deploy fcp newsletters
       install: skip
       env: [ENVIRONMENT=production]
 
@@ -39,6 +39,6 @@ jobs:
 
     - stage: production-finished
       name: Deployment Finished
-      script: npx @base-cms/newsletter-deployment-tool notify-finished
+      script: npx @parameter1/base-cms-newsletter-deployment-tool notify-finished
       install: skip
       env: [ENVIRONMENT=production]
