@@ -1,0 +1,98 @@
+import getAlignment from "@ac-business-media/common/utils/get-alignment";
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+
+$ const {
+  newsletter,
+  date,
+  title,
+  sectionName,
+  limit,
+  skip,
+  primaryColor,
+  hrBelow
+} = input;
+
+$ const nameStyle = {
+  "text-decoration": "none !important",
+  "font-size": "14px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": primaryColor,
+  "font-weight": "bold"
+};
+
+<marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
+  date: date.valueOf(),
+  newsletterId: newsletter.id,
+  sectionName: sectionName,
+  limit: limit,
+  skip: skip,
+  queryFragment: contentList,
+}>
+<for|node, index| of=nodes>
+  <common-table width="630" border="0" cellspacing="0" cellpadding="10" align="center" style="border: 5px solid #ecedee;" class="sponsored">
+    <tr>
+      <td valign="top">
+        <table width="280" border="0" cellspacing="0" cellpadding="0" align="left">
+          <tr>
+            <td>
+              <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
+                  <marko-newsletter-imgix
+                    src=image.src
+                    alt=image.alt
+                    options={ w: 280, h: 157 }
+                    attrs={ border: 0, width: 280, height: 157 }
+                  >
+                    <@link href=node.siteContext.url target="_blank" />
+                  </marko-newsletter-imgix>
+                </marko-core-obj-value>
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+            <marko-core-obj-value|{ value: image }| obj=node field="logo" as="object">
+                  <marko-newsletter-imgix
+                    src=image.src
+                    alt=image.alt
+                    options={ w: 150, h: 157 }
+                    attrs={ border: 0, width: 150, height: 157 }
+                  >
+                    <@link href=node.siteContext.url target="_blank" />
+                  </marko-newsletter-imgix>
+                </marko-core-obj-value>
+            </td>
+          </tr>
+        </table>
+        <table width="20" cellspacing="0" cellpadding="0" align="left">
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+        <table width="295" class="right" border="0" cellspacing="0" cellpadding="0" align="right">
+          <tr>
+            <td>
+
+              <div>
+                <marko-core-obj-text obj=node field="name" tag=false>
+                  <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle } />
+                </marko-core-obj-text>
+              </div>
+              <div style="text-decoration: none !important; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #666666; font-weight: normal;; text-align: left; line-height:1.2em; margin-top:15px !important;">
+                <marko-core-obj-text obj=node field="body" html=true />
+              </div>
+              <div style="margin:15px 0px 10px!important; text-align: left;">
+                <strong>
+                  <marko-core-obj-text obj=node field="linkText" tag=false>
+                    <@link href=node.siteContext.url target="_blank" attrs={ style: "font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000; line-height:20px;" } />
+                  </marko-core-obj-text>
+                </strong>
+              </div>
+
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </common-table>
+</for>
+</marko-web-query>

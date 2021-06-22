@@ -1,0 +1,144 @@
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import emailX from "../config/email-x";
+
+$ const { website } = out.global;
+$ const { newsletter, date, dateInfo } = data;
+$ const primaryColor = "#e82f20";
+
+$ const blackTitleStyle = {
+  "text-decoration": "none !important",
+  "font-size": "16px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#000000",
+  "text-align": "left",
+  "font-weight": "bold",
+  "padding": "10px"
+};
+
+$ const whiteTitleStyle = {
+  "text-decoration": "none !important",
+  "font-size": "16px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#FFFFFF",
+  "text-align": "left",
+  "font-weight": "bold",
+  "padding": "10px"
+};
+
+$ const gridTitleStyle = {
+  "text-decoration": "none !important",
+  "font-size": "16px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#FFFFFF",
+  "text-align": "left",
+  "font-weight": "bold",
+  "padding": "10px",
+  "background-color": "#494848"
+};
+
+
+<marko-newsletter-root
+  title=newsletter.name
+  description=newsletter.description
+  date=date
+>
+  <@head>
+    <common-head-styles color=primaryColor />
+  </@head>
+
+  <@body style="margin:0px !important">
+    <uncommon-banner-element
+      name=newsletter.name
+      mobile-text="The leading source of product information and industry insight"
+    />
+
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td>
+          <common-psc-header-image-block
+            name=newsletter.name
+            href=newsletter.site.origin
+            image-src-left=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2017/04/for_your_fleet_col1.58ec185377cc8.png`
+            image-src-right=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2017/04/for_your_fleet_col2.58ec186928eae.png`
+          />
+        </td>
+      </tr>
+    </common-table>
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td valign="top">
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Top News This Week"
+            title="TOP NEWS THIS WEEK"
+            section-type="featured"
+            show-socials=false
+            primary-color=primaryColor
+            width=300
+            title-style=blackTitleStyle
+          />
+        </td>
+        <td align="right">
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+            align="right"
+          />
+        </td>
+      </tr>
+    </common-table>
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td>
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Also in the News"
+            title="ALSO IN THE NEWS"
+            section-type="long"
+            show-socials=false
+            primary-color=primaryColor
+            title-style=whiteTitleStyle
+            bgcolor="#494848"
+            limit=4
+          />
+
+          <common-content-sponsored-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored"
+            title="SPONSORED"
+            title-bg-color=primaryColor
+            image-width=300
+            display-sponsored-section=false
+            title-style=whiteTitleStyle
+          />
+
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Items of Interest"
+            title="ITEMS OF INTEREST"
+            section-type="long"
+            show-socials=false
+            primary-color=primaryColor
+            title-style=whiteTitleStyle
+            bgcolor="#494848"
+          />
+
+          <common-grid-block
+            date=date
+            newsletter=newsletter
+            primary-color=primaryColor
+            section-name="For Your Fleet"
+            title="FOR YOUR FLEET"
+            show-socials=false
+            title-style=gridTitleStyle
+          />
+        </td>
+      </tr>
+    </common-table>
+    <common-psc-footer-block/>
+  </@body>
+</marko-newsletter-root>

@@ -3,7 +3,7 @@ import emailX from "../config/email-x";
 
 $ const { website } = out.global;
 $ const { newsletter, date, dateInfo } = data;
-$ const primaryColor = "#f26522";
+$ const primaryColor = "#12b9ea";
 
 $ const sponsoredNameStyle = {
   "text-decoration": "none",
@@ -11,21 +11,30 @@ $ const sponsoredNameStyle = {
   "text-decoration": "none !important",
   "font-size": "16px",
   "font-family": "Trebuchet MS, Helvetica, sans-serif",
-  "color": "#000000",
+  "color": "#12b9ea",
   "font-weight": "bold"
 }
 
+$ const nameStyle = {
+  "text-decoration": "none !important",
+  "font-size": "17px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "font-weight": "bold",
+  "text-decoration": "none",
+  "text-align": "left",
+  "color": "#222222"
+}
+
 <marko-newsletter-root
-  title = newsletter.name
-  description = newsletter.description
-  date = date
+  title=newsletter.name
+  description=newsletter.description
+  date=date
 >
   <@head>
     <common-head-styles color=primaryColor />
   </@head>
-  <@body style="margin: 0px !important">
 
-    <!--leaderboard-->
+  <@body style="margin:0px !important">
     <common-banner-element
       name=newsletter.name
       date=date
@@ -35,24 +44,18 @@ $ const sponsoredNameStyle = {
     <common-table width="630" border="0" align="center" class="main">
       <tr>
         <td>
-
-          <!-- Header View Online -->
           <common-header-view-online-block
-            mobile-text="Insights, tips and news impacting the construction industry"
+            mobile-text="Addressing key topics and critical issues centered around labor."
           />
 
-          <!-- Header Image -->
           <common-header-image-block
             date=date
-            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/04/FCP_HeadlineNews.5e875ac47444c.png`
+            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2021/05/PersonnelProgressENLHeader_630x100_v2_copy.609d806356884.png`
             href=newsletter.site.origin
             name=newsletter.name
+            show-date=false
           />
 
-          <!-- Horizontal Rule -->
-          <common-hr-element height="2" bgcolor=primaryColor/>
-
-          <!-- "Featured" Content Section -->
           <common-content-list-block
             date=date
             newsletter=newsletter
@@ -62,14 +65,15 @@ $ const sponsoredNameStyle = {
             display-primary-section=false
           />
 
-
           <common-hr-element height="1" bgcolor=primaryColor />
-            <common-content-sponsored-list-block
+
+          <common-content-sponsored-list-block
               date=date
               newsletter=newsletter
               section-name="SPONSORED"
+              limit=1
               name-style=sponsoredNameStyle
-            />
+          />
 
           <common-hr-element height="1" bgcolor=primaryColor />
 
@@ -79,6 +83,17 @@ $ const sponsoredNameStyle = {
             section-name="MID"
             primary-color=primaryColor
             display-primary-section=false
+            limit=1
+          />
+
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="MID"
+            primary-color=primaryColor
+            display-primary-section=false
+            skip=1
+            name-style=nameStyle
           />
 
           <common-content-list-block
@@ -87,16 +102,17 @@ $ const sponsoredNameStyle = {
             section-name="LOWER"
             primary-color=primaryColor
             display-primary-section=false
+            name-style=nameStyle
           />
 
-          <common-read-more-button-element href="https://www.forconstructionpros.com" value="Read More News" />
+          <common-read-more-button-element href="https://www.forconstructionpros.com" value="Read More News" show-border=false/>
         </td>
       </tr>
     </common-table>
 
     <common-footer-block
       newsletter=newsletter
-      primary-color=primaryColor
+      primary-color="#000000"
       company="fcp"
     />
   </@body>

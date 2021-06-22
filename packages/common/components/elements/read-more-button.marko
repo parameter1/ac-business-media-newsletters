@@ -1,3 +1,8 @@
+$ const border = { "color": "#a3a3a3", "padding": "12px 90px", "border": "1px solid #a3a3a3;" };
+$ const noBorder = { "color": "#a3a3a3", "padding": "12px 90px" };
+
+
+
 <common-table width="630" border="0" cellspacing="0" cellpadding="0" align="center" style="text-decoration: none !important; font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #666666; font-weight: normal; border-collapse:collapse;" class="main">
   <tr>
     <td valign="top">
@@ -8,8 +13,9 @@
             <table class="main" style="text-decoration: none !important; font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #a3a3a3; font-weight: normal; border-collapse: collapse;" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
                 <td align="center">
+                  $ const buttonStyle = (input.showBorder) ? border : noBorder;
                   <marko-core-text value=input.value>
-                    <@link href=input.href title=input.value target="_blank" attrs={ style: "color: #a3a3a3; padding:12px 90px; border: 1px solid #a3a3a3;" } rel="noopener noreferrer" />
+                    <@link href=input.href title=input.value target="_blank" attrs={ style: buttonStyle } rel="noopener noreferrer" />
                   </marko-core-text>
                 </td>
               </tr>

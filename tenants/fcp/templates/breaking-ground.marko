@@ -3,7 +3,7 @@ import emailX from "../config/email-x";
 
 $ const { website } = out.global;
 $ const { newsletter, date, dateInfo } = data;
-$ const primaryColor = "#f26522";
+$ const primaryColor = "#f89a00";
 
 $ const sponsoredNameStyle = {
   "text-decoration": "none",
@@ -13,19 +13,21 @@ $ const sponsoredNameStyle = {
   "font-family": "Trebuchet MS, Helvetica, sans-serif",
   "color": "#000000",
   "font-weight": "bold"
-}
+};
 
 <marko-newsletter-root
-  title = newsletter.name
-  description = newsletter.description
-  date = date
+  title=newsletter.name
+  description=newsletter.description
+  date=date
 >
+
   <@head>
     <common-head-styles color=primaryColor />
   </@head>
+
   <@body style="margin: 0px !important">
 
-    <!--leaderboard-->
+    <!-- Leaderboard -->
     <common-banner-element
       name=newsletter.name
       date=date
@@ -38,53 +40,61 @@ $ const sponsoredNameStyle = {
 
           <!-- Header View Online -->
           <common-header-view-online-block
-            mobile-text="Insights, tips and news impacting the construction industry"
+            mobile-text="The latest equipment, business and fleet management tips to improve profitability"
           />
 
           <!-- Header Image -->
           <common-header-image-block
             date=date
-            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/04/FCP_HeadlineNews.5e875ac47444c.png`
+            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/04/et_breaking_ground.5e9de70a6fe67.png`
             href=newsletter.site.origin
             name=newsletter.name
           />
 
           <!-- Horizontal Rule -->
-          <common-hr-element height="2" bgcolor=primaryColor/>
+          <common-hr-element height="2" bgcolor=primaryColor />
 
           <!-- "Featured" Content Section -->
           <common-content-list-block
             date=date
             newsletter=newsletter
-            section-name="FEATURED"
+            section-name="Featured"
             featured=true
             primary-color=primaryColor
             display-primary-section=false
           />
 
+          <!-- "Banner 1" Advertisement -->
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          />
 
-          <common-hr-element height="1" bgcolor=primaryColor />
-            <common-content-sponsored-list-block
-              date=date
-              newsletter=newsletter
-              section-name="SPONSORED"
-              name-style=sponsoredNameStyle
-            />
-
-          <common-hr-element height="1" bgcolor=primaryColor />
-
+          <!-- "Mid" Content Section -->
           <common-content-list-block
             date=date
             newsletter=newsletter
-            section-name="MID"
+            section-name="Mid"
             primary-color=primaryColor
             display-primary-section=false
           />
 
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <!-- "Sponsored" Content Section -->
+          <common-content-sponsored-list-block
+            date=date
+            newsletter=newsletter
+            section-name="SPONSORED"
+            name-style=sponsoredNameStyle
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
           <common-content-list-block
             date=date
             newsletter=newsletter
-            section-name="LOWER"
+            section-name="Lower"
             primary-color=primaryColor
             display-primary-section=false
           />

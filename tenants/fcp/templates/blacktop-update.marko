@@ -3,7 +3,7 @@ import emailX from "../config/email-x";
 
 $ const { website } = out.global;
 $ const { newsletter, date, dateInfo } = data;
-$ const primaryColor = "#f26522";
+$ const primaryColor = "#ED1F24";
 
 $ const sponsoredNameStyle = {
   "text-decoration": "none",
@@ -13,46 +13,39 @@ $ const sponsoredNameStyle = {
   "font-family": "Trebuchet MS, Helvetica, sans-serif",
   "color": "#000000",
   "font-weight": "bold"
-}
+};
 
 <marko-newsletter-root
-  title = newsletter.name
-  description = newsletter.description
-  date = date
+  title=newsletter.name
+  description=newsletter.description
+  date=date
 >
   <@head>
     <common-head-styles color=primaryColor />
   </@head>
-  <@body style="margin: 0px !important">
 
-    <!--leaderboard-->
+  <@body style="margin:0px !important">
     <common-banner-element
       name=newsletter.name
       date=date
       ad-unit=emailX.getAdUnit({ name: "header", alias: newsletter.alias })
     />
-
     <common-table width="630" border="0" align="center" class="main">
       <tr>
         <td>
-
-          <!-- Header View Online -->
           <common-header-view-online-block
-            mobile-text="Insights, tips and news impacting the construction industry"
+            mobile-text="The latest news about paving, sweeping, striping and repairing pavements"
           />
 
-          <!-- Header Image -->
           <common-header-image-block
             date=date
-            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/04/FCP_HeadlineNews.5e875ac47444c.png`
+            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/04/PVM_BlacktopUpdate.5e94ce891774e.png`
             href=newsletter.site.origin
             name=newsletter.name
           />
 
-          <!-- Horizontal Rule -->
-          <common-hr-element height="2" bgcolor=primaryColor/>
+          <common-hr-element height="2" bgcolor=primaryColor />
 
-          <!-- "Featured" Content Section -->
           <common-content-list-block
             date=date
             newsletter=newsletter
@@ -62,16 +55,19 @@ $ const sponsoredNameStyle = {
             display-primary-section=false
           />
 
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="MID"
+            primary-color=primaryColor
+            display-primary-section=false
+            limit=1
+          />
 
-          <common-hr-element height="1" bgcolor=primaryColor />
-            <common-content-sponsored-list-block
-              date=date
-              newsletter=newsletter
-              section-name="SPONSORED"
-              name-style=sponsoredNameStyle
-            />
-
-          <common-hr-element height="1" bgcolor=primaryColor />
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          />
 
           <common-content-list-block
             date=date
@@ -79,7 +75,19 @@ $ const sponsoredNameStyle = {
             section-name="MID"
             primary-color=primaryColor
             display-primary-section=false
+            skip=1
           />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <common-content-sponsored-list-block
+            date=date
+            newsletter=newsletter
+            section-name="SPONSORED"
+            name-style=sponsoredNameStyle
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
 
           <common-content-list-block
             date=date
@@ -100,5 +108,4 @@ $ const sponsoredNameStyle = {
       company="fcp"
     />
   </@body>
-
 </marko-newsletter-root>

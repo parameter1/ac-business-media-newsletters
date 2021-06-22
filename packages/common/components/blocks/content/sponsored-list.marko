@@ -8,10 +8,68 @@ $ const {
   title,
   limit,
   skip,
+  lineBreak,
   primaryColor,
   hrBelow,
-  featured
+  featured,
+  displaySponsoredSection,
+  titleBgColor,
+  titleLineBreak
 } = input;
+
+$ const imageWidth = defaultValue(input.imageWidth, 300);
+
+$ const bodyBackgroundColor = defaultValue(input.bodyBgColor, "#ffffff")
+
+$ const cellPadding = defaultValue(input.cellPadding, "0");
+
+$ const defaultNameStyle = {
+  "text-decoration": "none",
+  "text-align": "left",
+  "text-decoration": "none !important",
+  "font-size": "16px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#000000",
+  "font-weight": "bold"
+}
+
+$ const nameStyle = (input.nameStyle) ? input.nameStyle : defaultNameStyle;
+
+$ const defaultBodyStyle = {
+  "text-decoration": "none !important",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#666666",
+  "font-weight": "normal",
+  "font-size": "13px",
+  "text-align": "left",
+  "margin-top": "7px !important",
+  "line-height": "1.2em",
+  "letter-spacing": "1px"
+}
+
+$ const bodyStyle = (input.bodyStyle) ? input.bodyStyle : defaultBodyStyle;
+
+$ const defaultTeaserStyle = {
+  "padding-left": "10px",
+  "font-size": "11px",
+  "color": "#e8ae0b",
+  "text-decoration": "underline !important",
+  "font-weight": "normal",
+  "font-family": "Helvetica, Arial, sans-serif"
+}
+
+$ const defaultTitleStyle = {
+  "text-decoration": "none !important",
+  "font-size": "14px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#FFFFFF",
+  "text-align": "left",
+  "font-weight": "bold",
+  "padding": "10px"
+};
+$ const titleStyle = defaultValue(input.titleStyle, defaultTitleStyle);
+
+$ const teaserStyle = defaultValue(input.teaserStyle, defaultTeaserStyle);
 
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
   date: date.valueOf(),
@@ -21,16 +79,33 @@ $ const {
   skip: skip,
   queryFragment: contentList,
 }>
-  <common-table width="630" border="0" cellspacing="0" cellpadding="0" align="center" style="border-collapse:collapse;" class="sponsored">
+  <common-table width="630" border="0" cellspacing="0" cellpadding=cellPadding align="center" style="border-collapse:collapse;" class="sponsored">
+    <if(title)>
+      <tr>
+        <td style=titleStyle bgcolor=titleBgColor>${title}</td>
+      </tr>
+      <if(titleLineBreak)>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </if>
+    </if>
     <for|node, index| of=nodes>
       <tr>
-        <td valign="top">
+        <td valign="top" bgcolor=bodyBackgroundColor>
           <common-table width="300" border="0" cellspacing="0" cellpadding="0" align="left">
             <tr>
               <td>
-                <a href=node.siteContext.url target="_blank">
-                  <img border="0" src="https://p1-cms-assets.imgix.net/files/base/acbm/gip/image/2019/01/GIP_PrintSubscribe2019_320x180.5c2e463327284.png" width="300" alt="GIP Print Subscribe2019320x180" />
-                </a>
+                <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
+                  <marko-newsletter-imgix
+                    src=image.src
+                    alt=image.alt
+                    options={ w: imageWidth }
+                    attrs={ border: 0, width: imageWidth }
+                  >
+                    <@link href=node.siteContext.url target="_blank" />
+                  </marko-newsletter-imgix>
+                </marko-core-obj-value>
               </td>
             </tr>
           </common-table>
@@ -39,11 +114,13 @@ $ const {
               <td>
                 <div style="text-align: left;">
                   <marko-core-obj-text obj=node field="name" tag=false>
-                    <@link href=node.siteContext.url target="_blank" attrs={ style: "text-decoration:none; text-align: left; text-decoration: none !important; font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #000000; font-weight: bold;" } />
+                    <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle } />
                   </marko-core-obj-text>
-                  <marko-core-link href=node.siteContext.url target="_blank" attrs={ style: "padding-left: 10px; font-size: 11px; color: #e8ae0b; text-decoration: underline !important; font-weight: normal; font-family: Helvetica, Arial, sans-serif;" }>Sponsored</marko-core-link>
+                  <if (displaySponsoredSection)>
+                    <marko-core-link href=node.siteContext.url target="_blank" attrs={ style: teaserStyle }>Sponsored</marko-core-link>
+                  </if>
                 </div>
-                <div style="text-decoration: none !important; font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #666666; font-weight: normal; font-size: 13px; text-align: left; margin-top:7px !important; line-height:1.2em; letter-spacing: 1px;">
+                <div style=bodyStyle>
                   <marko-core-obj-text obj=node field="body" html=true />
                 </div>
                 <div style="margin-top:6px !important; text-decoration: underline !important;">

@@ -1,13 +1,21 @@
 {
   "<common-view-online-element>": {
     "template": "./view-online.marko",
-    "@name": "string"
+    "@name": "string",
+    "@psc": {
+      "type": "boolean",
+      "default-value": false
+    }
   },
   "<common-banner-element>": {
     "template": "./banner.marko",
     "@name": "string",
     "@date": "date",
-    "@ad-unit": "object"
+    "@ad-unit": "object",
+    "@psc": {
+      "type": "boolean",
+      "default-value": false
+    }
   },
   "<common-social-icon-element>": {
     "template": "./social-icon.marko",
@@ -20,10 +28,30 @@
     "@bgcolor": "string",
     "@height": "string"
   },
+  "<common-hr-social-element>": {
+    "template": "./hr-no-space.marko",
+    "@bgcolor": "string",
+    "@height": "string"
+  },
   "<common-table-spacer-element>": {
     "template": "./spacer.marko"
   },
   "<common-read-more-button-element>": {
-    "template": "./read-more-button.marko"
+    "template": "./read-more-button.marko",
+    "@href": "string",
+    "@value": "string",
+    "@show-border": {
+      "type": "boolean",
+      "default-value": true
+    }
+  },
+  "<common-psc-banner-element>": {
+    "template": "./psc-banner.marko",
+    "@name": "string"
+  },
+  "<uncommon-banner-element>": {
+    "template": "./uncommon-banner.marko",
+    "@name": "string",
+    "@mobile-text": "string"
   }
 }

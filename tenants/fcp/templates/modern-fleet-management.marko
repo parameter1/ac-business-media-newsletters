@@ -3,7 +3,7 @@ import emailX from "../config/email-x";
 
 $ const { website } = out.global;
 $ const { newsletter, date, dateInfo } = data;
-$ const primaryColor = "#f26522";
+$ const primaryColor = "#871937";
 
 $ const sponsoredNameStyle = {
   "text-decoration": "none",
@@ -13,80 +13,89 @@ $ const sponsoredNameStyle = {
   "font-family": "Trebuchet MS, Helvetica, sans-serif",
   "color": "#000000",
   "font-weight": "bold"
-}
+};
+
+$ const bodyStyle = {
+  "margin-left": "10px",
+  "text-decoration": "none !important",
+  "font-size": "16px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#666666",
+  "font-weight": "normal",
+  "text-align": "left",
+  "margin-top": "7px !important",
+  "line-height": "1.2em",
+  "letter-spacing": "1px"
+};
 
 <marko-newsletter-root
-  title = newsletter.name
-  description = newsletter.description
-  date = date
+  title=newsletter.name
+  description=newsletter.description
+  date=date
 >
   <@head>
     <common-head-styles color=primaryColor />
   </@head>
-  <@body style="margin: 0px !important">
 
-    <!--leaderboard-->
-    <common-banner-element
-      name=newsletter.name
-      date=date
-      ad-unit=emailX.getAdUnit({ name: "header", alias: newsletter.alias })
-    />
+  <@body style="margin:0px !important">
 
     <common-table width="630" border="0" align="center" class="main">
       <tr>
         <td>
-
-          <!-- Header View Online -->
           <common-header-view-online-block
-            mobile-text="Insights, tips and news impacting the construction industry"
+            mobile-text="Best practices, strategy and news to improve your fleet"
           />
 
-          <!-- Header Image -->
           <common-header-image-block
             date=date
-            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/04/FCP_HeadlineNews.5e875ac47444c.png`
+            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/04/FCP_ModernFleet.5e9dfa03a8258.png`
             href=newsletter.site.origin
             name=newsletter.name
           />
 
-          <!-- Horizontal Rule -->
-          <common-hr-element height="2" bgcolor=primaryColor/>
+          <common-hr-element height="2" bgcolor=primaryColor />
 
-          <!-- "Featured" Content Section -->
           <common-content-list-block
             date=date
             newsletter=newsletter
-            section-name="FEATURED"
+            section-name="Featured"
             featured=true
             primary-color=primaryColor
             display-primary-section=false
           />
 
-
-          <common-hr-element height="1" bgcolor=primaryColor />
-            <common-content-sponsored-list-block
-              date=date
-              newsletter=newsletter
-              section-name="SPONSORED"
-              name-style=sponsoredNameStyle
-            />
-
-          <common-hr-element height="1" bgcolor=primaryColor />
-
-          <common-content-list-block
+          <common-advertisement-block
             date=date
-            newsletter=newsletter
-            section-name="MID"
-            primary-color=primaryColor
-            display-primary-section=false
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
           />
 
           <common-content-list-block
             date=date
             newsletter=newsletter
-            section-name="LOWER"
+            section-name="Mid"
             primary-color=primaryColor
             display-primary-section=false
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <!-- "Sponsored" Content Section -->
+          <common-content-sponsored-list-block
+              date=date
+              newsletter=newsletter
+              section-name="Sponsored"
+              name-style=sponsoredNameStyle
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Lower"
+            primary-color=primaryColor
+            display-primary-section=false
+            body-style=bodyStyle
           />
 
           <common-read-more-button-element href="https://www.forconstructionpros.com" value="Read More News" />

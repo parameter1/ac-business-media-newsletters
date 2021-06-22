@@ -41,10 +41,125 @@
     "@featured": {
       "type": "boolean",
       "default-value": false
+    },
+    "@long-border": {
+      "type": "boolean",
+      "default-value": false
+    },
+    "@width": {
+      "type": "number",
+      "default-value": 630
+    },
+    "@align": {
+      "type": "string",
+      "default-value": "center"
+    },
+    "@use-spacer": {
+      "type": "boolean",
+      "default-value": true
     }
   },
   "<common-content-sponsored-list-block>": {
     "template": "./sponsored-list.marko",
+    "@name": "string",
+    "@href": "string",
+    "@image-src": "string",
+    "@date": {
+      "type": "object",
+      "required": true
+    },
+    "@newsletter": {
+      "type": "object",
+      "required": true
+    },
+    "@section-name": {
+      "type": "string",
+      "required": true
+    },
+    "@limit": {
+      "type": "number",
+      "default-value": 0
+    },
+    "@skip": {
+      "type": "number",
+      "default-value": 0
+    },
+    "@line-break": {
+      "type": "boolean",
+      "default-value": false
+    },
+    "@title": "string",
+    "@content-link-style": "object",
+    "@name-style": "object",
+    "@teaser-style": "object",
+    "@body-style": "object",
+    "@hr-below": "bool",
+    "@primary-color": {
+      "type" : "string",
+      "default-value" : "#eb1b2c"
+    },
+    "@featured": {
+      "type": "boolean",
+      "default-value": false
+    },
+    "@display-sponsored-section": {
+      "type": "boolean",
+      "default-value": true
+    },
+    "@title-bg-color": "string",
+    "@image-width": "number",
+    "@body-bg-color": "string",
+    "@title-style": "object",
+    "@title-line-break": {
+      "type": "boolean",
+      "default-value": true
+    },
+    "@cell-padding": "string"
+  },
+  "<common-grid-block>": {
+    "template": "./grid.marko",
+    "@name": "string",
+    "@href": "string",
+    "@image-src": "string",
+    "@date": {
+      "type": "object",
+      "required": true
+    },
+    "@newsletter": {
+      "type": "object",
+      "required": true
+    },
+    "@section-name": {
+      "type": "string",
+      "required": true
+    },
+    "@limit": {
+      "type": "number",
+      "default-value": 0
+    },
+    "@skip": {
+      "type": "number",
+      "default-value": 0
+    },
+    "@width": "number",
+    "@align": "string",
+    "@title": "string",
+    "@content-link-style": "object",
+    "@title-style": "string",
+    "@teaser-style": "object",
+    "@body-style": "object",
+    "@hr-below": "bool",
+    "@primary-color": {
+      "type" : "string",
+      "default-value" : "#eb1b2c"
+    },
+    "@show-socials": {
+      "type": "boolean",
+      "default-value": false
+    }
+  },
+  "<common-content-psc-block>": {
+    "template": "./psc-list.marko",
     "@name": "string",
     "@href": "string",
     "@image-src": "string",
@@ -77,14 +192,10 @@
     "@primary-color": {
       "type" : "string",
       "default-value" : "#eb1b2c"
-    },
-    "@featured": {
-      "type": "boolean",
-      "default-value": false
     }
   },
-  "<common-grid-block>": {
-    "template": "./grid.marko",
+  "<uncommon-content-list-block>": {
+    "template": "./uncommon-list.marko",
     "@name": "string",
     "@href": "string",
     "@image-src": "string",
@@ -96,8 +207,8 @@
       "type": "object",
       "required": true
     },
-    "@section-id": {
-      "type": "number",
+    "@section-name": {
+      "type": "string",
       "required": true
     },
     "@limit": {
@@ -110,13 +221,36 @@
     },
     "@title": "string",
     "@content-link-style": "object",
-    "@title-style": "string",
+    "@title-style": "object",
+    "@name-style": "object",
     "@teaser-style": "object",
     "@body-style": "object",
     "@hr-below": "bool",
     "@primary-color": {
       "type" : "string",
       "default-value" : "#eb1b2c"
+    },
+    "@display-primary-section": {
+      "type": "boolean",
+      "default-value": false
+    },
+    "@featured": {
+      "type": "boolean",
+      "default-value": false
+    },
+    "@width": "number",
+    "@bgcolor": "string",
+    "@section-type": {
+      "type": "string",
+      "required": true
+    },
+    "@show-socials": {
+      "type": "boolean",
+      "default-value": true
+    },
+    "@image-width": {
+      "type": "number",
+      "default-value": 150
     }
   }
 }

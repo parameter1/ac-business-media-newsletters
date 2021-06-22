@@ -1,0 +1,165 @@
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import emailX from "../config/email-x";
+
+$ const { website } = out.global;
+$ const { newsletter, date, dateInfo } = data;
+$ const primaryColor = "#0A723B";
+
+$ const titleStyle = {
+  "text-decoration": "none !important",
+  "font-size": "14px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#FFFFFF",
+  "text-align": "left",
+  "font-weight": "bold",
+  "padding": "10px",
+};
+
+$ const bodyStyle = {
+  "text-decoration": "none !important",
+  "font-size": "12px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#000000",
+  "font-weight": "regular",
+  "line-height": "1.2em",
+  "background-color": "#ecedee"
+};
+
+<marko-newsletter-root
+  title=newsletter.name
+  description=newsletter.description
+  date=date
+>
+  <@head>
+    <common-head-styles color=primaryColor />
+  </@head>
+
+  <@body style="margin:0px !important">
+    <uncommon-banner-element
+      name=newsletter.name
+      mobile-text="Information and topics on sustainable practices related to the construction industry"
+    />
+
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td>
+          <common-psc-header-image-block
+            name=newsletter.name
+            href=newsletter.site.origin
+            image-src-left=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2017/04/const_green_col1.58ebeba00b9f5.png`
+            image-src-right=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2017/04/const_green_col2.58ebeba514558.png`
+          />
+        </td>
+      </tr>
+    </common-table>
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td valign="top">
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="FEATURED"
+            title="FEATURED"
+            section-type="featured"
+            primary-color=primaryColor
+            width=300
+            show-socials=false
+            title-style=titleStyle
+          />
+        </td>
+        <td align="right">
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+            align="right"
+          />
+        </td>
+      </tr>
+    </common-table>
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td>
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="INDUSTRY NEWS"
+            title="INDUSTRY NEWS"
+            section-type="long"
+            primary-color=primaryColor
+            show-socials=false
+            bgcolor=primaryColor
+            title-style=titleStyle
+          />
+
+          <common-content-sponsored-list-block
+            date=date
+            newsletter=newsletter
+            section-name="SPONSORED"
+            title="SPONSORED"
+            title-bg-color="#000000"
+          />
+
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="ONLINE"
+            title="ONLINE"
+            section-type="long"
+            primary-color=primaryColor
+            show-socials=false
+            bgcolor=primaryColor
+            title-style=titleStyle
+          />
+
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="VIDEO NETWORK"
+            title="VIDEO NETWORK"
+            section-type="long"
+            primary-color=primaryColor
+            limit=1
+            show-socials=false
+            image-width=300
+            title-style=titleStyle
+          />
+
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="VIDEO NETWORK"
+            section-type="long"
+            primary-color=primaryColor
+            skip=1
+            show-socials=false
+          />
+        </td>
+      </tr>
+    </common-table>
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td valign="top">
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="FEATURED PRODUCTS"
+            title="FEATURED PRODUCTS"
+            section-type="FEATURED PRODUCTS"
+            primary-color=primaryColor
+            width=300
+            bgcolor=primaryColor
+            title-style=titleStyle
+          />
+        </td>
+        <td align="right">
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
+            align="right"
+          />
+        </td>
+      </tr>
+    </common-table>
+    <common-psc-footer-block />
+  </@body>
+</marko-newsletter-root>
