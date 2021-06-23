@@ -3,33 +3,50 @@ import emailX from "../config/email-x";
 
 $ const { website } = out.global;
 $ const { newsletter, date, dateInfo } = data;
-$ const primaryColor = "#004f75";
+$ const primaryColor = "#f89a00";
+
+$ const sponsoredNameStyle = {
+  "text-decoration": "none",
+  "text-align": "left",
+  "text-decoration": "none !important",
+  "font-size": "16px",
+  "font-family": "Trebuchet MS, Helvetica, sans-serif",
+  "color": "#000000",
+  "font-weight": "bold"
+};
 
 <marko-newsletter-root
   title=newsletter.name
   description=newsletter.description
   date=date
 >
+
   <@head>
     <common-head-styles color=primaryColor />
   </@head>
-  <@body style="margin: 0px !important; padding: 0 !important; mso-line-height-rule: exactly;">
 
-    <!--leaderboard-->
-    <!-- end leaderboard -->
+  <@body style="margin: 0px !important">
+
+    <!-- Leaderboard -->
+    <common-banner-element
+      name=newsletter.name
+      date=date
+      ad-unit=emailX.getAdUnit({ name: "header", alias: newsletter.alias })
+    />
 
     <common-table width="630" border="0" align="center" class="main">
       <tr>
         <td>
+
           <!-- Header View Online -->
           <common-header-view-online-block
-            mobile-text="Exclusive insight into the most impactful news and trends shaping the non-residential door and hardware industry."
+            mobile-text="The latest equipment, business and fleet management tips to improve profitability"
           />
 
           <!-- Header Image -->
           <common-header-image-block
             date=date
-            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/static/safesecure-enl-header.jpg`
+            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/04/et_breaking_ground.5e9de70a6fe67.png`
             href=newsletter.site.origin
             name=newsletter.name
           />
@@ -44,7 +61,7 @@ $ const primaryColor = "#004f75";
             section-name="Featured"
             featured=true
             primary-color=primaryColor
-            display-primary-section=true
+            display-primary-section=false
           />
 
           <!-- "Banner 1" Advertisement -->
@@ -59,42 +76,39 @@ $ const primaryColor = "#004f75";
             newsletter=newsletter
             section-name="Mid"
             primary-color=primaryColor
-            display-primary-section=true
+            display-primary-section=false
           />
 
+          <common-hr-element height="1" bgcolor=primaryColor />
+
           <!-- "Sponsored" Content Section -->
-          <!-- <common-hr-element height="1" bgcolor=primaryColor />
           <common-content-sponsored-list-block
             date=date
             newsletter=newsletter
-            section-name="Sponsored"
+            section-name="SPONSORED"
+            name-style=sponsoredNameStyle
           />
-          <common-hr-element height="1" bgcolor=primaryColor /> -->
 
-          <!-- "Lower" Content Section -->
+          <common-hr-element height="1" bgcolor=primaryColor />
+
           <common-content-list-block
             date=date
             newsletter=newsletter
             section-name="Lower"
             primary-color=primaryColor
-            display-primary-section=true
+            display-primary-section=false
           />
 
-          <!-- "Banner 2" Advertisement -->
-          <!-- <common-advertisement-block
-            date=date
-            ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
-          /> -->
-
-          <common-read-more-button-element href="https://www.fordsspros.com" value="Read More News" />
+          <common-read-more-button-element href="https://www.forconstructionpros.com" value="Read More News" />
         </td>
       </tr>
     </common-table>
 
-    <common-sso-footer-block
+    <common-footer-block
       newsletter=newsletter
       primary-color=primaryColor
+      company="fcp"
     />
-
   </@body>
+
 </marko-newsletter-root>

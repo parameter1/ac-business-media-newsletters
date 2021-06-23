@@ -2,6 +2,9 @@ import { getAsObject } from "@parameter1/base-cms-object-path";
 import contentList from "@ac-business-media/common/graphql/fragments/content-list";
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
+$ const align = defaultValue(input.align, "center");
+$ const width = defaultValue(input.width, "630");
+
 $ const {
   newsletter,
   date,
@@ -12,6 +15,8 @@ $ const {
   hrBelow,
   featured,
   displayPrimarySection,
+  longBorder,
+  useSpacer
 } = input;
 
 $ const primaryColor = defaultValue(input.primaryColor, "#83b93a");
@@ -23,15 +28,39 @@ $ const nameWrapperStyle = {
   "border-color": primaryColor,
 }
 
-$ const nameStyle = {
+$ const nameWrapperStyleThickBorder = {
+  "text-align": "left",
+  "border-left": "5px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
+}
+
+$ const defaultBodyStyle = {
+  "margin-left": "10px",
   "text-decoration": "none !important",
   "font-size": "16px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#666666",
+  "font-weight": "normal",
+  "text-align": "left",
+  "margin-top": "7px !important",
+  "line-height": "1.4em",
+  "letter-spacing": "1px"
+}
+
+$ const bodyStyle = (input.bodyStyle) ? input.bodyStyle : defaultBodyStyle;
+
+$ const defaultNameStyle = {
+  "text-decoration": "none !important",
+  "font-size": "17px",
   "font-family": "Trebuchet MS, Helvetica, sans-serif",
   "font-weight": "bold",
   "text-decoration": "none",
   "text-align": "left",
-  "color": "#222222",
+  "color": "#222222"
 }
+
+$ const nameStyle = (input.nameStyle) ? input.nameStyle : defaultNameStyle;
 
 $ const featuredNameStyle = {
   ...nameStyle,
@@ -64,21 +93,35 @@ $ const getPrimarySectionUrl = (node) => {
   skip: skip,
   queryFragment: contentList,
 }>
-  <common-table width="630" border="0" cellspacing="0" cellpadding="0" align="center" style="border-collapse:collapse;" class="main">
+  <common-table width=width border="0" cellspacing="0" cellpadding="0" align=align style="border-collapse:collapse;" class="main">
     <tr>
       <td>
-        <common-table width="630" border="0" cellspacing="0" cellpadding="0" align="center" class="main">
+        <common-table width=width border="0" cellspacing="0" cellpadding="0" align=align class="main">
           <for|node, index| of=nodes>
-            <common-table-spacer-element />
+            <if (useSpacer)>
+              <common-table-spacer-element />
+            </if>
             <tr>
               <td>
                 <div class="main">
-                  <div style=nameWrapperStyle>
+                  $ const borderStyle = (longBorder) ? nameWrapperStyleThickBorder : nameWrapperStyle;
+                  <div style=borderStyle>
                     <div style="margin-left: 5px;">
                       $ const style = (featured && index === 0) ? featuredNameStyle : nameStyle;
                       <marko-core-obj-text obj=node field="name">
                         <@link href=node.siteContext.url target="_blank" attrs={ style } />
                       </marko-core-obj-text>
+
+                      <if (longBorder)>
+                        <marko-core-obj-text
+                          obj=node
+                          field="teaser"
+                          class="main"
+                          attrs={ style: bodyStyle }
+                          html=true
+                        />
+                      </if>
+
                     </div>
                   </div>
                 </div>
@@ -102,17 +145,20 @@ $ const getPrimarySectionUrl = (node) => {
               </tr>
             </if>
 
-            <tr width="630" class="main">
-              <td>
-                <marko-core-obj-text
-                  obj=node
-                  field="teaser"
-                  class="main"
-                  attrs={ style: "margin-left: 10px; text-decoration: none !important; font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #666666; font-weight: normal; text-align: left; margin-top:7px !important; line-height:1.4em; letter-spacing: 1px;" }
-                  html=true
-                />
-              </td>
-            </tr>
+            <if (!longBorder)>
+              <tr width=input.width class="main">
+                <td>
+                  <marko-core-obj-text
+                    obj=node
+                    field="teaser"
+                    class="main"
+                    attrs={ style: bodyStyle }
+                    html=true
+                  />
+                </td>
+              </tr>
+            </if>
+
             <common-table-spacer-element />
           </for>
         </common-table>

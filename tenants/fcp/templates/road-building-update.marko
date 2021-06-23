@@ -1,0 +1,144 @@
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import emailX from "../config/email-x";
+
+$ const { website } = out.global;
+$ const { newsletter, date, dateInfo } = data;
+$ const primaryColor = "#f4381b";
+
+$ const bodyStyle = {
+  'margin-left': '10px',
+  'text-decoration': 'none !important',
+  'font-size': '17px',
+  'font-family': 'Arial, Helvetica, sans-serif',
+  'color': '#666666',
+  'font-weight': 'normal',
+  'text-align': 'left',
+  'margin-top': '7px !important',
+  'line-height': '1.4em',
+  'letter-spacing': '1px'
+}
+
+$ const sponsoredNameStyle = {
+  'text-decoration': 'none',
+  'text-align': 'left',
+  'text-decoration': 'none !important',
+  'font-size': '16px',
+  'font-family': 'Trebuchet MS, Helvetica, sans-serif',
+  'color': '#000000',
+  'font-weight': 'bold'
+};
+
+<marko-newsletter-root
+  title=newsletter.name
+  description=newsletter.description
+  date=date
+>
+  <@head>
+    <common-head-styles color=primaryColor />
+  </@head>
+
+  <@body style="margin:0px !important">
+
+    <!-- Leaderboard -->
+    <common-banner-element
+      name=newsletter.name
+      date=date
+      ad-unit=emailX.getAdUnit({ name: "header", alias: newsletter.alias })
+    />
+
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td>
+
+          <!-- Header View Online -->
+          <common-header-view-online-block
+            mobile-text="Insight into news and events specific to the highway construction community"
+          />
+
+          <!-- Header Image -->
+          <common-header-image-block
+            date=date
+            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/04/AC_Roadbuilding.5e9df5f23513d.png`
+            href=newsletter.site.origin
+            name=newsletter.name
+          />
+
+          <!-- Horizontal Rule -->
+          <common-hr-element height="2" bgcolor=primaryColor />
+
+          <!-- "Featured" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="FEATURED"
+            featured=true
+            primary-color=primaryColor
+            display-primary-section=false
+            body-style=bodyStyle
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <!-- "Sponsored" Content Section -->
+          <common-content-sponsored-list-block
+              date=date
+              newsletter=newsletter
+              section-name="SPONSORED"
+              name-style=sponsoredNameStyle
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <!-- "Mid" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="MID"
+            primary-color=primaryColor
+            display-primary-section=false
+            body-style=bodyStyle
+          />
+
+          <!-- "Lower" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="LOWER"
+            primary-color=primaryColor
+            display-primary-section=false
+            body-style=bodyStyle
+            limit=2
+          />
+
+          <!-- "Banner 1" Advertisement -->
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          />
+
+          <!-- "Lower" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="LOWER"
+            primary-color=primaryColor
+            display-primary-section=false
+            body-style=bodyStyle
+            skip=2
+          />
+
+
+
+          <common-read-more-button-element href="https://www.forconstructionpros.com" value="Read More News" />
+        </td>
+      </tr>
+    </common-table>
+
+    <common-footer-block
+      newsletter=newsletter
+      primary-color=primaryColor
+      company="fcp"
+    />
+  </@body>
+
+</marko-newsletter-root>

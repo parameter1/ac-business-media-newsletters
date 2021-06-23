@@ -1,0 +1,126 @@
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import emailX from "../config/email-x";
+
+$ const { website } = out.global;
+$ const { newsletter, date, dateInfo } = data;
+$ const primaryColor = "#e62725";
+
+$ const sponsoredNameStyle = {
+  "text-decoration": "none",
+  "text-align": "left",
+  "text-decoration": "none !important",
+  "font-size": "14px",
+  "font-family": "Trebuchet MS, Helvetica, sans-serif",
+  "color": "#000000",
+  "font-weight": "bold"
+}
+
+<marko-newsletter-root
+  title=newsletter.name
+  description=newsletter.description
+  date=date
+>
+  <@head>
+    <common-head-styles color=primaryColor />
+  </@head>
+
+  <@body style="margin: 0px !important">
+
+    <!--leaderboard-->
+    <common-banner-element
+      name=newsletter.name
+      date=date
+      ad-unit=emailX.getAdUnit({ name: "header", alias: newsletter.alias })
+    />
+
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td>
+          <!-- Header View Online -->
+          <common-header-view-online-block
+            mobile-text="Providing equipment rental professionals with the latest industry news, trends and insight"
+          />
+
+          <!-- Header Image -->
+          <common-header-image-block
+            date=date
+            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/12/RPN_RentalWatch.5fcf921029822.png`
+            href=newsletter.site.origin
+            name=newsletter.name
+          />
+
+          <!-- Horizontal Rule -->
+          <common-hr-element height="2" bgcolor=primaryColor />
+
+          <!-- "Featured" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="FEATURED"
+            featured=true
+            primary-color=primaryColor
+            display-primary-section=false
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <!-- "Sponsored" Content Section -->
+          <common-content-sponsored-list-block
+              date=date
+              newsletter=newsletter
+              section-name="SPONSORED"
+              name-style=sponsoredNameStyle
+              limit=1
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <!-- "Mid" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="MID"
+            primary-color=primaryColor
+            display-primary-section=false
+          />
+
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          />
+
+          <!-- "Lower" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="LOWER"
+            primary-color=primaryColor
+            display-primary-section=false
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <!-- "Sponsored" Content Section -->
+          <common-content-sponsored-list-block
+              date=date
+              newsletter=newsletter
+              section-name="SPONSORED"
+              name-style=sponsoredNameStyle
+              skip=1
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <common-read-more-button-element href="https://www.forconstructionpros.com" value="Read More News" />
+        </td>
+      </tr>
+    </common-table>
+
+    <common-footer-block
+      newsletter=newsletter
+      primary-color=primaryColor
+      company="fcp"
+    />
+  </@body>
+
+</marko-newsletter-root>

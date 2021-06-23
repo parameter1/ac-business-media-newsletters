@@ -1,0 +1,146 @@
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import emailX from "../config/email-x";
+
+$ const { website } = out.global;
+$ const { newsletter, date, dateInfo } = data;
+$ const primaryColor = "#F26522";
+
+$ const sponsoredNameStyle = {
+  "text-decoration": "none",
+  "text-align": "left",
+  "text-decoration": "none !important",
+  "font-size": "14px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#F26522",
+  "font-weight": "bold"
+};
+
+$ const sponsoredBodyStyle = {
+  "text-decoration": "none !important",
+  "font-size": "12px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#000000",
+  "font-weight": "regular",
+  "text-align": "left",
+  "margin-top": "3px !important",
+  "line-height": "1.2em"
+};
+
+$ const titleStyle = {
+  "text-decoration": "none !important",
+  "font-size": "14px",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "color": "#000000",
+  "text-align": "left",
+  "font-weight": "bold"
+};
+
+
+<marko-newsletter-root
+  title=newsletter.name
+  description=newsletter.description
+  date=date
+>
+  <@head>
+    <common-head-styles color=primaryColor />
+  </@head>
+
+  <@body style="margin:0px !important">
+    <uncommon-banner-element
+      name=newsletter.name
+      mobile-text="Daily headlines that impact construction"
+    />
+
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td>
+          <common-psc-header-image-block
+            name=newsletter.name
+            href=newsletter.site.origin
+            image-src-left=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2017/04/technology_trends_col1.58ebf2d382d2d.png`
+            image-src-right=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2017/04/technology_trends_col2.58ebf2d86c654.png`
+          />
+        </td>
+      </tr>
+    </common-table>
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td valign="top">
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Featured"
+            title="FEATURED"
+            section-type="featured"
+            primary-color=primaryColor
+            width=300
+            title-style=titleStyle
+          />
+        </td>
+        <td align="right">
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+            align="right"
+          />
+        </td>
+      </tr>
+    </common-table>
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td>
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Technology Update"
+            title="TECHNOLOGY UPDATE"
+            section-type="long"
+            primary-color=primaryColor
+            bgcolor="#ffcb05"
+          />
+
+          <common-content-sponsored-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored"
+            title="SPONSORED"
+            title-bg-color="#000000"
+            name-style=sponsoredNameStyle
+            body-style=sponsoredBodyStyle
+            image-width=300
+            display-sponsored-section=false
+          />
+        </td>
+      </tr>
+    </common-table>
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td>
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Products"
+            title="PRODUCTS"
+            section-type="box"
+            primary-color=primaryColor
+            bgcolor="#ffcb05"
+            width=300
+          />
+
+          <uncommon-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Technology Update"
+            title="TECHNOLOGY UPDATE"
+            section-type="box"
+            primary-color=primaryColor
+            bgcolor="#ffcb05"
+            width=300
+            limit=1
+          />
+        </td>
+      </tr>
+    </common-table>
+    <common-psc-footer-block/>
+  </@body>
+</marko-newsletter-root>

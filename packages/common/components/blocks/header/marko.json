@@ -18,8 +18,10 @@
     },
     "@name": "string",
     "@href": "string",
-    "@image-src": "string",
-    "@image-width": "number",
+    "@image-src-left": "string",
+    "@image-src-right": "string",
+    "@image-width-left": "number",
+    "@image-width-right": "number",
     "@bg-color": "string"
   },
   "<common-header-view-online-block>": {
@@ -33,6 +35,23 @@
     "@name": "string",
     "@href": "string",
     "@image-src": "string",
-    "@image-width": "number"
+    "@image-width": "number",
+    "@show-date": {
+      "type": "boolean",
+      "default-value": true
+    }
+  },
+  "<common-psc-header-image-block>": {
+    "template": "./psc-image.marko",
+    "@name": "string",
+    "@image-src-left": "string",
+    "@image-src-right": "string",
+    "@href": "string"
+  },
+  "<psc-header-block>": {
+    "template": "./psc-block.marko",
+    "@date": "object",
+    "@image-src": "string",
+    "@background-color": "string"
   }
 }

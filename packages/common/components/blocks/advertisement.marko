@@ -4,9 +4,11 @@ $ const adUnit = getAsObject(input, "adUnit");
 $ const newsletter = getAsObject(input, "newsletter");
 $ const { date } = input;
 
-<common-table width="300" class="center" border="0" cellspacing="0" cellpadding="0" valign="center" align="center">
+$ const { align } = (input.align) ? input.align : "center";
+
+<common-table width="300" class="right" border="0" cellspacing="0" cellpadding="0" valign="center" align=align>
     <tr>
-        <td>
+        <td align="center">
           <div class="advertisement inline ad-600x100">
             <marko-newsletters-email-x-display decoded-params=["email", "send"]>
               <@ad-unit ...adUnit />

@@ -14,5 +14,19 @@
   },
   "<common-gip-footer-block>": {
     "template": "./gip.marko"
+  },
+  "<common-fcp-footer-block>": {
+    "template": "./fcp.marko",
+    "@newsletter": "object",
+    "@primary-color": "string"
+  },
+  "<common-footer-block>": {
+    "template": "./footer.marko",
+    "@newsletter": "object",
+    "@primary-color": "string",
+    "@company": "string"
+  },
+  "<common-psc-footer-block>": {
+    "template": "./psc.marko"
   }
 }

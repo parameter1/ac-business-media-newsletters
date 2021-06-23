@@ -2,10 +2,13 @@ import getAlignment from "@ac-business-media/common/utils/get-alignment";
 import contentList from "@ac-business-media/common/graphql/fragments/content-list";
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
+$ const align = defaultValue(input.align, "center");
+$ const width = defaultValue(input.width, "630");
+
 $ const {
   newsletter,
   date,
-  sectionId,
+  sectionName,
   title,
   limit,
   skip,
@@ -16,8 +19,10 @@ $ const {
 $ const titleStyle = defaultValue(input.titleStyle, {
   "text-decoration": "none !important",
   "font": "bold 14px/16px Arial, Helvetica, sans-serif",
-  "color": "#000000",
+  "color": "#FFFFFF",
   "text-align": "left",
+  "background-color": primaryColor,
+  "padding": "10px"
 });
 
 $ const teaserStyle = defaultValue(input.teaserStyle, {
@@ -40,18 +45,18 @@ $ const contentLinkStyle = defaultValue(input.contentLinkStyle, {
   "text-decoration": "none !important",
   "font": "bold 16px/18px Arial, Helvetica, sans-serif",
   "text-align": "left",
-  "color": primaryColor,
+  "color": "#000000",
 });
 
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
   date: date.valueOf(),
   newsletterId: newsletter.id,
-  sectionId: sectionId,
+  sectionName: sectionName,
   limit: limit,
   skip: skip,
   queryFragment: contentList,
 }>
-  <common-table width="630" style="border-collapse:collapse;" align="center" class="main" padding=0 spacing=0>
+  <common-table width=width style="border-collapse:collapse;" align=align class="main" padding=0 spacing=0>
     <if(title)>
       <tr>
         <td style=titleStyle>
@@ -83,7 +88,7 @@ $ const contentLinkStyle = defaultValue(input.contentLinkStyle, {
                     </marko-newsletter-imgix>
                   </marko-core-obj-value>
 
-                  <marko-core-obj-text obj=node field="name" attrs={ style: { "margin-top": "5px", "text-align": "left" } } >
+                  <marko-core-obj-text obj=node field="name" attrs={ style: { "margin-top": "5px", "text-align": "left", "color": "#000000" } } >
                     <@link href=node.siteContext.url target="_blank" attrs={ style: contentLinkStyle } />
                   </marko-core-obj-text>
                   <marko-core-obj-text tag=null obj=node field="body" html=true attrs={ style: bodyStyle } />
@@ -98,12 +103,12 @@ $ const contentLinkStyle = defaultValue(input.contentLinkStyle, {
           <else>
             <common-table width="300" style="border-collapse:collapse;" align=align class="main" padding=0 spacing=0>
               <tr>
-                <td>
+                <td height="250">
                   <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
                     <marko-newsletter-imgix
                       src=image.src
                       alt=image.alt
-                      options={ w: 330 }
+                      options={ w: 300 }
                       class="main"
                       attrs={ border: 0, width: 300 }
                     >
@@ -115,8 +120,19 @@ $ const contentLinkStyle = defaultValue(input.contentLinkStyle, {
                     <@link href=node.siteContext.url target="_blank" attrs={ style: contentLinkStyle } />
                   </marko-core-obj-text>
                   <marko-core-obj-text tag="p" obj=node field="teaser" html=true attrs={ style: teaserStyle } />
+                  <if(input.showSocials)>
+                    <div align="right">
+                      <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.forconstructionpros.com/construction-technology/product/12090189/john-deere-construction-and-forestry-division-john-deere-creates-gopush-app-for-1050k-dozer-customers">
+                        <img border="0" src="https://cdn.base.parameter1.com/files/base/newsletter/facebook-share.png" style="padding:5px 5px 0 0;"/>
+                      </a>
+                      <a target="_blank" href="https://twitter.com/share?url=https://www.forconstructionpros.com/construction-technology/product/12090189/john-deere-construction-and-forestry-division-john-deere-creates-gopush-app-for-1050k-dozer-customers">
+                        <img border="0" src="https://cdn.base.parameter1.com/files/base/newsletter/twitter-share.png" style="padding:5px 5px 0 0;"/>
+                      </a>
+                    </div>
+                  </if>
                 </td>
               </tr>
+
               <tr>
                 <td>&nbsp;</td>
               </tr>

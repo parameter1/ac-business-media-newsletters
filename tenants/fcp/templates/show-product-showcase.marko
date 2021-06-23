@@ -1,0 +1,46 @@
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import emailX from "../config/email-x";
+
+$ const { website } = out.global;
+$ const { newsletter, date, dateInfo } = data;
+$ const primaryColor = "#f8a11c";
+
+<marko-newsletter-root
+  title=newsletter.name
+  description=newsletter.description
+  date=date
+>
+  <@head>
+    <common-head-styles color=primaryColor />
+  </@head>
+
+  <@body style="margin:0px !important">
+    <common-psc-banner-element
+      name=newsletter.name
+    />
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td>
+          <common-psc-header-image-block
+            name=newsletter.name
+            href=newsletter.site.origin
+            image-src-left=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2019/12/Conexpo_PSC_1.5dfcf8e9d0e36.png`
+            image-src-right=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2019/12/Conexpo_PSC_2.5dfcf8efb2ac7.png`
+          />
+
+          <common-content-psc-block
+            date=date
+            newsletter=newsletter
+            section-name="Showcase"
+            primary-color=primaryColor
+          />
+
+        </td>
+      </tr>
+    </common-table>
+
+    <common-psc-footer-block/>
+  </@body>
+
+
+</marko-newsletter-root>

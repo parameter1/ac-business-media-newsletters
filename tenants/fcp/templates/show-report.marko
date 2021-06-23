@@ -1,0 +1,152 @@
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import emailX from "../config/email-x";
+
+$ const { website } = out.global;
+$ const { newsletter, date, dateInfo } = data;
+$ const primaryColor = "#2783c2";
+
+$ const nameStyle = {
+  'text-decoration': 'none !important',
+  'font-size': '16px',
+  'font-family': 'Arial, Helvetica, sans-serif',
+  'font-weight': 'bold',
+  'text-decoration': 'none',
+  'text-align': 'left',
+  'color': '#222222'
+}
+
+$ const bodyStyle = {
+  'margin-left': '10px',
+  'text-decoration': 'none !important',
+  'font-size': '12px',
+  'font-family': 'Arial, Helvetica, sans-serif',
+  'color': '#00000',
+  'font-weight': 'regular',
+  'text-align': 'left',
+  'margin-top': '7px !important',
+  'line-height': '1.4em',
+  'letter-spacing': '1px'
+}
+
+<marko-newsletter-root
+  title=newsletter.name
+  description=newsletter.description
+  date=date
+>
+  <@head>
+    <common-head-styles color=primaryColor />
+  </@head>
+
+  <@body style="margin: 0px !important">
+    <common-table width="630" border="0" align="center" class="main">
+      <tr>
+        <td>
+          <!-- Header View Online -->
+          <common-header-view-online-block
+            mobile-text="News and insights from World of Concrete"
+          />
+
+          <!-- Header Image -->
+          <common-header-image-block
+            date=date
+            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/01/fcp_show_report.5e15eaa7decc9.png`
+            href=newsletter.site.origin
+            name=newsletter.name
+          />
+
+          <!-- Horizontal Rule -->
+          <common-hr-element height="2" bgcolor=primaryColor />
+
+          <!-- "Featured" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Featured"
+            featured=true
+            primary-color=primaryColor
+            display-primary-section=false
+            body-style=bodyStyle
+          />
+
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Mid"
+            primary-color=primaryColor
+            display-primary-section=false
+            limit=1
+            name-style=nameStyle
+            body-style=bodyStyle
+          />
+
+          <!-- "Banner 1" Advertisement -->
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          />
+
+          <!-- "Mid" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Mid"
+            primary-color=primaryColor
+            display-primary-section=false
+            skip=1
+            name-style=nameStyle
+            body-style=bodyStyle
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <common-content-sponsored-list-block
+              date=date
+              newsletter=newsletter
+              section-name="Sponsored"
+          />
+
+          <common-hr-element height="1" bgcolor=primaryColor />
+
+          <!-- "Lower" Content Section -->
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Lower"
+            primary-color=primaryColor
+            display-primary-section=false
+            name-style=nameStyle
+            body-style=bodyStyle
+            limit=2
+          />
+
+          <!-- "Banner 2" Advertisement -->
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
+          />
+
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Lower"
+            primary-color=primaryColor
+            display-primary-section=false
+            name-style=nameStyle
+            body-style=bodyStyle
+            skip=2
+          />
+
+          <common-read-more-button-element href="https://www.forconstructionpros.com" value="Read More News" />
+        </td>
+      </tr>
+    </common-table>
+
+    <common-footer-block
+      newsletter=newsletter
+      primary-color=primaryColor
+      company="fcp"
+    />
+  </@body>
+
+
+</marko-newsletter-root>
