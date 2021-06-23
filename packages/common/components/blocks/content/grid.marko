@@ -2,6 +2,8 @@ import getAlignment from "@ac-business-media/common/utils/get-alignment";
 import contentList from "@ac-business-media/common/graphql/fragments/content-list";
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
+$ const align = defaultValue(input.align, "center");
+
 $ const {
   newsletter,
   date,
@@ -53,7 +55,7 @@ $ const contentLinkStyle = defaultValue(input.contentLinkStyle, {
   skip: skip,
   queryFragment: contentList,
 }>
-  <common-table width=input.width style="border-collapse:collapse;" align=input.align class="main" padding=0 spacing=0>
+  <common-table width=input.width style="border-collapse:collapse;" align=align class="main" padding=0 spacing=0>
     <if(title)>
       <tr>
         <td style=titleStyle>
