@@ -2,6 +2,9 @@ import { getAsObject } from "@parameter1/base-cms-object-path";
 import contentList from "@ac-business-media/common/graphql/fragments/content-list";
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
+$ const align = defaultValue(input.align, "center");
+$ const width = defaultValue(input.width, "630");
+
 $ const {
   newsletter,
   date,
@@ -90,10 +93,10 @@ $ const getPrimarySectionUrl = (node) => {
   skip: skip,
   queryFragment: contentList,
 }>
-  <common-table width=input.width border="0" cellspacing="0" cellpadding="0" align=input.align style="border-collapse:collapse;" class="main">
+  <common-table width=width border="0" cellspacing="0" cellpadding="0" align=align style="border-collapse:collapse;" class="main">
     <tr>
       <td>
-        <common-table width=input.width border="0" cellspacing="0" cellpadding="0" align=input.align class="main">
+        <common-table width=width border="0" cellspacing="0" cellpadding="0" align=align class="main">
           <for|node, index| of=nodes>
             <if (useSpacer)>
               <common-table-spacer-element />
