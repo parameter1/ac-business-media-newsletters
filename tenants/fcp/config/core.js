@@ -10,6 +10,7 @@ module.exports = {
       enabled: true,
     },
   },
+  supportEmail: 'support@forconstructionpros.com',
   'asphalt-contractor-psc': {
     name: 'TBD',
     ...brands.acon,

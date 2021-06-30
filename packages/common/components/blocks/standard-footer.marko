@@ -38,11 +38,12 @@ $ const socialMediaLinks = getAsArray(socialMedia, "links");
   <common-table-hr-element height=2 color=primaryColor />
 </common-table>
 
+$ const supportEmail = get(newsletterConfig, "supportEmail") || config.get("supportEmail");
 <common-table style="border-collapse:collapse;">
   <tr>
     <td>
       <div style="color: #000000; text-decoration: none !important; font-family: Helvetica, Arial, sans-serif;font-size: 11px;line-height: 24px;text-align: center;font-weight: bold;">
-          920-542-1131 &nbsp; | &nbsp; <a href="mailto:support@forconstructionpros.com" target="_blank" style="text-decoration: none; color: #000000;">support@forconstructionpros.com</a> | &nbsp; 201 N. Main Street, Fort Atkinson, WI 53538
+          920-542-1131 &nbsp; | &nbsp; <a href=`mailto:${supportEmail}` target="_blank" style="text-decoration: none; color: #000000;">${supportEmail}</a> | &nbsp; 201 N. Main Street, Fort Atkinson, WI 53538
       </div>
     </td>
   </tr>

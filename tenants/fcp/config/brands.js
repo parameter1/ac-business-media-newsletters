@@ -4,6 +4,7 @@ module.exports = {
     brandName: 'For Construction Pros',
     logoSrc: '/files/base/acbm/fcp/image/static/fcp/logo.png',
     primaryColor: '#ffa200',
+    supportEmail: 'support@forconstructionpros.com',
     socialMedia: {
       imagePath: '/files/base/acbm/fcp/image/static/newsletter',
       links: [
