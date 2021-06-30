@@ -52,9 +52,14 @@ $ const supportEmail = get(newsletterConfig, "supportEmail") || config.get("supp
 <common-table>
   <tr style=primaryColor>
     <td valign="center" align="center">
-      <a href="https://www.forconstructionpros.com" target="_blank">
-        <img border="0" src="https://cdn.base.parameter1.com/files/base/newsletter/footer-fcp.png" class="main" align="center" style="display:block" alt="FooterLogo">
-      </a>
+      <marko-newsletter-imgix
+        src=get(newsletterConfig, "footerLogoSrc")
+        options={ w: 630 }
+        alt="FooterLogo"
+        attrs={ align: "center", border: "0", width: "630", style: "display:block" }
+      >
+        <@link href=website.get("origin") target="_blank" />
+      </marko-newsletter-imgix>
     </td>
   </tr>
 </common-table>
@@ -71,19 +76,19 @@ $ const supportEmail = get(newsletterConfig, "supportEmail") || config.get("supp
           Please add news.acbmmail.com and marketing.acbmmail.com to your address book or safe sender list to receive our emails in your inbox.
         </p>
         <p style="margin:0px;margin-bottom:1em;">
-          <a href="https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg" style="text-decoration: underline !important;">Manage Newsletter Subscriptions</a>
+          <a href=get(newsletterConfig, "newsletterPrefLink") style="text-decoration: underline !important;">Manage Newsletter Subscriptions</a>
           | <a href="@{forwardtoafriendlink}@" style="text-decoration: underline !important;">Forward to a Friend</a>
           | <a href="@{confirmunsubscribelink}@" style="text-decoration: underline !important;">Unsubscribe</a>
-          | <a href="https://www.forconstructionpros.com/contact-us" style="text-decoration: underline !important;">Request Customer Service</a>
-          | <a href="https://www.forconstructionpros.com/privacy-policy" style="text-decoration: underline !important;">Read Privacy Policy</a>
+          | <a href=get(newsletterConfig, "contactUsLink") style="text-decoration: underline !important;">Request Customer Service</a>
+          | <a href=get(newsletterConfig, "privacyPolicyLink") style="text-decoration: underline !important;">Read Privacy Policy</a>
         </p>
         <p style="margin:0px;margin-bottom:1em;">
-          If this email was forwarded to you and you are interested in subscribing, please <a href="https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg">click here</a> to sign-up.
+          If this email was forwarded to you and you are interested in subscribing, please <a href=get(newsletterConfig, "newsletterPrefLink")>click here</a> to sign-up.
         </p>
         <p style="margin:0px;margin-bottom:1em;">
           If you have any questions or concerns, please contact us at 920-542-1131 or toll-free at 800-538-5544.
         </p>
-        <p style="margin:0px;margin-bottom:1em;">For Construction Pros<br>
+        <p style="margin:0px;margin-bottom:1em;">${website.get("name")}<br>
           AC Business Media<br>
           201 N. Main Street<br>
           Fort Atkinson, WI 53538

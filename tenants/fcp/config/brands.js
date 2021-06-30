@@ -3,8 +3,12 @@ module.exports = {
   fcp: {
     brandName: 'For Construction Pros',
     logoSrc: '/files/base/acbm/fcp/image/static/fcp/logo.png',
+    footerLogoSrc: '/files/base/acbm/fcp/image/static/newsletter/footer-fcp.jpeg',
     primaryColor: '#ffa200',
     supportEmail: 'support@forconstructionpros.com',
+    contactUsLink: 'https://www.forconstructionpros.com/contact-us',
+    newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
+    privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
     socialMedia: {
       imagePath: '/files/base/acbm/fcp/image/static/newsletter',
       links: [
