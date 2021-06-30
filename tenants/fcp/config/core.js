@@ -10,6 +10,10 @@ module.exports = {
       enabled: true,
     },
   },
+  'asphalt-contractor-psc': {
+    name: 'TBD',
+    ...brands.acon,
+  },
   dss: {
     socialMediaLinks: [
       {
