@@ -7,25 +7,19 @@ $ const newsletterConfig = config.get(newsletter.alias);
 $ const primaryColor = get(newsletterConfig, "primaryColor") || "#efefef";
 
 <common-table style="border-collapse:collapse">
-  <common-table-hr-element color=primaryColor />
+  <common-table-hr-element height=2 color=primaryColor />
   <common-table-spacer-element />
 </common-table>
 
 $ const socialMedia = get(newsletterConfig, "socialMedia");
 $ const socialMediaLinks = getAsArray(socialMedia, "links");
 <if(socialMediaLinks.length)>
-
-
   <common-table cellpadding="10">
     <tr style="padding: 0; text-align: left; vertical-align: top">
       <td style="margin: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; margin: 0; padding: 0; text-align: center">
         $ const aStyle = "margin: 0; color: #000000; display: inline-block; font-family: Helvetica, Arial, sans-serif; font-weight: normal;  margin: 0; margin-bottom: 10px; margin-left: 7px; margin-right: 7px; margin-top: 10px; padding: 0; text-align: left; text-decoration: none";
         $ const iStyle = "-ms-interpolation-mode: bicubic; border: none; clear: both; display: block; max-width: 100%; outline: none; text-decoration: none; width: auto";
         <for|link| of=socialMediaLinks>
-          <!-- <a href="https://www.facebook.com/ForConstructionPros" align="center" style="margin: 0; color: #000000; display: inline-block; font-family: Helvetica, Arial, sans-serif; font-weight: normal;  margin: 0; margin-bottom: 10px; margin-left: 7px; margin-right: 7px; margin-top: 10px; padding: 0; text-align: left; text-decoration: none">
-            <img src="https://cdn.base.parameter1.com/files/base/newsletter/facebook-footer-black.png" alt="Facebook" style="-ms-interpolation-mode: bicubic; border: none; clear: both; display: block; max-width: 100%; outline: none; text-decoration: none; width: auto">
-          </a> -->
-
           <marko-newsletter-imgix
             src=`${socialMedia.imagePath}/${link.provider}-black.png`
             alt=link.provider
@@ -41,7 +35,7 @@ $ const socialMediaLinks = getAsArray(socialMedia, "links");
 </if>
 
 <common-table style="border-collapse:collapse;">
-  <common-table-hr-element color=primaryColor />
+  <common-table-hr-element height=2 color=primaryColor />
 </common-table>
 
 <common-table style="border-collapse:collapse;">
