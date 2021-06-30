@@ -3,15 +3,18 @@ import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 $ const border = defaultValue(input.border, 0);
 $ const cellspacing = input.cellspacing === null ? null : defaultValue(input.cellspacing, 0);
 $ const cellpadding = input.cellpadding === null ? null : defaultValue(input.cellpadding, 0);
+$ const align = defaultValue(input.align, "center");
+$ const width = input.width === null ? null : defaultValue(input.width, 630);
+$ const tableClass = input.class === null ? null : defaultValue(input.class, "main");
 
 <table
   ...input.attrs
-  class=input.class
-  width=input.width
+  class=tableClass
+  width=width
   border=border
   cellpadding=cellpadding
   cellspacing=cellspacing
-  align=input.align
+  align=align
   valign=input.valign
   style=input.style
 >
