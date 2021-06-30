@@ -1,5 +1,7 @@
 const brands = require('./brands');
+const emailX = require('./email-x');
 module.exports = {
+  emailX,
   dss: {
     socialMediaLinks: [
       {
