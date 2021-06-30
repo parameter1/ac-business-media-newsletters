@@ -1,10 +1,15 @@
 {
   "taglib-imports": [
     "./header/marko.json",
-    "./footer/marko.json",
     "./content/marko.json"
   ],
   "<common-advertisement-block>": {
     "template": "./advertisement.marko"
+  },
+  "<common-psc-footer-block>": {
+    "template": "./psc-footer.marko"
+  },
+  "<common-standard-footer-block>": {
+    "template": "./standard-footer.marko"
   }
 }
