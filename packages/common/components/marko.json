@@ -1,7 +1,8 @@
 {
   "taglib-imports": [
     "./elements/marko.json",
-    "./blocks/marko.json"
+    "./blocks/marko.json",
+    "./layouts/marko.json"
   ],
   "<common-document>": {
     "template": "./document.marko",
