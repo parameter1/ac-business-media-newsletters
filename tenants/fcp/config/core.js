@@ -1,3 +1,4 @@
+const brands = require('./brands');
 module.exports = {
   dss: {
     socialMediaLinks: [
