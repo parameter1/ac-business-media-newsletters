@@ -23,10 +23,8 @@
     "@provider": "string",
     "@href": "string"
   },
-  "<common-hr-element>": {
-    "template": "./hr.marko",
-    "@bgcolor": "string",
-    "@height": "string"
+  "<common-table-hr-element>": {
+    "template": "./table-hr.marko"
   },
   "<common-hr-social-element>": {
     "template": "./hr-no-space.marko",
