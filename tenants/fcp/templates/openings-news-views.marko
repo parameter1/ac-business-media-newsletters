@@ -35,7 +35,7 @@ $ const primaryColor = "#004f75";
           />
 
           <!-- Horizontal Rule -->
-          <common-hr-element height="2" bgcolor=primaryColor />
+          <common-table-hr-element height="2" bgcolor=primaryColor />
 
           <!-- "Featured" Content Section -->
           <common-content-list-block
@@ -63,13 +63,13 @@ $ const primaryColor = "#004f75";
           />
 
           <!-- "Sponsored" Content Section -->
-          <!-- <common-hr-element height="1" bgcolor=primaryColor />
+          <!-- <common-table-hr-element height="1" bgcolor=primaryColor />
           <common-content-sponsored-list-block
             date=date
             newsletter=newsletter
             section-name="Sponsored"
           />
-          <common-hr-element height="1" bgcolor=primaryColor /> -->
+          <common-table-hr-element height="1" bgcolor=primaryColor /> -->
 
           <!-- "Lower" Content Section -->
           <common-content-list-block
@@ -91,10 +91,7 @@ $ const primaryColor = "#004f75";
       </tr>
     </common-table>
 
-    <common-sso-footer-block
-      newsletter=newsletter
-      primary-color=primaryColor
-    />
+    <common-standard-footer-block newsletter=newsletter />
 
   </@body>
 </marko-newsletter-root>
