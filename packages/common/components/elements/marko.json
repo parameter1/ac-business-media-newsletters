@@ -34,7 +34,7 @@
     "@height": "string"
   },
   "<common-table-spacer-element>": {
-    "template": "./spacer.marko"
+    "template": "./table-spacer.marko"
   },
   "<common-read-more-button-element>": {
     "template": "./read-more-button.marko",
