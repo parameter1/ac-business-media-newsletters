@@ -14,6 +14,11 @@ module.exports = {
     name: 'TBD',
     ...brands.acon,
   },
+  'truck-report': {
+    name: 'Truck Report',
+    description: 'The latest truck innovations, product insights, selection and application tips',
+    ...brands.fcp,
+  },
   dss: {
     socialMediaLinks: [
       {
