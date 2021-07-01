@@ -31,6 +31,12 @@ module.exports = {
     description: 'New ideas and opportunities to consider implementing in your business',
     ...brands.fcp,
   },
+  'construction-workforce-management': {
+    primaryColor: '#000000',
+    name: 'Construction Workforce Mangagement',
+    description: 'Addressing key topics and critical issues centered around labor',
+    ...brands.fcp,
+  },
   'construction-zone-safety': {
     primaryColor: '#F04F23',
     name: 'Construction Zone Safety',
@@ -78,6 +84,12 @@ module.exports = {
     name: 'New Machine Solutions',
     description: 'The newest products and equipment for the construction market',
     ...brands.fcp,
+  },
+  'openings-news-views': {
+    primaryColor: '#004f75',
+    name: 'Openings News & Views',
+    description: 'Exclusive insight into the most impactful news and trends shaping the non-residential door and hardware industry',
+    ...brands.sso,
   },
   'power-rental': {
     primaryColor: '#fc501c',
