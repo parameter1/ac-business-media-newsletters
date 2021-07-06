@@ -25,11 +25,11 @@
     "@bg-color": "string"
   },
   "<common-header-view-online-block>": {
-    "template": "./view-online.marko",
-    "@mobile-text": "string"
+    "template": "./view-online.marko"
   },
   "<common-header-image-block>": {
     "template": "./image.marko",
+    "@newsletter": "object",
     "@date": "object",
     "@date-style": "object",
     "@name": "string",
@@ -43,6 +43,7 @@
   },
   "<common-psc-header-image-block>": {
     "template": "./psc-image.marko",
+    "@newsletter": "object",
     "@name": "string",
     "@image-src-left": "string",
     "@image-src-right": "string",

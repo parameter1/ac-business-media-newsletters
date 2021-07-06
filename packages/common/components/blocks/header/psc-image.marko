@@ -3,15 +3,24 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
+
     <td style="height:100px; width:320px;" align="right">
-      <a href=input.href align="right" style="line-height:0 !important;" target="_blank">
-        <img border="0" src=input.imageSrcLeft align="right" height="100" width="320" alt=input.name/>
-      </a>
+      <if(input.imageSrcLeft)>
+        <a href=input.href align="right" style="line-height:0 !important;" target="_blank">
+          <img border="0" src=input.imageSrcLeft align="right" height="100" width="320" alt=input.name/>
+        </a>
+      </if>
     </td>
+
     <td class="mobileHide" style="height:100px; width:310px; background-color:#ffffff;" align="left">
-      <a href=input.href align="left" style="line-height:0 !important;" target="_blank">
-        <img border="0" src=input.imageSrcRight align="left" height="100" width="310" alt=input.name/>
-      </a>
+      <if(input.imageSrcRight)>
+        <a href=input.href align="left" style="line-height:0 !important;" target="_blank">
+          <img border="0" src=input.imageSrcRight align="left" height="100" width="310" alt=input.name/>
+        </a>
+      </if>
+      <!-- <else-if(!input.imageSrcRight)>
+        <psc-header-block />
+      </else-if> -->
     </td>
   </tr>
   <tr>

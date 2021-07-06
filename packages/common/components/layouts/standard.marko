@@ -30,82 +30,14 @@ $ const sponsoredNameStyle = {
   </@head>
   <@body style="margin: 0px !important">
 
-    <!--leaderboard-->
-    <!-- <common-banner-element
+    <!-- leaderboard -->
+    <common-banner-element
       name=newsletter.name
       date=date
       ad-unit=emailX.getAdUnit({ name: "header", alias: newsletter.alias })
-    /> -->
+    />
+    <common-standard-header-block data=input.data />
 
-    <common-table width="630" border="0" align="center" class="main">
-      <tr>
-        <td>
-          <!-- Header View Online -->
-          <!-- <common-header-view-online-block
-            mobile-text="The latest truck innovations, product insights, selection and application tips"
-          /> -->
-
-          <!-- Header Image -->
-          <!-- <common-header-image-block
-            date=date
-            image-src=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2020/04/FCP_TruckReport.5e949f68b18af.png`
-            href=newsletter.site.origin
-            name=newsletter.name
-          /> -->
-
-          <!-- Horizontal Rule -->
-          <!-- <common-hr-element height="2" bgcolor=primaryColor /> -->
-
-          <!-- "Featured" Content Section -->
-          <!-- <common-content-list-block
-            date=date
-            newsletter=newsletter
-            section-name="FEATURED"
-            featured=true
-            primary-color=primaryColor
-            display-primary-section=false
-          />
-
-          <common-hr-element height="1" bgcolor=primaryColor /> -->
-
-          <!-- "Sponsored" Content Section -->
-          <!-- <common-content-sponsored-list-block
-              date=date
-              newsletter=newsletter
-              section-name="SPONSORED"
-              name-style=sponsoredNameStyle
-          />
-
-          <common-hr-element height="1" bgcolor=primaryColor /> -->
-
-          <!-- "Mid" Content Section -->
-          <!-- <common-content-list-block
-            date=date
-            newsletter=newsletter
-            section-name="MID"
-            primary-color=primaryColor
-            display-primary-section=false
-          /> -->
-
-          <!-- <common-advertisement-block
-            date=date
-            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
-          /> -->
-
-          <!-- "Lower" Content Section -->
-          <!-- <common-content-list-block
-            date=date
-            newsletter=newsletter
-            section-name="LOWER"
-            primary-color=primaryColor
-            display-primary-section=false
-          />
-
-          <common-read-more-button-element href="https://www.forconstructionpros.com" value="Read More News" /> -->
-
-        </td>
-      </tr>
-    </common-table>
 
     <common-standard-footer-block newsletter=newsletter />
 

@@ -1,0 +1,36 @@
+import { get } from "@parameter1/base-cms-object-path";
+
+$ const { website, config } = out.global;
+$ const { newsletter, date, dateInfo } = input.data;
+
+$ const emailX = config.get("emailX");
+$ const nativeX = config.getAsObject("nativeX");
+
+$ const newsletterConfig = config.get(newsletter.alias);
+
+$ const primaryColor =  get(newsletterConfig, "primaryColor") || "#aa282e";
+
+<marko-newsletter-root
+  title=newsletter.name
+  description=newsletter.description
+  date=date
+>
+  <@head>
+    <common-head-styles color=primaryColor />
+  </@head>
+
+  <@body style="margin:0px !important">
+    <common-psc-header-block data=input.data />
+
+          <!-- <common-content-psc-block
+            date=date
+            newsletter=newsletter
+            section-name="Showcase"
+            primary-color=primaryColor
+          /> -->
+
+    <common-psc-footer-block newsletter=newsletter />
+  </@body>
+
+
+</marko-newsletter-root>
