@@ -36,6 +36,7 @@ module.exports = {
     name: 'Constructing Green',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2017/04/const_green_col1.58ebeba00b9f5.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2017/04/const_green_col2.58ebeba514558.png',
+    ...brands.equipmentToday,
   },
   'construction-technology': {
     primaryColor: '#5DB2D7',
@@ -72,13 +73,14 @@ module.exports = {
   },
   'fleet-maintenance-report': {
     name: 'Fleet Maintenance Report',
-    headerLogoSrcLeft: '/files/base/acbm/fcp/image/2021/03/FCP_Fleet_Maintenance.605893908c575.png',
+    headerLogoSrc: '/files/base/acbm/fcp/image/2021/03/FCP_Fleet_Maintenance.605893908c575.png',
   },
   'for-your-fleet': {
     name: 'For Your Fleet',
     description: 'The leading source of product information and industry insight',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2017/04/for_your_fleet_col1.58ec185377cc8.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2017/04/for_your_fleet_col2.58ec186928eae.png',
+    ...brands.rentalMagazine,
   },
   'headline-news': {
     primaryColor: '#f26522',
@@ -133,6 +135,7 @@ module.exports = {
     name: 'Pavement Maintenance & Reconstruction PSC',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2019/11/PVM_PSC_1.5ddec3bbc35db.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2019/11/PVM_PSC_2.5ddec3c0b6633.png',
+    ...brands.sso,
   },
   'power-rental': {
     primaryColor: '#fc501c',
@@ -146,6 +149,7 @@ module.exports = {
     description: 'How to use technologies and strategies to improve construction profit',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2017/04/pm_col1.58ebdad143eb8.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2017/04/pm_col2.58ebdad6bf065.png',
+    ...brands.rentalMagazine,
   },
   // 'psc': {
   //   name: 'PSC',
@@ -162,6 +166,7 @@ module.exports = {
     name: 'Rental PSC',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2020/04/RPN_PSC_1.5eab10fd25630.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2020/11/RPN_PSC_OG.5fa957485b074.png',
+    ...brands.rentalMagazine,
   },
   'rental-watch': {
     primaryColor: '#e62725',
@@ -195,6 +200,7 @@ module.exports = {
     name: 'Show Product Showcase',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2019/12/Conexpo_PSC_1.5dfcf8e9d0e36.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2019/12/Conexpo_PSC_2.5dfcf8efb2ac7.png',
+    ...brands.rentalMagazine,
   },
   'show-report-conexpo': {
     primaryColor: '#2783c2',
@@ -215,6 +221,7 @@ module.exports = {
     description: 'Daily headlines that impact construction',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2017/04/technology_trends_col1.58ebf2d382d2d.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2017/04/technology_trends_col2.58ebf2d86c654.png',
+    ...brands.fcp,
   },
   'the-contractors-best-friend-rewind': {
     primaryColor: '#1ECC9D',
@@ -231,6 +238,7 @@ module.exports = {
     ...brands.fcp,
   },
   'truck-report': {
+    primaryColor: '#ffa200',
     name: 'Truck Report',
     description: 'The latest truck innovations, product insights, selection and application tips',
     headerLogoSrc: '/files/base/acbm/fcp/image/2020/04/FCP_TruckReport.5e949f68b18af.png',
