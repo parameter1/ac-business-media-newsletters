@@ -2,49 +2,51 @@ import { getAsObject } from "@parameter1/base-cms-object-path";
 
 $ const adUnit = getAsObject(input, "adUnit");
 
-<common-table width="100%" align="center" class="top">
-  <tr>
-    <td bgcolor="#ecedee">
-      <common-table width="630" align="center" class="main">
+<if(adUnit.id)>
+  <common-table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="top">
+    <tr>
+      <td bgcolor="#ecedee">
+        <common-table width="630" border="0" cellspacing="0" cellpadding="0" align="center" class="main">
 
-        <!--
-        <common-view-online-element name=input.name/>
-        -->
+          <!--
+          <common-view-online-element name=input.name/>
+          -->
 
-        <tr>
-          <td>&nbsp;</td>
-        </tr>
-
-        <if(adUnit.path)>
           <tr>
-            <td align="center">
-              <div class="advertisement inline ad-600x100">
-                <marko-newsletters-gam-display>
-                  <@ad-unit ...adUnit />
-                  <@image class="scaleAd" />
-                </marko-newsletters-gam-display>
-              </div>
-            </td>
+            <td>&nbsp;</td>
           </tr>
-        </if>
 
-        <!-- Leaving for now, in case EmailX is added back -->
-        <if(adUnit.id)>
+          <if(adUnit.path)>
+            <tr>
+              <td align="center">
+                <div class="advertisement inline ad-600x100">
+                  <marko-newsletters-gam-display>
+                    <@ad-unit ...adUnit />
+                    <@image class="scaleAd" />
+                  </marko-newsletters-gam-display>
+                </div>
+              </td>
+            </tr>
+          </if>
+
+          <!-- Leaving for now, in case EmailX is added back -->
+          <if(adUnit.id)>
+            <tr>
+              <td align="center">
+                <div class="advertisement inline ad-600x100">
+                  <marko-newsletters-email-x-display decoded-params=["email", "send"]>
+                    <@ad-unit ...adUnit />
+                    <@params date=input.date email="%%emailaddr%%" send="%%jobid%%" />
+                  </marko-newsletters-email-x-display>
+                </div>
+              </td>
+            </tr>
+          </if>
           <tr>
-            <td align="center">
-              <div class="advertisement inline ad-600x100">
-                <marko-newsletters-email-x-display decoded-params=["email", "send"]>
-                  <@ad-unit ...adUnit />
-                  <@params date=input.date email="%%emailaddr%%" send="%%jobid%%" />
-                </marko-newsletters-email-x-display>
-              </div>
-            </td>
+            <td height="20" class="short">&nbsp;</td>
           </tr>
-        </if>
-        <tr>
-          <td height="20" class="short">&nbsp;</td>
-        </tr>
-      </common-table>
-    </td>
-  </tr>
-</common-table>
+        </common-table>
+      </td>
+    </tr>
+  </common-table>
+</if>
