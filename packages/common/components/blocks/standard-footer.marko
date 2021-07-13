@@ -7,7 +7,7 @@ $ const newsletterConfig = config.get(newsletter.alias);
 $ const primaryColor = get(newsletterConfig, "primaryColor") || "#efefef";
 
 <common-table style="border-collapse:collapse">
-  <common-table-hr-element height=2 color=primaryColor />
+  <common-table-hr-element height=2 bg-color=primaryColor />
   <common-table-spacer-element />
 </common-table>
 
@@ -35,7 +35,7 @@ $ const socialMediaLinks = getAsArray(socialMedia, "links");
 </if>
 
 <common-table style="border-collapse:collapse;">
-  <common-table-hr-element height=2 color=primaryColor />
+  <common-table-hr-element height=2 bg-color=primaryColor />
 </common-table>
 
 $ const supportEmail = get(newsletterConfig, "supportEmail") || config.get("supportEmail");

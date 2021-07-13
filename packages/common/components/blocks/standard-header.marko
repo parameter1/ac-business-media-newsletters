@@ -2,10 +2,8 @@ import { get } from "@parameter1/base-cms-object-path";
 
 $ const { website, config } = out.global;
 $ const { newsletter, date, dateInfo } = input.data;
-
+$ const primaryColor = input.bgColor;
 $ const newsletterConfig = config.get(newsletter.alias);
-
-$ const primaryColor = get(newsletterConfig, "primaryColor") || "#efefef";
 
 <common-table width="630" border="0" cellspacing="0" cellpadding="0" align="center" class="main">
   <tr>
@@ -25,9 +23,5 @@ $ const primaryColor = get(newsletterConfig, "primaryColor") || "#efefef";
       </if>
     </td>
   </tr>
-</common-table>
-
-<common-table width="630" border="0" cellspacing="0" cellpadding="0" align="center" style="border-collapse:collapse" class="main">
-<!-- Horizontal Rule -->
-  <common-table-hr-element height="2" bgcolor=primaryColor />
+<common-table-hr-element height="2" bg-color=primaryColor />
 </common-table>

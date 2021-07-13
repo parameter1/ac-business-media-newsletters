@@ -1,7 +1,14 @@
+import { get } from "@parameter1/base-cms-object-path";
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
+$ const { config } = out.global;
+$ const { bgColor } = input;
+
+$ //const newsletterConfig = config.get(newsletter);
+
 $ const height = defaultValue(input.height, 2);
+$ //const primaryColor = get(newsletterConfig, "primaryColor") || "#efefef";
 
 <tr>
-  <td height=height bgcolor=input.color></td>
+  <td height=height bgcolor=bgColor></td>
 </tr>
