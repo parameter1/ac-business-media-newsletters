@@ -158,7 +158,7 @@
       "default-value": false
     }
   },
-  "<common-content-psc-block>": {
+  "<common-content-psc-list-block>": {
     "template": "./psc-list.marko",
     "@name": "string",
     "@href": "string",
