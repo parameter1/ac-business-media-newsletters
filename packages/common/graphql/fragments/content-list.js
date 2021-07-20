@@ -26,6 +26,15 @@ fragment NewsletterContentListFragment on Content {
     body(input: { mutation: Email })
     linkText
   }
+  images(input:{ pagination: { limit: 100 }, sort: { order: values } }) {
+    edges {
+      node {
+        id
+        src
+        alt
+      }
+    }
+  }
 }
 
 `;
