@@ -20,36 +20,22 @@ $ const primaryColor =  get(newsletterConfig, "primaryColor") || "#aa282e";
   </@head>
 
   <@body style="margin:0px !important">
+
     <common-psc-header-block data=input.data />
 
-          <!-- <common-content-psc-block
-    <!-- <common-psc-banner-element
-      name=newsletter.name
-    /> -->
     <common-table width="630" border="0" align="center" class="main">
       <tr>
         <td>
-          <!-- <common-psc-header-image-block
-            name=newsletter.name
-            href=newsletter.site.origin
-            image-src-left=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2019/11/ACON_PSC_1.5ddec1344916c.png`
-            image-src-right=`https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/2019/11/ACON_PSC_2.5ddec13a9b99e.png`
-          />
-
-          <common-content-psc-block
+          <common-content-psc-list-block
             date=date
             newsletter=newsletter
             section-name="Showcase"
             primary-color=primaryColor
           />
- -->
-<!--  -->
         </td>
       </tr>
     </common-table>
 
     <common-psc-footer-block newsletter=newsletter />
   </@body>
-
-
 </marko-newsletter-root>

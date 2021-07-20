@@ -30,6 +30,7 @@ $ const nameStyle = {
   queryFragment: contentList,
 }>
 <for|node, index| of=nodes>
+  $ const siteContextURL = node.siteContext.url
   <common-table width="630" border="0" cellspacing="0" cellpadding="10" align="center" style="border: 5px solid #ecedee;" class="sponsored">
     <tr>
       <td valign="top">
@@ -42,25 +43,28 @@ $ const nameStyle = {
                     alt=image.alt
                     options={ w: 280, h: 157 }
                     attrs={ border: 0, width: 280, height: 157 }
-                  >
-                    <@link href=node.siteContext.url target="_blank" />
+                    >
+                    <@link href=siteContextURL target="_blank" />
                   </marko-newsletter-imgix>
                 </marko-core-obj-value>
             </td>
           </tr>
           <tr>
-            <td align="center">
-            <marko-core-obj-value|{ value: image }| obj=node field="logo" as="object">
+            <if(node.images.edges.length > 1)>
+            $ const logoImage = node.images.edges[1]
+              <td align="center">
+                <marko-core-obj-value|{ value: node }| obj=logoImage field="node" as="object">
                   <marko-newsletter-imgix
-                    src=image.src
-                    alt=image.alt
-                    options={ w: 150, h: 157 }
-                    attrs={ border: 0, width: 150, height: 157 }
-                  >
-                    <@link href=node.siteContext.url target="_blank" />
+                    src=node.src
+                    alt=node.alt
+                    options={ w: 150}
+                    attrs={ border: 0, width: 150 }
+                    >
+                    <@link href=siteContextURL target="_blank" />
                   </marko-newsletter-imgix>
                 </marko-core-obj-value>
-            </td>
+              </td>
+            </if>
           </tr>
         </table>
         <table width="20" cellspacing="0" cellpadding="0" align="left">
@@ -71,7 +75,6 @@ $ const nameStyle = {
         <table width="295" class="right" border="0" cellspacing="0" cellpadding="0" align="right">
           <tr>
             <td>
-
               <div>
                 <marko-core-obj-text obj=node field="name" tag=false>
                   <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle } />
@@ -87,7 +90,6 @@ $ const nameStyle = {
                   </marko-core-obj-text>
                 </strong>
               </div>
-
             </td>
           </tr>
         </table>
