@@ -354,6 +354,13 @@ config
       width: 300,
       height: 250,
     },
+  ])
+  .setAdUnits('infrastructure-impact', [
+    {
+      name: 'header',
+      id: '60cb9d94984d452332bb1bdb',
+      width: 600,
+      height: 100,
+    },
   ]);
-
 module.exports = config;
