@@ -8,6 +8,10 @@ $ const emailX = config.get("emailX");
 $ const nativeX = config.getAsObject("nativeX");
 
 $ const newsletterConfig = config.get(newsletter.alias);
+<!-- $ const featuredSectionName = (newsletter.alias === 'show-report-conexpo') ? 'EVENT' || 'Featured';
+
+$ if (['headline-news'].includes) -->
+
 
 $ const primaryColor = get(newsletterConfig, "primaryColor") || "#efefef";
 
@@ -48,15 +52,77 @@ $ const sponsoredNameStyle = {
         href=newsletter.site.origin
         name=newsletter.name
       />
+      <common-table-hr-element height="1" bg-color=primaryColor />
     </if>
     <else>
-      <common-standard-header-block data=input.data />
+      <common-standard-header-block data=input.data bg-color=primaryColor />
     </else>
 
+    <common-table width="630" border="0" align="center" class="main">
+    <common-table-spacer-element />
+      <tr>
+        <td>
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Featured"
+            primary-color=primaryColor
+            display-primary-section=false
+            featured=true
+          />
+
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          />
+
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Mid"
+            primary-color=primaryColor
+            display-primary-section=false
+            limit=1
+          />
+
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Mid"
+            primary-color=primaryColor
+            display-primary-section=false
+            skip=1
+          />
+
+          <common-table-hr-element height="1" bg-color=primaryColor />
+          <common-table-spacer-element />
+
+          <common-content-sponsored-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored"
+            primary-color=primaryColor
+            name-style=sponsoredNameStyle
+          />
+
+          <common-table-spacer-element />
+
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Lower"
+            primary-color=primaryColor
+            display-primary-section=false
+          />
+
+          <common-read-more-button-element href="https://www.forconstructionpros.com" value="Read More News" />
+        </td>
+      </tr>
+    <common-table-spacer-element />
+    </common-table>
+
     <if(input.footer)>
-      <common-psc-footer-block
-        newsletter=newsletter
-      />
+      <common-psc-footer-block newsletter=newsletter />
     </if>
     <else>
     <common-standard-footer-block newsletter=newsletter />
