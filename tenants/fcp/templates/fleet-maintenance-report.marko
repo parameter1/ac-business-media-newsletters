@@ -1,9 +1,164 @@
-<common-standard-layout data=data>
-  <@header>
-    <common-psc-header-block />
-  </@header>
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import { get } from "@parameter1/base-cms-object-path";
+import emailX from "../config/email-x";
 
-  <@footer>
-    <common-psc-footer-block />
-  </@footer>
-</common-standard-layout>
+$ const { website, config } = out.global;
+$ const { newsletter, date, dateInfo } = data;
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const primaryColor =  get(newsletterConfig, "primaryColor") || "#aa282e";
+
+$ const nameStyle = {
+ "text-decoration": "none !important",
+ "font-size": "17px",
+ "font-family": "Arial, Helvetica, sans-serif",
+ "font-weight": "bold",
+ "text-decoration": "none",
+ "text-align": "left",
+ "color": "#222222"
+}
+
+$ const bodyStyle = {
+ "margin-left": "10px",
+ "text-decoration": "none !important",
+ "font-size": "13px",
+ "font-family": "Arial, Helvetica, sans-serif",
+ "color": "#666666",
+ "font-weight": "normal",
+ "text-align": "left",
+ "margin-top": "7px !important",
+ "line-height": "1.4em",
+ "letter-spacing": "1px"
+};
+
+$ const sponsoredNameStyle = {
+ "text-decoration": "none",
+ "text-align": "left",
+ "text-decoration": "none !important",
+ "font-size": "16px",
+ "font-family": "Trebuchet MS, Helvetica, sans-serif",
+ "color": "#000000",
+ "font-weight": "bold"
+}
+
+$ const sponsoredBodyStyle = {
+ "text-decoration": "none !important",
+ "font-family": "Arial, Helvetica, sans-serif",
+ "color": "#666666",
+ "font-weight": "normal",
+ "font-size": "13px",
+ "text-align": "left",
+ "margin-top": "3px !important",
+ "line-height": "1.2em"
+};
+
+<marko-newsletter-root
+ title=newsletter.name
+ description=newsletter.description
+ date=date
+>
+ <@head>
+   <common-head-styles color=primaryColor />
+ </@head>
+
+ <@body style="margin:0px !important">
+  <common-psc-banner-element name=newsletter.name />
+
+  <common-table-spacer-element />
+
+  <common-table width="630" border="0" align="center" class="main">
+    <tr>
+      <td>
+        <common-header-image-block
+          date=date
+          image-src=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrc}`
+          href=newsletter.site.origin
+          name=newsletter.name
+        />
+      </td>
+    </tr>
+
+    <common-table-hr-element bg-color=primaryColor />
+
+    <common-table-spacer-element />
+
+  </common-table>
+
+  <common-table-spacer-element />
+    <tr>
+      <td>
+        <common-content-list-block
+          date=date
+          newsletter=newsletter
+          section-name="Featured"
+          featured=true
+          primary-color=primaryColor
+          display-primary-section=false
+          body-style=bodyStyle
+        />
+      </td>
+    </tr>
+
+  <common-table width="630" border="0" align="center" class="main">
+    <tr>
+      <td valign="top">
+        <common-content-list-block
+          date=date
+          newsletter=newsletter
+          section-name="Mid"
+          primary-color=primaryColor
+          display-primary-section=false
+          limit=1
+          width=300
+          align="left"
+          use-spacer=false
+          body-style=bodyStyle
+          name-style=nameStyle
+        />
+      </td>
+      <td align="right">
+        <common-advertisement-block
+          date=date
+          ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          align="right"
+        />
+      </td>
+    </tr>
+  </common-table>
+
+  <common-table width="630" border="0" align="center" class="main">
+    <tr>
+      <td>
+        <common-table-hr-element height="1" bg-color=primaryColor />
+        <common-table-spacer-element />
+
+        <common-content-sponsored-list-block
+          date=date
+          newsletter=newsletter
+          section-name="Sponsored"
+          name-style=sponsoredNameStyle
+          body-style=sponsoredBodyStyle
+          display-sponsored-section=false
+        />
+
+        <common-table-spacer-element />
+
+        <common-content-list-block
+          date=date
+          newsletter=newsletter
+          section-name="Mid"
+          primary-color=primaryColor
+          display-primary-section=false
+          skip=1
+          body-style=bodyStyle
+        />
+
+        <common-read-more-button-element href="https://www.forconstructionpros.com" value="Read More News" show-border=false/>
+        <common-table-spacer-element />
+      </td>
+    </tr>
+  </common-table>
+
+  <common-psc-footer-block newsletter=newsletter />
+
+ </@body>
+</marko-newsletter-root>
