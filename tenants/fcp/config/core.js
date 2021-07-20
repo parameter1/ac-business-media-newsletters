@@ -11,28 +11,33 @@ module.exports = {
     },
   },
   'asphalt-contractor-psc': {
+    primaryColor: '#aa282e',
     name: 'Asphalt Contractor PSC',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2019/11/ACON_PSC_1.5ddec1344916c.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2019/11/ACON_PSC_2.5ddec13a9b99e.png',
   },
   'blacktop-update': {
+    primaryColor: '#ED1F24',
     name: 'Blacktop Update',
     description: 'The latest news about paving, sweeing, striping and repairing pavements',
     headerLogoSrc: '/files/base/acbm/fcp/image/2020/04/PVM_BlacktopUpdate.5e94ce891774e.png',
     ...brands.pavementMagazine,
   },
   'breaking-ground': {
+    primaryColor: '#f89a00',
     name: 'Breaking Ground',
     description: 'The latest equipment, business and fleet management tips to improve profitability',
     headerLogoSrc: '/files/base/acbm/fcp/image/2020/04/et_breaking_ground.5e9de70a6fe67.png',
     ...brands.equipmentToday,
   },
   'concrete-contractor-psc': {
+    primaryColor: '#3432a9',
     name: 'Concrete Contractor PSC',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2021/04/cc_psc_left.608af211068ba.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2021/04/cc_psc_right.608af215924c4.png',
   },
   'constructing-green': {
+    primaryColor: '#0A723B',
     name: 'Constructing Green',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2017/04/const_green_col1.58ebeba00b9f5.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2017/04/const_green_col2.58ebeba514558.png',
@@ -46,7 +51,7 @@ module.exports = {
     ...brands.fcp,
   },
   'construction-workforce-management': {
-    primaryColor: '#000000',
+    primaryColor: '#12b9ea',
     name: 'Construction Workforce Mangagement',
     description: 'Addressing key topics and critical issues centered around labor',
     headerLogoSrc: '/files/base/acbm/fcp/image/2021/05/PersonnelProgressENLHeader_630x100_v2_copy.609d806356884.png',
@@ -67,15 +72,18 @@ module.exports = {
     ...brands.rentalMagazine,
   },
   'equipment-today-psc': {
+    primaryColor: '#f8a11c',
     name: 'Equipment Today PSC',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2019/12/ET_PSC_1.5de54bbd50c12.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2019/12/ET_PSC_2.5de54bc48ddf3.png',
   },
   'fleet-maintenance-report': {
+    primaryColor: '#f26522',
     name: 'Fleet Maintenance Report',
     headerLogoSrc: '/files/base/acbm/fcp/image/2021/03/FCP_Fleet_Maintenance.605893908c575.png',
   },
   'for-your-fleet': {
+    primaryColor: '#e82f20',
     name: 'For Your Fleet',
     description: 'The leading source of product information and industry insight',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2017/04/for_your_fleet_col1.58ec185377cc8.png',
@@ -90,10 +98,17 @@ module.exports = {
     ...brands.fcp,
   },
   'in-the-mix': {
+    primaryColor: '#ed1c24',
     name: 'In the Mix',
     description: 'Concrete industry topics that affect your business',
     headerLogoSrc: '/files/base/acbm/fcp/image/2020/07/CC_InTheMix.5f233b6338d4d.png',
     ...brands.concreteContractor,
+  },
+  'infrastructure-impact': {
+    primaryColor: '#e9bf2f',
+    name: 'Infrastructure Impact',
+    headerLogoSrc: '/files/base/acbm/fcp/image/2021/06/fcp_header_InfraImpact.60d2476abb5d0.png',
+    ...brands.fcp,
   },
   // eslint-disable-next-line quote-props
   'ipaf': {
@@ -132,6 +147,7 @@ module.exports = {
     ...brands.sso,
   },
   'pavement-maintenance-reconstruction-psc': {
+    primaryColor: '#d71921',
     name: 'Pavement Maintenance & Reconstruction PSC',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2019/11/PVM_PSC_1.5ddec3bbc35db.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2019/11/PVM_PSC_2.5ddec3c0b6633.png',
@@ -145,16 +161,20 @@ module.exports = {
     ...brands.rentalMagazine,
   },
   'profit-matters': {
+    primaryColor: '#f04200',
     name: 'Profit Matters',
     description: 'How to use technologies and strategies to improve construction profit',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2017/04/pm_col1.58ebdad143eb8.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2017/04/pm_col2.58ebdad6bf065.png',
     ...brands.rentalMagazine,
   },
-  // 'psc': {
-  //   name: 'PSC',
-  //   headerLogoSrc: '/files/base/acbm/fcp/image/2017/04/psc_col1.58ec27f92257f.png',
-  // },
+  // eslint-disable-next-line quote-props
+  'psc': {
+    primaryColor: '#ecedee',
+    name: 'Product Showcase',
+    headerLogoSrc: '/files/base/acbm/fcp/image/2017/04/psc_col1.58ec27f92257f.png',
+    ...brands.psc,
+  },
   'rental-market-watch': {
     primaryColor: '#bb2b15',
     name: 'Rental Market Watch',
@@ -163,6 +183,7 @@ module.exports = {
     ...brands.rentalMagazine,
   },
   'rental-psc': {
+    primaryColor: '#f9a71e',
     name: 'Rental PSC',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2020/04/RPN_PSC_1.5eab10fd25630.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2020/11/RPN_PSC_OG.5fa957485b074.png',
@@ -187,16 +208,19 @@ module.exports = {
   //   headerLogoSrc: '/files/base/acbm/fcp/image/2017/04/resource_center_col1.58ec254138a79.png',
   // },
   'resource-center': {
+    primaryColor: '#ecedee',
     name: 'Resource Center',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2017/04/resource_center_col1.58ec254138a79.png',
   },
   'road-building-update': {
+    primaryColor: '#f4381b',
     name: 'Road Building Update',
     description: 'Insight into news and events specific to the highway construction community',
     headerLogoSrc: '/files/base/acbm/fcp/image/2020/04/AC_Roadbuilding.5e9df5f23513d.png',
     ...brands.asphaltContractor,
   },
   'show-product-showcase': {
+    primaryColor: '#f8a11c',
     name: 'Show Product Showcase',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2019/12/Conexpo_PSC_1.5dfcf8e9d0e36.png',
     headerLogoSrcRight: '/files/base/acbm/fcp/image/2019/12/Conexpo_PSC_2.5dfcf8efb2ac7.png',
@@ -217,6 +241,7 @@ module.exports = {
     ...brands.fcp,
   },
   'technology-trends': {
+    primaryColor: '#F26522',
     name: 'Technology Trends',
     description: 'Daily headlines that impact construction',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2017/04/technology_trends_col1.58ebf2d382d2d.png',
