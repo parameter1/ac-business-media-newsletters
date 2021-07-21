@@ -5,7 +5,7 @@ import emailX from "../config/email-x";
 $ const { website, config } = out.global;
 $ const { newsletter, date, dateInfo } = data;
 $ const newsletterConfig = config.get(newsletter.alias);
-$ const primaryColor =  get(newsletterConfig, "primaryColor") || "#aa282e";
+$ const primaryColor = get(newsletterConfig, "primaryColor") || "#aa282e";
 
 $ const nameStyle = {
  "text-decoration": "none !important",
@@ -56,11 +56,11 @@ $ const sponsoredBodyStyle = {
  description=newsletter.description
  date=date
 >
- <@head>
-   <common-head-styles color=primaryColor />
- </@head>
+  <@head>
+    <common-head-styles color=primaryColor />
+  </@head>
 
- <@body style="margin:0px !important">
+  <@body style="margin:0px !important">
   <common-psc-banner-element name=newsletter.name />
 
   <common-table-spacer-element />
@@ -160,5 +160,5 @@ $ const sponsoredBodyStyle = {
 
   <common-psc-footer-block newsletter=newsletter />
 
- </@body>
+  </@body>
 </marko-newsletter-root>

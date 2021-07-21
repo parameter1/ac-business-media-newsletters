@@ -22,11 +22,11 @@ $ const sponsoredNameStyle = {
  description=newsletter.description
  date=date
 >
- <@head>
-   <common-head-styles color=primaryColor />
- </@head>
+  <@head>
+    <common-head-styles color=primaryColor />
+  </@head>
 
- <@body style="margin:0px !important">
+  <@body style="margin:0px !important">
 
   <common-table width="630" border="0" align="center" class="main">
     <tr>
@@ -43,7 +43,6 @@ $ const sponsoredNameStyle = {
     </tr>
 
     <common-table-hr-element bg-color=primaryColor />
-
     <common-table-spacer-element />
 
   </common-table>
@@ -142,11 +141,7 @@ $ const sponsoredNameStyle = {
     </tr>
   </common-table>
 
-  <common-standard-footer-block
-    newsletter=newsletter
-    primary-color=primaryColor
-    company="fcp"
-  />
+  <common-standard-footer-block newsletter=newsletter />
 
- </@body>
+  </@body>
 </marko-newsletter-root>
