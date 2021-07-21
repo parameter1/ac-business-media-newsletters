@@ -1,0 +1,109 @@
+import { get } from "@parameter1/base-cms-object-path";
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+
+$ const { website, config } = out.global;
+$ const { newsletter, date, dateInfo } = input.data;
+
+$ const emailX = config.get("emailX");
+$ const nativeX = config.getAsObject("nativeX");
+
+$ const newsletterConfig = config.get(newsletter.alias);
+
+$ const primaryColor = get(newsletterConfig, "primaryColor") || "#efefef";
+
+$ const sponsoredNameStyle = {
+  'text-decoration': 'none',
+  'text-align': 'left',
+  'text-decoration': 'none !important',
+  'font-size': '14px',
+  'font-family': 'Trebuchet MS, Helvetica, sans-serif',
+  'color': '#000000',
+  'font-weight': 'bold'
+};
+
+<marko-newsletter-root
+  title=newsletter.name
+  description=newsletter.description
+  date=date
+>
+  <@head>
+    <common-head-styles color=primaryColor />
+  </@head>
+  <@body style="margin: 0px !important">
+
+    <!-- leaderboard -->
+    <common-banner-element
+      name=newsletter.name
+      date=date
+      ad-unit=emailX.getAdUnit({ name: "header", alias: newsletter.alias })
+    />
+
+    <common-standard-header-block data=input.data bg-color=primaryColor />
+
+    <common-table width="630" border="0" align="center" class="main">
+    <common-table-spacer-element />
+      <tr>
+        <td>
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Featured"
+            primary-color=primaryColor
+            display-primary-section=false
+            featured=true
+          />
+
+          <common-table-hr-element height="1" bg-color=primaryColor />
+          <common-table-spacer-element />
+
+          <common-content-sponsored-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored"
+            primary-color=primaryColor
+            name-style=sponsoredNameStyle
+          />
+
+          <common-table-spacer-element />
+
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Mid"
+            primary-color=primaryColor
+            display-primary-section=false
+            limit=1
+          />
+
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Mid"
+            primary-color=primaryColor
+            display-primary-section=false
+            skip=1
+          />
+
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          />
+
+          <common-content-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Lower"
+            primary-color=primaryColor
+            display-primary-section=false
+          />
+
+          <common-read-more-button-element href="https://www.forconstructionpros.com" value="Read More News" />
+        </td>
+      </tr>
+    <common-table-spacer-element />
+    </common-table>
+
+    <common-standard-footer-block newsletter=newsletter />
+
+  </@body>
+</marko-newsletter-root>
