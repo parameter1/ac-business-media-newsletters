@@ -17,12 +17,6 @@
       "default-value": false
     }
   },
-  "<common-social-icon-element>": {
-    "template": "./social-icon.marko",
-    "@type": "string",
-    "@provider": "string",
-    "@href": "string"
-  },
   "<common-table-hr-element>": {
     "template": "./table-hr.marko"
   },
