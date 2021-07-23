@@ -26,11 +26,6 @@
   "<common-table-hr-element>": {
     "template": "./table-hr.marko"
   },
-  "<common-hr-social-element>": {
-    "template": "./hr-no-space.marko",
-    "@bgcolor": "string",
-    "@height": "string"
-  },
   "<common-table-spacer-element>": {
     "template": "./table-spacer.marko"
   },
@@ -46,10 +41,5 @@
   "<common-psc-banner-element>": {
     "template": "./psc-banner.marko",
     "@name": "string"
-  },
-  "<uncommon-banner-element>": {
-    "template": "./uncommon-banner.marko",
-    "@name": "string",
-    "@mobile-text": "string"
   }
 }
