@@ -1,22 +1,26 @@
 import contentList from "@ac-business-media/common/graphql/fragments/content-list";
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
+import { get } from "@parameter1/base-cms-object-path";
+
+$ const { website, config } = out.global;
+$ const { newsletter } = data;
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const primaryColor = get(newsletterConfig, "primaryColor") || "aa282e";
+
 $ const {
-  newsletter,
   date,
   sectionName,
   title,
   limit,
   skip,
   lineBreak,
-  primaryColor,
   hrBelow,
   featured,
   displaySponsoredSection,
   titleBgColor,
   titleLineBreak
 } = input;
-
 $ const imageWidth = defaultValue(input.imageWidth, 300);
 
 $ const bodyBackgroundColor = defaultValue(input.bodyBgColor, "#ffffff")
@@ -82,7 +86,7 @@ $ const teaserStyle = defaultValue(input.teaserStyle, defaultTeaserStyle);
   <common-table width="630" border="0" cellspacing="0" cellpadding=cellPadding align="center" style="border-collapse:collapse;" class="sponsored">
     <if(title)>
       <tr>
-        <td style=titleStyle bgcolor=titleBgColor>${title}</td>
+        <td style=titleStyle bg-color=titleBgColor>${title}</td>
       </tr>
       <if(titleLineBreak)>
         <tr>
@@ -92,7 +96,7 @@ $ const teaserStyle = defaultValue(input.teaserStyle, defaultTeaserStyle);
     </if>
     <for|node, index| of=nodes>
       <tr>
-        <td valign="top" bgcolor=bodyBackgroundColor>
+        <td valign="top" bg-color=bodyBackgroundColor>
           <common-table width="300" border="0" cellspacing="0" cellpadding="0" align="left">
             <tr>
               <td>
@@ -136,6 +140,7 @@ $ const teaserStyle = defaultValue(input.teaserStyle, defaultTeaserStyle);
         </td>
       </tr>
       <common-table-spacer-element />
+      <common-table-hr-element height="1" bg-color=primaryColor />
     </for>
   </common-table>
 </marko-web-query>

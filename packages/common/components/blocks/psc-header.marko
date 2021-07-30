@@ -1,0 +1,43 @@
+import { get } from "@parameter1/base-cms-object-path";
+
+$ const { website, config } = out.global;
+$ const { newsletter, date, dateInfo } = input.data;
+
+$ const newsletterConfig = config.get(newsletter.alias);
+
+<common-psc-banner-element
+  name=newsletter.name
+/>
+<common-table width="630" border="0" align="center" class="main">
+  <tr>
+    <td>
+      <if(newsletterConfig.headerLogoSrcLeft && newsletterConfig.headerLogoSrcRight)>
+        <common-psc-header-image-block
+          newsletter=newsletter
+          name=newsletter.name
+          href=newsletter.site.origin
+          image-src-left=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrcLeft}`
+          image-src-right=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrcRight}`
+        />
+      </if>
+      <else-if(newsletterConfig.headerLogoSrcLeft && !newsletterConfig.headerLogoSrcRight)>
+        <common-psc-header-image-block
+          newsletter=newsletter
+          name=newsletter.name
+          href=newsletter.site.origin
+          image-src-left=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrcLeft}`
+          image-src-right=null
+        />
+      </else-if>
+      <else-if(!newsletterConfig.headerLogoSrcLeft && newsletterConfig.headerLogoSrcRight)>
+       <common-psc-header-image-block
+          newsletter=newsletter
+          name=newsletter.name
+          href=newsletter.site.origin
+          image-src-left=null
+          image-src-right=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrcRight}`
+        />
+      </else-if>
+    </td>
+  </tr>
+</common-table>

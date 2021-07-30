@@ -11,5 +11,11 @@
   },
   "<common-standard-footer-block>": {
     "template": "./standard-footer.marko"
+  },
+  "<common-psc-header-block>": {
+    "template": "./psc-header.marko"
+  },
+  "<common-standard-header-block>": {
+    "template": "./standard-header.marko"
   }
 }

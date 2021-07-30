@@ -33,7 +33,6 @@ module.exports = {
   pavementMagazine: {
     brandName: 'Pavement Management',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/newsletter/footer-fcp.jpeg',
-    primaryColor: '#ED1F24',
     supportEmail: 'support@forconstructionpros.com',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
@@ -51,7 +50,6 @@ module.exports = {
   equipmentToday: {
     brandName: 'Equipment Today',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/newsletter/footer-fcp.jpeg',
-    primaryColor: '#f89a00',
     supportEmail: 'support@forconstructionpros.com',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
@@ -87,7 +85,6 @@ module.exports = {
   concreteContractor: {
     brandName: 'Concrete Contractor',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/newsletter/footer-fcp.jpeg',
-    primaryColor: '#ed1c24',
     supportEmail: 'support@forconstructionpros.com',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
@@ -105,7 +102,6 @@ module.exports = {
   asphaltContractor: {
     brandName: 'AsphaltContractor',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/newsletter/footer-fcp.jpeg',
-    primaryColor: '#f4381b',
     supportEmail: 'support@forconstructionpros.com',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
@@ -117,6 +113,17 @@ module.exports = {
         { provider: 'linkedin', href: 'https://www.linkedin.com/company/asphalt-contractor-magazine/' },
         { provider: 'twitter', href: 'https://twitter.com/AsphaltContrctr' },
         { provider: 'instagram', href: 'https://www.instagram.com/asphaltcontractor/' },
+      ],
+    },
+  },
+  psc: {
+    brandName: 'Product Showcase',
+    socialMedia: {
+      imagePath: '/files/base/newsletter',
+      links: [
+        { provider: 'facebook', href: 'https://www.facebook.comForContructionPros' },
+        { provider: 'twitter', href: 'https://twitter.com/4ConstructnPros' },
+        { provider: 'linkedin', href: 'https://www.linkedin.com/groups/2676745/profile' },
       ],
     },
   },
