@@ -9,6 +9,7 @@ $ const nativeX = config.getAsObject("nativeX");
 
 $ const newsletterConfig = config.get(newsletter.alias);
 
+$ const displayPrimarySection = get(newsletterConfig, "displayPrimarySection") || false;
 $ const primaryColor = get(newsletterConfig, "primaryColor") || "#efefef";
 
 $ const sponsoredNameStyle = {
@@ -49,7 +50,7 @@ $ const sponsoredNameStyle = {
             newsletter=newsletter
             section-name="Featured"
             primary-color=primaryColor
-            display-primary-section=false
+            display-primary-section=displayPrimarySection
             featured=true
           />
 
@@ -63,7 +64,7 @@ $ const sponsoredNameStyle = {
             newsletter=newsletter
             section-name="Mid"
             primary-color=primaryColor
-            display-primary-section=false
+            display-primary-section=displayPrimarySection
             limit=1
           />
 
@@ -72,7 +73,7 @@ $ const sponsoredNameStyle = {
             newsletter=newsletter
             section-name="Mid"
             primary-color=primaryColor
-            display-primary-section=false
+            display-primary-section=displayPrimarySection
             skip=1
           />
 
@@ -94,7 +95,7 @@ $ const sponsoredNameStyle = {
             newsletter=newsletter
             section-name="Lower"
             primary-color=primaryColor
-            display-primary-section=false
+            display-primary-section=displayPrimarySection
           />
 
           <common-advertisement-block
