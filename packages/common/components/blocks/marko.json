@@ -17,5 +17,8 @@
   },
   "<common-standard-header-block>": {
     "template": "./standard-header.marko"
+  },
+  "<common-new-standard-footer-block>": {
+    "template": "./new-standard-footer.marko"
   }
 }
