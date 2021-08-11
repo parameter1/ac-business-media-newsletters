@@ -33,6 +33,12 @@ jobs:
       install: skip
       env: [ENVIRONMENT=production]
 
+    - stage: production
+      name: Supply & Demand Chain
+      script: npx @parameter1/base-cms-newsletter-deployment-tool deploy sdce newsletters
+      install: skip
+      env: [ENVIRONMENT=production]
+
     #############################
     # ^^^ ADD SERVICES HERE ^^^ #
     #############################
