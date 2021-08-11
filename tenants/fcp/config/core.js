@@ -144,6 +144,7 @@ module.exports = {
     name: 'Openings News & Views',
     description: 'Exclusive insight into the most impactful news and trends shaping the non-residential door and hardware industry',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/safesecure-enl-header.jpg',
+    displayPrimarySection: true,
     ...brands.sso,
   },
   'pavement-maintenance-reconstruction-psc': {
