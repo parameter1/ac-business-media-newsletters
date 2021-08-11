@@ -35,7 +35,7 @@ jobs:
 
     - stage: production
       name: Supply & Demand Chain
-      script: npx @parameter1/base-cms-newsletter-deployment-tool deploy sdc newsletters
+      script: npx @parameter1/base-cms-newsletter-deployment-tool deploy sdce newsletters
       install: skip
       env: [ENVIRONMENT=production]
 
