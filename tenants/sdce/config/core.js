@@ -13,7 +13,7 @@ module.exports = {
   },
   'headline-news': {
     name: 'Headline News',
-    primaryColor: '#e65225',
+    primaryColor: '#e50102',
     ...brands.sdce,
   },
 };
