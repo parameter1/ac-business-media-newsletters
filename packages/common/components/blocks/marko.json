@@ -20,5 +20,8 @@
   },
   "<common-new-standard-footer-block>": {
     "template": "./new-standard-footer.marko"
+  },
+  "<common-new-standard-header-block>": {
+    "template": "./new-standard-header.marko"
   }
 }
