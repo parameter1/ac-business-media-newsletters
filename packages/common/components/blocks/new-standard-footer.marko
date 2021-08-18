@@ -1,70 +1,128 @@
-<tr>
-  <td align="center" valign="top">
-    <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap102" bgcolor="#e65225">
-      <tr>
-        <td align="center" valign="top"><img src="https://img.sdcexec.com/files/base/acbm/static/new-standard-footer-image.png" alt="shape" width="540" height="93" class="resize_img"></td>
-      </tr>
-      <tr>
-        <td align="center" valign="top"  class="align">
-          <table width="242" align="center"  class="align" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td align="center" valign="middle"><img src="https://img.sdcexec.com/files/base/acbm/static/new-standard-facebook.png" alt="fb" width="35" height="34"></td>
-              <td align="center" valign="middle"><img src="https://img.sdcexec.com/files/base/acbm/static/new-standard-twitter.png" alt="tw" width="34" height="28"></td>
-              <td align="center" valign="middle"><img src="https://img.sdcexec.com/files/base/acbm/static/new-standard-instagram.png" alt="insta" width="35" height="34"></td>
-              <td align="center" valign="middle"><img src="https://img.sdcexec.com/files/base/acbm/static/new-standard-youtube.png" alt="you" width="35" height="24"></td>
-              <td align="center" valign="middle"><img src="https://img.sdcexec.com/files/base/acbm/static/new-standard-linkedin.png" alt="link" width="35" height="34"></td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td align="center" valign="top">
-          <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td align="center" valign="top" height="19" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-            </tr>
-            <tr>
-              <td align="center" class="align" valign="middle"  style="font-family: 'Arial', sans-serif;font-size: 7px; line-height: 12px; color: #ffffff; font-weight: normal;letter-spacing: 0;">This email is being sent to @{email name}@.</td>
-            </tr>
-            <tr>
-              <td align="center" valign="top" height="3" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-            </tr>
-            <tr>
-              <td align="center"  class="align" valign="middle"  style="font-family: 'Arial', sans-serif;font-size: 7px; line-height: 12px; color: #ffffff; font-weight: normal;letter-spacing: 0;">Please add news.acbmmail.com and marketing.acbmmail.com to your address book or safe sender list to receive our emails in your inbox.</td>
-            </tr>
-            <tr>
-              <td align="center" valign="top" height="3" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-            </tr>
-            <tr>
-              <td align="center"  class="align1" valign="middle"  style="font-family: 'Arial', sans-serif;font-size: 7px; line-height: 12px; color: #ffffff; font-weight: normal;letter-spacing: 0;">Manage Newsletter Subscriptions | Forward to a Friend | Unsubscribe | Request Customer Service | Read Privacy Policy</td>
-            </tr>
-            <tr>
-              <td align="center" valign="top" height="3" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-            </tr>
-            <tr>
-              <td align="center"  class="align" valign="middle"  style="font-family: 'Arial', sans-serif;font-size: 7px; line-height: 12px; color: #ffffff; font-weight: normal;letter-spacing: 0;">If this email was forwarded to you and you are interested in subscribing, please click here to sign-up.</td>
-            </tr>
-            <tr>
-              <td align="center" valign="top" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-            </tr>
-            <tr>
-              <td align="center"  class="align" valign="middle"  style="font-family: 'Arial', sans-serif;font-size: 7px; line-height: 12px; color: #ffffff; font-weight: normal;letter-spacing: 0;">If you have any questions or concerns, please contact us at 920-542-1131 or toll-free at 800-538-5544.</td>
-            </tr>
-            <tr>
-              <td align="center" valign="top" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-            </tr>
-            <tr>
-              <td align="center"  class="align" valign="middle"  style="font-family: 'Arial', sans-serif;font-size: 7px; line-height: 9px; color: #ffffff; font-weight: normal;letter-spacing: 0;">For Construction Pros <br>AC Business Media <br>201 N. Main Street <br>Fort Atkinson, WI 53538</td>
-            </tr>
-            <tr>
-              <td align="center" valign="top" height="21" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr>
-  <td align="center" valign="top" height="45" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-</tr>
+import { get, getAsArray } from "@parameter1/base-cms-object-path";
+
+$ const { website, config } = out.global;
+$ const { newsletter } = input;
+
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const primaryColor = get(newsletterConfig, "primaryColor");
+$ const socialMedia = get(newsletterConfig, "socialMedia");
+$ const socialMediaLinks = getAsArray(socialMedia, "links");
+
+$ const standardStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "7px",
+  "line-height": "12px",
+  "color": "#ffffff",
+  "font-weight": "normal",
+  "letter-spacing": "0",
+};
+
+$ const smallerStyle = {
+  ...standardStyle,
+  "line-height": "9px",
+};
+
+$ const linkStyle = {
+  ...standardStyle,
+  "text-decoration": "none"
+};
+
+<body style="padding:0; margin:0; -webkit-text-size-adjust: 100%; background: #ffffff; font-family: 'Arial' sans-serif;">
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td align="center" valign="top">
+        <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+          <tr>
+            <td align="center" valign="top">
+              <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap102">
+                <tr>
+                  <td align="center" valign="top">
+                    <marko-newsletter-imgix
+                      src=`${newsletterConfig.footerLogoSrc}`
+                      options={ w: 540, h: 93 }
+                      alt="shape"
+                      class="resize_img"
+                    />
+                  </td>
+                </tr>
+                <if(socialMediaLinks.length)>
+                  <tr bgcolor=primaryColor>
+                    <td align="center" valign="top"  class="align">
+                      <table width="242" align="center"  class="align" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          $ const aStyle = "margin: 0; color: #000000; display: inline-block; font-family: Helvetica, Arial, sans-serif; font-weight: normal;  margin: 0; margin-bottom: 10px; margin-left: 10px; margin-right: 10px; margin-top: 10px; padding: 0; text-align: left; text-decoration: none";
+                          $ const iStyle = "-ms-interpolation-mode: bicubic; border: none; clear: both; display: block; max-width: 100%; outline: none; text-decoration: none; width: auto";
+                          <for|link| of=socialMediaLinks>
+                            <marko-newsletter-imgix
+                              src=`${socialMedia.imagePath}/${link.provider}-white.png`
+                              alt=link.provider
+                              options={ w: 35, h: 34 }
+                              attrs={ align: "center", valign: "middle", style: iStyle }
+                            >
+                              <@link href=link.href target="_blank" attrs={ style: aStyle} />
+                            </marko-newsletter-imgix>
+                          </for>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </if>
+                <tr bgcolor=primaryColor>
+                  <td align="center" valign="top">
+                    <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+                      <common-table-spacer-element height=19 />
+                      <tr>
+                        <td align="center" class="align" valign="middle" style=standardStyle>
+                          This email is being sent to
+                            <a href="mailto:@{email name}@" style=linkStyle>@{email name}@</a>.
+                        </td>
+                      </tr>
+                      <common-table-spacer-element height=3 />
+                      <tr>
+                        <td align="center"  class="align" valign="middle" style=standardStyle>
+                          Please add news.acbmmail.com and marketing.acbmmail.com to your address book or safe sender list to receive our emails in your inbox.
+                        </td>
+                      </tr>
+                      <common-table-spacer-element height=3 />
+                      <tr>
+                        <td align="center"  class="align1" valign="middle" style=standardStyle>
+                          <a href=get(newsletterConfig, "newsletterPrefLink") style=linkStyle>Manage Newsletter Subscriptions</a>
+                          | <a href="@{forwardtoafriendlink}@" style=linkStyle>Forward to a Friend</a>
+                          | <a href="@{confirmunsubscribelink}@" style=linkStyle>Unsubscribe</a>
+                          | <a href=get(newsletterConfig, "contactUsLink") style=linkStyle>Request Customer Service</a>
+                          | <a href=get(newsletterConfig, "privacyPolicyLink") style=linkStyle>Read Privacy Policy</a>
+                        </td>
+                      </tr>
+                      <common-table-spacer-element height=3 />
+                      <tr>
+                        <td align="center"  class="align" valign="middle" style=standardStyle>
+                          If this email was forwarded to you and you are interested in subscribing, please <a href=get(newsletterConfig, "newsletterPrefLink") style=linkStyle>click here</a> to sign-up.
+                        </td>
+                      </tr>
+                      <common-table-spacer-element height=5 />
+                      <tr>
+                        <td align="center"  class="align" valign="middle" style=standardStyle>
+                          If you have any questions or concerns, please contact us at 920-542-1131 or toll-free at 800-538-5544.
+                        </td>
+                      </tr>
+                      <common-table-spacer-element height=5 />
+                      <tr>
+                        <td align="center"  class="align" valign="middle" style=smallerStyle>${website.get("name")}<br>
+                          AC Business Media<br>
+                          201 N. Main Street<br>
+                          Fort Atkinson, WI 53538
+                        </td>
+                      </tr>
+                      <common-table-spacer-element height=21 />
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <common-table-spacer-element height=45 />
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
