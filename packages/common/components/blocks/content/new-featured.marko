@@ -1,0 +1,185 @@
+import { get } from "@parameter1/base-cms-object-path";
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+
+$ const { config } = out.global;
+
+$ const {
+  newsletter,
+  date,
+  sectionName,
+  longBorder,
+} = input;
+
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const primaryColor = get(newsletterConfig, "primaryColor");
+$ const editor = get(newsletterConfig, "editor");
+$ const brandName = get(newsletterConfig, "brandName");
+
+$ const sectionNameStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "25px",
+  "line-height": "30px",
+  "font-weight": "900",
+  "letter-spacing": "0",
+  "color": "#ffffff",
+  "text-transform": "uppercase",
+};
+
+$ const teaserStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "16px",
+  "line-height": "21px",
+  "color": "#A4A09F",
+  "font-weight": "400",
+  "letter-spacing":"0",
+};
+
+$ const verticalBorderStyle = {
+  "text-align": "left",
+  "border-left": "3px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
+};
+
+$ const verticalBorderStyleThick = {
+  "text-align": "left",
+  "border-left": "5px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
+};
+
+$ const editorStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "17px",
+  "line-height": "22px",
+  "color": "#000000",
+  "font-weight": "900",
+  "letter-spacing": "0",
+};
+
+$ const brandNameStyle = {
+  "font-family": "'Arial Narrow Bold', sans-serif",
+  "font-style": "italic",
+  "font-weight": "bold",
+  "color": primaryColor,
+  "letter-spacing": "-0.4px",
+};
+
+$ const buttonStyle = {
+  "font-family": "'Arial Narrow Bold', sans-serif",
+  "font-size": "13px",
+  "color": "#ffffff",
+  "font-weight": "normal",
+};
+
+$ const buttonTextStyle = {
+  "color": "#ffffff",
+  "text-decoration": "none",
+  "display": "block",
+};
+
+<marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
+  date: date.valueOf(),
+  newsletterId: newsletter.id,
+  sectionName: sectionName,
+  queryFragment: contentList,
+}>
+
+  <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+    <tr>
+      <td align="center" valign="top">
+        <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+          <tr>
+          $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
+            <td style=borderStyle>
+              <td align="left" class="font1" valign="middle" style=sectionNameStyle>${sectionName}</td>
+            </td>
+          </tr>
+          <common-table-spacer-element height=8 />
+        </table>
+      </td>
+    </tr>
+  </table>
+  <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+    <tr>
+      <for|node| of=nodes>
+        <td align="center" valign="top">
+          <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap101">
+            <tr>
+              <td valign="top">
+                <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
+                  <marko-newsletter-imgix
+                    src=image.src
+                    alt=image.alt
+                    options={ w: 540, h: 393 }
+                    attrs={ align: "center", width: 540, height: 393 }
+                    class="resize_img"
+                  >
+                    <@link href=node.siteContext.url target="_blank" />
+                  </marko-newsletter-imgix>
+                </marko-core-obj-value>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </for>
+    </tr>
+  </table>
+  <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+    <tr>
+      <for|node| of=nodes>
+        <td align="center" valign="top">
+          <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap101">
+            <tr>
+              <td align="center" valign="top">
+                <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
+                  <tr>
+                    <td align="left" valign="top">
+                      <table width="100%" align="left" valign="bottom" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" valign="middle" class="font3" style=editorStyle>
+                            ${editor} | Editor |
+                          </td>
+                          <td style=brandNameStyle>
+                            ${brandName}
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <common-table-spacer-element height=5 />
+              <tr>
+                <td align="center" valign="top">
+                  <table width="88%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
+                    <tr>
+                      <td align="left" class="mob_hide" valign="middle">
+                        <marko-core-obj-text obj=node field="teaser" html=true attrs={ style: teaserStyle } />
+                      </td>
+                    </tr>
+                    <common-table-spacer-element height=10 />
+                    <tr>
+                      <td align="left" valign="top">
+                        <table width="120" align="left" border="0" cellspacing="0" style="background-color: #000000; border-radius: 6px;">
+                          <tr>
+                            <td align="center" height="30" valign="middle" style=buttonStyle>
+                              <marko-core-obj-text obj=node>
+                                <@link href=node.siteContext.url target="_blank" attrs= { style: buttonTextStyle } />VIEW ARTICLE
+                              </marko-core-obj-text>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <common-table-spacer-element height=14 />
+            </tr>
+          </table>
+        </td>
+      </for>
+    </tr>
+  </table>
+</marko-web-query>
