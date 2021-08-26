@@ -2,8 +2,7 @@ import { get } from  "@parameter1/base-cms-object-path";
 import moment from "moment";
 
 $ const { website, config } = out.global;
-$ const { newsletter, date, dateInfo } = input;
-
+$ const { newsletter, date, dateInfo } = input.data;
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const displayDate = moment(date).format("MMMM DD, YYYY");
 
