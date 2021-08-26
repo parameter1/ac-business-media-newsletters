@@ -8,7 +8,7 @@
   "<common-standard-2-layout>": {
     "template": "./standard-2.marko"
   },
-  "<common-new-standard-layout": {
+  "<common-new-standard-layout>": {
     "template": "./new-standard.marko"
   }
 }
