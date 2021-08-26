@@ -23,5 +23,8 @@
   },
   "<common-new-standard-header-block>": {
     "template": "./new-standard-header.marko"
+  },
+  "<common-new-standard-advertisement-block>": {
+    "template": "./new-standard-advertisement.marko"
   }
 }

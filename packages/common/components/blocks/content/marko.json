@@ -193,5 +193,98 @@
       "type" : "string",
       "default-value" : "#eb1b2c"
     }
+  },
+  "<common-content-new-featured-block>": {
+    "template": "./new-featured.marko",
+    "@name": "string",
+    "@href": "string",
+    "@image-src": "string",
+    "@date": {
+      "type": "object",
+      "required": true
+    },
+    "@data": "data",
+    "@newsletter": {
+      "type": "object",
+      "required": true
+    },
+    "@section-name": {
+      "type": "string",
+      "required": true
+    },
+    "@primary-color": "string",
+    "@long-border": {
+      "type": "boolean",
+      "default-value": false
+    }
+  },
+  "<common-content-new-sponsored-list-block>": {
+    "template": "./new-sponsored-list.marko",
+    "@name": "string",
+    "@href": "string",
+    "@image-src": "string",
+    "@date": {
+      "type": "object",
+      "required": true
+    },
+    "@newsletter": {
+      "type": "object",
+      "required": true
+    },
+    "@section-name": {
+      "type": "string",
+      "required": true
+    },
+    "@primary-color": "string",
+    "@display-sponsored-section": {
+      "type": "boolean",
+      "default-value": true
+    }
+  },
+  "<common-content-new-mid-block>": {
+    "template": "./new-mid.marko",
+    "@name": "string",
+    "@data": "data",
+    "@href": "string",
+    "@image-src": "string",
+    "@date": {
+      "type": "object",
+      "required": true
+    },
+    "@newsletter": {
+      "type": "object",
+      "required": true
+    },
+    "@section-name": {
+      "type": "string",
+      "required": true
+    },
+    "@primary-color": "string"
+  },
+  "<common-content-new-list-block>": {
+    "template": "./new-list.marko",
+    "@name": "string",
+    "@data": "data",
+    "@href": "string",
+    "@image-src": "string",
+    "@date": {
+      "type": "object",
+      "required": true
+    },
+    "@limit": "number",
+    "@skip": "number",
+    "@newsletter": {
+      "type": "object",
+      "required": true
+    },
+    "@section-name": {
+      "type": "string",
+      "required": true
+    },
+    "@primary-color": "string",
+    "@display-section-name": {
+      "type": "boolean",
+      "default-value": false
+    }
   }
 }
