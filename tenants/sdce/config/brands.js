@@ -1,7 +1,7 @@
 module.exports = {
   sdce: {
     brandName: 'Supply & Demand Chain Executive',
-    headerLogoSrc: '',
+    headerLogoSrc: '/files/base/acbm/sdce/image/static/logo/new-standard-header-logo.png',
     footerLogoSrc: '/files/base/acbm/sdce/image/static/logo/new-standard-footer-logo.png',
     contactUsLink: 'https://www.sdcexec.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=SDCEprefs&pk=managepref&r',

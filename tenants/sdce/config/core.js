@@ -11,9 +11,9 @@ module.exports = {
     },
   },
   'headline-news': {
+    ...brands.sdce,
     name: 'Headline News',
     primaryColor: '#e65225',
     editor: 'Marina Mayer',
-    ...brands.sdce,
   },
 };

@@ -20,80 +20,77 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td align="center" valign="top">
-          <!-- <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10"> -->
+          <common-new-standard-header-block data=input.data bgColor=primaryColor />
 
-            <common-new-standard-header-block data=input.data bgColor=primaryColor />
+          <common-content-new-featured-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Featured"
+          />
 
-            <common-content-new-featured-block
-              data=data
-              newsletter=newsletter
-              date=date
-              section-name="Featured"
-            />
+          <common-content-new-sponsored-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored"
+            display-sponsored-section=false
+          />
 
-            <common-content-new-sponsored-list-block
-              date=date
-              newsletter=newsletter
-              section-name="Sponsored"
-              display-sponsored-section=false
-            />
+          <common-content-new-mid-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Mid"
+          />
 
-            <common-content-new-mid-block
-              data=data
-              newsletter=newsletter
-              date=date
-              section-name="Mid"
-            />
+          <common-new-standard-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          />
 
-            <common-new-standard-advertisement-block
-              date=date
-              ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
-            />
+          <common-content-new-list-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Lower"
+            display-section-name=true
+            limit=1
+            skip=0
+          />
 
-            <common-content-new-list-block
-              data=data
-              newsletter=newsletter
-              date=date
-              section-name="Lower"
-              display-section-name=true
-              limit=1
-              skip=0
-            />
+          <common-content-new-list-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Lower"
+            display-section-name=false
+            limit=1
+            skip=1
+          />
 
-            <common-content-new-list-block
-              data=data
-              newsletter=newsletter
-              date=date
-              section-name="Lower"
-              display-section-name=false
-              limit=1
-              skip=1
-            />
+          <common-content-new-sponsored-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored"
+            display-sponsored-section=true
+          />
 
-            <common-content-new-sponsored-list-block
-              date=date
-              newsletter=newsletter
-              section-name="Sponsored"
-              display-sponsored-section=true
-            />
+          <common-content-new-list-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Lower"
+            display-section-name=false
+            limit=1
+            skip=2
+          />
 
-            <common-content-new-list-block
-              data=data
-              newsletter=newsletter
-              date=date
-              section-name="Lower"
-              display-section-name=false
-              limit=1
-              skip=2
-            />
+          <common-new-standard-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
+          />
 
-            <common-new-standard-advertisement-block
-              date=date
-              ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
-            />
-
-            <common-new-standard-footer-block data=input.data />
-          <!-- </table> -->
+          <common-new-standard-footer-block data=input.data />
         </td>
       </tr>
     </table>
