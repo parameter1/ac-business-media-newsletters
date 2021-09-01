@@ -2,10 +2,10 @@ import { get } from "@parameter1/base-cms-object-path";
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
 $ const { config } = out.global;
-$ const { bgColor } = input;
+$ const { bgColor, style } = input;
 
 $ const height = defaultValue(input.height, 2);
 
 <tr>
-  <td height=height bgcolor=bgColor></td>
+  <td height=height bgcolor=bgColor style=style></td>
 </tr>

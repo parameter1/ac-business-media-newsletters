@@ -1,0 +1,142 @@
+import { get } from "@parameter1/base-cms-object-path";
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+
+$ const { config } = out.global;
+
+$ const { content, urlParams } = input;
+
+$ const {
+  newsletter,
+  date,
+  sectionName,
+  longBorder,
+  limit,
+  skip,
+  displaySectionName,
+} = input;
+
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const primaryColor = get(newsletterConfig, "primaryColor");
+
+$ const sectionNameStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "28px",
+  "line-height": "33px",
+  "font-weight": "900",
+  "letter-spacing": "0",
+  "color": "#ffffff",
+  "text-transform": "uppercase",
+};
+
+$ const titleStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "17px",
+  "line-height": "22px",
+  "color": "#000000",
+  "font-weight": "900",
+  "letter-spacing": "0",
+};
+
+$ const teaserStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "16px",
+  "line-height": "21px",
+  "color": "#A4A09F",
+  "font-weight": "400",
+  "letter-spacing":"0",
+};
+
+$ const verticalBorderStyle = {
+  "text-align": "left",
+  "border-left": "3px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
+};
+
+$ const verticalBorderStyleThick = {
+  "text-align": "left",
+  "border-left": "5px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
+};
+
+$ const linkStyle = {
+  "color": primaryColor,
+  "text-decoration": "underline",
+  "font-weight": "normal",
+};
+
+
+<marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
+  date: date.valueOf(),
+  newsletterId: newsletter.id,
+  sectionName: sectionName,
+  limit: limit,
+  skip: skip,
+  queryFragment: contentList,
+  displaySectionName: displaySectionName,
+}>
+
+  <if(displaySectionName === true)>
+    <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+      <tr>
+        <td align="center" valign="top">
+          <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+            <common-table-spacer-element class="height2" height=10 />
+            <tr>
+              <td align="center" valign="middle" class="font1" style=sectionNameStyle>${sectionName}</td>
+            </tr>
+            <common-table-spacer-element class="height2" height=13 />
+          </table>
+        </td>
+      </tr>
+    </table>
+  </if>
+  <for|node| of=nodes>
+    <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+      <tr>
+        <td align="center" valign="top">
+          <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101" bgcolor="#ffffff">
+            <tr>
+              <td align="center" valign="top">
+                <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
+                  <common-table-spacer-element class="height2" height=18 />
+                  <tr>
+                    <td align="left" valign="top">
+                      <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
+                            <td align="left" valign="middle" style=borderStyle></td>
+                            <td align="left" valign="middle" width="7px"></td>
+                            <td align="left" class="font6" valign="middle" style=titleStyle>
+                              <marko-core-obj-text obj=node field="name" html=true attrs={ style: titleStyle } />
+                            </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <common-table-spacer-element height=4 />
+                  <tr>
+                    <td align="left" valign="top">
+                      <table width="98%" align="right" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" class="font3" valign="middle">
+                            <marko-core-obj-text obj=node field="teaser" html=true attrs={ style: teaserStyle } />
+                            <marko-core-text value="Read More...">
+                              <@link href=node.siteContext.url target="_blank" attrs={ style: linkStyle } />
+                            </marko-core-text>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <common-table-spacer-element class="height3" height=14 />
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </for>
+</marko-web-query>

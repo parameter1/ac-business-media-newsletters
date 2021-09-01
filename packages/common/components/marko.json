@@ -27,5 +27,8 @@
     "@valign": "string",
     "@style": "string",
     "@attrs": "object"
+  },
+  "<common-new-standard-head-styles>": {
+    "template": "./new-standard-head-styles.marko"
   }
 }
