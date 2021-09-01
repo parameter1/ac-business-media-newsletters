@@ -49,20 +49,20 @@ $ const sponsoredNameStyle = {
   queryFragment: contentList,
   displaySponsoredSection: displaySponsoredSection,
 }>
-  <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
-    <tr>
-      <td align="center" valign="top">
-        <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101" bgcolor="#ffffff">
-          <tr>
-            <common-table-spacer-element height=15 />
-            <td align="center" valign="top">
-              <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
-                <common-table-hr-element height="15" style="border-top: 2px solid #2f2f2f;" />
-                <tr>
-                  <td align="center" valign="top">
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-                      <tr>
-                        <for|node, index| of=nodes>
+  <for|node, index| of=nodes>
+    <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+      <tr>
+        <td align="center" valign="top">
+          <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101" bgcolor="#ffffff">
+            <tr>
+              <common-table-spacer-element height=15 />
+              <td align="center" valign="top">
+                <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
+                  <common-table-hr-element height="15" style="border-top: 2px solid #2f2f2f;" />
+                  <tr>
+                    <td align="center" valign="top">
+                      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
                           <td align="center" width="45%">
                             <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
                               <marko-newsletter-imgix
@@ -105,18 +105,18 @@ $ const sponsoredNameStyle = {
                               </tr>
                             </table>
                           </td>
-                        </for>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <common-table-hr-element height="17" style="border-bottom: 2px solid #2f2f2f" />
-                <common-table-spacer-element height=24 />
-              </table>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <common-table-hr-element height="17" style="border-bottom: 2px solid #2f2f2f" />
+                  <common-table-spacer-element height=24 />
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </for>
 </marko-web-query>
