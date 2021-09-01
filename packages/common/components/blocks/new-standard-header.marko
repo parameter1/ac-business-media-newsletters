@@ -6,49 +6,40 @@ $ const { newsletter, date, dateInfo } = input.data;
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const displayDate = moment(date).format("MMMM DD, YYYY");
 
-<body style="padding:0;margin:0; -webkit-text-size-adjust: 100%; background: #ffffff; font-family: 'arial', sans-serif;">
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td align="center" valign="top">
-        <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
-          <!-- 1st block starts-->
-          <tr>
-            <td align="center" valign="top">
-              <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
-                <common-table-spacer-element height=10 />
-                <tr>
-                  <td align="center" valign="top">
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-                      <tr>
-                        <td align="right" class="mob_hide" valign="top" style="font-family: 'Arial Narrow Bold', sans-serif;font-size: 12px; line-height: 17px; color: #FFFFFF;letter-spacing: 0px;">
-                          <a href="@{mv_online_version}@" target="_blank" style="color: #FFFFFF;text-decoration: none;">View Email Online</a>
-                        </td>
-                        <td align="right" valign="top"  style="font-family: 'Arial Narrow Bold', sans-serif;font-size: 12px; line-height: 17px; color: #FFFFFF; letter-spacing: 0px; text-decoration: none;">
-                          ${displayDate}
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <common-table-spacer-element height=16 />
-                <tr>
-                  <td align="left" valign="top">
-                    <marko-newsletter-imgix
-                      src=`${newsletterConfig.headerLogoSrc}`
-                      alt="logo"
-                      options={ w: 85, h: 24 }
-                      attrs={ style: "margin: 0 0 0 8px !important; height: 24" }
-                    >
-                      <@link href=website.get("origin") target="_blank" />
-                    </marko-newsletter-imgix>
-                  </td>
-                </tr>
-                <common-table-spacer-element height=5 />
-              </table>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
+<table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+  <tr>
+    <td align="center" valign="top">
+      <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+        <common-table-spacer-element height=10 />
+        <tr>
+          <td align="center" valign="top">
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="right" class="mob_hide" valign="top" style="font-family: 'Arial Narrow Bold', sans-serif;font-size: 12px; line-height: 17px; color: #FFFFFF;letter-spacing: 0px;">
+                  <a href="@{mv_online_version}@" target="_blank" style="color: #FFFFFF;text-decoration: none;">View Email Online</a>
+                </td>
+                <td align="right" valign="top"  style="font-family: 'Arial Narrow Bold', sans-serif;font-size: 12px; line-height: 17px; color: #FFFFFF; letter-spacing: 0px; text-decoration: none;">
+                  ${displayDate}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <common-table-spacer-element height=16 />
+        <tr>
+          <td align="left" valign="top">
+            <marko-newsletter-imgix
+              src=`${newsletterConfig.headerLogoSrc}`
+              alt="logo"
+              options={ w: 85, h: 24 }
+              attrs={ style: "margin: 0 0 0 8px !important; height: 24" }
+            >
+              <@link href=website.get("origin") target="_blank" />
+            </marko-newsletter-imgix>
+          </td>
+        </tr>
+        <common-table-spacer-element height=5 />
+      </table>
+    </td>
+  </tr>
+</table>
