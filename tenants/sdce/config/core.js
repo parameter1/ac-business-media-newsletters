@@ -15,5 +15,6 @@ module.exports = {
     name: 'Headline News',
     primaryColor: '#e65225',
     editor: 'Marina Mayer',
+    editorImage: '/files/base/acbm/sdce/image/static/editors_marina.png',
   },
 };
