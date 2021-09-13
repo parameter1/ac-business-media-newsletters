@@ -35,6 +35,22 @@ fragment NewsletterContentListFragment on Content {
       }
     }
   }
+  ... on Authorable {
+    authors {
+      edges {
+        node {
+          id
+          name
+          title
+          primaryImage {
+            id
+            src(input: { options: { auto: "format", fillColor: "fff", fit: "fill", h: 185, w: 185, pad: 25, mask: "ellipse" } })
+            alt
+          }
+        }
+      }
+    }
+  }
 }
 
 `;

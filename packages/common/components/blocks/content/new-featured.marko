@@ -1,4 +1,4 @@
-import { get } from "@parameter1/base-cms-object-path";
+import { get, getAsArray } from "@parameter1/base-cms-object-path";
 import contentList from "@ac-business-media/common/graphql/fragments/content-list";
 
 $ const { config } = out.global;
@@ -55,6 +55,7 @@ $ const editorStyle = {
   "color": "#000000",
   "font-weight": "900",
   "letter-spacing": "0",
+  "border-top": "solid 2px #000",
 };
 
 $ const brandNameStyle = {
@@ -101,6 +102,18 @@ $ const buttonTextStyle = {
     </tr>
   </table>
   <for|node| of=nodes>
+
+    $ const authors = getAsArray(node, "authors.edges");
+    $ const author = authors.length ? get(authors, "0.node") : null;
+    $ const authorSrc = get(author, 'primaryImage.src');
+    $ const imgOptions = {
+      w: 540,
+      h: 393,
+      fit: "crop",
+      mask: "https://img.forconstructionpros.com/files/base/acbm/static/enl-feature-mask.png",
+      ...(authorSrc && { mark: authorSrc }),
+    };
+
     <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
       <tr>
         <td align="center" valign="top">
@@ -111,7 +124,7 @@ $ const buttonTextStyle = {
                   <marko-newsletter-imgix
                     src=image.src
                     alt=image.alt
-                    options={ w: 540, h: 393, fit: "crop" }
+                    options=imgOptions
                     attrs={ align: "center", width: 540, height: 393 }
                     class="resize_img"
                   >
@@ -133,15 +146,19 @@ $ const buttonTextStyle = {
                 <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
                   <tr>
                     <td align="left" valign="top">
-                      <table width="100%" align="left" valign="bottom" border="0" cellspacing="0" cellpadding="0">
+                      <table width="100%" align="left" valign="bottom" border="0" cellspacing="0" cellpadding="5">
                         <tr>
-                          <td align="left" valign="middle" class="font3" style=editorStyle>
-                            ${editor} | Editor |
-                          </td>
                           <td style=brandNameStyle>
                             ${brandName}
                           </td>
                         </tr>
+                        <if(author)>
+                          <tr>
+                            <td align="left" valign="middle" class="font3" style=editorStyle>
+                                ${author.name} | ${author.title}
+                            </td>
+                          </tr>
+                        </if>
                       </table>
                     </td>
                   </tr>
