@@ -14,9 +14,8 @@ $ const {
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const primaryColor = get(newsletterConfig, "primaryColor");
 $ const editor = get(newsletterConfig, "editor");
-$ const editorImage = get(newsletterConfig, "editorImage");
 $ const brandName = get(newsletterConfig, "brandName");
-
+$ const editorImage = get(newsletterConfig, "editorImage");
 $ const waterMarkOptions = {
   auto: "format",
   fillColor: "fff",
@@ -24,10 +23,9 @@ $ const waterMarkOptions = {
   h: 185,
   w: 185,
   pad: 25,
-  mark: "ellipse",
+  mask: "ellipse",
 };
-
-$ const waterMark = buildImgixUrl("https://img.sdcexec.com/files/base/acbm/sdce/image/static/editors_marina.png", waterMarkOptions);
+$ const waterMark = editorImage ? buildImgixUrl(`https://${newsletter.site.imageHost}/${editorImage}`, waterMarkOptions) : null;
 
 $ const sectionNameStyle = {
   "font-family": "'Arial', sans-serif",
@@ -121,9 +119,9 @@ $ const buttonTextStyle = {
     h: 393,
     dpr: 2,
     fit: "crop",
-    mask: "https://img.forconstructionpros.com/files/base/acbm/static/enl-feature-mask.png",
+    mask: `https://${newsletter.site.imageHost}/files/base/acbm/static/enl-feature-mask.png`,
     mark: "waterMark",
-    ...(editorImage && { mark: editorImage }),
+    ...(waterMark && { mark: waterMark }),
   };
 
 
