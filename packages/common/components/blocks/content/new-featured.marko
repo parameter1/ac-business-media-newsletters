@@ -1,4 +1,5 @@
 import { get } from "@parameter1/base-cms-object-path";
+import { buildImgixUrl } from "@parameter1/base-cms-image";
 import contentList from "@ac-business-media/common/graphql/fragments/content-list";
 
 $ const { config } = out.global;
@@ -14,6 +15,17 @@ $ const newsletterConfig = config.get(newsletter.alias);
 $ const primaryColor = get(newsletterConfig, "primaryColor");
 $ const editor = get(newsletterConfig, "editor");
 $ const brandName = get(newsletterConfig, "brandName");
+$ const editorImage = get(newsletterConfig, "editorImage");
+$ const waterMarkOptions = {
+  auto: "format",
+  fillColor: "fff",
+  fit: "fill",
+  h: 185,
+  w: 185,
+  pad: 25,
+  mask: "ellipse",
+};
+$ const waterMark = editorImage ? buildImgixUrl(`https://${newsletter.site.imageHost}/${editorImage}`, waterMarkOptions) : null;
 
 $ const sectionNameStyle = {
   "font-family": "'Arial', sans-serif",
@@ -101,6 +113,18 @@ $ const buttonTextStyle = {
     </tr>
   </table>
   <for|node| of=nodes>
+
+  $ const imgOptions = {
+    w: 540,
+    h: 393,
+    dpr: 2,
+    fit: "crop",
+    mask: `https://${newsletter.site.imageHost}/files/base/acbm/static/enl-feature-mask.png`,
+    mark: "waterMark",
+    ...(waterMark && { mark: waterMark }),
+  };
+
+
     <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
       <tr>
         <td align="center" valign="top">
@@ -110,8 +134,7 @@ $ const buttonTextStyle = {
                 <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
                   <marko-newsletter-imgix
                     src=image.src
-                    alt=image.alt
-                    options={ w: 540, h: 393, fit: "crop" }
+                    options=imgOptions
                     attrs={ align: "center", width: 540, height: 393 }
                     class="resize_img"
                   >
@@ -120,14 +143,6 @@ $ const buttonTextStyle = {
                 </marko-core-obj-value>
               </td>
             </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-    <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
-      <tr>
-        <td align="center" valign="top">
-          <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap101">
             <tr>
               <td align="center" valign="top">
                 <table width="88%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
