@@ -1,4 +1,5 @@
 import { get } from "@parameter1/base-cms-object-path";
+import { buildImgixUrl } from "@parameter1/base-cms-image";
 import contentList from "@ac-business-media/common/graphql/fragments/content-list";
 
 $ const { config } = out.global;
@@ -13,8 +14,20 @@ $ const {
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const primaryColor = get(newsletterConfig, "primaryColor");
 $ const editor = get(newsletterConfig, "editor");
-$ const brandName = get(newsletterConfig, "brandName");
 $ const editorImage = get(newsletterConfig, "editorImage");
+$ const brandName = get(newsletterConfig, "brandName");
+
+$ const waterMarkOptions = {
+  auto: "format",
+  fillColor: "fff",
+  fit: "fill",
+  h: 185,
+  w: 185,
+  pad: 25,
+  mark: "ellipse",
+};
+
+$ const waterMark = buildImgixUrl("https://img.sdcexec.com/files/base/acbm/sdce/image/static/editors_marina.png", waterMarkOptions);
 
 $ const sectionNameStyle = {
   "font-family": "'Arial', sans-serif",
@@ -79,15 +92,6 @@ $ const buttonTextStyle = {
   "display": "block",
 };
 
-$ const imageStyle = {
-  "-webkit-clip-path": "polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%)",
-  "clip-path": "polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%)",
-}
-
-$ const editorImageStyle = {
-  "padding-right": "30px"
-}
-
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
   date: date.valueOf(),
   newsletterId: newsletter.id,
@@ -111,6 +115,18 @@ $ const editorImageStyle = {
     </tr>
   </table>
   <for|node| of=nodes>
+
+  $ const imgOptions = {
+    w: 540,
+    h: 393,
+    dpr: 2,
+    fit: "crop",
+    mask: "https://img.forconstructionpros.com/files/base/acbm/static/enl-feature-mask.png",
+    mark: "waterMark",
+    ...(editorImage && { mark: editorImage }),
+  };
+
+
     <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
       <tr>
         <td align="center" valign="top">
@@ -120,22 +136,11 @@ $ const editorImageStyle = {
                 <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
                   <marko-newsletter-imgix
                     src=image.src
-                    options={ w: 540, fit: "crop" }
-                    attrs={ align: "center", width: 540, height: "auto", style: imageStyle}
+                    options=imgOptions
+                    attrs={ align: "center", width: 540, height: 393 }
                     class="resize_img"
                   >
                     <@link href=node.siteContext.url target="_blank" />
-                  </marko-newsletter-imgix>
-                </marko-core-obj-value>
-              </td>
-            </tr>
-            <tr>
-              <td align="right">
-                <marko-core-obj-value|{ value: image }| obj=node as="object">
-                  <marko-newsletter-imgix
-                    src=editorImage
-                    attrs={ width: 75, height: 75, style: editorImageStyle }
-                  >
                   </marko-newsletter-imgix>
                 </marko-core-obj-value>
               </td>
