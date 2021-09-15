@@ -10,8 +10,8 @@ $ const socialMediaLinks = getAsArray(socialMedia, "links");
 
 $ const standardStyle = {
   "font-family": "'Arial', sans-serif",
-  "font-size": "9px",
-  "line-height": "12px",
+  "font-size": "5px",
+  "line-height": "8px",
   "color": "#ffffff",
   "font-weight": "normal",
   "letter-spacing": "0",
@@ -19,7 +19,7 @@ $ const standardStyle = {
 
 $ const smallerStyle = {
   ...standardStyle,
-  "line-height": "9px",
+  "line-height": "5px",
 };
 
 $ const linkStyle = {
@@ -76,7 +76,7 @@ $ const linkStyle = {
               <common-table-spacer-element height=3 />
               <tr>
                 <td align="center"  class="align" valign="middle" style=standardStyle>
-                  Please add news.acbmmail.com and marketing.acbmmail.com to your address book or<br/>safe sender list to receive our emails in your inbox.
+                  Please add news.acbmmail.com and marketing.acbmmail.com to your address book or safe sender list to receive our emails in your inbox.
                 </td>
               </tr>
               <common-table-spacer-element height=3 />
@@ -95,13 +95,13 @@ $ const linkStyle = {
                   If this email was forwarded to you and you are interested in subscribing, please <a href=get(newsletterConfig, "newsletterPrefLink") style=linkStyle>click here</a> to sign-up.
                 </td>
               </tr>
-              <common-table-spacer-element height=5 />
+              <common-table-spacer-element height=3 />
               <tr>
                 <td align="center"  class="align" valign="middle" style=standardStyle>
                   If you have any questions or concerns, please contact us at 920-542-1131 or toll-free at 800-538-5544.
                 </td>
               </tr>
-              <common-table-spacer-element height=5 />
+              <common-table-spacer-element height=3 />
               <tr>
                 <td align="center"  class="align" valign="middle" style=smallerStyle>${website.get("name")}<br>
                   AC Business Media<br>
