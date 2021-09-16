@@ -16,5 +16,19 @@ config
       width: 500,
       height: 100,
     },
+  ])
+  .setAdUnits('industry-research', [
+    {
+      name: 'banner-1',
+      id: '',
+      width: 500,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '',
+      width: 500,
+      height: 100,
+    },
   ]);
 module.exports = config;

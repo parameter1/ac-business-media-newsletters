@@ -17,4 +17,11 @@ module.exports = {
     editor: 'Marina Mayer',
     editorImage: '/files/base/acbm/sdce/image/static/editors_marina.png',
   },
+  'industry-research': {
+    ...brands.sdce,
+    name: 'Industry Research',
+    primaryColor: '',
+    editor: '',
+    editorImage: '',
+  },
 };
