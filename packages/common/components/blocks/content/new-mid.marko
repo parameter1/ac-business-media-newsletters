@@ -19,6 +19,7 @@ $ const nameStyle = {
   "line-height": "30px",
   "color": "#ffffff",
   "font-weight": "900",
+  "text-decoration": "none !important"
 };
 
 $ const mobileStyle = {
@@ -27,6 +28,7 @@ $ const mobileStyle = {
   "line-height": "18px",
   "color": "#000000",
   "font-weight": "900",
+  "text-decoration": "none !important"
 };
 
 $ const verticalBorderStyle = {
@@ -50,6 +52,7 @@ $ const teaserStyle = {
   "color": "#A4A09F",
   "font-weight": "400",
   "letter-spacing": "-0.2px",
+  "text-decoration": "none !important"
 };
 
 $ const buttonStyle = {
@@ -79,7 +82,7 @@ $ const buttonTextStyle = {
         <td align="center" valign="top">
           <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
             <tr>
-              <td valign="top" width="60%" class="flt1">
+              <td valign="center" width="60%" class="flt1">
                 <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
                   <marko-newsletter-imgix
                     src=image.src
@@ -87,14 +90,18 @@ $ const buttonTextStyle = {
                     options={ w: 324, h: 253 }
                     attrs={ align: "center", width: 324, height: 253 }
                     class="resize_img"
-                  />
+                  >
+                    <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle} />
+                  </marko-newsletter-imgix>
                 </marko-core-obj-value>
               </td>
               <td align="center" valign="bottom" width="40%" class="flt1" bgcolor=primaryColor>
                 <table width="84%" align="center" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td align="left" class="mob_hide1" valign="bottom">
-                      <marko-core-obj-text obj=node field="name" html=true attrs={ style: nameStyle } />
+                      <marko-core-obj-text obj=node field="name" html=true >
+                        <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle }/>
+                      </marko-core-obj-text>
                     </td>
                   </tr>
                   <common-table-spacer-element height=13 />

@@ -35,6 +35,7 @@ $ const titleStyle = {
   "color": "#000000",
   "font-weight": "900",
   "letter-spacing": "0",
+  "text-decoration": "none"
 };
 
 $ const teaserStyle = {
@@ -109,7 +110,9 @@ $ const linkStyle = {
                             <td align="left" valign="middle" style=borderStyle></td>
                             <td align="left" valign="middle" width="7px"></td>
                             <td align="left" class="font6" valign="middle" style=titleStyle>
-                              <marko-core-obj-text obj=node field="name" html=true attrs={ style: titleStyle } />
+                              <marko-core-obj-text obj=node field="name" html=true >
+                                <@link href=node.siteContext.url target="_blank" attrs={ style: titleStyle }/>
+                              </marko-core-obj-text>
                             </td>
                         </tr>
                       </table>
