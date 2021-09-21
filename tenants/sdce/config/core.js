@@ -13,7 +13,7 @@ module.exports = {
   'headline-news': {
     ...brands.sdce,
     name: 'Headline News',
-    primaryColor: '#e65225',
+    primaryColor: '#e50102',
     editor: 'Marina Mayer',
     editorImage: '/files/base/acbm/sdce/image/static/editors_marina.png',
   },
