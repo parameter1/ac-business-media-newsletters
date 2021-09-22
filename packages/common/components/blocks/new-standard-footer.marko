@@ -27,16 +27,16 @@ $ const linkStyle = {
   "text-decoration": "none"
 };
 
-<table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+<table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
   <tr>
     <td align="center" valign="top">
-      <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="ffffff" class="wrap101">
+      <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="ffffff" class="wrap101">
         <tr>
           <td align="center" valign="top">
             <marko-newsletter-imgix
               src=`${newsletterConfig.footerLogoSrc}`
-              options={ w: 540, h: 93 }
-              attrs={ align: "center", width: 540, height: 93 }
+              options={ w: 600, h: 93 }
+              attrs={ align: "center", width: 600, height: 93 }
               class="resize_img"
             />
           </td>
@@ -50,8 +50,9 @@ $ const linkStyle = {
                     <td>
                       <marko-newsletter-imgix
                         src=`${socialMedia.imagePath}/${link.provider}-white.png`
+                        class="resize_img1"
                         alt=link.provider
-                        options={ w: 35, h: 34 }
+                        options={ w: 45, h: 34 }
                         attrs={ align: "center", valign: "middle" }
                       >
                         <@link href=link.href target="_blank" />

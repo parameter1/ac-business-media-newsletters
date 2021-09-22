@@ -4,13 +4,13 @@ $ const adUnit = getAsObject(input, "adUnit");
 $ const newsletter = getAsObject(input, "newsletter");
 $ const { date } = input;
 
-<table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+<table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
   <tr>
     <td align="center" valign="top">
-      <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101" bgcolor="#ffffff">
+      <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101" bgcolor="#ffffff">
         <tr>
           <td align="center" valign="top">
-            <marko-newsletters-email-x-display decoded-params=["email", "send"]>
+            <marko-newsletters-email-x-display decoded-params=["email", "send"] class="wrap100">
               <@ad-unit ...adUnit />
               <@params date=date email="@{email name}@" />
               <@image class="resize_img1" />

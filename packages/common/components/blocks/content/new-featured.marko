@@ -14,6 +14,7 @@ $ const {
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const primaryColor = get(newsletterConfig, "primaryColor");
 $ const editor = get(newsletterConfig, "editor");
+$ const editorTitle = get(newsletterConfig, "editorTitle");
 $ const brandName = get(newsletterConfig, "brandName");
 $ const editorImage = get(newsletterConfig, "editorImage");
 $ const waterMarkOptions = {
@@ -97,10 +98,10 @@ $ const buttonTextStyle = {
   queryFragment: contentList,
 }>
 
-  <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+  <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
     <tr>
       <td align="center" valign="top">
-        <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+        <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
           <tr>
           $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
             <td style=borderStyle>
@@ -115,7 +116,7 @@ $ const buttonTextStyle = {
   <for|node| of=nodes>
 
   $ const imgOptions = {
-    w: 540,
+    w: 600,
     h: 393,
     dpr: 2,
     fit: "crop",
@@ -125,17 +126,17 @@ $ const buttonTextStyle = {
   };
 
 
-    <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+    <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
       <tr>
         <td align="center" valign="top">
-          <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap101">
+          <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap101">
             <tr>
               <td valign="top">
                 <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
                   <marko-newsletter-imgix
                     src=image.src
                     options=imgOptions
-                    attrs={ align: "center", width: 540, height: 393 }
+                    attrs={ align: "center", width: 600, height: 393 }
                     class="resize_img"
                   >
                     <@link href=node.siteContext.url target="_blank" />
@@ -151,7 +152,7 @@ $ const buttonTextStyle = {
                       <table width="100%" align="left" valign="bottom" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                           <td align="left" valign="middle" class="font3" style=editorStyle>
-                            ${editor} | Editor |
+                            ${editor} | ${editorTitle} |
                           </td>
                           <td style=brandNameStyle>
                             ${brandName}
