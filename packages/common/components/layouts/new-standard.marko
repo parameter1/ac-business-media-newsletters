@@ -72,7 +72,8 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
             date=date
             newsletter=newsletter
             section-name="Sponsored"
-            display-sponsored-section=true
+            display-sponsored-section=false
+            skip=1
           />
 
           <common-content-new-list-block
@@ -83,6 +84,13 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
             display-section-name=false
             limit=1
             skip=2
+          />
+
+          <common-content-new-sponsored-list-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsors Secondary"
+            display-sponsored-section=true
           />
 
           <common-new-standard-advertisement-block
