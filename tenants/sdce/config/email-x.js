@@ -6,14 +6,14 @@ config
   .setAdUnits('headline-news', [
     {
       name: 'banner-1',
-      id: '61269385d9e8784033015a79',
-      width: 500,
+      id: '5c51c2469bcbcf1119dc9816',
+      width: 600,
       height: 100,
     },
     {
       name: 'banner-2',
-      id: '6126939a984d45b075bc2d4d',
-      width: 500,
+      id: '5c51c28e58ff6944ce55d111',
+      width: 600,
       height: 100,
     },
   ]);

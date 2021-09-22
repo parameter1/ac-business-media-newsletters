@@ -227,6 +227,7 @@
       "type": "object",
       "required": true
     },
+    "@skip": "number",
     "@newsletter": {
       "type": "object",
       "required": true
