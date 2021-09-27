@@ -36,14 +36,14 @@ $ const linkStyle = {
             <marko-newsletter-imgix
               src=`${newsletterConfig.footerLogoSrc}`
               options={ w: 600, h: 93 }
-              attrs={ align: "center", width: 600, height: 93 }
+              attrs={ width: 600, align: "center", style: "display=block" }
               class="resize_img"
             />
           </td>
         </tr>
         <if(socialMediaLinks.length)>
           <tr bgcolor=primaryColor>
-            <td align="center" valign="top"  class="align2">
+            <td align="center" valign="top" class="align2">
               <table align="center"  class="align2" border="0" cellspacing="0" cellpadding="10">
                 <tr>
                   <for|link| of=socialMediaLinks>

@@ -69,7 +69,6 @@ $ const buttonTextStyle = {
   "display": "block",
 };
 
-
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
   date: date.valueOf(),
   newsletterId: newsletter.id,
@@ -88,7 +87,7 @@ $ const buttonTextStyle = {
                     src=image.src
                     alt=image.alt
                     options={ w: 360, h: 253 }
-                    attrs={ align: "center", width: 360, height: 253 }
+                    attrs={ align: "center", style: "display=block" }
                     class="resize_img"
                   >
                     <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle} />
@@ -144,11 +143,11 @@ $ const buttonTextStyle = {
           <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101" bgcolor="#ffffff">
             <tr>
               <td align="center" valign="top">
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap100">
                   <common-table-spacer-element height=11 />
                   <tr>
                     <td align="left" valign="top">
-                      <table width="88%" align="center" border="0" cellspacing="0" cellpadding="0">
+                      <table width="88%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap100">
                         <tr>
                           <td align="left" valign="middle" class="font3">
                             <marko-core-obj-text obj=node field="teaser" attrs={ style: teaserStyle } />
@@ -157,7 +156,7 @@ $ const buttonTextStyle = {
                         <common-table-spacer-element height=10 />
                         <tr>
                           <td align="left" valign="top" class="mob_hide">
-                            <table width="120" align="left" border="0" cellspacing="0" cellpadding="0">
+                            <table width="120" align="left" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
                               <tr>
                                 <td align="center" height="30" valign="middle" style=buttonStyle>
                                   <marko-core-obj-text obj=node>
