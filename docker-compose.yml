@@ -70,5 +70,20 @@ services:
       - "21095:80"
       - "31095:31095"
 
+  flog:
+    <<: *node
+    <<: *newsletter-cmd
+    working_dir: /root/tenants/flog
+    environment:
+      <<: *env
+      <<: *env-tauron
+      PORT: 80
+      EXPOSED_PORT: 21096
+      LIVERELOAD_PORT: 31096
+      TENANT_KEY: acbm_flog
+    ports:
+      - "21096:80"
+      - "31096:31096"
+
 volumes:
   yarn-cache: {}
