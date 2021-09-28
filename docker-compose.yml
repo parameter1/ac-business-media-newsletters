@@ -70,5 +70,20 @@ services:
       - "21095:80"
       - "31095:31095"
 
+  oem:
+    <<: *node
+    <<: *newsletter-cmd
+    working_dir: /root/tenants/oem
+    environment:
+      <<: *env
+      <<: *env-tauron
+      PORT: 80
+      EXPOSED_PORT: 21097
+      LIVERELOAD_PORT: 31097
+      TENANT_KEY: acbm_oem
+    ports:
+      - "21097:80"
+      - "31097:31097"
+
 volumes:
   yarn-cache: {}
