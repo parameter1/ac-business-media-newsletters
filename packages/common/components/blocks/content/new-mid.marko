@@ -69,6 +69,12 @@ $ const buttonTextStyle = {
   "display": "block",
 };
 
+$ const imageStyle = {
+  "align": "center",
+  "display": "block",
+  "object-fit": "cover"
+}
+
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
   date: date.valueOf(),
   newsletterId: newsletter.id,
@@ -87,7 +93,7 @@ $ const buttonTextStyle = {
                     src=image.src
                     alt=image.alt
                     options={ w: 360, h: 253 }
-                    attrs={ align: "center", style: "display=block" }
+                    attrs={ style: imageStyle }
                     class="resize_img"
                   >
                     <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle} />

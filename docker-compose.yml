@@ -69,6 +69,21 @@ services:
     ports:
       - "21095:80"
       - "31095:31095"
+      
+  gip:
+    <<: *node
+    <<: *newsletter-cmd
+    working_dir: /root/tenants/gip
+    environment:
+      <<: *env
+      <<: *env-tauron
+      PORT: 80
+      EXPOSED_PORT: 21098
+      LIVERELOAD_PORT: 31098
+      TENANT_KEY: acbm_gip
+    ports:
+      - "21098:80"
+      - "31098:31098"
 
   oem:
     <<: *node
