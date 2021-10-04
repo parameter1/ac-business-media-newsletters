@@ -27,6 +27,11 @@ $ const linkStyle = {
   "text-decoration": "none"
 };
 
+$ const imageStyle = {
+  "align": "center",
+  "display": "block",
+}
+
 <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
   <tr>
     <td align="center" valign="top">
@@ -36,7 +41,7 @@ $ const linkStyle = {
             <marko-newsletter-imgix
               src=`${newsletterConfig.footerLogoSrc}`
               options={ w: 600, h: 93 }
-              attrs={ width: 600, align: "center", style: "display=block" }
+              attrs={ width: 600, style: imageStyle }
               class="resize_img"
             />
           </td>
