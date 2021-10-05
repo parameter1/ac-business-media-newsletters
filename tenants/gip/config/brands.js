@@ -5,7 +5,7 @@ module.exports = {
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=GIPROS_prefs&r',
     privacyPolicyLink: 'https://www.greenindustrypros.com/page/privacy-policy',
     socialMedia: {
-      imagePath: '/files/base/acbm/sdce/image/static/newsletter/',
+      imagePath: '/files/base/acbm/gip/image/static/newsletter/',
       links: [
         { provider: 'facebook', href: 'https://www.facebook.com/GreenIndustryPros/', target: '_blank' },
         { provider: 'linkedin', href: 'https://www.linkedin.com/company/green-industry-pros/', target: '_blank' },
