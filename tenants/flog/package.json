@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@ac-business-media/common": "^0.2.9",
-    "@parameter1/base-cms-marko-core": "^2.37.2",
-    "@parameter1/base-cms-marko-newsletters": "^2.39.3",
+    "@parameter1/base-cms-marko-core": "^2.44.0",
+    "@parameter1/base-cms-marko-newsletters": "^2.44.0",
     "@parameter1/base-cms-marko-newsletters-email-x": "^2.22.2",
     "@parameter1/base-cms-marko-newsletters-gam": "^2.22.2",
     "@parameter1/base-cms-marko-newsletters-mc": "^2.0.0",
