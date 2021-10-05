@@ -42,7 +42,7 @@ module.exports = {
   },
   'lawn-care-report': {
     ...brands.gip,
-    name: 'Lawn Care Report',
+    name: 'Lawn Care',
     headerLogoSrc: '/files/base/acbm/gip/image/static/logo/gip-logo.png',
     footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-83B93A.png',
     primaryColor: '#83b93a',

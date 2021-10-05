@@ -53,7 +53,7 @@ jobs:
 
     - stage: production
       name: OEM Off Highway
-      script: npx @parameter1/base-cms-newsletter-deployment-tool deploy oem newsletters
+      script: npx @parameter1/base-cms-newsletter-deployment-tool deploy ooh newsletters
       install: skip
       env: [ENVIRONMENT=production]
 
