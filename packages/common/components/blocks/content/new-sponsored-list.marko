@@ -11,7 +11,7 @@ $ const {
   date,
   sectionName,
   displaySponsoredSection,
-  skip,
+  limit,
 } = input;
 
 $ const nameStyle = {
@@ -31,12 +31,14 @@ $ const bodyStyle = {
 
 $ const linkStyle = {
   ...nameStyle,
+  "font-size": "11px",
   "color": primaryColor,
   "text-transform": "uppercase",
 }
 
 $ const sponsoredNameStyle = {
   ...nameStyle,
+  "font-size": "11px",
   "color": primaryColor,
   "display": "block",
   "text-decoration": "underline",
@@ -49,7 +51,7 @@ $ const sponsoredNameStyle = {
   sectionName: sectionName,
   queryFragment: contentList,
   displaySponsoredSection: displaySponsoredSection,
-  skip: skip,
+  limit: limit,
 }>
   <for|node, index| of=nodes>
     <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
@@ -62,57 +64,53 @@ $ const sponsoredNameStyle = {
                 <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
                   <common-table-hr-element height="15" style="border-top: 2px solid #2f2f2f;" />
                   <tr>
-                    <td align="center" valign="top">
-                      <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <td valign="top">
+                      <table border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                          <td align="center" width="45%">
+                          <td width="250" align="left">
                             <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
                               <marko-newsletter-imgix
                                 src=image.src
                                 alt=image.alt
-                                options={ w: 216, h: 144 }
+                                options={ w: 225, h: "auto" }
                                 class="resize_img"
                               >
                                 <@link href=node.siteContext.url target="_blank" />
                               </marko-newsletter-imgix>
                             </marko-core-obj-value>
                           </td>
-                          <td align="center" valign="top" width="55%">
-                            <table width="96%" align="right" border="0" cellspacing="0" cellpadding="0">
-                              <tr>
-                                <td>
-                                  <marko-core-obj-text obj=node field="name" tag=false>
-                                    <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle } />
-                                  </marko-core-obj-text>
-                                </td>
-                              </tr>
-                              <if (displaySponsoredSection)>
-                                <tr>
-                                  <td>
-                                    <marko-core-link href=node.siteContext.url target="_blank" class="mob_show1" attrs={ style: sponsoredNameStyle }>Sponsored</marko-core-link>
-                                  </td>
-                                </tr>
-                              </if>
-                              <tr>
-                                <td align="left" valign="top" class="font2" style=bodyStyle>
-                                  <marko-core-obj-text obj=node field="body" html=true />
-                                </td>
-                              </tr>
-                              <tr align="left" class="font4" valign="middle" style=linkStyle>
-                                <td >
-                                  <marko-core-obj-text obj=node field="linkText" tag=false>
-                                    <@link href=node.siteContext.url target="_blank" attrs={ style: linkStyle } />
-                                  </marko-core-obj-text>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
+                        <!-- </tr> -->
+                      <!-- </table>
+                      <table align="right" border="0" cellspacing="0" cellpadding="0"> -->
+                          <if (displaySponsoredSection)>
+                            <!-- <tr> -->
+                              <td align="left" valign="top" class="font2" style=bodyStyle>
+                                <marko-core-obj-text obj=node field="name" tag=false>
+                                  <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle } />
+                                </marko-core-obj-text>
+                                <marko-core-link href=node.siteContext.url target="_blank" class="mob_show1" attrs={ style: sponsoredNameStyle }>Sponsored</marko-core-link>
+                              <!-- </td> -->
+                            <!-- </tr> -->
+
+                          <!-- <tr> -->
+                            <!-- <td align="right" > -->
+                              <marko-core-obj-text obj=node field="body" html=true />
+                            <!-- </td> -->
+                          <!-- </tr> -->
+                          <!-- <tr > -->
+                            <!-- <td align="right" class="font4" valign="middle" style=linkStyle> -->
+                              <marko-core-obj-text obj=node field="linkText" tag=false>
+                                <@link href=node.siteContext.url target="_blank" attrs={ style: linkStyle } />
+                              </marko-core-obj-text>
+                            </td>
+                          <!-- </tr> -->
+                          </if>
                         </tr>
                       </table>
                     </td>
                   </tr>
                   <common-table-hr-element height="17" style="border-bottom: 2px solid #2f2f2f" />
-                  <common-table-spacer-element height=24 />
+                  <common-table-spacer-element height=15 />
                 </table>
               </td>
             </tr>
