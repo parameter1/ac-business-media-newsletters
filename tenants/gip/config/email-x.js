@@ -50,5 +50,19 @@ config
       width: 600,
       height: 100,
     },
+  ])
+  .setAdUnits('lawn-care-report', [
+    {
+      name: 'banner-1',
+      id: '5f7f47099a6ce70078238fa3',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '615b17d0a65026e891f7a689',
+      width: 600,
+      height: 100,
+    },
   ]);
 module.exports = config;
