@@ -10,13 +10,15 @@ module.exports = {
       enabled: true,
     },
   },
-  '': {
+  snowpro: {
     ...brands.gip,
-    name: '',
-    primaryColor: '',
-    editor: '',
-    editorTitle: '',
-    editorImage: '',
+    name: 'SnowPro Newsletter',
+    headerLogoSrc: '/files/base/acbm/gip/image/static/logo/snow-pro-logo.png',
+    footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-7EC0EA.png',
+    primaryColor: '#7ec0ea',
+    editor: 'Ryan Whisner',
+    editorTitle: 'Editor-in-Chief',
+    editorImage: '/files/base/acbm/gip/image/static/editors-ryan.png',
   },
   'technology-report': {
     ...brands.gip,
