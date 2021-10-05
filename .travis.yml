@@ -47,7 +47,7 @@ jobs:
 
     - stage: production
       name: Food Logistics
-      script: npx @parameter1/base-cms-newsletter-deployment-tool deploy flog newsletters
+      script: npx @parameter1/base-cms-newsletter-deployment-tool deploy fl newsletters
       install: skip
       env: [ENVIRONMENT=production]
 
