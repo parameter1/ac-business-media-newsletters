@@ -36,5 +36,19 @@ config
       width: 600,
       height: 100,
     },
+  ])
+  .setAdUnits('the-pro-report', [
+    {
+      name: 'banner-1',
+      id: '5c59a35e465d19b462ab8411',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '5dfabda5a94a69b967b3f20a',
+      width: 600,
+      height: 100,
+    },
   ]);
 module.exports = config;
