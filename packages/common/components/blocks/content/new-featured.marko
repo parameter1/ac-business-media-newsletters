@@ -13,6 +13,7 @@ $ const {
 
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const primaryColor = get(newsletterConfig, "primaryColor");
+$ const name = get(newsletterConfig, "name");
 $ const editor = get(newsletterConfig, "editor");
 $ const editorTitle = get(newsletterConfig, "editorTitle");
 $ const brandName = get(newsletterConfig, "brandName");
@@ -105,7 +106,7 @@ $ const buttonTextStyle = {
           <tr>
           $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
             <td style=borderStyle>
-              <td align="left" class="font1" valign="middle" style=sectionNameStyle>HEADLINE NEWS</td>
+              <td align="left" class="font1" valign="middle" style=sectionNameStyle>${name}</td>
             </td>
           </tr>
           <common-table-spacer-element height=8 />
