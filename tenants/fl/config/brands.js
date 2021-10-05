@@ -2,7 +2,7 @@ module.exports = {
   fl: {
     brandName: 'Food Logistics',
     headerLogoSrc: '',
-    footerLogoSrc: '',
+    footerLogoSrc: '/files/base/acbm/fl/image/static/logo/new-standard-footer-logo-1a93f9.png',
     contactUsLink: 'https://www.foodlogistics.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FLprefs&pk=managepref&r',
     privacyPolicyLink: 'https://www.foodlogistics.com/page/privacy-policy',
