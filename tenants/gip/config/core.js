@@ -30,16 +30,6 @@ module.exports = {
     editorTitle: 'Editor-in-Chief',
     editorImage: '/files/base/acbm/gip/image/static/editors-ryan.png',
   },
-  'technology-report': {
-    ...brands.gip,
-    name: 'Technology Report',
-    headerLogoSrc: '/files/base/acbm/gip/image/static/logo/gip-logo.png',
-    footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-83B93A.png',
-    primaryColor: '#83b93a',
-    editor: 'Ryan Whisner',
-    editorTitle: 'Editor-in-Chief',
-    editorImage: '/files/base/acbm/gip/image/static/editors-ryan.png',
-  },
   'the-pro-report': {
     ...brands.gip,
     name: 'Pro Report',
@@ -53,6 +43,16 @@ module.exports = {
   'lawn-care-report': {
     ...brands.gip,
     name: 'Lawn Care',
+    headerLogoSrc: '/files/base/acbm/gip/image/static/logo/gip-logo.png',
+    footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-83B93A.png',
+    primaryColor: '#83b93a',
+    editor: 'Ryan Whisner',
+    editorTitle: 'Editor-in-Chief',
+    editorImage: '/files/base/acbm/gip/image/static/editors-ryan.png',
+  },
+  'show-report': {
+    ...brands.gip,
+    name: 'Show Report',
     headerLogoSrc: '/files/base/acbm/gip/image/static/logo/gip-logo.png',
     footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-83B93A.png',
     primaryColor: '#83b93a',

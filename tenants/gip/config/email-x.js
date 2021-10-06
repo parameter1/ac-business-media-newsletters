@@ -64,5 +64,19 @@ config
       width: 600,
       height: 100,
     },
+  ])
+  .setAdUnits('show-report', [
+    {
+      name: 'banner-1',
+      id: '5c59a4855a66db2feed47963',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '615b1a8665f06a0c83d8c1a4',
+      width: 600,
+      height: 100,
+    },
   ]);
 module.exports = config;

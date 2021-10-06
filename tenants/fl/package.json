@@ -1,6 +1,5 @@
-{
-  "name": "@ac-business-media/fl",
-  "version": "0.0.0",
+  "name": "@ac-business-media/flog",
+  "version": "0.2.9",
   "author": "Jessica Wade <jessica.wade@parameter1.com>",
   "repository": "https://github.com/parameter1/newsletter-ac-business-media/tree/master/tenants/fl",
   "license": "MIT",
@@ -12,7 +11,7 @@
     "test": "yarn lint && yarn compile"
   },
   "dependencies": {
-    "@ac-business-media/common": "^0.2.8",
+    "@ac-business-media/common": "^0.2.9",
     "@parameter1/base-cms-marko-core": "^2.44.0",
     "@parameter1/base-cms-marko-newsletters": "^2.44.0",
     "@parameter1/base-cms-marko-newsletters-email-x": "^2.22.2",

@@ -39,6 +39,24 @@ jobs:
       install: skip
       env: [ENVIRONMENT=production]
 
+    - stage: production
+      name: Green Industry Pros
+      script: npx @parameter1/base-cms-newsletter-deployment-tool deploy gip newsletters
+      install: skip
+      env: [ENVIRONMENT=production]
+
+    - stage: production
+      name: Food Logistics
+      script: npx @parameter1/base-cms-newsletter-deployment-tool deploy fl newsletters
+      install: skip
+      env: [ENVIRONMENT=production]
+
+    - stage: production
+      name: OEM Off Highway
+      script: npx @parameter1/base-cms-newsletter-deployment-tool deploy oem newsletters
+      install: skip
+      env: [ENVIRONMENT=production]
+
     #############################
     # ^^^ ADD SERVICES HERE ^^^ #
     #############################
