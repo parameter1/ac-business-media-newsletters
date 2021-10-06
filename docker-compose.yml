@@ -100,17 +100,17 @@ services:
       - "21098:80"
       - "31098:31098"
 
-  oem:
+  ooh:
     <<: *node
     <<: *newsletter-cmd
-    working_dir: /root/tenants/oem
+    working_dir: /root/tenants/ooh
     environment:
       <<: *env
       <<: *env-tauron
       PORT: 80
       EXPOSED_PORT: 21097
       LIVERELOAD_PORT: 31097
-      TENANT_KEY: acbm_oem
+      TENANT_KEY: acbm_ooh
     ports:
       - "21097:80"
       - "31097:31097"

@@ -1,8 +1,8 @@
 {
-  "name": "@ac-business-media/oem",
+  "name": "@ac-business-media/ooh",
   "version": "0.2.9",
   "author": "Jessica Wade <jessica.wade@parameter1.com>",
-  "repository": "https://github.com/parameter1/newsletter-ac-business-media/tree/master/tenants/oem",
+  "repository": "https://github.com/parameter1/newsletter-ac-business-media/tree/master/tenants/ooh",
   "license": "MIT",
   "private": true,
   "scripts": {
