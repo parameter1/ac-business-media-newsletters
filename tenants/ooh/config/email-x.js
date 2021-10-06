@@ -31,20 +31,20 @@ config
       height: 100,
     },
   ])
-  // .setAdUnits('economic-market-outlook', [
-  //   {
-  //     name: 'banner-1',
-  //     id: '5c59b78a5a66db55f1d47c0e',
-  //     width: 600,
-  //     height: 100,
-  //   },
-  //   {
-  //     name: 'banner-2',
-  //     id: '5e344dda88eecd8310a701eb',
-  //     width: 600,
-  //     height: 100,
-  //   },
-  // ])
+  .setAdUnits('economic-market-outlook', [
+    {
+      name: 'banner-1',
+      id: '5c59b78a5a66db55f1d47c0e',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '5e344dda88eecd8310a701eb',
+      width: 600,
+      height: 100,
+    },
+  ])
   .setAdUnits('in-the-cab', [
     {
       name: 'banner-1',
