@@ -17,7 +17,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/ooh/image/static/logo/new-standard-footer-logo-ed1b24.png',
     primaryColor: '#ed1b24',
     editor: 'Sara Jensen',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
   },
   'technology-news-tracker': {
@@ -27,7 +27,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/ooh/image/static/logo/new-standard-footer-logo-03c0d4.png',
     primaryColor: '#03c0d4',
     editor: 'Sara Jensen',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
   },
   'economic-market-outlook': {
@@ -37,7 +37,7 @@ module.exports = {
     footerLogoSrc: '',
     primaryColor: '',
     editor: 'Sara Jensen',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
   },
   'in-the-cab': {
@@ -47,7 +47,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/ooh/image/static/logo/new-standard-footer-logo-47a255.png',
     primaryColor: '#47a255',
     editor: 'Sara Jensen',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
   },
   'the-electric-age': {
@@ -57,7 +57,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/ooh/image/static/logo/new-standard-footer-logo-6aba0b.png',
     primaryColor: '#6aba0b',
     editor: 'Sara Jensen',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
   },
   'engine-revolutions': {
@@ -67,7 +67,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/ooh/image/static/logo/new-standard-footer-logo-a5b82a.png',
     primaryColor: '#a5b82a',
     editor: 'Sara Jensen',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
   },
   'drivetrain-technology-update': {
@@ -77,7 +77,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/ooh/image/static/logo/new-standard-footer-logo-f2a300.png',
     primaryColor: '#f2a300',
     editor: 'Sara Jensen',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
   },
   'efficient-design-manufacturing': {
@@ -87,7 +87,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/ooh/image/static/logo/new-standard-footer-logo-ed1c21.png',
     primaryColor: '#ed1c21',
     editor: 'Sara Jensen',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
   },
   'fluid-power-progress': {
@@ -97,7 +97,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/ooh/image/static/logo/new-standard-footer-logo-126baf.png',
     primaryColor: '#126baf',
     editor: 'Sara Jensen',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
   },
 };
