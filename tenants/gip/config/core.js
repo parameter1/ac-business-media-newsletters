@@ -18,7 +18,7 @@ module.exports = {
     primaryColor: '#7ec0ea',
     editor: 'Ryan Whisner',
     editorTitle: 'Editor-in-Chief',
-    editorImage: '/files/base/acbm/gip/image/static/editors-ryan.png',
+    editorImage: '/files/base/acbm/gip/image/static/editor-ryan.png',
   },
   'technology-report': {
     ...brands.gip,
@@ -28,7 +28,7 @@ module.exports = {
     primaryColor: '#83b93a',
     editor: 'Ryan Whisner',
     editorTitle: 'Editor-in-Chief',
-    editorImage: '/files/base/acbm/gip/image/static/editors-ryan.png',
+    editorImage: '/files/base/acbm/gip/image/static/editor-ryan.png',
   },
   'the-pro-report': {
     ...brands.gip,
@@ -38,7 +38,7 @@ module.exports = {
     primaryColor: '#83b93a',
     editor: 'Ryan Whisner',
     editorTitle: 'Editor-in-Chief',
-    editorImage: '/files/base/acbm/gip/image/static/editors-ryan.png',
+    editorImage: '/files/base/acbm/gip/image/static/editor-ryan.png',
   },
   'lawn-care-report': {
     ...brands.gip,
@@ -48,7 +48,7 @@ module.exports = {
     primaryColor: '#83b93a',
     editor: 'Ryan Whisner',
     editorTitle: 'Editor-in-Chief',
-    editorImage: '/files/base/acbm/gip/image/static/editors-ryan.png',
+    editorImage: '/files/base/acbm/gip/image/static/editor-ryan.png',
   },
   'show-report': {
     ...brands.gip,
@@ -58,6 +58,6 @@ module.exports = {
     primaryColor: '#83b93a',
     editor: 'Ryan Whisner',
     editorTitle: 'Editor-in-Chief',
-    editorImage: '/files/base/acbm/gip/image/static/editors-ryan.png',
+    editorImage: '/files/base/acbm/gip/image/static/editor-ryan.png',
   },
 };
