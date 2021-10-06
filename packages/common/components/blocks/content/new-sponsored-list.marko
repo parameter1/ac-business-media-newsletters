@@ -73,37 +73,25 @@ $ const sponsoredNameStyle = {
                                 src=image.src
                                 alt=image.alt
                                 options={ w: 225, h: "auto" }
-                                class="resize_img"
+                                class="resize_img1"
                               >
                                 <@link href=node.siteContext.url target="_blank" />
                               </marko-newsletter-imgix>
                             </marko-core-obj-value>
                           </td>
-                        <!-- </tr> -->
-                      <!-- </table>
-                      <table align="right" border="0" cellspacing="0" cellpadding="0"> -->
                           <if (displaySponsoredSection)>
-                            <!-- <tr> -->
                               <td align="left" valign="top" class="font2" style=bodyStyle>
                                 <marko-core-obj-text obj=node field="name" tag=false>
                                   <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle } />
                                 </marko-core-obj-text>
                                 <marko-core-link href=node.siteContext.url target="_blank" class="mob_show1" attrs={ style: sponsoredNameStyle }>Sponsored</marko-core-link>
-                              <!-- </td> -->
-                            <!-- </tr> -->
 
-                          <!-- <tr> -->
-                            <!-- <td align="right" > -->
                               <marko-core-obj-text obj=node field="body" html=true />
-                            <!-- </td> -->
-                          <!-- </tr> -->
-                          <!-- <tr > -->
-                            <!-- <td align="right" class="font4" valign="middle" style=linkStyle> -->
+
                               <marko-core-obj-text obj=node field="linkText" tag=false>
                                 <@link href=node.siteContext.url target="_blank" attrs={ style: linkStyle } />
                               </marko-core-obj-text>
                             </td>
-                          <!-- </tr> -->
                           </if>
                         </tr>
                       </table>

@@ -2,7 +2,7 @@
   "name": "@ac-business-media/flog",
   "version": "0.2.9",
   "author": "Jessica Wade <jessica.wade@parameter1.com>",
-  "repository": "https://github.com/parameter1/newsletter-ac-business-media/tree/master/tenants/flog",
+  "repository": "https://github.com/parameter1/newsletter-ac-business-media/tree/master/tenants/fl",
   "license": "MIT",
   "private": true,
   "scripts": {
