@@ -25,6 +25,16 @@ fragment NewsletterContentListFragment on Content {
   ... on ContentPromotion {
     body(input: { mutation: Email })
     linkText
+    company {
+      name
+    }
+  }
+  ... on ContentTextAd {
+    body(input: { mutation: Email })
+    linkText
+    company {
+      name
+    }
   }
   images(input:{ pagination: { limit: 100 }, sort: { order: values } }) {
     edges {
