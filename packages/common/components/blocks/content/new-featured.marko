@@ -6,6 +6,7 @@ $ const { config } = out.global;
 
 $ const {
   newsletter,
+  content,
   date,
   sectionName,
   longBorder,
@@ -92,6 +93,12 @@ $ const buttonTextStyle = {
   "display": "block",
 };
 
+$ const contentTypeActions = {
+  'article': 'VIEW ARTICLE',
+  'podcast': 'LISTEN',
+  'video': 'WATCH',
+};
+
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
   date: date.valueOf(),
   newsletterId: newsletter.id,
@@ -114,7 +121,7 @@ $ const buttonTextStyle = {
       </td>
     </tr>
   </table>
-  <for|node| of=nodes>
+  <for|node, content| of=nodes>
 
   $ const imgOptions = {
     w: 600,
@@ -174,14 +181,22 @@ $ const buttonTextStyle = {
                       <marko-core-obj-text obj=node field="teaser" html=true attrs={ style: teaserStyle } />
                     </td>
                   </tr>
-                  <common-table-spacer-element height=10 />
+                </table>
+              </td>
+            </tr>
+            <common-table-spacer-element height=10 />
+            <tr>
+              <td align="center" valign="top">
+                <table width="88%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap102">
                   <tr>
                     <td align="left" valign="top">
                       <table width="120" align="left" border="0" cellspacing="0" style="background-color: #000000; border-radius: 6px;">
                         <tr>
                           <td align="center" height="30" valign="middle" style=buttonStyle>
+                            $ const contentAction = contentTypeActions[node.type] ? contentTypeActions[node.type] : "VIEW CONTENT";
                             <marko-core-obj-text obj=node>
-                              <@link href=node.siteContext.url target="_blank" attrs= { style: buttonTextStyle } />VIEW ARTICLE
+                              <@link href=node.siteContext.url target="_blank" attrs= { style: buttonTextStyle }/>
+                                ${contentAction}
                             </marko-core-obj-text>
                           </td>
                         </tr>

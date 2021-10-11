@@ -73,7 +73,13 @@ $ const imageStyle = {
   "align": "center",
   "display": "block",
   "object-fit": "cover"
-}
+};
+
+$ const contentTypeActions = {
+  'article': 'VIEW ARTICLE',
+  'podcast': 'LISTEN',
+  'video': 'WATCH',
+};
 
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
   date: date.valueOf(),
@@ -169,9 +175,14 @@ $ const imageStyle = {
                             <table width="120" align="left" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
                               <tr>
                                 <td align="center" height="30" valign="middle" style=buttonStyle>
-                                  <marko-core-obj-text obj=node>
+                                  $ const contentAction = contentTypeActions[node.type] ? contentTypeActions[node.type] : "VIEW CONTENT";
+                                    <marko-core-obj-text obj=node>
+                                      <@link href=node.siteContext.url target="_blank" attrs= { style: buttonTextStyle }/>
+                                        ${contentAction}
+                                    </marko-core-obj-text>
+                                  <!-- <marko-core-obj-text obj=node>
                                     <@link href=node.siteContext.url target="_blank" attrs= { style: buttonTextStyle } />VIEW ARTICLE
-                                  </marko-core-obj-text>
+                                  </marko-core-obj-text> -->
                                 </td>
                               </tr>
                             </table>
