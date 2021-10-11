@@ -103,7 +103,7 @@ $ const imageStyle = {
               <td align="center" valign="bottom" width="40%" class="flt1" bgcolor=primaryColor>
                 <table width="84%" align="center" border="0" cellspacing="0" cellpadding="0">
                   <tr>
-                    <td align="left" class="mob_hide1" valign="bottom">
+                    <td align="left" class="mob_hide" valign="bottom">
                       <marko-core-obj-text obj=node field="name" html=true >
                         <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle }/>
                       </marko-core-obj-text>
@@ -128,16 +128,20 @@ $ const imageStyle = {
                   <tr>
                     <td align="left" valign="top" class="mob_show1" style="display: none;">
                       <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
-                        $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
-                          <td align="left" valign="middle" style=borderStyle></td>
-                          <td align="left" valign="middle" width="7px"></td>
-                          <td align="left" valign="bottom" class="font5" style=mobileStyle>
-                            <marko-core-obj-text obj=node field="name" attrs={ style: mobileStyle } />
-                          </td>
+                        <!--[if gte mso 15]><!-->
+                        <tr style="mso-hide:all">
+                          $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
+                            <td align="left" valign="middle" style=borderStyle></td>
+                            <td align="left" valign="middle" width="3"></td>
+                            <td align="left" valign="bottom" class="font5" style=mobileStyle>
+                              <marko-core-obj-text obj=node field="name" attrs={ style: mobileStyle } />
+                            </td>
+                        </tr>
+                        <!--<![endif]-->
                       </table>
                     </td>
                   </tr>
-                  <common-table-spacer-element height=5 />
+                  <common-table-spacer-element height=4 />
                 </table>
               </td>
             </tr>
@@ -153,7 +157,7 @@ $ const imageStyle = {
                   <common-table-spacer-element height=11 />
                   <tr>
                     <td align="left" valign="top">
-                      <table width="88%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap100">
+                      <table width="86%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap100">
                         <tr>
                           <td align="left" valign="middle" class="font3">
                             <marko-core-obj-text obj=node field="teaser" attrs={ style: teaserStyle } />
