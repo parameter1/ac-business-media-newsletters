@@ -14,8 +14,8 @@ module.exports = {
     ...brands.sdce,
     name: 'Headline News',
     primaryColor: '#e50102',
-    editor: 'Marina Mayer',
-    editorTitle: 'Editor-in-Chief',
-    editorImage: '/files/base/acbm/sdce/image/static/editors_marina.png',
+    editor: 'Brielle Jaekel',
+    editorTitle: 'Managing Editor',
+    editorImage: '/files/base/acbm/sdce/image/static/Brielle.png',
   },
 };
