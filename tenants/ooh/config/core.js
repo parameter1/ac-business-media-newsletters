@@ -18,7 +18,7 @@ module.exports = {
     primaryColor: '#ed1b24',
     editor: 'Sara Jensen',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
+    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen_new.png',
   },
   'technology-news-tracker': {
     ...brands.oem,
@@ -28,7 +28,7 @@ module.exports = {
     primaryColor: '#03c0d4',
     editor: 'Sara Jensen',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
+    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen_new.png',
   },
   'economic-market-outlook': {
     ...brands.oem,
@@ -38,7 +38,7 @@ module.exports = {
     primaryColor: '',
     editor: 'Sara Jensen',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
+    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen_new.png',
   },
   'in-the-cab': {
     ...brands.oem,
@@ -48,7 +48,7 @@ module.exports = {
     primaryColor: '#47a255',
     editor: 'Sara Jensen',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
+    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen_new.png',
   },
   'the-electric-age': {
     ...brands.oem,
@@ -58,7 +58,7 @@ module.exports = {
     primaryColor: '#6aba0b',
     editor: 'Sara Jensen',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
+    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen_new.png',
   },
   'engine-revolutions': {
     ...brands.oem,
@@ -68,7 +68,7 @@ module.exports = {
     primaryColor: '#a5b82a',
     editor: 'Sara Jensen',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
+    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen_new.png',
   },
   'drivetrain-technology-update': {
     ...brands.oem,
@@ -78,7 +78,7 @@ module.exports = {
     primaryColor: '#f2a300',
     editor: 'Sara Jensen',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
+    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen_new.png',
   },
   'efficient-design-manufacturing': {
     ...brands.oem,
@@ -88,7 +88,7 @@ module.exports = {
     primaryColor: '#ed1c21',
     editor: 'Sara Jensen',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
+    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen_new.png',
   },
   'fluid-power-progress': {
     ...brands.oem,
@@ -98,6 +98,6 @@ module.exports = {
     primaryColor: '#126baf',
     editor: 'Sara Jensen',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen.png',
+    editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen_new.png',
   },
 };
