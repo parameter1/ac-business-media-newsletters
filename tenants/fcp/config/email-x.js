@@ -30,15 +30,13 @@ config
   .setAdUnits('new-machine-solutions', [
     {
       name: 'banner-1',
-      id: '5feb4e829a6ce74af524a6f7',
+      id: '5c59c331465d195747ab8de4',
       width: 600,
       height: 100,
     },
-  ])
-  .setAdUnits('new-machine-solutions', [
     {
-      name: 'header',
-      id: '5c59c331465d195747ab8de4',
+      name: 'banner-2',
+      id: '5feb4e829a6ce74af524a6f7',
       width: 600,
       height: 100,
     },
@@ -85,8 +83,14 @@ config
   ])
   .setAdUnits('headline-news', [
     {
-      name: 'header',
+      name: 'banner-1',
       id: '5feb4eed9a6ce7e1a224a713',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '6165a95265f06a250fd8ee8b',
       width: 600,
       height: 100,
     },
@@ -194,6 +198,12 @@ config
       width: 600,
       height: 100,
     },
+    {
+      name: 'banner-2',
+      id: '6165a99aa650269316f7d63c',
+      width: 600,
+      height: 100,
+    },
   ])
   .setAdUnits('in-the-mix', [
     {
@@ -234,6 +244,12 @@ config
       width: 600,
       height: 100,
     },
+    {
+      name: 'banner-2',
+      id: '6165a906a6502660e0f7d5ea',
+      width: 600,
+      height: 100,
+    },
   ])
   .setAdUnits('construction-workforce-management', [
     {
@@ -247,6 +263,12 @@ config
     {
       name: 'banner-1',
       id: '5c59c151465d1963e4ab8bf3',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '6165a8b6a650267edef7d5aa',
       width: 600,
       height: 100,
     },
