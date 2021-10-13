@@ -17,7 +17,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-7EC0EA.png',
     primaryColor: '#7ec0ea',
     editor: 'Ryan Whisner',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/gip/image/static/editor-ryan.png',
   },
   'technology-report': {
@@ -27,7 +27,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-83B93A.png',
     primaryColor: '#83b93a',
     editor: 'Ryan Whisner',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/gip/image/static/editor-ryan.png',
   },
   'the-pro-report': {
@@ -37,7 +37,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-83B93A.png',
     primaryColor: '#83b93a',
     editor: 'Ryan Whisner',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/gip/image/static/editor-ryan.png',
   },
   'lawn-care-report': {
@@ -47,7 +47,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-83B93A.png',
     primaryColor: '#83b93a',
     editor: 'Ryan Whisner',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/gip/image/static/editor-ryan.png',
   },
   'show-report': {
@@ -57,7 +57,7 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-83B93A.png',
     primaryColor: '#83b93a',
     editor: 'Ryan Whisner',
-    editorTitle: 'Editor-in-Chief',
+    editorTitle: 'Editor',
     editorImage: '/files/base/acbm/gip/image/static/editor-ryan.png',
   },
 };
