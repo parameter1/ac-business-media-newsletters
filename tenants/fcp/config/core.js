@@ -51,7 +51,7 @@ module.exports = {
   },
   'crane-connection': {
     ...brands.fcp,
-    name: 'Crane Connection',
+    name: 'Crane Connections',
     primaryColor: '#e62725',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-E62725.png',
     editor: 'Alexis Sheprak',
@@ -167,7 +167,7 @@ module.exports = {
   },
   'the-contractors-best-friend': {
     ...brands.fcp,
-    name: 'The Contractors Best Friend',
+    name: "The Contractor's Best Friend",
     primaryColor: '#108BC4',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-108BC4.png',
     editor: 'Gigi Wood',
