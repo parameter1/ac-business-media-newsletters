@@ -1,0 +1,34 @@
+import { getAsArray, get, getAsObject } from "@parameter1/base-cms-object-path";
+
+$ const { isArray } = Array;
+$ const { config } = out.global;
+$ const { node, date } = input;
+$ const newsletter = getAsObject(input, "newsletter");
+
+<!-- load the dpm content config -->
+$ const dpmConfig = config.getAsObject("dpm.content");
+<!-- handle enabled content types. default to `promotion` and `text-ad` when not explicitally configured -->
+$ const enabledTypes = isArray(dpmConfig.types) ? dpmConfig.types : ["promotion", "text-ad"];
+<!-- dpm is enabled when `enabled` is set in the config and the current content type matches a configured type -->
+<!-- $ const dpmEnabled = dpmConfig.enabled && enabledTypes.includes(node.type); -->
+$ const dpmEnabled = dpmConfig.enabled;
+
+<!-- only render when enabled -->
+<if(dpmEnabled)>
+  $ const position = get(input, "dpm.position") || 0;
+  $ const isAd = ["promotion", "text-ad"].includes(node.type);
+
+  <!-- Advertising (promotions, text ads) -->
+  <if(isAd)>
+    $ const lcv = [
+      get(node, "company.name") || ""
+    ].join("|");
+    $ const dpm = {
+      ln: get(node, "name") || "",
+      lc: "Advertising",
+      lkw: "textad",
+      lcv,
+    };
+    <marko-newsletters-omail-dpm lc=dpm.lc lcv=dpm.lcv ln=dpm.ln lkw=dpm.lkw />
+  </if>
+</if>

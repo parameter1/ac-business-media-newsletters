@@ -965,6 +965,11 @@
   resolved "https://registry.yarnpkg.com/@parameter1/base-cms-marko-newsletters-mc/-/base-cms-marko-newsletters-mc-2.0.0.tgz#003c8d9e3c74de66341555c30b175555944ea9a1"
   integrity sha512-Hz41PJTs5uk0qlG4gzT7i4PUt2pLT5bOdvKblCFbqguF7T5cufW4pFtOG2kOQnJeYzlrLWy+sn4nGgpMVqZ7xw==
 
+"@parameter1/base-cms-marko-newsletters-omail@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@parameter1/base-cms-marko-newsletters-omail/-/base-cms-marko-newsletters-omail-2.0.0.tgz#b11c1736caac172468e261d644ee4bf882c725af"
+  integrity sha512-sQOL1gOO6WwP/Gx8aKNxnr9aRSU3aOGAQ+jY6ENREE8oOD5dmjxvah36eVyRY1SFrWKtM6bd3SpnkltQTIRFSQ==
+
 "@parameter1/base-cms-marko-newsletters@^2.44.0":
   version "2.44.0"
   resolved "https://registry.yarnpkg.com/@parameter1/base-cms-marko-newsletters/-/base-cms-marko-newsletters-2.44.0.tgz#1d05dd262018f901bce9491c000fa64767f34505"

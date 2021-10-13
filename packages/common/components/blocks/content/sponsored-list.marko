@@ -107,8 +107,9 @@ $ const teaserStyle = defaultValue(input.teaserStyle, defaultTeaserStyle);
                     options={ w: imageWidth }
                     attrs={ border: 0, width: imageWidth }
                   >
-                    <@link href=node.siteContext.url target="_blank" />
+                    <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" />
                   </marko-newsletter-imgix>
+                  <common-dpm-content node=node date=input.date />
                 </marko-core-obj-value>
               </td>
             </tr>
@@ -118,10 +119,12 @@ $ const teaserStyle = defaultValue(input.teaserStyle, defaultTeaserStyle);
               <td>
                 <div style="text-align: left;">
                   <marko-core-obj-text obj=node field="name" tag=false>
-                    <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle } />
+                    <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" attrs={ style: nameStyle } />
                   </marko-core-obj-text>
+                  <common-dpm-content node=node date=input.date />
                   <if (displaySponsoredSection)>
-                    <marko-core-link href=node.siteContext.url target="_blank" attrs={ style: teaserStyle }>Sponsored</marko-core-link>
+                    <marko-core-link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" attrs={ style: teaserStyle }>Sponsored</marko-core-link>
+                    <common-dpm-content node=node date=input.date />
                   </if>
                 </div>
                 <div style=bodyStyle>
@@ -130,8 +133,9 @@ $ const teaserStyle = defaultValue(input.teaserStyle, defaultTeaserStyle);
                 <div style="margin-top:6px !important; text-decoration: underline !important;">
                   <strong>
                     <marko-core-obj-text obj=node field="linkText" tag=false>
-                      <@link href=node.siteContext.url target="_blank" attrs={ style: "text-align: left; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000; line-height: 18px; letter-spacing: 1px; text-decoration:underline !important;" } />
+                      <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" attrs={ style: "text-align: left; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000; line-height: 18px; letter-spacing: 1px; text-decoration:underline !important;" } />
                     </marko-core-obj-text>
+                    <common-dpm-content node=node date=input.date />
                   </strong>
                 </div>
               </td>

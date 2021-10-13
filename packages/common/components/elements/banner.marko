@@ -1,6 +1,12 @@
 import { getAsObject } from "@parameter1/base-cms-object-path";
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
+$ const { config } = out.global;
 $ const adUnit = getAsObject(input, "adUnit");
+$ const dpm = {
+  ...config.getAsObject("dpm.emailx"),
+  ...getAsObject(input, "dpm"),
+};
 
 <if(adUnit.id)>
   <common-table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="top">
@@ -34,10 +40,27 @@ $ const adUnit = getAsObject(input, "adUnit");
             <tr>
               <td align="center">
                 <div class="advertisement inline ad-600x100">
-                  <marko-newsletters-email-x-display decoded-params=["email", "send"]>
-                    <@ad-unit ...adUnit />
-                    <@params date=input.date email="%%emailaddr%%" send="%%jobid%%" />
-                  </marko-newsletters-email-x-display>
+                  <if(dpm.enabled)>
+                    <!-- use the emailx-dpm component when enabled -->
+                    <!-- by default, do not use the emailx click url unless explicitly requested -->
+                    <common-dpm-emailx
+                      ad-unit=adUnit
+                      class="scaleAd"
+                      date=input.date
+                      use-emailx-href=defaultValue(dpm.useEmailxHref, false)
+                      when-empty=dpm.whenEmpty
+                      with-header=input.withHeader
+                    >
+                      <!-- pass dpm ln, lc, lcv, lkw values if passed, otherwise the defaults will be used -->
+                      <@dpm ln=dpm.ln lc=dpm.lc lcv=dpm.lcv lkw=dpm.lkw position=dpm.position />
+                    </common-dpm-emailx>
+                  </if>
+                  <else>
+                    <marko-newsletters-email-x-display class="scaledAd" decoded-params=["email", "send"]>
+                      <@ad-unit ...adUnit />
+                      <@params date=input.date email="@{email name}@" send="@{track_id}@" />
+                    </marko-newsletters-email-x-display>
+                  </else>
                 </div>
               </td>
             </tr>

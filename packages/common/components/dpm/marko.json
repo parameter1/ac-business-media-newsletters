@@ -1,0 +1,41 @@
+{
+  "<common-dpm-content>": {
+    "template": "./content.marko",
+    "@node": "object",
+    "@newsletter": "object",
+    "<dpm>": {
+      "@enabled": "boolean",
+      "@ln": "string",
+      "@lc": "string",
+      "@lcv": "string",
+      "@lkw": "string",
+      "@position": "integer"
+    },
+    "@date": "date"
+  },
+  "<common-dpm-emailx>": {
+    "template": "./emailx.marko",
+    "<dpm>": {
+      "@enabled": "boolean",
+      "@ln": "string",
+      "@lc": "string",
+      "@lcv": "string",
+      "@lkw": "string",
+      "@position": "integer"
+    },
+    "<ad-unit>": {
+      "@uri": "string",
+      "@id": "string",
+      "@name": "string",
+      "@alias": "string"
+    },
+    "<image>": {},
+    "<link>": {},
+    "<when-empty>": {},
+    "@date": "date",
+    "@use-emailx-href": "boolean",
+    "@class": "string",
+    "@attrs": "object",
+    "@with-header": "boolean"
+  }
+}
