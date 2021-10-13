@@ -1,39 +1,24 @@
 module.exports = {
   fcp: {
     brandName: 'For Construction Pros',
-    logoSrc: '/files/base/acbm/fcp/image/static/fcp/logo.png',
-    footerLogoSrc: '/files/base/acbm/fcp/image/static/newsletter/footer-fcp.jpeg',
-    supportEmail: 'support@forconstructionpros.com',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/FCP_logo_White.png',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
     socialMedia: {
       imagePath: '/files/base/acbm/fcp/image/static/newsletter',
       links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/ForConstructionPros' },
-        { provider: 'linkedin', href: 'https://www.linkedin.com/company/forconstructionpros/' },
-        { provider: 'twitter', href: 'https://twitter.com/4ConstructnPros' },
-        { provider: 'instagram', href: 'https://www.instagram.com/4constructionpros/' },
-        { provider: 'youtube', href: 'https://www.youtube.com/user/ForConstructionPros' },
-      ],
-    },
-  },
-  sso: {
-    brandName: 'Safe & Secure Openings',
-    logoSrc: '/files/base/acbm/fcp/image/static/sso/logo.png',
-    socialMedia: {
-      imagePath: '/files/base/acbm/fcp/image/static/newsletter',
-      links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/fordsspros' },
-        { provider: 'linkedin', href: 'https://www.linkedin.com/company/fordsspros/' },
-        { provider: 'twitter', href: 'https://twitter.com/fordsspros' },
+        { provider: 'facebook', href: 'https://www.facebook.com/ForConstructionPros', target: '_blank' },
+        { provider: 'linkedin', href: 'https://www.linkedin.com/company/forconstructionpros/', target: '_blank' },
+        { provider: 'twitter', href: 'https://twitter.com/4ConstructnPros', target: '_blank' },
+        { provider: 'instagram', href: 'https://www.instagram.com/4constructionpros/', target: '_blank' },
+        { provider: 'youtube', href: 'https://www.youtube.com/user/ForConstructionPros', target: '_blank' },
       ],
     },
   },
   pavementMagazine: {
     brandName: 'Pavement Management',
-    footerLogoSrc: '/files/base/acbm/fcp/image/static/newsletter/footer-fcp.jpeg',
-    supportEmail: 'support@forconstructionpros.com',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/Pavement_logo.png',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
@@ -49,8 +34,7 @@ module.exports = {
   },
   equipmentToday: {
     brandName: 'Equipment Today',
-    footerLogoSrc: '/files/base/acbm/fcp/image/static/newsletter/footer-fcp.jpeg',
-    supportEmail: 'support@forconstructionpros.com',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/EqupToday_logo.png',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
@@ -67,8 +51,7 @@ module.exports = {
   },
   rentalMagazine: {
     brandName: 'Rental Magazine',
-    footerLogoSrc: '/files/base/acbm/fcp/image/static/newsletter/footer-fcp.jpeg',
-    supportEmail: 'support@forconstructionpros.com',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/Rental_logo.png',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
@@ -84,8 +67,7 @@ module.exports = {
   },
   concreteContractor: {
     brandName: 'Concrete Contractor',
-    footerLogoSrc: '/files/base/acbm/fcp/image/static/newsletter/footer-fcp.jpeg',
-    supportEmail: 'support@forconstructionpros.com',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/ConcreteContractor_logo.png',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
@@ -101,8 +83,7 @@ module.exports = {
   },
   asphaltContractor: {
     brandName: 'AsphaltContractor',
-    footerLogoSrc: '/files/base/acbm/fcp/image/static/newsletter/footer-fcp.jpeg',
-    supportEmail: 'support@forconstructionpros.com',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/AsphaltContractor_logo.png',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
@@ -113,17 +94,6 @@ module.exports = {
         { provider: 'linkedin', href: 'https://www.linkedin.com/company/asphalt-contractor-magazine/' },
         { provider: 'twitter', href: 'https://twitter.com/AsphaltContrctr' },
         { provider: 'instagram', href: 'https://www.instagram.com/asphaltcontractor/' },
-      ],
-    },
-  },
-  psc: {
-    brandName: 'Product Showcase',
-    socialMedia: {
-      imagePath: '/files/base/newsletter',
-      links: [
-        { provider: 'facebook', href: 'https://www.facebook.comForContructionPros' },
-        { provider: 'twitter', href: 'https://twitter.com/4ConstructnPros' },
-        { provider: 'linkedin', href: 'https://www.linkedin.com/groups/2676745/profile' },
       ],
     },
   },

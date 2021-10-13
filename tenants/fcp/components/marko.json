@@ -1,8 +1,0 @@
-{
-  "<tenant-banner-element>": {
-    "template": "./banner-element.marko"
-  },
-  "<tenant-ad-unit>": {
-    "template": "ad-unit.marko"
-  }
-}
