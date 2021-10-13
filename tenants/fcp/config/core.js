@@ -6,6 +6,9 @@ module.exports = {
   emailX,
   // nativeX,
   dpm: {
+    content: {
+      enabled: true,
+    },
     emailx: {
       enabled: true,
     },

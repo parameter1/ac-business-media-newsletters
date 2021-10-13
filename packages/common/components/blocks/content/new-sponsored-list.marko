@@ -75,24 +75,26 @@ $ const sponsoredNameStyle = {
                                 options={ w: 225, h: "auto" }
                                 class="resize_img1"
                               >
-                                <@link href=node.siteContext.url target="_blank" />
+                                <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" />
                               </marko-newsletter-imgix>
+                              <common-dpm-content node=node date=input.date />
                             </marko-core-obj-value>
                           </td>
-                          <if (displaySponsoredSection)>
-                              <td align="left" valign="top" class="font2" style=bodyStyle>
-                                <marko-core-obj-text obj=node field="name" tag=false>
-                                  <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle } />
-                                </marko-core-obj-text>
-                                <marko-core-link href=node.siteContext.url target="_blank" class="mob_show1" attrs={ style: sponsoredNameStyle }>Sponsored</marko-core-link>
-
-                              <marko-core-obj-text obj=node field="body" html=true />
-
-                              <marko-core-obj-text obj=node field="linkText" tag=false>
-                                <@link href=node.siteContext.url target="_blank" attrs={ style: linkStyle } />
-                              </marko-core-obj-text>
+                          <td align="left" valign="top" class="font2" style=bodyStyle>
+                            <marko-core-obj-text obj=node field="name" tag=false>
+                              <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" attrs={ style: nameStyle } />
+                            </marko-core-obj-text>
+                            <common-dpm-content node=node date=input.date />
+                            <div>
+                              <marko-core-link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" class="mob_show1" attrs={ style: sponsoredNameStyle }>Sponsored</marko-core-link>
+                              <common-dpm-content node=node date=input.date />
+                            </div>
+                            <marko-core-obj-text obj=node field="body" html=true />
+                            <marko-core-obj-text obj=node field="linkText" tag=false>
+                              <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" attrs={ style: linkStyle } />
+                            </marko-core-obj-text>
+                            <common-dpm-content node=node date=input.date />
                             </td>
-                          </if>
                         </tr>
                       </table>
                     </td>
