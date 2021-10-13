@@ -27,14 +27,8 @@ $ const classNames = [`email-x-${alias}-${name}`, input.class];
     };
 
     $ const withHeaderWrapperStyle = {
-      "background-color": "#E5E5E5",
-      "background": "#e5e5e5 linear-gradient(to right, #fff 0%, #e5e5e5 15%, #e5e5e5 85%, #fff 100%)",
-      "border-bottom": "1px solid #ddd",
       "text-align": "center",
     };
-    $ const headerLabelHTML = "<h5 style='font-size:9px; line-height:15px; margin:0px auto; padding:6px 0px 1px 0px; text-align:center; font-weight:normal; letter-spacing:1px; color:#999999; font-family:Helvetica,Arial,sans-serif; background-color: #E5E5E5; background: #e5e5e5 linear-gradient(to right, #fff 0%, #e5e5e5 15%, #e5e5e5 85%, #fff 100%); border-top:1px solid #ddd;'>ADVERTISEMENT</h5>";
-
-    $ const headerLabel = (withHeader) ? headerLabelHTML : "";
 
     $ const adStyle = (withHeader) ? withHeaderWrapperStyle : {}
     <div ...input.attrs class=classNames style=adStyle>
