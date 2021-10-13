@@ -79,22 +79,20 @@ $ const sponsoredNameStyle = {
                               </marko-newsletter-imgix>
                             </marko-core-obj-value>
                           </td>
-                          <if (displaySponsoredSection)>
-                            <td align="left" valign="top" class="font2" style=bodyStyle>
-                              <marko-core-obj-text obj=node field="name" tag=false>
-                                <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle } />
-                              </marko-core-obj-text>
-                              <div>
-                                <marko-core-link href=node.siteContext.url target="_blank" class="mob_show1" attrs={ style: sponsoredNameStyle }>Sponsored</marko-core-link>
-                              </div>
+                          <td align="left" valign="top" class="font2" style=bodyStyle>
+                            <marko-core-obj-text obj=node field="name" tag=false>
+                              <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle } />
+                            </marko-core-obj-text>
+                            <div>
+                              <marko-core-link href=node.siteContext.url target="_blank" class="mob_show1" attrs={ style: sponsoredNameStyle }>Sponsored</marko-core-link>
+                            </div>
 
-                              <marko-core-obj-text obj=node field="body" html=true />
+                            <marko-core-obj-text obj=node field="body" html=true />
 
-                              <marko-core-obj-text obj=node field="linkText" tag=false>
-                                <@link href=node.siteContext.url target="_blank" attrs={ style: linkStyle } />
-                              </marko-core-obj-text>
-                            </td>
-                          </if>
+                            <marko-core-obj-text obj=node field="linkText" tag=false>
+                              <@link href=node.siteContext.url target="_blank" attrs={ style: linkStyle } />
+                            </marko-core-obj-text>
+                          </td>
                         </tr>
                       </table>
                     </td>
