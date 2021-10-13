@@ -1,6 +1,6 @@
 module.exports = {
   fcp: {
-    brandName: 'For Construction Pros',
+    brandName: 'ForConstructionPros.com',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/FCP_logo_White.png',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
@@ -17,7 +17,7 @@ module.exports = {
     },
   },
   pavementMagazine: {
-    brandName: 'Pavement Management',
+    brandName: 'Pavement',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/Pavement_logo.png',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
@@ -82,7 +82,7 @@ module.exports = {
     },
   },
   asphaltContractor: {
-    brandName: 'AsphaltContractor',
+    brandName: 'Asphalt Contractor',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/AsphaltContractor_logo.png',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
