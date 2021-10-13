@@ -124,6 +124,7 @@ module.exports = {
     ...brands.fcp,
     primaryColor: '#f87526',
     name: 'Modern Fleet Management',
+    footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-F87526.png',
     editor: 'Larry Stewart',
     editorTitle: 'Editor',
     editorImage: '/files/base/acbm/fcp/image/static/LarryS.png',
