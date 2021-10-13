@@ -26,6 +26,12 @@ config
       width: 600,
       height: 100,
     },
+    {
+      name: 'banner-2',
+      id: '5ee3a93ab51a8c25969a1c36',
+      width: 600,
+      height: 100,
+    },
   ])
   .setAdUnits('new-machine-solutions', [
     {
@@ -44,15 +50,13 @@ config
   .setAdUnits('truck-report', [
     {
       name: 'banner-1',
-      id: '5feb4da807c07be94d8da70c',
+      id: '5c59c4ee465d196851ab8fa6',
       width: 600,
       height: 100,
     },
-  ])
-  .setAdUnits('truck-report', [
     {
-      name: 'header',
-      id: '5c59c4ee465d196851ab8fa6',
+      name: 'banner-2',
+      id: '5feb4da807c07be94d8da70c',
       width: 600,
       height: 100,
     },
@@ -60,15 +64,13 @@ config
   .setAdUnits('breaking-ground', [
     {
       name: 'banner-1',
-      id: '5feb48d407c07b06cb8da6b1',
+      id: '5c59c0a7465d198bd4ab8b69',
       width: 600,
       height: 100,
     },
-  ])
-  .setAdUnits('breaking-ground', [
     {
-      name: 'header',
-      id: '5c59c0a7465d198bd4ab8b69',
+      name: 'banner-2',
+      id: '5feb48d407c07b06cb8da6b1',
       width: 600,
       height: 100,
     },
@@ -77,6 +79,12 @@ config
     {
       name: 'banner-1',
       id: '5c59c36b5a66dbe2bbd48293',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '6166d582a650260355f7e5b1',
       width: 600,
       height: 100,
     },
@@ -97,15 +105,13 @@ config
   ])
   .setAdUnits('the-contractors-best-friend', [
     {
-      name: 'header',
+      name: 'banner-1',
       id: '5ff369379a6ce79af524d907',
       width: 600,
       height: 100,
     },
-  ])
-  .setAdUnits('the-contractors-best-friend', [
     {
-      name: 'banner-1',
+      name: 'banner-2',
       id: '5ff3695f9a6ce756ae24d92c',
       width: 600,
       height: 100,
@@ -137,15 +143,13 @@ config
   ])
   .setAdUnits('road-building-update', [
     {
-      name: 'header',
+      name: 'banner-1',
       id: '5c59c4545a66dba063d4835e',
       width: 600,
       height: 100,
     },
-  ])
-  .setAdUnits('road-building-update', [
     {
-      name: 'banner-1',
+      name: 'banner-2',
       id: '5feb4df19a6ce7162b24a6a4',
       width: 600,
       height: 100,
@@ -169,15 +173,13 @@ config
   ])
   .setAdUnits('rental-watch', [
     {
-      name: 'header',
+      name: 'banner-1',
       id: '5c59c427465d192920ab8eae',
       width: 600,
       height: 100,
     },
-  ])
-  .setAdUnits('rental-watch', [
     {
-      name: 'banner-1',
+      name: 'banner-2',
       id: '5feb4d539a6ce7036724a652',
       width: 600,
       height: 100,
@@ -187,6 +189,12 @@ config
     {
       name: 'banner-1',
       id: '5c59c3b75a66db8051d482dd',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '61670a1665f06a1d1fd902fb',
       width: 600,
       height: 100,
     },
@@ -207,15 +215,13 @@ config
   ])
   .setAdUnits('in-the-mix', [
     {
-      name: 'header',
+      name: 'banner-1',
       id: '5c59c23f5a66dba1ead4815a',
       width: 600,
       height: 100,
     },
-  ])
-  .setAdUnits('in-the-mix', [
     {
-      name: 'banner-1',
+      name: 'banner-2',
       id: '5feb4e469a6ce7965a24a6c9',
       width: 600,
       height: 100,
@@ -275,15 +281,13 @@ config
   ])
   .setAdUnits('blacktop-update', [
     {
-      name: 'header',
+      name: 'banner-1',
       id: '5c59c0675a66dbb918d47f97',
       width: 600,
       height: 100,
     },
-  ])
-  .setAdUnits('blacktop-update', [
     {
-      name: 'banner-1',
+      name: 'banner-2',
       id: '6005ed23a205ff9585ca4ef8',
       width: 600,
       height: 100,
@@ -292,17 +296,29 @@ config
   .setAdUnits('fleet-maintenance-report', [
     {
       name: 'banner-1',
-      id: '606f024278c82be699aa521d',
-      width: 300,
-      height: 250,
+      id: '60423b5ca205ffb146cb211c',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '6042442da205ff6f0dcb2138',
+      width: 600,
+      height: 100,
     },
   ])
   .setAdUnits('lube-report', [
     {
       name: 'banner-1',
-      id: '5c59c2b5465d19f9f8ab8d75',
-      width: 300,
-      height: 250,
+      id: '5c59c2a95a66db0978d481db',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '6166e8c5a65026714ff7e79b',
+      width: 600,
+      height: 100,
     },
   ])
   .setAdUnits('show-report-conexpo', [
@@ -379,8 +395,28 @@ config
   ])
   .setAdUnits('infrastructure-impact', [
     {
-      name: 'header',
+      name: 'banner-1',
       id: '60cb9d94984d452332bb1bdb',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '6166e5f765f06ace35d8fefb',
+      width: 600,
+      height: 100,
+    },
+  ])
+  .setAdUnits('elevating-safety', [
+    {
+      name: 'banner-1',
+      id: '6166d792a65026259bf7e5f2',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '6166d7a8a65026abeaf7e605',
       width: 600,
       height: 100,
     },
