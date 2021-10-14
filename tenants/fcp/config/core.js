@@ -27,7 +27,7 @@ module.exports = {
     name: 'Breaking Ground',
     primaryColor: '#f79a00',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-F79A00.png',
-    editor: 'Becky Shultz',
+    editor: 'Becky Schultz',
     editorTitle: 'Editor',
     editorImage: '/files/base/acbm/fcp/image/static/Becky_Shulz.png',
   },
