@@ -72,7 +72,7 @@ module.exports = {
     name: 'Fleet Maintenance',
     primaryColor: '#f26522',
     editor: 'Curt Bennink',
-    editorTitle: 'Field Editor',
+    editorTitle: 'Senior Editor',
     editorImage: '/files/base/acbm/fcp/image/static/Curt_Bennick.png',
   },
   'headline-news': {
@@ -181,7 +181,7 @@ module.exports = {
     primaryColor: '#ffa200',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-FFA200.png',
     editor: 'Curt Bennink',
-    editorTitle: 'Field Editor',
+    editorTitle: 'Senior Editor',
     editorImage: '/files/base/acbm/fcp/image/static/Curt_Bennick.png',
   },
 };
