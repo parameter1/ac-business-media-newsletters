@@ -287,5 +287,16 @@
       "type": "boolean",
       "default-value": false
     }
+  },
+  "<common-content-economic-outlook-block>": {
+    "template": "./economic-outlook.marko",
+    "@data": "string",
+    "@date": {
+      "type": "object"
+    },
+    "@newsletter": {
+      "type": "object",
+      "required": true
+    }
   }
 }
