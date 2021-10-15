@@ -27,7 +27,7 @@ module.exports = {
     name: 'Breaking Ground',
     primaryColor: '#f79a00',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-F79A00.png',
-    editor: 'Becky Shultz',
+    editor: 'Becky Schultz',
     editorTitle: 'Editor',
     editorImage: '/files/base/acbm/fcp/image/static/Becky_Shulz.png',
   },
@@ -72,7 +72,7 @@ module.exports = {
     name: 'Fleet Maintenance',
     primaryColor: '#f26522',
     editor: 'Curt Bennink',
-    editorTitle: 'Field Editor',
+    editorTitle: 'Senior Editor',
     editorImage: '/files/base/acbm/fcp/image/static/Curt_Bennick.png',
   },
   'headline-news': {
@@ -181,7 +181,7 @@ module.exports = {
     primaryColor: '#ffa200',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-FFA200.png',
     editor: 'Curt Bennink',
-    editorTitle: 'Field Editor',
+    editorTitle: 'Senior Editor',
     editorImage: '/files/base/acbm/fcp/image/static/Curt_Bennick.png',
   },
 };
