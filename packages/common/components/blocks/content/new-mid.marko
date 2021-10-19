@@ -140,7 +140,9 @@ $ const contentTypeActions = {
                             <td align="left" valign="middle" style=borderStyle></td>
                             <td align="left" valign="middle" width="5"></td>
                             <td align="left" valign="bottom" class="font5" style=mobileStyle>
-                              <marko-core-obj-text obj=node field="name" attrs={ style: mobileStyle } />
+                              <marko-core-obj-text obj=node field="name" attrs={ style: mobileStyle }>
+                                <@link href=node.siteContext.url target="_blank" attrs={ style: mobileStyle } />
+                              </marko-core-obj-text>
                             </td>
                         </tr>
                         <!--<![endif]-->
@@ -165,7 +167,7 @@ $ const contentTypeActions = {
                     <td align="left" valign="top">
                       <table width="86%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap100">
                         <tr>
-                          <td align="left" valign="middle" class="font3">
+                          <td align="left" valign="middle" class="font3" style=teaserStyle>
                             <marko-core-obj-text obj=node field="teaser" attrs={ style: teaserStyle } />
                           </td>
                         </tr>
@@ -176,7 +178,7 @@ $ const contentTypeActions = {
                               <tr>
                                 <td align="center" height="30" valign="middle" style=buttonStyle>
                                   $ const contentAction = contentTypeActions[node.type] ? contentTypeActions[node.type] : "VIEW CONTENT";
-                                    <marko-core-obj-text obj=node>
+                                    <marko-core-obj-text obj=node attrs= { style: buttonTextStyle }>
                                       <@link href=node.siteContext.url target="_blank" attrs= { style: buttonTextStyle }/>
                                         ${contentAction}
                                     </marko-core-obj-text>
