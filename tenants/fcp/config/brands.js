@@ -17,7 +17,7 @@ module.exports = {
     },
   },
   pavementMagazine: {
-    brandName: 'Pavement',
+    brandName: 'Pavement Maintenance & Reconstruction',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/Pavement_logo.png',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
