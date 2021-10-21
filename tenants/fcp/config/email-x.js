@@ -268,5 +268,21 @@ config
       width: 600,
       height: 100,
     },
+  ])
+  .setAdUnits('openings-news-views', [
+    {
+      name: 'banner-1',
+      id: '617178be65f06a2839d962e7',
+      width: 600,
+      height: 100,
+    },
+  ])
+  .setAdUnits('openings-news-views', [
+    {
+      name: 'banner-2',
+      id: '617178d365f06a14b2d962fa',
+      width: 600,
+      height: 100,
+    },
   ]);
 module.exports = config;
