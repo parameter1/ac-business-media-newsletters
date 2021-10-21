@@ -97,4 +97,16 @@ module.exports = {
       ],
     },
   },
+  sso: {
+    brandName: 'Safe & Secure Openings',
+    logoSrc: '/files/base/acbm/fcp/image/static/sso/logo.png',
+    socialMedia: {
+      imagePath: '/files/base/acbm/fcp/image/static/newsletter',
+      links: [
+        { provider: 'facebook', href: 'https://www.facebook.com/fordsspros' },
+        { provider: 'linkedin', href: 'https://www.linkedin.com/company/fordsspros/' },
+        { provider: 'twitter', href: 'https://twitter.com/fordsspros' },
+      ],
+    },
+  },
 };
