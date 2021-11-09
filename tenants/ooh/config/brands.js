@@ -1,6 +1,6 @@
 module.exports = {
   oem: {
-    brandName: 'OEM Off Highway',
+    brandName: 'OEM Off-Highway',
     contactUsLink: 'https://www.oemoffhighway.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=OOHprefs&r',
     privacyPolicyLink: 'https://www.oemoffhighway.com/page/privacy-policy',
