@@ -11,6 +11,7 @@ module.exports = {
     },
     emailx: {
       enabled: true,
+      useEmailxHref: true,
     },
   },
   'headline-news': {
