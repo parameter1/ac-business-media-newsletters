@@ -29,6 +29,9 @@ fragment NewsletterContentListFragment on Content {
       name
     }
   }
+  ... on ContentContact {
+    title
+  }
   ... on ContentTextAd {
     body(input: { mutation: Email })
     linkText
