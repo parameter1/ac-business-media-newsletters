@@ -15,20 +15,7 @@ $ const {
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const primaryColor = get(newsletterConfig, "primaryColor");
 $ const name = get(newsletterConfig, "name");
-$ const editor = get(newsletterConfig, "editor");
-$ const editorTitle = get(newsletterConfig, "editorTitle");
 $ const brandName = get(newsletterConfig, "brandName");
-$ const editorImage = get(newsletterConfig, "editorImage");
-$ const waterMarkOptions = {
-  auto: "format",
-  fillColor: "fff",
-  fit: "fill",
-  h: 185,
-  w: 185,
-  pad: 25,
-  mask: "ellipse",
-};
-$ const waterMark = editorImage ? buildImgixUrl(`https://${newsletter.site.imageHost}/${editorImage}`, waterMarkOptions) : null;
 
 $ const sectionNameStyle = {
   "font-family": "'Arial', sans-serif",
@@ -100,12 +87,34 @@ $ const contentTypeActions = {
   'webinar': 'REGISTER',
 };
 
-<marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
+<marko-web-query|{ nodes: allNodes }| name="newsletter-scheduled-content" params={
   date: date.valueOf(),
   newsletterId: newsletter.id,
   sectionName: sectionName,
   queryFragment: contentList,
 }>
+
+  $ const contactNodes = allNodes.reduce((arr, node) => {
+    if(node.type === 'contact') arr.push(node);
+    return arr;
+  }, []);
+  $ const editor = contactNodes.length ? contactNodes[0].name : get(newsletterConfig, "editor");
+  $ const editorTitle = contactNodes.length ? contactNodes[0].title : get(newsletterConfig, "editorTitle");
+  $ const editorImage = contactNodes.length ? get(contactNodes[0], 'primaryImage.src') : `https://${newsletter.site.imageHost}/${get(newsletterConfig, "editorImage")}`;
+  $ const waterMarkOptions = {
+    auto: "format",
+    fillColor: "fff",
+    fit: "fill",
+    h: 185,
+    w: 185,
+    pad: 25,
+    mask: "ellipse",
+  };
+  $ const waterMark = editorImage ? buildImgixUrl(editorImage, waterMarkOptions) : null;
+  $ const nodes = allNodes.reduce((arr, node) => {
+    if(node.type !== 'contact') arr.push(node);
+    return arr;
+  }, []);
 
   <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
     <tr>
