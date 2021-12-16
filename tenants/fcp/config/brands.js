@@ -53,7 +53,7 @@ module.exports = {
     brandName: 'Rental Magazine',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/Rental_logo.png',
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
-    newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
+    newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=RENTALprefs&r=@{encrypted_customer_id}@',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
     socialMedia: {
       imagePath: '/files/base/acbm/fcp/image/static/newsletter',
