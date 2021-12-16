@@ -2,7 +2,7 @@ module.exports = {
   gip: {
     brandName: 'Green Industry Pros',
     contactUsLink: 'https://www.greenindustrypros.com/contact-us',
-    newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=GIPROS_prefs&r',
+    newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=GIPROSprefs&pk=managepref',
     privacyPolicyLink: 'https://www.greenindustrypros.com/page/privacy-policy',
     socialMedia: {
       imagePath: '/files/base/acbm/gip/image/static/newsletter/',
