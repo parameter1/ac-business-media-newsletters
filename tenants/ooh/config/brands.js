@@ -2,7 +2,7 @@ module.exports = {
   oem: {
     brandName: 'OEM Off-Highway',
     contactUsLink: 'https://www.oemoffhighway.com/contact-us',
-    newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=OOHprefs&r',
+    newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=OOHprefs&r=@{encrypted_customer_id}@',
     privacyPolicyLink: 'https://www.oemoffhighway.com/page/privacy-policy',
     socialMedia: {
       imagePath: '/files/base/acbm/ooh/image/static/newsletter/',

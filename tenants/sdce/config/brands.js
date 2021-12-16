@@ -4,7 +4,7 @@ module.exports = {
     headerLogoSrc: '/files/base/acbm/sdce/image/static/logo/new-standard-header-logo.png',
     footerLogoSrc: '/files/base/acbm/sdce/image/static/logo/new-standard-footer-logo.png',
     contactUsLink: 'https://www.sdcexec.com/contact-us',
-    newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=SDCEprefs&pk=managepref&r',
+    newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=SDCEprefs&r=@{encrypted_customer_id}@',
     privacyPolicyLink: 'https://www.sdcexec.com/page/privacy-policy',
     socialMedia: {
       imagePath: '/files/base/acbm/sdce/image/static/newsletter/',
