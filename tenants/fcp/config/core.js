@@ -193,4 +193,9 @@ module.exports = {
     displayPrimarySection: true,
     ...brands.sso,
   },
+  'show-report': {
+    primaryColor: '#2783c2',
+    name: 'Show Report',
+    ...brands.rentalMagazine,
+  },
 };

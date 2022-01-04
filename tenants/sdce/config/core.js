@@ -22,4 +22,9 @@ module.exports = {
     editorTitle: 'Managing Editor',
     editorImage: '/files/base/acbm/sdce/image/static/Brielle.png',
   },
+  'show-report': {
+    ...brands.sdce,
+    name: 'Show Report',
+    primaryColor: '#2783c2',
+  },
 };

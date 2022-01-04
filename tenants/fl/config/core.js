@@ -22,4 +22,9 @@ module.exports = {
     editorTitle: 'Editor-in-Chief',
     editorImage: '/files/base/acbm/fl/image/static/editors_marina.png',
   },
+  'show-report': {
+    ...brands.fl,
+    name: 'Show Report',
+    primaryColor: '#2783c2',
+  },
 };
