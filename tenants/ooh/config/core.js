@@ -104,4 +104,10 @@ module.exports = {
     editorTitle: 'Editor',
     editorImage: '/files/base/acbm/ooh/image/static/Sarah_Jensen_new.png',
   },
+  'show-report': {
+    ...brands.oem,
+    name: 'Show Report',
+    primaryColor: '#2783c2',
+    footerLogoSrc: '/files/base/acbm/ooh/image/static/logo/new-standard-footer-logo-2783C2.png',
+  },
 };

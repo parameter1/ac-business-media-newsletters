@@ -193,4 +193,10 @@ module.exports = {
     displayPrimarySection: true,
     ...brands.sso,
   },
+  'show-report': {
+    ...brands.rentalMagazine,
+    name: 'Show Report',
+    primaryColor: '#2783c2',
+    footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-2783C2.png',
+  },
 };
