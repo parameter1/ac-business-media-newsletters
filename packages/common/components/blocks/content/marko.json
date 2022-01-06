@@ -212,6 +212,10 @@
       "type": "string",
       "required": true
     },
+    "@brand": {
+      "type": "string",
+      "required": true
+    },
     "@primary-color": "string",
     "@long-border": {
       "type": "boolean",
