@@ -1,8 +1,11 @@
 import { get } from "@parameter1/base-cms-object-path";
 import { buildImgixUrl } from "@parameter1/base-cms-image";
 import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
 $ const { config } = out.global;
+
+$ const showBrand = defaultValue(input.showBrand, true);
 
 $ const {
   newsletter,
@@ -170,10 +173,12 @@ $ const contentTypeActions = {
                       <table width="100%" align="left" valign="bottom" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                           <td align="left" valign="middle" class="font6" style=editorStyle>
-                            ${editor} | ${editorTitle} |
-                            <span style=brandNameStyle>
-                              ${brandName}
-                            </span>
+                            ${editor} | ${editorTitle}
+                            <if(showBrand)>
+                              &nbsp;| <span style=brandNameStyle>
+                                ${brandName}
+                              </span>
+                            </if>
                           </td>
                         </tr>
                       </table>

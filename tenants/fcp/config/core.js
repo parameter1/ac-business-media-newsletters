@@ -194,7 +194,7 @@ module.exports = {
     ...brands.sso,
   },
   'show-report': {
-    ...brands.rentalMagazine,
+    ...brands.fcp,
     name: 'Show Report',
     primaryColor: '#2783c2',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-2783C2.png',
