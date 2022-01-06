@@ -5,7 +5,7 @@ import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
 $ const { config } = out.global;
 
-$ const brand = defaultValue(input.brand, true);
+$ const showBrand = defaultValue(input.showBrand, true);
 
 $ const {
   newsletter,
@@ -174,7 +174,7 @@ $ const contentTypeActions = {
                         <tr>
                           <td align="left" valign="middle" class="font6" style=editorStyle>
                             ${editor} | ${editorTitle}
-                            <if(brand)>
+                            <if(showBrand)>
                               &nbsp;| <span style=brandNameStyle>
                                 ${brandName}
                               </span>

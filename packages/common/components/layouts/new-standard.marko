@@ -4,7 +4,7 @@ import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 $ const { website, config } = out.global;
 $ const { newsletter, date, dateInfo } = input.data;
 
-$ const brand = defaultValue(input.brand, true);
+$ const showBrand = defaultValue(input.showBrand, true);
 $ const emailX = config.get("emailX");
 $ const nativeX = config.getAsObject("nativeX");
 
@@ -29,7 +29,7 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
             newsletter=newsletter
             date=date
             section-name="Featured"
-            brand=brand
+            showBrand=showBrand
           />
 
           <common-content-new-sponsored-list-block

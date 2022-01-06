@@ -212,7 +212,7 @@
       "type": "string",
       "required": true
     },
-    "@brand": {
+    "@showBrand": {
       "type": "string",
       "required": true
     },
