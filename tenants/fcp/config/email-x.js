@@ -94,12 +94,12 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '5ff3695f9a6ce756ae24d92c',
-      width: 600,
-      height: 100,
-    },
+    // {
+    //   name: 'banner-2',
+    //   id: '5ff3695f9a6ce756ae24d92c',
+    //   width: 600,
+    //   height: 100,
+    // },
   ])
   .setAdUnits('road-building-update', [
     {
