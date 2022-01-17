@@ -228,12 +228,6 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '6166e8c5a65026714ff7e79b',
-      width: 600,
-      height: 100,
-    },
   ])
   .setAdUnits('infrastructure-impact', [
     {
