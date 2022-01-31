@@ -1,8 +1,8 @@
 {
-  "name": "@ac-business-media/fl",
+  "name": "@ac-business-media/scn",
   "version": "0.2.39",
   "author": "Jessica Wade <jessica.wade@parameter1.com>",
-  "repository": "https://github.com/parameter1/newsletter-ac-business-media/tree/master/tenants/fl",
+  "repository": "https://github.com/parameter1/newsletter-ac-business-media/tree/master/tenants/scn",
   "license": "MIT",
   "private": true,
   "scripts": {
