@@ -55,35 +55,20 @@ services:
       - "21094:80"
       - "31094:31094"
 
-  sdce:
+  scn:
     <<: *node
     <<: *newsletter-cmd
-    working_dir: /root/tenants/sdce
+    working_dir: /root/tenants/scn
     environment:
       <<: *env
       <<: *env-tauron
       PORT: 80
       EXPOSED_PORT: 21095
       LIVERELOAD_PORT: 31095
-      TENANT_KEY: acbm_sdce
+      TENANT_KEY: acbm_scn
     ports:
       - "21095:80"
       - "31095:31095"
-
-  fl:
-    <<: *node
-    <<: *newsletter-cmd
-    working_dir: /root/tenants/fl
-    environment:
-      <<: *env
-      <<: *env-tauron
-      PORT: 80
-      EXPOSED_PORT: 21096
-      LIVERELOAD_PORT: 31096
-      TENANT_KEY: acbm_fl
-    ports:
-      - "21096:80"
-      - "31096:31096"
 
   gip:
     <<: *node
