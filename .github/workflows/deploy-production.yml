@@ -37,9 +37,8 @@ jobs:
           - newsletters
         tenant:
           - fcp
-          - sdce
+          - scn
           - gip
-          - fl
           - ooh
     steps:
       - uses: actions/checkout@v2
