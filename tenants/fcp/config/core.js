@@ -72,6 +72,7 @@ module.exports = {
     ...brands.fcp,
     name: 'Fleet Maintenance',
     primaryColor: '#f26522',
+    footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-F26522.png',
     editor: 'Curt Bennink',
     editorTitle: 'Senior Editor',
     editorImage: '/files/base/acbm/fcp/image/static/Curt_Bennick.png',
