@@ -9,7 +9,7 @@ $ const useEmailxHref = defaultValue(input.useEmailxHref, false);
 $ const withHeader = defaultValue(input.withHeader, true);
 
 $ const { name, alias } = adUnit;
-$ const classNames = [`email-x-${alias}-${name}`, input.class];
+$ const classNames = [`email-x-${alias}-${name}`, input.class, "scaledAd"];
 
 <marko-newsletters-email-x-data|{ response }| decoded-params=["email", "send"]>
   <@ad-unit ...adUnit />
