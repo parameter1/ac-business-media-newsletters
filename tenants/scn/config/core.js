@@ -40,7 +40,7 @@ module.exports = {
   },
   'show-report-sdce': {
     ...brands.sdce,
-    name: 'Show Report (SDCE)',
+    name: 'Show Report',
     primaryColor: '#2783c2',
     footerLogoSrc: '/files/base/acbm/fl/image/static/logo/new-standard-footer-logo-2783C2.png',
   },
