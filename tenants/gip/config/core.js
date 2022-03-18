@@ -22,7 +22,7 @@ module.exports = {
     primaryColor: '#7ec0ea',
     editor: 'Hannah Gooch',
     editorTitle: 'Associate Editor',
-    editorImage: '/files/base/acbm/gip/image/static/Hannah_Gooch.jpeg',
+    editorImage: '/files/base/acbm/gip/image/static/hannah-gooch_newsletter.png',
   },
   'technology-report': {
     ...brands.gip,
