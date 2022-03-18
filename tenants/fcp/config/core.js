@@ -37,9 +37,9 @@ module.exports = {
     primaryColor: '#5db2d7',
     name: 'Construction Technology',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-5DB2D7.png',
-    editor: 'Larry Stewart',
+    editor: 'Charles Rathmann',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/fcp/image/static/LarryS.png',
+    editorImage: '/files/base/acbm/fcp/image/static/rathmann_headshot.png',
   },
   'construction-zone-safety': {
     ...brands.fcp,
