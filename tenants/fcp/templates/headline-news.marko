@@ -10,6 +10,7 @@ $ const nativeX = config.getAsObject("nativeX");
 
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const primaryColor = get(newsletterConfig, "primaryColor");
+$ const adBackgroundColor = '#000101'
 
 <marko-newsletter-root
   title=newsletter.name
@@ -29,6 +30,18 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
             ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
             location="banner-1"
           />
+
+          <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#000101" class="wrap10">
+            <tr>
+              <td align="center" valign="top">
+                <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101" bgcolor=adBackgroundColor>
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
 
           <common-content-new-featured-block
             data=data
