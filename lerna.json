@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "version": "1.0.9",
+=======
+  "version": "1.0.10",
+>>>>>>> 719e96f8440c920e75291b8624506338c11cbea6
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
