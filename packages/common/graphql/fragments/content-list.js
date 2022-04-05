@@ -25,7 +25,7 @@ fragment NewsletterContentListFragment on Content {
   ... on ContentPromotion {
     body(input: { mutation: Email })
     linkText
-    company {
+    company(input: { status: any })  {
       name
     }
   }
@@ -35,7 +35,7 @@ fragment NewsletterContentListFragment on Content {
   ... on ContentTextAd {
     body(input: { mutation: Email })
     linkText
-    company {
+    company(input: { status: any })  {
       name
     }
   }
