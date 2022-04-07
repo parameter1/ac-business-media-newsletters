@@ -214,12 +214,6 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '6042442da205ff6f0dcb2138',
-      width: 600,
-      height: 100,
-    },
   ])
   .setAdUnits('lube-report', [
     {
