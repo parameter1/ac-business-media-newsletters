@@ -28,9 +28,9 @@ module.exports = {
     name: 'Breaking Ground',
     primaryColor: '#f79a00',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-F79A00.png',
-    editor: 'Becky Schultz',
+    editor: 'Larry Stewart',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/fcp/image/static/Becky_Shulz.png',
+    editorImage: '/files/base/acbm/fcp/image/static/LarryS.png',
   },
   'construction-technology': {
     ...brands.fcp,
