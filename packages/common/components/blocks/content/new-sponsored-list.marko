@@ -113,7 +113,6 @@ $ const sponsoredNameStyle = {
                       </marko-core-obj-value>
                     </td>
                   </tr>
-                  <!--[if !mso]><!-->
                   <tr class="mob_show1" style="display: none;mso-hide: all;">
                     <td align="left" valign="top" style=bodyStyle>
                       <marko-core-obj-text obj=node field="name" tag=false>
@@ -121,7 +120,9 @@ $ const sponsoredNameStyle = {
                       </marko-core-obj-text>
                       <common-dpm-content node=node date=input.date />
                       <div>
+                        <!--[if !mso]><!-->
                         <marko-core-link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" class="mob_show1" attrs={ style: sponsoredNameStyle }>Sponsored</marko-core-link>
+                        <!--<![endif]-->
                         <common-dpm-content node=node date=input.date />
                       </div>
                       <marko-core-obj-text obj=node field="body" html=true />
@@ -131,7 +132,6 @@ $ const sponsoredNameStyle = {
                       <common-dpm-content node=node date=input.date />
                     </td>
                   </tr>
-                  <!--<![endif]-->
                   <common-table-hr-element height="17" style="border-bottom: 2px solid #2f2f2f" />
                   <common-table-spacer-element height=15 />
                 </table>
