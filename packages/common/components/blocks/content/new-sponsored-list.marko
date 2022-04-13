@@ -120,7 +120,9 @@ $ const sponsoredNameStyle = {
                       </marko-core-obj-text>
                       <common-dpm-content node=node date=input.date />
                       <div>
+                        <!--[if !mso]><!-->
                         <marko-core-link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" class="mob_show1" attrs={ style: sponsoredNameStyle }>Sponsored</marko-core-link>
+                        <!--<![endif]-->
                         <common-dpm-content node=node date=input.date />
                       </div>
                       <marko-core-obj-text obj=node field="body" html=true />
