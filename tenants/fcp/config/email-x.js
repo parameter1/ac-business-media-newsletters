@@ -24,12 +24,6 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '5feb4e829a6ce74af524a6f7',
-      width: 600,
-      height: 100,
-    },
   ])
   .setAdUnits('truck-report', [
     {
@@ -141,12 +135,6 @@ config
     {
       name: 'banner-1',
       id: '5c59c2e8465d19a093ab8da3',
-      width: 600,
-      height: 100,
-    },
-    {
-      name: 'banner-2',
-      id: '6165a99aa650269316f7d63c',
       width: 600,
       height: 100,
     },
