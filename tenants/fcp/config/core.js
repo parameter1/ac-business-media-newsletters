@@ -41,6 +41,15 @@ module.exports = {
     editorTitle: 'Editor',
     editorImage: '/files/base/acbm/fcp/image/static/rathmann_headshot.png',
   },
+  'construction-and-workforce-management': {
+    ...brands.fcp,
+    name: 'Construction & Workforce Management',
+    primaryColor: '#f36422',
+    footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-F36422.png',
+    editor: 'Charles Rathmann',
+    editorTitle: 'Editor',
+    editorImage: '/files/base/acbm/fcp/image/static/rathmann_headshot.png',
+  },
   'construction-zone-safety': {
     ...brands.fcp,
     primaryColor: '#f04f23',
