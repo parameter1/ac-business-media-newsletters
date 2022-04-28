@@ -43,7 +43,7 @@ module.exports = {
   },
   'construction-and-workforce-management': {
     ...brands.fcp,
-    name: 'Headline News',
+    name: 'Construction & Workforce Management',
     primaryColor: '#f36422',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-F36422.png',
     editor: 'Charles Rathmann',
