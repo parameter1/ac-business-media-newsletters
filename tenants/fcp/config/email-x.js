@@ -268,5 +268,13 @@ config
       width: 600,
       height: 100,
     },
+  ])
+  .setAdUnits('construction-and-workforce-management', [
+    {
+      name: 'banner-1',
+      id: '626ab83a8afef27576bb1dc9',
+      width: 600,
+      height: 100,
+    },
   ]);
 module.exports = config;
