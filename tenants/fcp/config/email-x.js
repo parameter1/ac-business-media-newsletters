@@ -269,7 +269,7 @@ config
       height: 100,
     },
   ])
-  .setAdUnits('construction-and-workforce-management', [
+  .setAdUnits('technology-editor', [
     {
       name: 'banner-1',
       id: '626ab83a8afef27576bb1dc9',
