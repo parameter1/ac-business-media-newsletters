@@ -60,12 +60,6 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '6166d582a650260355f7e5b1',
-      width: 600,
-      height: 100,
-    },
   ])
   .setAdUnits('headline-news', [
     {
@@ -74,12 +68,6 @@ config
       width: 600,
       height: 100,
     },
-    // {
-    //   name: 'banner-2',
-    //   id: '6165a95265f06a250fd8ee8b',
-    //   width: 600,
-    //   height: 100,
-    // },
   ])
   .setAdUnits('the-contractors-best-friend', [
     {
