@@ -71,8 +71,8 @@ module.exports = {
   'elevating-safety': {
     ...brands.rentalMagazine,
     name: 'Elevating Safety',
-    primaryColor: '#fdf21c',
-    footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-FDF21C.png',
+    primaryColor: '#365685',
+    footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-365685.png',
     editor: 'Jon Minnick',
     editorTitle: 'Group Content Director',
     editorImage: '/files/base/acbm/fcp/image/static/Jon_Minnick.png',
