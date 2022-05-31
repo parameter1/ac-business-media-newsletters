@@ -22,7 +22,7 @@ module.exports = {
     primaryColor: '#ed1b24',
     editor: 'Lori Ditoro',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.jpg',
+    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
   },
   'technology-news-tracker': {
     ...brands.oem,
@@ -32,7 +32,7 @@ module.exports = {
     primaryColor: '#03c0d4',
     editor: 'Lori Ditoro',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.jpg',
+    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
   },
   'economic-market-outlook': {
     ...brands.oem,
@@ -42,7 +42,7 @@ module.exports = {
     primaryColor: '#ed1d25',
     editor: 'Lori Ditoro',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.jpg',
+    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
   },
   'in-the-cab': {
     ...brands.oem,
@@ -52,7 +52,7 @@ module.exports = {
     primaryColor: '#47a255',
     editor: 'Lori Ditoro',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.jpg',
+    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
   },
   'the-electric-age': {
     ...brands.oem,
@@ -62,7 +62,7 @@ module.exports = {
     primaryColor: '#6aba0b',
     editor: 'Lori Ditoro',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.jpg',
+    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
   },
   'engine-revolutions': {
     ...brands.oem,
@@ -72,7 +72,7 @@ module.exports = {
     primaryColor: '#a5b82a',
     editor: 'Lori Ditoro',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.jpg',
+    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
   },
   'drivetrain-technology-update': {
     ...brands.oem,
@@ -82,7 +82,7 @@ module.exports = {
     primaryColor: '#f2a300',
     editor: 'Lori Ditoro',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.jpg',
+    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
   },
   'efficient-design-manufacturing': {
     ...brands.oem,
@@ -92,7 +92,7 @@ module.exports = {
     primaryColor: '#ed1c21',
     editor: 'Lori Ditoro',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.jpg',
+    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
   },
   'fluid-power-progress': {
     ...brands.oem,
@@ -102,7 +102,7 @@ module.exports = {
     primaryColor: '#126baf',
     editor: 'Lori Ditoro',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.jpg',
+    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
   },
   'show-report': {
     ...brands.oem,
@@ -111,6 +111,6 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/ooh/image/static/logo/new-standard-footer-logo-2783C2.png',
     editor: 'Lori Ditoro',
     editorTitle: 'Editor',
-    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.jpg',
+    editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
   },
 };
