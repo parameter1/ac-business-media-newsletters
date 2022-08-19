@@ -206,12 +206,6 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '6166e5f765f06ace35d8fefb',
-      width: 600,
-      height: 100,
-    },
   ])
   .setAdUnits('elevating-safety', [
     {
