@@ -148,12 +148,6 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '6165a906a6502660e0f7d5ea',
-      width: 600,
-      height: 100,
-    },
   ])
   .setAdUnits('construction-technology', [
     {
