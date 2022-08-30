@@ -21,6 +21,8 @@ x-env-defaults: &env
   NODE_ENV: development
   NEW_RELIC_ENABLED: ${NEW_RELIC_ENABLED-0}
   NEW_RELIC_LICENSE_KEY: ${NEW_RELIC_LICENSE_KEY-(unset)}
+  GULP_POLLING_ENABLED: ${GULP_POLLING_ENABLED-0}
+  GULP_POLLING_INTERVAL: ${GULP_POLLING_INTERVAL-1000}
 
 x-env-tauron: &env-tauron
   GRAPHQL_URI: ${GRAPHQL_URI-https://tauron.graphql.base.parameter1.com}
