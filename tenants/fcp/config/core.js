@@ -173,7 +173,7 @@ module.exports = {
     name: 'Road Building Update',
     primaryColor: '#f4381b',
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/new-standard-footer-logo-F4381B.png',
-    editor: 'Brondon Noel',
+    editor: 'Brandon Noel',
     editorTitle: 'Editor',
     editorImage: '/files/base/acbm/fcp/image/static/Brandon_Noel_circle.png',
   },
