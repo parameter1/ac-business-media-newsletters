@@ -122,12 +122,6 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '5e344dc788eecd486da701e1',
-      width: 600,
-      height: 100,
-    },
   ])
   .setAdUnits('show-report', [
     {
