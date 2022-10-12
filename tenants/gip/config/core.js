@@ -17,6 +17,7 @@ module.exports = {
   snowpro: {
     ...brands.gip,
     name: 'SnowPro Newsletter',
+    brandName: 'SnowPro',
     headerLogoSrc: '/files/base/acbm/gip/image/static/logo/snow-pro-logo.png',
     footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-7EC0EA.png',
     primaryColor: '#7ec0ea',
