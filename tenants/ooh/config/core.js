@@ -108,6 +108,7 @@ module.exports = {
     ...brands.oem,
     name: 'Show Report',
     primaryColor: '#2783c2',
+    headerLogoSrc: '/files/base/acbm/ooh/image/static/logo/OEM_LOGO.png',
     footerLogoSrc: '/files/base/acbm/ooh/image/static/logo/new-standard-footer-logo-2783C2.png',
     editor: 'Lori Ditoro',
     editorTitle: 'Editor',
