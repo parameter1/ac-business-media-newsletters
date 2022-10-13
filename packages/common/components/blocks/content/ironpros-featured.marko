@@ -1,0 +1,226 @@
+import { get } from "@parameter1/base-cms-object-path";
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+
+$ const { config } = out.global;
+
+$ const showBrand = defaultValue(input.showBrand, true);
+
+$ const {
+  newsletter,
+  content,
+  date,
+  sectionName,
+  longBorder,
+} = input;
+
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const primaryColor = get(newsletterConfig, "primaryColor");
+$ const name = get(newsletterConfig, "name");
+$ const subBrandName = get(newsletterConfig, "subBrandName");
+$ const editor = get(newsletterConfig, "editor");
+$ const editorImage = get(newsletterConfig, "editorImage");
+
+$ const sectionNameStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "25px",
+  "line-height": "30px",
+  "font-weight": "900",
+  "letter-spacing": "0",
+  "color": "#3e5573",
+  "text-transform": "uppercase",
+};
+
+$ const teaserStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "16px",
+  "line-height": "21px",
+  "color": "#A4A09F",
+  "font-weight": "400",
+  "letter-spacing":"0",
+};
+
+$ const verticalBorderStyle = {
+  "text-align": "left",
+  "border-left": "2px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
+};
+
+$ const editorStyle = {
+  "font-family": "Integral CF, 'Arial', Helvetica, sans-serif",
+  "font-size": "21px",
+  "line-height": "35px",
+  "color": "#3e5573",
+  "font-weight": "500",
+  "letter-spacing": "0",
+};
+
+$ const subBrandNameStyle = {
+  "font-family": "Integral CF, 'Arial', Helvetica, sans-serif",
+  "color": primaryColor,
+};
+
+$ const nameStyle = {
+  ...editorStyle,
+  "font-size": "25px",
+  "color": primaryColor,
+  "font-weight": "700",
+  "text-transform": "uppercase",
+};
+
+$ const editorImageOptions = {
+  auto: "format",
+  h: 75,
+  mask: "ellipse",
+  pad: 0,
+};
+
+$ const buttonStyle = {
+  "font-family": "'Arial Narrow Bold', sans-serif",
+  "font-size": "17px",
+  "background": "#3e5573",
+  "font-weight": "normal",
+  "text-transformation": "uppercase",
+  "border-radius": "10px",
+  "border": "0",
+  "padding": "10px",
+};
+
+$ const buttonTextStyle = {
+  "color": "#ffffff",
+  "text-decoration": "none",
+  "display": "block",
+};
+
+$ const contentTypeActions = {
+  'article': 'VIEW ARTICLE',
+  'podcast': 'LISTEN',
+  'video': 'WATCH',
+  'webinar': 'REGISTER',
+};
+
+<table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
+  <tr>
+    <td align="center" valign="top">
+      <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+        <common-table-spacer-element height=10 />
+        <tr>
+          <td width="7" style=verticalBorderStyle>
+            <td align="left" class="font1" valign="middle" style=sectionNameStyle>${name}</td>
+          </td>
+        </tr>
+        <common-table-spacer-element height=10 />
+      </table>
+    </td>
+  </tr>
+</table>
+
+<marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
+  date: date.valueOf(),
+  newsletterId: newsletter.id,
+  sectionName: sectionName,
+  queryFragment: contentList,
+}>
+
+  $ const imgOptions = {
+    mark: `https://${newsletter.site.imageHost}/files/base/acbm/fcp/image/static/eqw_feature_overlay_2260.png`,
+  };
+
+  <for|node, content| of=nodes>
+    <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
+      <tr>
+        <td align="center" valign="top">
+          <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+            <tr>
+              <td valign="top">
+                <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
+                  <marko-newsletter-imgix
+                    src=image.src
+                    options=imgOptions
+                    attrs= { width: 600, style: "mark-align=bottom; mark-pad=0"}
+                    class="resize_img"
+                  >
+                    <@link href=node.siteContext.url target="_blank" />
+                  </marko-newsletter-imgix>
+                </marko-core-obj-value>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                      <table>
+                        <tr>
+                          <td align="left" width="85%" style=editorStyle>
+                            ${editor} |
+                            <span style=subBrandNameStyle>
+                              ${subBrandName}
+                            </span>
+                          </td>
+                          <td align="right">
+                            <marko-newsletter-imgix
+                              src=editorImage
+                              options=editorImageOptions
+                              attrs={ style: "border:3px solid #3e5573; border-radius:150px; padding:0" }
+                            >
+                            </marko-newsletter-imgix>
+                          </td>
+                        </tr>
+                      </table>
+                      <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td valign="top" align="left">
+                            <marko-core-obj-text obj=node field="name" html=true >
+                              <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle }/>
+                            </marko-core-obj-text>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <common-table-spacer-element height=5 />
+            <tr>
+              <td align="left" valign="top">
+                <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" class="wrap102">
+                  <tr>
+                    <td align="left" valign="middle">
+                      <marko-core-obj-text obj=node field="teaser" html=true attrs={ style: teaserStyle } />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <common-table-spacer-element height=20 />
+            <tr>
+              <td align="left" valign="top">
+                <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" class="wrap102">
+                  <tr>
+                    <td align="left" valign="top">
+                      <table align="left" border="0" cellspacing="0">
+                        <tr>
+                          <td align="left" height="30" valign="middle" style=buttonStyle>
+                            $ const contentAction = contentTypeActions[node.type] ? contentTypeActions[node.type] : "VIEW CONTENT";
+                            <marko-core-obj-text obj=node>
+                              <@link href=node.siteContext.url target="_blank" attrs= { style: buttonTextStyle }/>
+                                ${contentAction}
+                            </marko-core-obj-text>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <common-table-spacer-element height=14 />
+          </table>
+        </td>
+      </tr>
+    </table>
+  </for>
+</marko-web-query>
