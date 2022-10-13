@@ -10,5 +10,8 @@
   },
   "<common-new-standard-layout>": {
     "template": "./new-standard.marko"
+  },
+  "<common-ironpros-layout>": {
+    "template": "./ironpros.marko"
   }
 }
