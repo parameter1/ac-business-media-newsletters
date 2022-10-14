@@ -26,5 +26,14 @@
   },
   "<common-new-standard-advertisement-block>": {
     "template": "./new-standard-advertisement.marko"
+  },
+  "<common-ironpros-header-block>": {
+    "template": "./ironpros-header.marko"
+  },
+  "<common-ironpros-advertisement-block>": {
+    "template": "./ironpros-advertisement.marko"
+  },
+  "<common-ironpros-footer-block>": {
+    "template": "./ironpros-footer.marko"
   }
 }

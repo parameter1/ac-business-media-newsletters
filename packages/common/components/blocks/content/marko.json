@@ -302,5 +302,90 @@
       "type": "object",
       "required": true
     }
+  },
+  "<common-content-ironpros-featured-block>": {
+    "template": "./ironpros-featured.marko",
+    "@name": "string",
+    "@href": "string",
+    "@image-src": "string",
+    "@date": {
+      "type": "object",
+      "required": true
+    },
+    "@data": "data",
+    "@newsletter": {
+      "type": "object",
+      "required": true
+    },
+    "@section-name": {
+      "type": "string",
+      "required": true
+    },
+    "@showBrand": {
+      "type": "string",
+      "required": true
+    },
+    "@primary-color": "string",
+    "@long-border": {
+      "type": "boolean",
+      "default-value": false
+    }
+  },
+  "<common-content-ironpros-sponsored-block>": {
+    "template": "./ironpros-sponsored.marko",
+    "@name": "string",
+    "@href": "string",
+    "@image-src": "string",
+    "@date": {
+      "type": "object",
+      "required": true
+    },
+    "@limit": "number",
+    "@newsletter": {
+      "type": "object",
+      "required": true
+    },
+    "@section-name": {
+      "type": "string",
+      "required": true
+    },
+    "@primary-color": "string",
+    "@display-sponsored-section": {
+      "type": "boolean",
+      "default-value": true
+    }
+  },
+  "<common-content-ironpros-equipment-block>": {
+    "template": "./ironpros-equipment.marko"
+  },
+  "<common-content-ironpros-technology-block>": {
+    "template": "./ironpros-technology.marko"
+  },
+  "<common-content-ironpros-sponsored-secondary-block>": {
+    "template": "./ironpros-sponsored-secondary.marko",
+    "@name": "string",
+    "@href": "string",
+    "@image-src": "string",
+    "@date": {
+      "type": "object",
+      "required": true
+    },
+    "@limit": "number",
+    "@newsletter": {
+      "type": "object",
+      "required": true
+    },
+    "@section-name": {
+      "type": "string",
+      "required": true
+    },
+    "@primary-color": "string",
+    "@display-sponsored-section": {
+      "type": "boolean",
+      "default-value": true
+    }
+  },
+  "<common-content-ironpros-workwear-block>": {
+    "template": "./ironpros-workwear.marko"
   }
 }

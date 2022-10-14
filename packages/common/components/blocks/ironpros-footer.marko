@@ -1,0 +1,120 @@
+import { get, getAsArray } from "@parameter1/base-cms-object-path";
+
+$ const { website, config } = out.global;
+$ const { newsletter } = input.data;
+
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const primaryColor = get(newsletterConfig, "primaryColor");
+$ const socialMedia = get(newsletterConfig, "socialMedia");
+$ const socialMediaLinks = getAsArray(socialMedia, "links");
+
+$ const standardStyle = {
+  "font-family": "'Arial', Helvetica, sans-serif",
+  "font-size": "9px",
+  "line-height": "10px",
+  "color": "#ffffff",
+  "font-weight": "normal",
+};
+
+$ const smallerStyle = {
+  ...standardStyle,
+  "font-size": "7px",
+  "line-height": "11px",
+};
+
+$ const linkStyle = {
+  ...standardStyle,
+  "text-decoration": "none!important"
+};
+
+$ const imageStyle = {
+  "background-size": "100%",
+  "background-repeat": "no-repeat",
+};
+
+<table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
+  <tr>
+    <td align="center" valign="top">
+      <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+        <tr>
+          <td align="center" valign="top" background="https://img.forconstructionpros.com/files/base/acbm/fcp/image/static/logo/footerbg.png" style=imageStyle>
+            <!--[if gte mso 9]>
+              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0;display: inline-block; width: 600px;">
+                <v:fill type="tile" src="https://img.forconstructionpros.com/files/base/acbm/fcp/image/static/logo/footerbg.png" color="#000000" />
+                <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+            <![endif]-->
+            <table align="center"  class="align2" border="0" cellspacing="0" cellpadding="10">
+              <common-table-spacer-element heigth=20 />
+              <tr>
+                <for|link| of=socialMediaLinks>
+                  <td>
+                    <marko-newsletter-imgix
+                      src=`${socialMedia.imagePath}/${link.provider}-white.png`
+                      class="resize_img1"
+                      alt=link.provider
+                      options={ w: 45, h: 34 }
+                      attrs={ align: "center", valign: "middle" }
+                    >
+                      <@link href=link.href target="_blank" />
+                    </marko-newsletter-imgix>
+                  </td>
+                </for>
+              </tr>
+            </table>
+            <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+              <common-table-spacer-element height=19 />
+              <tr>
+                <td align="center" class="align2" valign="middle" style=smallerStyle>
+                  This email is being sent to
+                    <a href="mailto:@{email name}@" style=linkStyle>@{email name}@</a>.
+                </td>
+              </tr>
+              <common-table-spacer-element height=3 />
+              <tr>
+                <td align="center"  class="align2" valign="middle" style=standardStyle>
+                  Please add news.acbmmail.com and marketing.acbmmail.com to your address book or safe sender list to receive our emails in your inbox.
+                </td>
+              </tr>
+              <common-table-spacer-element height=2 />
+              <tr>
+                <td align="center"  class="align3" valign="middle" style=standardStyle>
+                  <a href=get(newsletterConfig, "newsletterPrefLink") style=linkStyle>Manage Newsletter Subscriptions</a>
+                  | <a href="@{forwardtoafriendlink}@" style=linkStyle>Forward to a Friend</a>
+                  | <a href="@{confirmunsubscribelink}@" style=linkStyle>Unsubscribe</a>
+                  | <a href=get(newsletterConfig, "contactUsLink") style=linkStyle>Request Customer Service</a>
+                  | <a href=get(newsletterConfig, "privacyPolicyLink") style=linkStyle>Read Privacy Policy</a>
+                </td>
+              </tr>
+              <common-table-spacer-element height=2 />
+              <tr>
+                <td align="center" class="align2" valign="middle" style=standardStyle>
+                  If this email was forwarded to you and you are interested in subscribing, please <a href=get(newsletterConfig, "newsletterPrefLink") style=linkStyle>click here</a> to sign-up.
+                </td>
+              </tr>
+              <common-table-spacer-element height=2 />
+              <tr>
+                <td align="center" class="align2" valign="middle" style=standardStyle>
+                  If you have any questions or concerns, please contact us at 920-542-1131 or toll-free at 800-538-5544.
+                </td>
+              </tr>
+              <common-table-spacer-element height=5 />
+              <tr>
+                <td align="center" class="align2" valign="middle" style=standardStyle>
+                  IropPros<br>
+                  AC Business Media<br>
+                  201 N. Main Street<br>
+                  Fort Atkinson, WI 53538
+                </td>
+              </tr>
+              <common-table-spacer-element height=21 />
+            </table>
+          <!--[if gte mso 9]>
+              </v:textbox>
+            </v:rect>
+          <![endif]-->
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

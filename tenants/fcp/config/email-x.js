@@ -252,5 +252,21 @@ config
       width: 600,
       height: 100,
     },
+  ])
+  .setAdUnits('breaking-ground-ironpros', [
+    {
+      name: 'banner-1',
+      id: '634420a4bc9824da70cac985',
+      width: 600,
+      height: 100,
+    },
+  ])
+  .setAdUnits('headline-news-ironpros', [
+    {
+      name: 'banner-1',
+      id: '6345b2e3bc9824c344cb0a01',
+      width: 600,
+      height: 100,
+    },
   ]);
 module.exports = config;
