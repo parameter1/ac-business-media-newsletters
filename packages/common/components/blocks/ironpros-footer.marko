@@ -38,14 +38,11 @@ $ const imageStyle = {
       <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
         <tr>
           <td align="center" valign="top" background="https://img.forconstructionpros.com/files/base/acbm/fcp/image/static/logo/footerbg.png" style=imageStyle>
-            <!-- <marko-newsletter-imgix
-              src=`${newsletterConfig.footerLogoSrc}`
-              options={ w: 600 }
-              attrs={ width: 600, style: imageStyle }
-              class="resize_img"
-            /> -->
-            <!-- </td>
-            <td align="center" valign="top" class="align2"> -->
+            <!--[if gte mso 9]>
+              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0;display: inline-block; width: 600px;">
+                <v:fill type="tile" src="https://img.forconstructionpros.com/files/base/acbm/fcp/image/static/logo/footerbg.png" color="#000000" />
+                <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+            <![endif]-->
             <table align="center"  class="align2" border="0" cellspacing="0" cellpadding="10">
               <common-table-spacer-element heigth=20 />
               <tr>
@@ -111,6 +108,10 @@ $ const imageStyle = {
               </tr>
               <common-table-spacer-element height=21 />
             </table>
+          <!--[if gte mso 9]>
+              </v:textbox>
+            </v:rect>
+          <![endif]-->
           </td>
         </tr>
       </table>
