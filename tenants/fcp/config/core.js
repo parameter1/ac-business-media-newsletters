@@ -221,6 +221,15 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/footerbg.png',
     editor: 'Wayne Grayson',
     editorImage: '/files/base/acbm/fcp/image/static/Wayne_B&W.jpg',
+    socialMedia: {
+      imagePath: '/files/base/acbm/fcp/image/static/newsletter',
+      links: [
+        { provider: 'facebook', href: 'https://www.facebook.com/IronProsResearch/' },
+        { provider: 'linkedin', href: 'https://www.linkedin.com/company/ironpros/' },
+        { provider: 'twitter', href: 'https://twitter.com/iron_pros/' },
+        { provider: 'instagram', href: 'https://www.instagram.com/iron_pros/' },
+      ],
+    },
   },
   'headline-news-ironpros': {
     ...brands.fcp,
@@ -234,5 +243,14 @@ module.exports = {
     footerLogoSrc: '/files/base/acbm/fcp/image/static/logo/footerbg.png',
     editor: 'Wayne Grayson',
     editorImage: '/files/base/acbm/fcp/image/static/Wayne_B&W.jpg',
+    socialMedia: {
+      imagePath: '/files/base/acbm/fcp/image/static/newsletter',
+      links: [
+        { provider: 'facebook', href: 'https://www.facebook.com/IronProsResearch/' },
+        { provider: 'linkedin', href: 'https://www.linkedin.com/company/ironpros/' },
+        { provider: 'twitter', href: 'https://twitter.com/iron_pros/' },
+        { provider: 'instagram', href: 'https://www.instagram.com/iron_pros/' },
+      ],
+    },
   },
 };
