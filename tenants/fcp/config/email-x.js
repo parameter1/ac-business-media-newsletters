@@ -98,12 +98,6 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '5feb4d539a6ce7036724a652',
-      width: 600,
-      height: 100,
-    },
   ])
   .setAdUnits('rental-market-watch', [
     {
@@ -256,7 +250,7 @@ config
   .setAdUnits('breaking-ground-ironpros', [
     {
       name: 'banner-1',
-      id: '634420a4bc9824da70cac985',
+      id: '5c59c0a7465d198bd4ab8b69',
       width: 600,
       height: 100,
     },
@@ -264,7 +258,7 @@ config
   .setAdUnits('headline-news-ironpros', [
     {
       name: 'banner-1',
-      id: '6345b2e3bc9824c344cb0a01',
+      id: '5feb4eed9a6ce7e1a224a713',
       width: 600,
       height: 100,
     },
