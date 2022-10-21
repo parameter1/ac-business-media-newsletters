@@ -14,9 +14,9 @@ module.exports = {
       useEmailxHref: true,
     },
   },
-  'todays-news': {
+  'cold-chain-insights': {
     ...brands.fl,
-    name: "Today's News",
+    name: 'Cold Chain Insights',
     primaryColor: '#1a93f9',
     footerLogoSrc: '/files/base/acbm/fl/image/static/logo/new-standard-footer-logo-1a93f9.png',
     editor: 'Marina Mayer',
@@ -29,9 +29,9 @@ module.exports = {
     primaryColor: '#2783c2',
     footerLogoSrc: '/files/base/acbm/fl/image/static/logo/new-standard-footer-logo-2783C2.png',
   },
-  'headline-news': {
+  'global-supply-chain-insights': {
     ...brands.sdce,
-    name: 'Headline News',
+    name: 'Global Supply Chain Insights',
     primaryColor: '#e50102',
     footerLogoSrc: '/files/base/acbm/sdce/image/static/logo/new-standard-footer-logo.png',
     editor: 'Marina Mayer',
