@@ -3,7 +3,7 @@ const EmailXConfiguration = require('@parameter1/base-cms-marko-newsletters-emai
 const config = new EmailXConfiguration('https://acbm.serve.email-x.parameter1.com');
 
 config
-  .setAdUnits('todays-news', [
+  .setAdUnits('cold-chain-insights', [
     {
       name: 'banner-1',
       id: '5c59a2f5465d1901d2ab83a4',
@@ -31,7 +31,7 @@ config
       height: 100,
     },
   ])
-  .setAdUnits('headline-news', [
+  .setAdUnits('global-supply-chain-insights', [
     {
       name: 'banner-1',
       id: '5c51c2469bcbcf1119dc9816',
