@@ -98,17 +98,17 @@ config
       width: 600,
       height: 100,
     },
+    {
+      name: 'banner-2',
+      id: '5feb4d539a6ce7036724a652',
+      width: 600,
+      height: 100,
+    },
   ])
   .setAdUnits('rental-market-watch', [
     {
       name: 'banner-1',
       id: '5c59c3b75a66db8051d482dd',
-      width: 600,
-      height: 100,
-    },
-    {
-      name: 'banner-2',
-      id: '61670a1665f06a1d1fd902fb',
       width: 600,
       height: 100,
     },
