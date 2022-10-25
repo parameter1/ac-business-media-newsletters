@@ -34,16 +34,16 @@ $ const titleStyle = {
 
 $ const teaserStyle = {
   "font-family": "'ArialMT','Arial', Helvetica, sans-serif",
-  "font-size": "21px",
+  "font-size": "18px",
   "line-height": "28px",
   "color": "#9fa4a1",
 };
 
 $ const linkStyle = {
-  "font-size": "21px",
+  "font-size": "18px",
   "color": primaryColor,
   "text-decoration": "underline",
-  "font-weight": "400",
+  "font-weight": "normal",
 };
 
 $ const verticalBorderStyle = {
@@ -73,8 +73,8 @@ $ const verticalBorderStyle = {
                 <td align="center" valign="middle">
                   <marko-newsletter-imgix
                     src=`${newsletterConfig.equipmentImage}`
-                    options={ w: 584 }
-                    class="resize_img1"
+                    attrs={ width: 600}
+                    class="resize_img"
                   >
                   </marko-newsletter-imgix>
                 </td>
@@ -89,16 +89,23 @@ $ const verticalBorderStyle = {
           <td align="center" valign="top">
             <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101" bgcolor="#ffffff">
               <tr>
-                <td align="center">
-                  <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
-                    <marko-newsletter-imgix
-                      src=image.src
-                      alt=image.alt
-                      attrs={ style: imageStyle }
-                    >
-                      <@link href=node.siteContext.url target="_blank" />
-                    </marko-newsletter-imgix>
-                  </marko-core-obj-value>
+                <td align="center" valign="top">
+                  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
+                    <tr>
+                      <td align="center">
+                        <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
+                          <marko-newsletter-imgix
+                            src=image.src
+                            alt=image.alt
+                            attrs={ style: imageStyle }
+                            class="resize_img"
+                          >
+                            <@link href=node.siteContext.url target="_blank" />
+                          </marko-newsletter-imgix>
+                        </marko-core-obj-value>
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
             </table>
@@ -130,7 +137,7 @@ $ const verticalBorderStyle = {
                     <common-table-spacer-element height=6 />
                     <tr>
                       <td align="left" valign="top">
-                        <table width="93%" align="center" border="0" cellspacing="0" cellpadding="0">
+                        <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0">
                           <tr>
                             <td align="left" class="font3" valign="middle">
                               <marko-core-obj-text obj=node field="teaser" html=true attrs={ style: teaserStyle } />
@@ -177,7 +184,7 @@ $ const verticalBorderStyle = {
                     <common-table-spacer-element height=6 />
                     <tr>
                       <td align="left" valign="top">
-                        <table width="93%" align="center" border="0" cellspacing="0" cellpadding="0">
+                        <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0">
                           <tr>
                             <td align="left" class="font3" valign="middle">
                               <marko-core-obj-text obj=node field="teaser" html=true attrs={ style: teaserStyle } />
@@ -196,7 +203,7 @@ $ const verticalBorderStyle = {
             </table>
           </td>
         </tr>
-        <common-table-spacer-element height=35 />
+        <common-table-spacer-element height=30 />
       </table>
     </else>
   </for>
