@@ -25,7 +25,7 @@ $ const sectionNameStyle = {
   "font-family": "'Arial', sans-serif",
   "font-size": "25px",
   "line-height": "30px",
-  "font-weight": "900",
+  "font-weight": "bold",
   "letter-spacing": "0",
   "color": "#3e5573",
   "text-transform": "uppercase",
@@ -36,7 +36,6 @@ $ const teaserStyle = {
   "font-size": "16px",
   "line-height": "21px",
   "color": "#A4A09F",
-  "font-weight": "400",
   "letter-spacing":"0",
 };
 
@@ -52,20 +51,21 @@ $ const editorStyle = {
   "font-size": "21px",
   "line-height": "35px",
   "color": "#3e5573",
-  "font-weight": "500",
+  "font-weight": "normal",
   "letter-spacing": "0",
 };
 
 $ const subBrandNameStyle = {
-  "font-family": "Integral CF, 'Arial', Helvetica, sans-serif",
+  ...editorStyle,
   "color": primaryColor,
+  "font-weight": "400",
 };
 
 $ const nameStyle = {
   ...editorStyle,
   "font-size": "25px",
   "color": primaryColor,
-  "font-weight": "700",
+  "font-weight": "bold",
   "text-transform": "uppercase",
 };
 
@@ -74,6 +74,7 @@ $ const editorImageOptions = {
   h: 75,
   mask: "ellipse",
   pad: 0,
+  border: '3,3e5573'
 };
 
 $ const buttonStyle = {
@@ -131,10 +132,11 @@ $ const contentTypeActions = {
   };
 
   <for|node, content| of=nodes>
+
     <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
       <tr>
         <td align="center" valign="top">
-          <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+          <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap101">
             <tr>
               <td valign="top">
                 <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
@@ -149,14 +151,15 @@ $ const contentTypeActions = {
                 </marko-core-obj-value>
               </td>
             </tr>
+            <common-table-spacer-element height=5 />
             <tr>
-              <td align="left" valign="top">
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+              <td align="center" valign="top">
+                <table width="88%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap102">
                   <tr>
-                    <td>
-                      <table>
+                    <td align="left" valign="top">
+                      <table width="100%" align="center" valign="bottom" border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                          <td align="left" width="85%" style=editorStyle>
+                          <td align="left" style=editorStyle>
                             ${editor} |
                             <span style=subBrandNameStyle>
                               ${subBrandName}
@@ -166,18 +169,8 @@ $ const contentTypeActions = {
                             <marko-newsletter-imgix
                               src=editorImage
                               options=editorImageOptions
-                              attrs={ style: "border:3px solid #3e5573; border-radius:150px; padding:0" }
                             >
                             </marko-newsletter-imgix>
-                          </td>
-                        </tr>
-                      </table>
-                      <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                          <td valign="top" align="left">
-                            <marko-core-obj-text obj=node field="name" html=true >
-                              <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle }/>
-                            </marko-core-obj-text>
                           </td>
                         </tr>
                       </table>
@@ -188,39 +181,47 @@ $ const contentTypeActions = {
             </tr>
             <common-table-spacer-element height=5 />
             <tr>
-              <td align="left" valign="top">
-                <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" class="wrap102">
+              <td valign="top" align="center">
+                <table width="88%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap102">
+                  <tr>
+                    <td align="left" valign="middle">
+                      <marko-core-obj-text obj=node field="name" html=true >
+                        <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle }/>
+                      </marko-core-obj-text>
+                    </td>
+                  </tr>
+                  <common-table-spacer-element height=5 />
                   <tr>
                     <td align="left" valign="middle">
                       <marko-core-obj-text obj=node field="teaser" html=true attrs={ style: teaserStyle } />
                     </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
-            <common-table-spacer-element height=20 />
-            <tr>
-              <td align="left" valign="top">
-                <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" class="wrap102">
+                  <common-table-spacer-element height=20 />
                   <tr>
-                    <td align="left" valign="top">
-                      <table align="left" border="0" cellspacing="0">
+                    <td align="center" valign="top">
+                      <table width="88%" align="left" border="0" cellspacing="0" cellpadding="0" class="wrap102">
                         <tr>
-                          <td align="left" height="30" valign="middle" style=buttonStyle>
-                            $ const contentAction = contentTypeActions[node.type] ? contentTypeActions[node.type] : "VIEW CONTENT";
-                            <marko-core-obj-text obj=node>
-                              <@link href=node.siteContext.url target="_blank" attrs= { style: buttonTextStyle }/>
-                                ${contentAction}
-                            </marko-core-obj-text>
+                          <td align="left" valign="top">
+                            <table width="151" align="left" border="0" cellspacing="0" style="background-color: #3e5573; border-radius: 6px;">
+                              <tr>
+                                <td align="left" height="20" valign="middle" style=buttonStyle>
+                                  $ const contentAction = contentTypeActions[node.type] ? contentTypeActions[node.type] : "VIEW CONTENT";
+                                  <marko-core-obj-text obj=node>
+                                    <@link href=node.siteContext.url target="_blank" attrs= { style: buttonTextStyle }/>
+                                      ${contentAction}
+                                  </marko-core-obj-text>
+                                </td>
+                              </tr>
+                            </table>
                           </td>
                         </tr>
                       </table>
                     </td>
                   </tr>
+                  <common-table-spacer-element height=14 />
                 </table>
               </td>
             </tr>
-            <common-table-spacer-element height=14 />
           </table>
         </td>
       </tr>

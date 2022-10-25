@@ -27,8 +27,8 @@ $ const linkStyle = {
   "text-decoration": "none!important"
 };
 
-$ const imageStyle = {
-  "background-size": "100%",
+$ const bgImage = {
+  "background-size": "600px, 450px",
   "background-repeat": "no-repeat",
 };
 
@@ -37,13 +37,13 @@ $ const imageStyle = {
     <td align="center" valign="top">
       <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
         <tr>
-          <td align="center" valign="top" background="https://img.forconstructionpros.com/files/base/acbm/fcp/image/static/logo/footerbg.png" style=imageStyle>
+          <td align="center" valign="top" background="https://img.forconstructionpros.com/files/base/acbm/fcp/image/static/logo/footerbg.png" style=bgImage>
             <!--[if gte mso 9]>
-              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0;display: inline-block; width: 600px;">
-                <v:fill type="tile" src="https://img.forconstructionpros.com/files/base/acbm/fcp/image/static/logo/footerbg.png" color="#000000" />
-                <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+            <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0;display: inline-block; background-size: contain; background-repeat: no-repeat; width: 600px; height: 300px;">
+              <v:fill type="frame" src="https://img.forconstructionpros.com/files/base/acbm/fcp/image/static/logo/footerbg.png" color="#ededee"/>
+            </v:background>
             <![endif]-->
-            <table align="center"  class="align2" border="0" cellspacing="0" cellpadding="10">
+            <table align="center" class="align2" border="0" cellspacing="0" cellpadding="10">
               <common-table-spacer-element heigth=20 />
               <tr>
                 <for|link| of=socialMediaLinks>
@@ -108,10 +108,10 @@ $ const imageStyle = {
               </tr>
               <common-table-spacer-element height=21 />
             </table>
-          <!--[if gte mso 9]>
+            <!--[if gte mso 9]>
               </v:textbox>
             </v:rect>
-          <![endif]-->
+            <![endif]-->
           </td>
         </tr>
       </table>

@@ -33,16 +33,16 @@ $ const titleStyle = {
 
 $ const teaserStyle = {
   "font-family": "'ArialMT','Arial', Helvetica, sans-serif",
-  "font-size": "21px",
+  "font-size": "18px",
   "line-height": "28px",
   "color": "#9fa4a1",
 };
 
 $ const linkStyle = {
-  "font-size": "21px",
+  "font-size": "18px",
   "color": "#3e5573",
   "text-decoration": "underline",
-  "font-weight": "400",
+  "font-weight": "normal",
 };
 
 $ const verticalBorderStyle = {
@@ -67,13 +67,13 @@ $ const verticalBorderStyle = {
       <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
         <tr>
           <td align="center" valign="top">
-            <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101" bgcolor="#ffffff">
+            <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="wrap101">
               <tr>
                 <td align="center" valign="middle">
                   <marko-newsletter-imgix
                     src=`${newsletterConfig.technologyImage}`
-                    options={ w: 584 }
-                    class="resize_img1"
+                    attrs={ width: 600}
+                    class="resize_img"
                   >
                   </marko-newsletter-imgix>
                 </td>
@@ -94,6 +94,7 @@ $ const verticalBorderStyle = {
                       src=image.src
                       alt=image.alt
                       attrs={ style: imageStyle }
+                      class="resize_img"
                     >
                       <@link href=node.siteContext.url target="_blank" />
                     </marko-newsletter-imgix>
@@ -129,7 +130,7 @@ $ const verticalBorderStyle = {
                     <common-table-spacer-element height=6 />
                     <tr>
                       <td align="left" valign="top">
-                        <table width="93%" align="center" border="0" cellspacing="0" cellpadding="0">
+                        <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0">
                           <tr>
                             <td align="left" class="font3" valign="middle">
                               <marko-core-obj-text obj=node field="teaser" html=true attrs={ style: teaserStyle } />
@@ -176,7 +177,7 @@ $ const verticalBorderStyle = {
                     <common-table-spacer-element height=6 />
                     <tr>
                       <td align="left" valign="top">
-                        <table width="93%" align="center" border="0" cellspacing="0" cellpadding="0">
+                        <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0">
                           <tr>
                             <td align="left" class="font3" valign="middle">
                               <marko-core-obj-text obj=node field="teaser" html=true attrs={ style: teaserStyle } />
@@ -195,6 +196,7 @@ $ const verticalBorderStyle = {
             </table>
           </td>
         </tr>
+        <common-table-spacer-element height=30 />
       </table>
     </else>
   </for>

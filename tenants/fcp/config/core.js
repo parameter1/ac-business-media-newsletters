@@ -233,7 +233,7 @@ module.exports = {
   },
   'headline-news-ironpros': {
     ...brands.fcp,
-    name: 'Headline News - Ironpros',
+    name: 'Ironpros Insights',
     subBrandName: 'IronPros',
     primaryColor: '#c99227',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/ironpros-logo.png',
