@@ -64,6 +64,14 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
             skip=1
           />
 
+          <common-content-ironpros-sponsored-secondary-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored Secondary"
+            display-sponsored-section=true
+            limit=1
+          />
+
           <common-content-ironpros-technology-block
             data=data
             newsletter=newsletter
@@ -82,12 +90,9 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
             skip=1
           />
 
-          <common-content-ironpros-sponsored-secondary-block
+          <common-ironpros-advertisement-block
             date=date
-            newsletter=newsletter
-            section-name="Sponsored Secondary"
-            display-sponsored-section=true
-            limit=1
+            ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
           />
 
           <common-content-ironpros-workwear-block

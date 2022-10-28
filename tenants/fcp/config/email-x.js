@@ -254,11 +254,23 @@ config
       width: 600,
       height: 100,
     },
+    {
+      name: 'banner-2',
+      id: '635bee9eec6c022f9a33f945',
+      width: 600,
+      height: 100,
+    },
   ])
   .setAdUnits('headline-news-ironpros', [
     {
       name: 'banner-1',
       id: '5feb4eed9a6ce7e1a224a713',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'banner-2',
+      id: '635bef4cec6c0281b833f973',
       width: 600,
       height: 100,
     },
