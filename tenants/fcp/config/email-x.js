@@ -256,7 +256,7 @@ config
     },
     {
       name: 'banner-2',
-      id: '635bee9eec6c022f9a33f945',
+      id: '5feb48d407c07b06cb8da6b1',
       width: 600,
       height: 100,
     },
@@ -270,7 +270,7 @@ config
     },
     {
       name: 'banner-2',
-      id: '635bef4cec6c0281b833f973',
+      id: '6165a95265f06a250fd8ee8b',
       width: 600,
       height: 100,
     },
