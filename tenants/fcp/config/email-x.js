@@ -268,11 +268,5 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '6165a95265f06a250fd8ee8b',
-      width: 600,
-      height: 100,
-    },
   ]);
 module.exports = config;
