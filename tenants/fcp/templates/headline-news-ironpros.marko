@@ -1,1 +1,108 @@
-<common-ironpros-layout data=data />
+import { get } from "@parameter1/base-cms-object-path";
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+
+$ const { website, config } = out.global;
+$ const { newsletter, date, dateInfo } = data;
+
+$ const showBrand = defaultValue(input.showBrand, true);
+$ const primaryImage = defaultValue(input.primaryImage, false);
+$ const emailX = config.get("emailX");
+$ const nativeX = config.getAsObject("nativeX");
+
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const primaryColor = get(newsletterConfig, "primaryColor");
+
+<marko-newsletter-root
+  title=newsletter.name
+  date=date
+>
+  <@head>
+    <common-new-standard-head-styles color=primaryColor />
+  </@head>
+  <@body style="padding:0; margin:0; -webkit-text-size-adjust: 100%; background: #ffffff; font-family: 'arial', sans-serif;">
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="top">
+          <common-ironpros-header-block data=data bgColor=primaryColor />
+
+          <common-ironpros-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          />
+
+          <common-content-ironpros-featured-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Featured"
+            showBrand=true
+          />
+
+          <common-content-ironpros-sponsored-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored"
+            display-sponsored-section=true
+            limit=1
+          />
+
+          <common-content-ironpros-equipment-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Equipment"
+            primary-image=true
+            limit=1
+          />
+
+          <common-content-ironpros-equipment-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Equipment"
+            primary-image=false
+            skip=1
+          />
+
+          <common-content-ironpros-technology-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Technology"
+            primary-image=true
+            limit=1
+          />
+
+          <common-content-ironpros-technology-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Technology"
+            primary-image=false
+            skip=1
+          />
+
+          <common-content-ironpros-workwear-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Workwear"
+            primary-image=true
+            limit=1
+          />
+
+          <common-content-ironpros-workwear-block
+            data=data
+            newsletter=newsletter
+            date=date
+            section-name="Workwear"
+            primary-image=false
+            skip=1
+          />
+
+          <common-ironpros-footer-block data=data />
+        </td>
+      </tr>
+    </table>
+  </@body>
+</marko-newsletter-root>
