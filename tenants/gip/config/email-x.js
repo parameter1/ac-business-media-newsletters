@@ -30,12 +30,6 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '615b0f3ca650265e38f7a58e',
-      width: 600,
-      height: 100,
-    },
   ])
   .setAdUnits('the-pro-report', [
     {
