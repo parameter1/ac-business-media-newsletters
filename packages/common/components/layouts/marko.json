@@ -13,5 +13,8 @@
   },
   "<common-ironpros-layout>": {
     "template": "./ironpros.marko"
+  },
+  "<common-top-ad-standard-layout>": {
+    "template": "./top-ad-standard.marko"
   }
 }
