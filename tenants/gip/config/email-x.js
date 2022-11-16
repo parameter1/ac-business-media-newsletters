@@ -52,12 +52,6 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-2',
-      id: '615b17d0a65026e891f7a689',
-      width: 600,
-      height: 100,
-    },
   ])
   .setAdUnits('show-report', [
     {
