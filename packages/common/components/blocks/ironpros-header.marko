@@ -40,10 +40,10 @@ $ const poweredByText = {
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
                 </td>
-                <td valign="top" style=poweredByText>
+                <td align="center" valign="top" style=poweredByText>
                   Powered By:
                 </td>
-                <td>
+                <td align="center" valign="center">
                   <marko-newsletter-imgix
                     src=`${newsletterConfig.fcpLogoSrc}`
                     alt="logo"
@@ -53,6 +53,20 @@ $ const poweredByText = {
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
                 </td>
+                <td align="right" valign="center">
+                  <marko-newsletter-imgix
+                    src=`${newsletterConfig.equipmentTodayLogoSrc}`
+                    alt="logo"
+                    options={ w: 120, h: 25 }
+                    attrs={ width: 120 }
+                  >
+                    <@link href=website.get("origin") target="_blank" />
+                  </marko-newsletter-imgix>
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
                 <td>
                   <span style="display:none !important;visibility:hidden;mso-hide:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"></span>
                   <!-- // Start Stealth Link // -->
@@ -61,7 +75,7 @@ $ const poweredByText = {
                   </div>
                   <!-- // End Stealth Link // -->
                 </td>
-                <td align="center" class="mob_hide" valign="top" style=textStyle>
+                <td align="left" class="mob_hide" valign="top" style=textStyle>
                   <a href="@{mv_online_version}@" target="_blank" style=textStyle>View Email Online</a>
                 </td>
                 <td align="right" valign="top" style=textStyle>
