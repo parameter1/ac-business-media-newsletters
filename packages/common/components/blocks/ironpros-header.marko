@@ -17,6 +17,11 @@ $ const textStyle = {
   "align": "center",
 }
 
+$ const poweredByText = {
+  ...textStyle,
+  "font-size": "14px",
+}
+
 <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
   <tr>
     <td align="center" valign="top">
@@ -26,11 +31,24 @@ $ const textStyle = {
           <td valign="top">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td align="left" valign="top" width="33%">
+                <td align="left" valign="center">
                   <marko-newsletter-imgix
                     src=`${newsletterConfig.headerLogoSrc}`
                     alt="logo"
-                    options={ w: 150, h: 25 }
+                    options={ w: 120, h: 25 }
+                  >
+                    <@link href=website.get("origin") target="_blank" />
+                  </marko-newsletter-imgix>
+                </td>
+                <td valign="top" style=poweredByText>
+                  Powered By:
+                </td>
+                <td>
+                  <marko-newsletter-imgix
+                    src=`${newsletterConfig.fcpLogoSrc}`
+                    alt="logo"
+                    options={ w: 120, h: 25 }
+                    attrs={ width: 120 }
                   >
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
@@ -43,10 +61,10 @@ $ const textStyle = {
                   </div>
                   <!-- // End Stealth Link // -->
                 </td>
-                <td align="center" class="mob_hide" valign="top" width="33%" style=textStyle>
+                <td align="center" class="mob_hide" valign="top" style=textStyle>
                   <a href="@{mv_online_version}@" target="_blank" style=textStyle>View Email Online</a>
                 </td>
-                <td align="right" valign="top" width="33%" style=textStyle>
+                <td align="right" valign="top" style=textStyle>
                   ${displayDate}
                 </td>
               </tr>
