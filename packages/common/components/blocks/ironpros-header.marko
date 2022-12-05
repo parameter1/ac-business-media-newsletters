@@ -17,11 +17,6 @@ $ const textStyle = {
   "align": "center",
 }
 
-$ const poweredByText = {
-  ...textStyle,
-  "font-size": "14px",
-}
-
 <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
   <tr>
     <td align="center" valign="top">
@@ -35,20 +30,20 @@ $ const poweredByText = {
                   <marko-newsletter-imgix
                     src=`${newsletterConfig.headerLogoSrc}`
                     alt="logo"
-                    options={ w: 120, h: 25 }
+                    attrs={ width: 280 }
                   >
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
                 </td>
-                <td align="center" valign="top" style=poweredByText>
+                <td align="right" valign="center" style=textStyle>
                   Powered By:
                 </td>
-                <td align="center" valign="center">
+                <td align="right" valign="center">
                   <marko-newsletter-imgix
                     src=`${newsletterConfig.fcpLogoSrc}`
                     alt="logo"
-                    options={ w: 120, h: 25 }
-                    attrs={ width: 120 }
+                    options={ w: 90, h: 25 }
+                    attrs={ width: 90 }
                   >
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
@@ -57,8 +52,8 @@ $ const poweredByText = {
                   <marko-newsletter-imgix
                     src=`${newsletterConfig.equipmentTodayLogoSrc}`
                     alt="logo"
-                    options={ w: 120, h: 25 }
-                    attrs={ width: 120 }
+                    options={ w: 90, h: 25 }
+                    attrs={ width: 90 }
                   >
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
