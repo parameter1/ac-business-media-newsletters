@@ -31,11 +31,12 @@ $ const textStyle = {
                     src=`${newsletterConfig.headerLogoSrc}`
                     alt="logo"
                     attrs={ width: 280 }
+                    class="resize_img1"
                   >
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
                 </td>
-                <td align="right" valign="center" style=textStyle>
+                <td align="right" valign="center" class="font2" style=textStyle>
                   Powered By:
                 </td>
                 <td align="right" valign="center">
@@ -44,6 +45,7 @@ $ const textStyle = {
                     alt="logo"
                     options={ w: 90, h: 25 }
                     attrs={ width: 90 }
+                    class="resize_img"
                   >
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
@@ -54,6 +56,7 @@ $ const textStyle = {
                     alt="logo"
                     options={ w: 90, h: 25 }
                     attrs={ width: 90 }
+                    class="resize_img"
                   >
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
@@ -70,10 +73,10 @@ $ const textStyle = {
                   </div>
                   <!-- // End Stealth Link // -->
                 </td>
-                <td align="left" class="mob_hide" valign="top" style=textStyle>
-                  <a href="@{mv_online_version}@" target="_blank" style=textStyle>View Email Online</a>
+                <td align="left" style=textStyle>
+                  <a href="@{mv_online_version}@" target="_blank" class="font5" style=textStyle>View Email Online</a>
                 </td>
-                <td align="right" valign="top" style=textStyle>
+                <td align="right" class="font5" style=textStyle>
                   ${displayDate}
                 </td>
               </tr>
