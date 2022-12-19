@@ -24,7 +24,7 @@ $ const textStyle = {
         <common-table-spacer-element height=48 />
         <tr>
           <td valign="top">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <table width="300px" border="0" cellspacing="0" cellpadding="0" align="left">
               <tr>
                 <td align="left" valign="center">
                   <marko-newsletter-imgix
@@ -36,26 +36,30 @@ $ const textStyle = {
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
                 </td>
-                <td align="right" valign="center" class="font2" style=textStyle>
-                  Powered By:
+              </tr>
+            </table>
+            <table width="300px" border="0" cellspacing="0" cellpadding="0" align="right">
+              <tr>
+                <td align="right" valign="center" class="font2" style=textStyle width="100px">
+                  Powered By:&nbsp;
                 </td>
-                <td align="right" valign="center">
+                <td align="right" valign="center" width="100px">
                   <marko-newsletter-imgix
                     src=`${newsletterConfig.fcpLogoSrc}`
                     alt="logo"
                     options={ w: 90, h: 25 }
-                    attrs={ width: 90 }
+                    attrs={ width: 90, height: 25 }
                     class="resize_img"
                   >
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
                 </td>
-                <td align="right" valign="center">
+                <td align="right" valign="center" width="100px">
                   <marko-newsletter-imgix
                     src=`${newsletterConfig.equipmentTodayLogoSrc}`
                     alt="logo"
                     options={ w: 90, h: 25 }
-                    attrs={ width: 90 }
+                    attrs={ width: 90, height: 25 }
                     class="resize_img"
                   >
                     <@link href=website.get("origin") target="_blank" />
