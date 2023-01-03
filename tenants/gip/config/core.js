@@ -21,9 +21,9 @@ module.exports = {
     headerLogoSrc: '/files/base/acbm/gip/image/static/logo/snow-pro-logo.png',
     footerLogoSrc: '/files/base/acbm/gip/image/static/logo/new-standard-footer-logo-7EC0EA.png',
     primaryColor: '#7ec0ea',
-    editor: 'Alexis Mizell-Pleasant',
-    editorTitle: 'Associate Editor',
-    editorImage: '/files/base/acbm/gip/image/static/Alexis_Pleasant.png',
+    editor: 'Sarah Webb',
+    editorTitle: 'Editor',
+    editorImage: '/files/base/acbm/gip/image/static/Sarah_Webb_headshot.png',
   },
   'technology-report': {
     ...brands.gip,
