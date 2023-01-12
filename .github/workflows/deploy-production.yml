@@ -122,7 +122,7 @@ jobs:
         run: |
           npx @parameter1/rancher2cli dl \
             --wait --namespace ${{ matrix.namespace }} \
-            basecms-newletter ${{ env.IMG_PREFIX }}-${{ matrix.tenant }} \
+            basecms-newsletter ${{ env.IMG_PREFIX }}-${{ matrix.tenant }} \
             ${{ env.ECR_REGISTRY }}/${{ env.IMG_PREFIX }}-${{ matrix.tenant }}:${{ needs.vars.outputs.version }}
         env:
           RANCHER_CLUSTERID: c-7p6pt
