@@ -69,10 +69,9 @@ $ const buttonTextStyle = {
   "display": "block",
 };
 
-$ const imageStyle = {
-  "align": "center",
-  "display": "block",
-  "object-fit": "cover"
+$ const imgOptions = {
+  "fit": "crop",
+  "ar": "3:2"
 };
 
 $ const contentTypeActions = {
@@ -94,13 +93,13 @@ $ const contentTypeActions = {
         <td align="center" valign="top">
           <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
             <tr>
-              <td valign="center" width="60%" class="flt1">
+              <td valign="center" width="60%" class="flt1" bgcolor=primaryColor>
                 <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
                   <marko-newsletter-imgix
                     src=image.src
                     alt=image.alt
-                    options={ w: 360, h: 253 }
-                    attrs={ style: imageStyle }
+                    options=imgOptions
+                    attrs={ align: "center", width: "300" }
                     class="resize_img"
                   >
                     <@link href=node.siteContext.url target="_blank" attrs={ style: nameStyle} />
