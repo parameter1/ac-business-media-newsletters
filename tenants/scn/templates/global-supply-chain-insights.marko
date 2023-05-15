@@ -1,1 +1,79 @@
-<common-top-ad-standard-layout data=data />
+import { get } from "@parameter1/base-cms-object-path";
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+
+$ const { website, config } = out.global;
+$ const { newsletter, date, dateInfo } = data;
+
+$ const showBrand = defaultValue(input.showBrand, true);
+$ const emailX = config.get("emailX");
+$ const nativeX = config.getAsObject("nativeX");
+
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const primaryColor = get(newsletterConfig, "primaryColor");
+$ const bgColor = get(newsletterConfig, "bgColor");
+
+<marko-newsletter-root
+  title=newsletter.name
+  date=date
+>
+  <@head>
+    <common-new-standard-head-styles color=primaryColor />
+  </@head>
+  <@body style="padding:0; margin:0; -webkit-text-size-adjust: 100%; font-family: 'arial', sans-serif;">
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="top">
+          <common-standard-header-block data=data />
+
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+            location="banner-1"
+          />
+
+          <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap10">
+            <tr>
+              <td align="center" valign="top">
+                <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <common-content-simple-list-block
+            date=date
+            section-name="Main"
+            newsletter=newsletter
+            with-image=true
+            image-position="right"
+            with-section=true
+            limit=1
+            primary-color="#e50102"
+          />
+
+          <common-content-simple-list-block
+            date=date
+            section-name="Main"
+            newsletter=newsletter
+            with-image=true
+            image-position="right"
+            with-section=true
+            skip=1
+            limit=9
+            primary-color="#e50102"
+          />
+
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
+          />
+
+          <common-standard-footer-block data=data />
+        </td>
+      </tr>
+    </table>
+  </@body>
+</marko-newsletter-root>
