@@ -1,27 +1,59 @@
-import { get } from "@parameter1/base-cms-object-path";
+import { get } from  "@parameter1/base-cms-object-path";
+import moment from "moment";
 
 $ const { website, config } = out.global;
 $ const { newsletter, date, dateInfo } = input.data;
-$ const primaryColor = input.bgColor;
 $ const newsletterConfig = config.get(newsletter.alias);
+$ const displayDate = moment(date).format("MMMM DD, YYYY");
 
-<common-table width="630" border="0" cellspacing="0" cellpadding="0" align="center" class="main">
+$ const textStyle = {
+  "font-family": "'Arial Narrow Bold', sans-serif",
+  "font-size": "12px",
+  "line-height": "17px",
+  "color": "#000000",
+  "letter-spacing": "0px",
+  "text-decoration": "none",
+  "align": "center",
+}
+
+<table width="660" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap10">
   <tr>
-    <td>
-      <!-- Header View Online -->
-      <common-header-view-online-block newsletter=newsletter/>
-
-      <if(newsletterConfig.headerLogoSrc)>
-        <!-- Header Image -->
-        <common-header-image-block
-          newsletter=newsletter
-          date=date
-          image-src=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrc}`
-          href=newsletter.site.origin
-          name=newsletter.name
-        />
-      </if>
+    <td align="center" valign="top">
+      <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+        <common-table-spacer-element height=10 />
+        <tr>
+          <td valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="left" valign="top" width="33%">
+                  <marko-newsletter-imgix
+                    src=`${newsletterConfig.headerLogoSrc}`
+                    alt="logo"
+                    options={ w: 150 }
+                  >
+                    <@link href=website.get("origin") target="_blank" />
+                  </marko-newsletter-imgix>
+                </td>
+                <td>
+                  <span style="display:none !important;visibility:hidden;mso-hide:all;font-size:1px;color:#000000;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"></span>
+                  <!-- // Start Stealth Link // -->
+                  <div name="divHrefB" style="display:none;height:0px;width:0px;overflow:hidden;visibility:hidden;mso-hide:all">
+                    <a href="http://www.acbusinessmedia.com/Omeda">AC Business Media Info</a>
+                  </div>
+                  <!-- // End Stealth Link // -->
+                </td>
+                <td align="center" class="mob_hide" valign="center" width="33%" style=textStyle>
+                  <a href="@{mv_online_version}@" target="_blank" style=textStyle>View Email Online</a>
+                </td>
+                <td align="right" valign="center" width="33%" style=textStyle>
+                  ${displayDate}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <common-table-spacer-element height=5 />
+      </table>
     </td>
   </tr>
-<common-table-hr-element height="2" bg-color=primaryColor />
-</common-table>
+</table>
