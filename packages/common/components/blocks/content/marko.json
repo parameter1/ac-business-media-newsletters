@@ -393,5 +393,8 @@
   },
   "<common-content-simple-list-item-block>": {
     "template": "./simple-list-item.marko"
+  },
+  "<common-content-simple-sponsored-block>": {
+    "template": "./simple-sponsored.marko"
   }
 }
