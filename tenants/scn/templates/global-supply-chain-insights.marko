@@ -45,11 +45,20 @@ $ const bgColor = get(newsletterConfig, "bgColor");
 
           <common-content-simple-list-block
             date=date
-            section-name="Main"
+            section-name="Featured"
             newsletter=newsletter
             with-image=true
-            image-position="right"
+            image-position="top"
             with-section=true
+            limit=1
+            primary-color="#e50102"
+          />
+
+          <common-content-simple-sponsored-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored"
+            display-sponsored-section=true
             limit=1
             primary-color="#e50102"
           />
@@ -58,11 +67,29 @@ $ const bgColor = get(newsletterConfig, "bgColor");
             date=date
             section-name="Main"
             newsletter=newsletter
-            with-image=true
-            image-position="right"
+            with-image=false
             with-section=true
             skip=1
-            limit=9
+            limit=2
+            primary-color="#e50102"
+          />
+
+          <common-content-simple-sponsored-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsors Secondary"
+            display-sponsored-section=true
+            primary-color="#e50102"
+          />
+
+          <common-content-simple-list-block
+            date=date
+            section-name="Main"
+            newsletter=newsletter
+            with-image=false
+            with-section=true
+            skip=3
+            limit=7
             primary-color="#e50102"
           />
 
