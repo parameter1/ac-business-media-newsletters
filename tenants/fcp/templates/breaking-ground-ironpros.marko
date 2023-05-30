@@ -23,94 +23,32 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td align="center" valign="top">
-          <common-ironpros-header-block data=data bgColor=primaryColor />
+          <common-ironpros-header-block data=data />
 
-          <common-ironpros-advertisement-block
-            date=date
-            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
-          />
-
-          <common-content-ironpros-featured-block
+          <common-content-simple-list-block
             data=data
-            newsletter=newsletter
             date=date
             section-name="Featured"
-            showBrand=true
-          />
-
-          <common-content-ironpros-sponsored-block
-            date=date
             newsletter=newsletter
-            section-name="Sponsored"
-            display-sponsored-section=true
+            with-image=true
+            image-position="top"
+            with-section=true
             limit=1
+            primary-color="#c99227"
+            background="#ededee"
           />
 
-          <common-content-ironpros-equipment-block
+          <common-content-simple-list-block
             data=data
-            newsletter=newsletter
             date=date
-            section-name="Equipment"
-            primary-image=true
-            limit=1
-          />
-
-          <common-content-ironpros-equipment-block
-            data=data
+            section-name="Main"
             newsletter=newsletter
-            date=date
-            section-name="Equipment"
-            primary-image=false
+            with-image=false
+            with-section=true
+            limit=9
             skip=1
-          />
-
-          <common-content-ironpros-sponsored-secondary-block
-            date=date
-            newsletter=newsletter
-            section-name="Sponsored Secondary"
-            display-sponsored-section=true
-            limit=1
-          />
-
-          <common-content-ironpros-technology-block
-            data=data
-            newsletter=newsletter
-            date=date
-            section-name="Technology"
-            primary-image=true
-            limit=1
-          />
-
-          <common-content-ironpros-technology-block
-            data=data
-            newsletter=newsletter
-            date=date
-            section-name="Technology"
-            primary-image=false
-            skip=1
-          />
-
-          <common-ironpros-advertisement-block
-            date=date
-            ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
-          />
-
-          <common-content-ironpros-workwear-block
-            data=data
-            newsletter=newsletter
-            date=date
-            section-name="Workwear"
-            primary-image=true
-            limit=1
-          />
-
-          <common-content-ironpros-workwear-block
-            data=data
-            newsletter=newsletter
-            date=date
-            section-name="Workwear"
-            primary-image=false
-            skip=1
+            primary-color="#c99227"
+            background="#ededee"
           />
 
           <common-ironpros-footer-block data=data />

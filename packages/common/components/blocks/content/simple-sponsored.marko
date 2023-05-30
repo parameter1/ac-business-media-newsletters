@@ -1,0 +1,141 @@
+import contentList from "@ac-business-media/common/graphql/fragments/content-list";
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+
+import { get } from "@parameter1/base-cms-object-path";
+
+$ const { website, config } = out.global;
+$ const { newsletter } = data;
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const primaryColor = defaultValue(input.primaryColor, "#257478");
+$ const background = defaultValue(input.background, "#ffffff");
+
+$ const {
+  date,
+  sectionName,
+  displaySponsoredSection,
+  limit,
+} = input;
+
+$ const nameStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "13px",
+  "line-height": "16px",
+  "color": "#000000",
+  "font-weight": "bold",
+  "letter-spacing": "0px",
+  "text-decoration": "none",
+}
+
+$ const bodyStyle = {
+  ...nameStyle,
+  "font-weight": "normal",
+}
+
+$ const linkStyle = {
+  ...nameStyle,
+  "font-size": "11px",
+  "color": primaryColor,
+  "text-transform": "uppercase",
+}
+
+$ const sponsoredNameStyle = {
+  ...nameStyle,
+  "font-size": "11px",
+  "color": primaryColor,
+  "display": "block",
+  "text-decoration": "underline",
+  "font-weight": "normal",
+}
+
+<marko-web-query|{ nodes }| name="newsletter-scheduled-content" params={
+  date: date.valueOf(),
+  newsletterId: newsletter.id,
+  sectionName: sectionName,
+  queryFragment: contentList,
+  displaySponsoredSection: displaySponsoredSection,
+  limit: limit,
+}>
+  <for|node, index| of=nodes>
+    <table role="presentation" width="660" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor=background class="wrap10">
+      <common-table-spacer-element height=15 />
+      <tr>
+        <td align="center" valign="top">
+          <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
+            <common-table-hr-element height="15" style="border-top: 2px solid #2f2f2f;" />
+            <tr>
+              <td valign="top">
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr class="mob_hide">
+                    <td width="250" align="left">
+                      <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
+                        <marko-newsletter-imgix
+                          src=image.src
+                          alt=image.alt
+                          options={ w: 225, h: "auto" }
+                          class="resize_img1"
+                        >
+                          <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" />
+                        </marko-newsletter-imgix>
+                        <common-dpm-content node=node date=input.date />
+                      </marko-core-obj-value>
+                    </td>
+                    <td align="left" valign="top" style=bodyStyle>
+                      <marko-core-obj-text obj=node field="name" tag=false>
+                        <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" attrs={ style: nameStyle } />
+                      </marko-core-obj-text>
+                      <common-dpm-content node=node date=input.date />
+                      <div>
+                        <marko-core-link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" class="mob_show1" attrs={ style: sponsoredNameStyle }>Sponsored</marko-core-link>
+                        <common-dpm-content node=node date=input.date />
+                      </div>
+                      <marko-core-obj-text obj=node field="body" html=true />
+                      <marko-core-obj-text obj=node field="linkText" tag=false>
+                        <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" attrs={ style: linkStyle } />
+                      </marko-core-obj-text>
+                      <common-dpm-content node=node date=input.date />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr align="center" class="mob_show1" style="display: none;mso-hide: all;">
+              <td>
+                <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
+                  <marko-newsletter-imgix
+                    src=image.src
+                    alt=image.alt
+                    class="resize_img1"
+                  >
+                    <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" />
+                  </marko-newsletter-imgix>
+                  <common-dpm-content node=node date=input.date />
+                </marko-core-obj-value>
+              </td>
+            </tr>
+            <tr class="mob_show1" style="display: none;mso-hide: all;">
+              <td align="left" valign="top" style=bodyStyle>
+                <marko-core-obj-text obj=node field="name" tag=false>
+                  <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" attrs={ style: nameStyle } />
+                </marko-core-obj-text>
+                <common-dpm-content node=node date=input.date />
+                <div>
+                  <!--[if !mso]><!-->
+                  <marko-core-link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" class="mob_show1" attrs={ style: sponsoredNameStyle }>Sponsored</marko-core-link>
+                  <!--<![endif]-->
+                  <common-dpm-content node=node date=input.date />
+                </div>
+                <marko-core-obj-text obj=node field="body" html=true />
+                <marko-core-obj-text obj=node field="linkText" tag=false>
+                  <@link href=`${node.siteContext.url}#cid-${node.id}` target="_blank" attrs={ style: linkStyle } />
+                </marko-core-obj-text>
+                <common-dpm-content node=node date=input.date />
+              </td>
+            </tr>
+            <common-table-hr-element height="17" style="border-bottom: 2px solid #2f2f2f" />
+            <common-table-spacer-element height=15 />
+          </table>
+        </td>
+      </tr>
+    </table>
+  </for>
+</marko-web-query>

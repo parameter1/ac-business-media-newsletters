@@ -387,5 +387,14 @@
   },
   "<common-content-ironpros-workwear-block>": {
     "template": "./ironpros-workwear.marko"
+  },
+  "<common-content-simple-list-block>": {
+    "template": "./simple-list.marko"
+  },
+  "<common-content-simple-list-item-block>": {
+    "template": "./simple-list-item.marko"
+  },
+  "<common-content-simple-sponsored-block>": {
+    "template": "./simple-sponsored.marko"
   }
 }

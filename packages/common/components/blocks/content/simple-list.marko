@@ -1,0 +1,36 @@
+import { get, getAsArray } from "@parameter1/base-cms-object-path";
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+import queryFragment from "@ac-business-media/common/graphql/fragments/content-list";
+
+$ const { sectionName, date, newsletter } = input;
+
+$ const withImage = defaultValue(input.withImage, true);
+$ const imagePosition = defaultValue(input.imagePosition, 'right');
+$ const withSection = defaultValue(input.withSection, false);
+$ const primaryColor = defaultValue(input.primaryColor, "#257478");
+$ const background = defaultValue(input.background, "#ffffff");
+
+$ const queryParams = {
+  date: date.valueOf(),
+  newsletterId: newsletter.id,
+  sectionName,
+  limit: input.limit,
+  skip: input.skip || 0,
+  queryFragment,
+};
+
+<marko-web-query|{ nodes }| name="newsletter-scheduled-content" collapsible=false params=queryParams>
+  <if(nodes.length)>
+    <for|content| of=nodes>
+      <common-content-simple-list-item-block
+        content=content
+        with-section=withSection
+        section-name=sectionName
+        with-image=withImage
+        image-position=imagePosition
+        primary-color=primaryColor
+        background=background
+      />
+    </for>
+  </if>
+</marko-web-query>
