@@ -2,7 +2,7 @@ import { get } from "@parameter1/base-cms-object-path";
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
 $ const { website, config } = out.global;
-$ const { newsletter, date, dateInfo, sectionName, longBorder } = data;
+$ const { newsletter, date, dateInfo } = input;
 
 $ const showBrand = defaultValue(input.showBrand, true);
 $ const emailX = config.get("emailX");
