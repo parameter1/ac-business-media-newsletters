@@ -2,15 +2,33 @@ import { get } from "@parameter1/base-cms-object-path";
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
 $ const { website, config } = out.global;
-$ const { newsletter, date, dateInfo } = input;
+$ const { newsletter, date, dateInfo, sectionName, longBorder } = data;
 
 $ const showBrand = defaultValue(input.showBrand, true);
-$ const primaryImage = defaultValue(input.primaryImage, false);
 $ const emailX = config.get("emailX");
 $ const nativeX = config.getAsObject("nativeX");
 
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const primaryColor = get(newsletterConfig, "primaryColor");
+$ const bgColor = get(newsletterConfig, "bgColor");
+$ const name = get(newsletterConfig, "name");
+
+$ const sectionNameStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "25px",
+  "line-height": "30px",
+  "font-weight": "bold",
+  "letter-spacing": "0",
+  "color": "#3e5573",
+  "text-transform": "uppercase",
+};
+
+$ const verticalBorderStyle = {
+  "text-align": "left",
+  "border-left": "2px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
+};
 
 <marko-newsletter-root
   title=newsletter.name
@@ -25,6 +43,30 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
         <td align="center" valign="top">
           <common-ironpros-header-block data=data />
 
+          <common-ironpros-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+          />
+
+          <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
+            <tr>
+              <td align="center" valign="top">
+                <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                  $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
+                    <td width="7" style=borderStyle>
+                      <td align="left" class="font1" valign="middle" style=sectionNameStyle>${name}</td>
+                    </td>
+                  </tr>
+                  <common-table-spacer-element height=8 />
+                </table>
+              </td>
+            </tr>
+          </table>
+
           <common-content-simple-list-block
             data=data
             date=date
@@ -32,20 +74,61 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
             newsletter=newsletter
             with-image=true
             image-position="top"
-            with-section=true
+            with-section=false
             limit=1
             primary-color="#c99227"
             background="#ededee"
           />
 
+          <common-content-ironpros-sponsored-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored"
+            display-sponsored-section=true
+          />
+
           <common-content-simple-list-block
             data=data
             date=date
-            section-name="Main"
+            section-name="Top"
             newsletter=newsletter
             with-image=false
             with-section=true
-            limit=9
+            primary-color="#c99227"
+            background="#ededee"
+          />
+
+          <common-content-ironpros-sponsored-secondary-block
+            date=date
+            newsletter=newsletter
+            section-name="Sponsored Secondary"
+            display-sponsored-section=true
+            limit=1
+          />
+
+          <common-content-simple-list-block
+            data=data
+            date=date
+            section-name="Mid"
+            newsletter=newsletter
+            with-image=false
+            with-section=true
+            primary-color="#c99227"
+            background="#ededee"
+          />
+
+          <common-ironpros-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
+          />
+
+          <common-content-simple-list-block
+            data=data
+            date=date
+            section-name="Lower"
+            newsletter=newsletter
+            with-image=false
+            with-section=true
             primary-color="#c99227"
             background="#ededee"
           />
