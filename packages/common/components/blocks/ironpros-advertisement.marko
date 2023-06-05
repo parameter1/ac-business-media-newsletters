@@ -5,34 +5,18 @@ import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 $ const { config } = out.global;
 $ const adUnit = getAsObject(input, "adUnit");
 $ const newsletter = getAsObject(input, "newsletter");
-$ const newsletterConfig = config.get(newsletter.alias);
-$ const primaryColor = get(newsletterConfig, "primaryColor");
 $ const { date } = input;
 $ const dpm = {
   ...config.getAsObject("dpm.emailx"),
   ...getAsObject(input, "dpm"),
 };
 
-<table width="660" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
+<table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
   <tr>
-    <td>
-      <table width="600" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+    <td align="center" valign="top">
+      <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
         <tr>
-          <td width="300" style="padding-left: 30px">
-            <table width="300" border="0" cellspacing="0" cellpadding="0" class="wrap101">
-              <common-table-hr-element height=0 style="border-top: 2px solid #c99227;" />
-            </table>
-          </td>
-          <td width="300">
-            <table width="300" border="0" cellspacing="0" class="wrap101">
-              <common-table-hr-element height=0 />
-            </table>
-          </td>
-        </tr>
-      </table>
-      <table align="center" width="600" border="0" cellspacing="0" cellpadding="0" class="wrap101">
-        <tr>
-          <td>
+          <td align="center" valign="top">
             <if(dpm.enabled)>
               <!-- use the emailx-dpm component when enabled -->
               <!-- by default, do not use the emailx click url unless explicitly requested -->
@@ -56,7 +40,6 @@ $ const dpm = {
             </else>
           </td>
         </tr>
-        <common-table-hr-element height=0 style="border-top: 2px solid #c99227;" />
       </table>
     </td>
   </tr>
