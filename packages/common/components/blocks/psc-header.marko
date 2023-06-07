@@ -4,9 +4,11 @@ $ const { website, config } = out.global;
 $ const { newsletter, date, dateInfo } = input.data;
 
 $ const newsletterConfig = config.get(newsletter.alias);
+$ const tagline = get(newsletterConfig, "tagline");
 
 <common-psc-banner-element
   name=newsletter.name
+  tagline=tagline
 />
 <common-table width="630" border="0" align="center" class="main">
   <tr>
