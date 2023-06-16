@@ -193,7 +193,8 @@ module.exports = {
   },
   'breaking-ground-ironpros': {
     ...brands.equipmentToday,
-    name: 'Breaking Ground - Ironpros',
+    nameFirst: 'Breaking',
+    nameLast: 'Ground',
     subBrandName: 'IronPros',
     primaryColor: '#c99227',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/IP-logo-high-res.png',
@@ -216,7 +217,8 @@ module.exports = {
   },
   'headline-news-ironpros': {
     ...brands.fcp,
-    name: 'Ironpros Insights',
+    nameFirst: 'IronPros',
+    nameLast: 'Insights',
     subBrandName: 'IronPros',
     primaryColor: '#c99227',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/ironpros-logo.png',
