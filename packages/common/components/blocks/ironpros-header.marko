@@ -5,17 +5,36 @@ $ const { website, config } = out.global;
 $ const { newsletter, date, dateInfo } = input.data;
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const displayDate = moment(date).format("MMMM DD, YYYY");
+$ const nameFirst = get(newsletterConfig, "nameFirst");
+$ const nameLast = get(newsletterConfig, "nameLast");
 
 $ const textStyle = {
   "font-family": "'Arial Narrow', Helvetica, sans-serif",
-  "font-size": "16px",
-  "line-height": "35px",
   "color": "#06060c",
   "font-weight": 700,
   "letter-spacing": "0px",
   "text-decoration": "none",
-  "align": "center",
-}
+};
+
+$ const poweredByStyle = {
+  ...textStyle,
+  "padding-right": "32px",
+};
+
+$ const sectionNameStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "28px",
+  "line-height": "30px",
+  "font-weight": "bold",
+  "letter-spacing": "0",
+  "color": "#06060c",
+  "text-transform": "uppercase",
+};
+
+$ const sectionNameStyle2 = {
+  ...sectionNameStyle,
+  "color": "#c99227"
+};
 
 <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
   <tr>
@@ -24,13 +43,26 @@ $ const textStyle = {
         <common-table-spacer-element height=48 />
         <tr>
           <td valign="top">
-            <table width="300px" border="0" cellspacing="0" cellpadding="0" align="left">
+            <table width="400px" border="0" cellspacing="0" cellpadding="0" align="left">
+              <common-table-spacer-element height=15 />
               <tr>
-                <td align="left" valign="center">
+                <td align="left" class="font1" valign="center" style=sectionNameStyle>${nameFirst}&nbsp;
+                  <span style=sectionNameStyle2>${nameLast}</span>
+                </td>
+              </tr>
+            </table>
+            <table width="200px" border="0" cellspacing="0" cellpadding="0" align="right">
+              <tr>
+                <td align="right" valign="right" class="font2" style=poweredByStyle>
+                  Powered By
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="center" width="100px">
                   <marko-newsletter-imgix
                     src=`${newsletterConfig.headerLogoSrc}`
                     alt="logo"
-                    attrs={ width: 280 }
+                    attrs={ width: 150 }
                     class="resize_img1"
                   >
                     <@link href=website.get("origin") target="_blank" />
@@ -38,34 +70,9 @@ $ const textStyle = {
                 </td>
               </tr>
             </table>
-            <table width="300px" border="0" cellspacing="0" cellpadding="0" align="right">
-              <tr>
-                <td align="right" valign="center" class="font2" style=textStyle width="100px">
-                  Powered By:&nbsp;
-                </td>
-                <td align="right" valign="center" width="100px">
-                  <marko-newsletter-imgix
-                    src=`${newsletterConfig.fcpLogoSrc}`
-                    alt="logo"
-                    options={ w: 90, h: 25 }
-                    attrs={ width: 90, height: 25 }
-                    class="resize_img"
-                  >
-                    <@link href=website.get("origin") target="_blank" />
-                  </marko-newsletter-imgix>
-                </td>
-                <td align="right" valign="center" width="100px">
-                  <marko-newsletter-imgix
-                    src=`${newsletterConfig.equipmentTodayLogoSrc}`
-                    alt="logo"
-                    options={ w: 90, h: 25 }
-                    attrs={ width: 90, height: 25 }
-                    class="resize_img"
-                  >
-                    <@link href=website.get("origin") target="_blank" />
-                  </marko-newsletter-imgix>
-                </td>
-              </tr>
+            <table width="600px" border="0" cellspacing="0" cellpadding="0">
+              <common-table-hr-element height=0 style="border-top: 2px solid #c99227;" />
+              <common-table-spacer-element height=3 />
             </table>
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
