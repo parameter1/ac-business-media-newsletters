@@ -2,7 +2,7 @@ import { get } from  "@parameter1/base-cms-object-path";
 import moment from "moment";
 
 $ const { website, config } = out.global;
-$ const { newsletter, date, dateInfo } = input.data;
+$ const { newsletter, date, dateInfo, longBorder } = input.data;
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const displayDate = moment(date).format("MMMM DD, YYYY");
 $ const nameFirst = get(newsletterConfig, "nameFirst");
@@ -36,6 +36,20 @@ $ const sectionNameStyle2 = {
   "color": "#c99227"
 };
 
+$ const verticalBorderStyle = {
+  "text-align": "left",
+  "border-left": "3px solid",
+  "color": "#000000",
+  "border-color": "#c99227",
+};
+
+$ const verticalBorderStyleThick = {
+  "text-align": "left",
+  "border-left": "5px solid",
+  "color": "#000000",
+  "border-color": "#c99227",
+};
+
 <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
   <tr>
     <td align="center" valign="top">
@@ -46,7 +60,10 @@ $ const sectionNameStyle2 = {
             <table width="400px" border="0" cellspacing="0" cellpadding="0" align="left">
               <common-table-spacer-element height=15 />
               <tr>
-                <td align="left" class="font1" valign="center" style=sectionNameStyle>${nameFirst}&nbsp;
+                $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
+                <td align="left" valign="middle" style=borderStyle></td>
+                <td align="left" valign="middle" width="7"></td>
+                <td align="left" class="font6" valign="middle" style=sectionNameStyle>${nameFirst}&nbsp;
                   <span style=sectionNameStyle2>${nameLast}</span>
                 </td>
               </tr>
@@ -71,8 +88,9 @@ $ const sectionNameStyle2 = {
               </tr>
             </table>
             <table width="600px" border="0" cellspacing="0" cellpadding="0">
+              <common-table-spacer-element height=5 />
               <common-table-hr-element height=0 style="border-top: 2px solid #c99227;" />
-              <common-table-spacer-element height=3 />
+              <common-table-spacer-element height=5 />
             </table>
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>

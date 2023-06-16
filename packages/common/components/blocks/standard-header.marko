@@ -2,57 +2,118 @@ import { get } from  "@parameter1/base-cms-object-path";
 import moment from "moment";
 
 $ const { website, config } = out.global;
-$ const { newsletter, date, dateInfo } = input.data;
+$ const { newsletter, date, dateInfo, longBorder } = input.data;
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const displayDate = moment(date).format("MMMM DD, YYYY");
+$ const nameFirst = get(newsletterConfig, "nameFirst");
+$ const nameLast = get(newsletterConfig, "nameLast");
 
 $ const textStyle = {
-  "font-family": "'Arial Narrow Bold', sans-serif",
-  "font-size": "12px",
-  "line-height": "17px",
-  "color": "#000000",
+  "font-family": "'Arial Narrow', Helvetica, sans-serif",
+  "color": "#06060c",
+  "font-weight": 700,
   "letter-spacing": "0px",
   "text-decoration": "none",
-  "align": "center",
-}
+};
+
+$ const poweredByStyle = {
+  ...textStyle,
+  "padding-right": "38px",
+  "font-size": "14px",
+};
+
+$ const sectionNameStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "28px",
+  "line-height": "30px",
+  "font-weight": "bold",
+  "letter-spacing": "0",
+  "color": "#06060c",
+  "text-transform": "uppercase",
+};
+
+$ const sectionNameStyle2 = {
+  ...sectionNameStyle,
+  "color": "#e50102"
+};
+
+$ const verticalBorderStyle = {
+  "text-align": "left",
+  "border-left": "3px solid",
+  "color": "#000000",
+  "border-color": "#e50102",
+};
+
+$ const verticalBorderStyleThick = {
+  "text-align": "left",
+  "border-left": "5px solid",
+  "color": "#000000",
+  "border-color": "#e50102",
+};
 
 <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap10">
   <tr>
     <td align="center" valign="top">
       <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
-        <common-table-spacer-element height=10 />
+        <common-table-spacer-element height=48 />
         <tr>
           <td valign="top">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <table width="400px" border="0" cellspacing="0" cellpadding="0" align="left">
+              <common-table-spacer-element height=15 />
               <tr>
-                <td align="left" valign="top" width="33%">
+                $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
+                <td align="left" valign="middle" style=borderStyle></td>
+                <td align="left" valign="middle" width="7"></td>
+                <td align="left" class="font6" valign="middle" style=sectionNameStyle>${nameFirst}<br/>
+                  <span style=sectionNameStyle2>${nameLast}</span>
+                </td>
+              </tr>
+            </table>
+            <table width="200px" border="0" cellspacing="0" cellpadding="0" align="right">
+              <tr>
+                <td align="right" valign="right" class="font2" style=poweredByStyle>
+                  Powered By
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="bottom" width="100px">
                   <marko-newsletter-imgix
                     src=`${newsletterConfig.headerLogoSrc}`
                     alt="logo"
-                    options={ w: 150 }
+                    attrs={ width: 150 }
+                    class="resize_img1"
                   >
                     <@link href=website.get("origin") target="_blank" />
                   </marko-newsletter-imgix>
                 </td>
+              </tr>
+            </table>
+            <table width="600px" border="0" cellspacing="0" cellpadding="0">
+              <common-table-spacer-element height=5 />
+              <common-table-hr-element height=0 style="border-top: 2px solid #202A44;" />
+              <common-table-spacer-element height=5 />
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
                 <td>
-                  <span style="display:none !important;visibility:hidden;mso-hide:all;font-size:1px;color:#000000;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"></span>
+                  <span style="display:none !important;visibility:hidden;mso-hide:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"></span>
                   <!-- // Start Stealth Link // -->
                   <div name="divHrefB" style="display:none;height:0px;width:0px;overflow:hidden;visibility:hidden;mso-hide:all">
                     <a href="http://www.acbusinessmedia.com/Omeda">AC Business Media Info</a>
                   </div>
                   <!-- // End Stealth Link // -->
                 </td>
-                <td align="center" class="mob_hide" valign="center" width="33%" style=textStyle>
-                  <a href="@{mv_online_version}@" target="_blank" style=textStyle>View Email Online</a>
+                <td align="left" style=textStyle>
+                  <a href="@{mv_online_version}@" target="_blank" class="font5" style=textStyle>View Email Online</a>
                 </td>
-                <td align="right" valign="center" width="33%" style=textStyle>
+                <td align="right" class="font5" style=textStyle>
                   ${displayDate}
                 </td>
               </tr>
             </table>
           </td>
         </tr>
-        <common-table-spacer-element height=5 />
+        <common-table-spacer-element height=15 />
       </table>
     </td>
   </tr>
