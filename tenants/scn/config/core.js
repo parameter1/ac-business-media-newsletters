@@ -29,7 +29,8 @@ module.exports = {
   },
   'global-supply-chain-insights': {
     ...brands.sdce,
-    name: 'Global Supply Chain Insights',
+    nameFirst: 'Global Supply',
+    nameLast: 'Chain Insights',
     headerLogoSrc: '/files/base/acbm/sdce/image/static/logo/black_site_logo.png',
     primaryColor: '#e50102',
     editor: 'Marina Mayer',

@@ -4,7 +4,7 @@ import { URLSearchParams } from "url";
 
 $ const { website, config } = out.global;
 $ const { newsletter } = data;
-$ const { content, urlParams } = input;
+$ const { content, urlParams, longBorder } = input;
 
 $ const withImage = defaultValue(input.withImage, true);
 $ const imagePosition = defaultValue(input.imagePosition, 'right');
@@ -39,9 +39,28 @@ $ const tagStyle = {
   "text-transform": "uppercase",
 };
 
-$ const sponsoredTagStyle = {
-  ...tagStyle,
-  "color": "#a91b20",
+$ const titleStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "17px",
+  "line-height": "22px",
+  "color": "#000000",
+  "font-weight": "900",
+  "letter-spacing": "0",
+  "text-decoration": "none"
+};
+
+$ const verticalBorderStyle = {
+  "text-align": "left",
+  "border-left": "3px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
+};
+
+$ const verticalBorderStyleThick = {
+  "text-align": "left",
+  "border-left": "5px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
 };
 
 $ const linkLabel = input.storyLocation ? `story|${input.storyLocation}|${content.name}` : input.linkLabel;
@@ -49,27 +68,6 @@ $ const linkLabel = input.storyLocation ? `story|${input.storyLocation}|${conten
 <tr>
   <td align="center" valign="top">
     <table role="presentation" width="660" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor=background class="wrap10">
-
-      $ const labels = getAsArray(content, "labels");
-      <if(labels.includes("Sponsored"))>
-        $ const tag = (content.company) ? `Sponsored Content by ${get(content, "company.name")}` : "Sponsored Content";
-        <tr>
-          <td align="left" valign="top" style=sponsoredTagStyle>${tag}</td>
-        </tr>
-      </if>
-      <else-if(withSection)>
-        <tr>
-          <td align="center" valign="top">
-            <table role="presentation" width="600" border="0" cellpadding="0" cellspacing="0">
-              <tr>
-                <td align="left" valign="top" style=tagStyle>${get(content, "primarySection.name")}</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </else-if>
-
-      <common-table-spacer-element height="6" />
 
       <if(withImage && imagePosition === 'top' && content.primaryImage)>
         <common-table-spacer-element height="6" />
@@ -154,16 +152,47 @@ $ const linkLabel = input.storyLocation ? `story|${input.storyLocation}|${conten
           <td align="center" valign="top">
             <table role="presentation" width="600" border="0" cellpadding="0" cellspacing="0">
               <tr>
-                <td align="left" valign="top">
-                  <a style="font-family: 'Roboto', arial, sans-serif;font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;" href=contentUrl linklabel=linkLabel>
-                    $!{content.name}
-                  </a>
-                </td>
-              </tr>
-              <common-table-spacer-element height="5" />
-              <tr>
-                <td align="left" valign="middle" style="font-family: 'Roboto', arial, sans-serif;font-size: 17px;line-height: 23px;color: #202022;font-weight: 400;">
-                  $!{content.teaser}
+                <td align="center" valign="top">
+                  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
+                    <if(withSection)>
+                      <tr>
+                        <td align="center" valign="top">
+                          <table role="presentation" width="95%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td align="left" valign="top" style=tagStyle>${get(content, "primarySection.name")}</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </if>
+                    <common-table-spacer-element class="height2" height=8 />
+                    <tr>
+                      <td align="left" valign="top">
+                        <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
+                            <td align="left" valign="middle" style=borderStyle></td>
+                            <td align="left" valign="middle" width="7"></td>
+                            <td align="left" class="font6" valign="middle" style=titleStyle>
+                              <a style="font-family: 'Roboto', arial, sans-serif;font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;" href=contentUrl linklabel=linkLabel>
+                                $!{content.name}
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                        <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+                          <common-table-spacer-element attributes={ colspan: 3 } height="5" />
+
+                          <tr>
+                            <td align="left" valign="middle" style="font-family: 'Roboto', arial, sans-serif;font-size: 17px;line-height: 23px;color: #202022;font-weight: 400;">
+                              $!{content.teaser}
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <common-table-spacer-element height=4 />
+                  </table>
                 </td>
               </tr>
             </table>
