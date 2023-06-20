@@ -153,11 +153,11 @@ $ const linkLabel = input.storyLocation ? `story|${input.storyLocation}|${conten
             <table role="presentation" width="600" border="0" cellpadding="0" cellspacing="0">
               <tr>
                 <td align="center" valign="top">
-                  <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
+                  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
                     <if(withSection)>
                       <tr>
                         <td align="center" valign="top">
-                          <table role="presentation" width="600" border="0" cellpadding="0" cellspacing="0">
+                          <table role="presentation" width="95%" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                               <td align="left" valign="top" style=tagStyle>${get(content, "primarySection.name")}</td>
                             </tr>
@@ -168,7 +168,7 @@ $ const linkLabel = input.storyLocation ? `story|${input.storyLocation}|${conten
                     <common-table-spacer-element class="height2" height=8 />
                     <tr>
                       <td align="left" valign="top">
-                        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+                        <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
                           <tr>
                             $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
                             <td align="left" valign="middle" style=borderStyle></td>
@@ -179,19 +179,22 @@ $ const linkLabel = input.storyLocation ? `story|${input.storyLocation}|${conten
                               </a>
                             </td>
                           </tr>
-                          <common-table-spacer-element height="5" />
+                        </table>
+                        <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+                          <common-table-spacer-element attributes={ colspan: 4 } height="5" />
+
+                          <tr>
+                            <td align="left" valign="middle" style="font-family: 'Roboto', arial, sans-serif;font-size: 17px;line-height: 23px;color: #202022;font-weight: 400;">
+                              $!{content.teaser}
+                            </td>
+                          </tr>
                         </table>
                       </td>
                     </tr>
-                    <tr>
-                      <td align="left" valign="middle" style="font-family: 'Roboto', arial, sans-serif;font-size: 17px;line-height: 23px;color: #202022;font-weight: 400;">
-                        $!{content.teaser}
-                      </td>
-                    </tr>
+                    <common-table-spacer-element height=4 />
                   </table>
                 </td>
               </tr>
-              <common-table-spacer-element height=4 />
             </table>
           </td>
         </tr>
