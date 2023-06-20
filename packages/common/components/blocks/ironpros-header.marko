@@ -53,65 +53,65 @@ $ const verticalBorderStyleThick = {
 <table width="660" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ededee" class="wrap10">
   <tr>
     <td align="center" valign="top">
-      <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap101">
+      <table width="600" align="center" border="0" cellspacing="0" cellpadding="0">
         <common-table-spacer-element height=48 />
-        <tr>
-          <td valign="top">
-            <table width="400px" border="0" cellspacing="0" cellpadding="0" align="left">
-              <common-table-spacer-element height=15 />
-              <tr>
-                $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
-                <td align="left" valign="middle" style=borderStyle></td>
-                <td align="left" valign="middle" width="7"></td>
-                <td align="left" class="font6" valign="middle" style=sectionNameStyle>${nameFirst}&nbsp;
-                  <span style=sectionNameStyle2>${nameLast}</span>
-                </td>
-              </tr>
-            </table>
-            <table width="200px" border="0" cellspacing="0" cellpadding="0" align="right">
-              <tr>
-                <td align="right" valign="right" class="font2" style=poweredByStyle>
-                  Powered By
-                </td>
-              </tr>
-              <tr>
-                <td align="right" valign="center" width="100px">
-                  <marko-newsletter-imgix
-                    src=`${newsletterConfig.headerLogoSrc}`
-                    alt="logo"
-                    attrs={ width: 150 }
-                    class="resize_img1"
-                  >
-                    <@link href=website.get("origin") target="_blank" />
-                  </marko-newsletter-imgix>
-                </td>
-              </tr>
-            </table>
-            <table width="600px" border="0" cellspacing="0" cellpadding="0">
-              <common-table-spacer-element height=5 />
-              <common-table-hr-element height=0 style="border-top: 2px solid #c99227;" />
-              <common-table-spacer-element height=5 />
-            </table>
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td>
-                  <span style="display:none !important;visibility:hidden;mso-hide:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"></span>
-                  <!-- // Start Stealth Link // -->
-                  <div name="divHrefB" style="display:none;height:0px;width:0px;overflow:hidden;visibility:hidden;mso-hide:all">
-                    <a href="http://www.acbusinessmedia.com/Omeda">AC Business Media Info</a>
-                  </div>
-                  <!-- // End Stealth Link // -->
-                </td>
-                <td align="left" style=textStyle>
-                  <a href="@{mv_online_version}@" target="_blank" class="font5" style=textStyle>View Email Online</a>
-                </td>
-                <td align="right" class="font5" style=textStyle>
-                  ${displayDate}
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
+        <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top">
+              <table width="400px" border="0" cellspacing="0" cellpadding="0" align="left">
+                <common-table-spacer-element height=15 />
+                <tr>
+                  $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
+                  <td align="left" valign="middle" style=borderStyle></td>
+                  <td align="left" valign="middle" width="7"></td>
+                  <td align="left" class="font6" valign="middle" style=sectionNameStyle>${nameFirst}&nbsp;
+                    <span style=sectionNameStyle2>${nameLast}</span>
+                  </td>
+                </tr>
+              </table>
+              <table width="200px" border="0" cellspacing="0" cellpadding="0" align="right">
+                <tr>
+                  <td align="right" valign="right" class="font2" style=poweredByStyle>
+                    Powered By
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right" valign="center">
+                    <marko-newsletter-imgix
+                      src=`${newsletterConfig.headerLogoSrc}`
+                      alt="logo"
+                      attrs={ width: 150 }
+                      class="resize_img2"
+                    >
+                      <@link href=website.get("origin") target="_blank" />
+                    </marko-newsletter-imgix>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <common-table-spacer-element height=5 />
+          <common-table-hr-element height=0 style="border-top: 2px solid #c99227;" />
+          <common-table-spacer-element height=5 />
+        </table>
+        <table width="95%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+              <span style="display:none !important;visibility:hidden;mso-hide:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"></span>
+              <!-- // Start Stealth Link // -->
+              <div name="divHrefB" style="display:none;height:0px;width:0px;overflow:hidden;visibility:hidden;mso-hide:all">
+                <a href="http://www.acbusinessmedia.com/Omeda">AC Business Media Info</a>
+              </div>
+              <!-- // End Stealth Link // -->
+            </td>
+            <td align="left" style=textStyle>
+              <a href="@{mv_online_version}@" target="_blank" class="font5" style=textStyle>View Email Online</a>
+            </td>
+            <td align="right" class="font5" style=textStyle>
+              ${displayDate}
+            </td>
+          </tr>
+        </table>
         <common-table-spacer-element height=15 />
       </table>
     </td>
