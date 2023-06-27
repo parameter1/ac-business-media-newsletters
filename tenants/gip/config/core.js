@@ -68,4 +68,12 @@ module.exports = {
     headerLogoSrcRight: '/files/base/acbm/gip/image/static/SnowPro_SIMA_header.png',
     primaryColor: '#0d77e6',
   },
+  psc: {
+    ...brands.gip,
+    tagline: 'Check out the latest products to keep the grass greener on the other side',
+    name: 'GIP Product Showcase',
+    headerLogoSrcLeft: '/files/base/acbm/gip/image/2019/10/psc_col1.5d9ddd51f3caa.png',
+    headerLogoSrcRight: '/files/base/acbm/gip/image/2020/08/GIP_OG_PSCHeader.5f46b71d446ba.png',
+    primaryColor: '#006600',
+  },
 };
