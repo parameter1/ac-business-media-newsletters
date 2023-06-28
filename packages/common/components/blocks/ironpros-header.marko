@@ -55,17 +55,17 @@ $ const verticalBorderStyleThick = {
     <td align="center" valign="top">
       <table width="600" align="center" border="0" cellspacing="0" cellpadding="0">
         <common-table-spacer-element height=48 />
-        <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="padding:0 20px 0 20px">
           <tr>
             <td valign="top">
               <table width="400px" border="0" cellspacing="0" cellpadding="0" align="left">
                 <common-table-spacer-element attributes={ colspan: 3} height=15 />
                 <tr>
                   $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
-                  <td align="left" valign="middle" style=borderStyle></td>
-                  <td align="left" valign="middle" width="7"></td>
-                  <td align="left" class="font6" valign="middle" style=sectionNameStyle>${nameFirst}&nbsp;
-                    <span style=sectionNameStyle2>${nameLast}</span>
+                  <td align="left" valign="middle" class="mob_hide" style=borderStyle></td>
+                  <td align="left" valign="middle" width="7" class="mob_hide"></td>
+                  <td align="left" class="font7" valign="middle" style=sectionNameStyle>${nameFirst}&nbsp;
+                    <span class="font7" style=sectionNameStyle2>${nameLast}</span>
                   </td>
                 </tr>
               </table>
@@ -94,7 +94,7 @@ $ const verticalBorderStyleThick = {
           <common-table-hr-element height=0 style="border-top: 2px solid #c99227;" />
           <common-table-spacer-element height=5 />
         </table>
-        <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="padding:0 20px 0 20px">
           <tr>
             <td>
               <span style="display:none !important;visibility:hidden;mso-hide:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"></span>
