@@ -98,9 +98,9 @@ module.exports = {
     ...brands.fcp,
     name: 'Infrastructure Impact',
     primaryColor: '#e9bf2f',
-    editor: 'Jessica Lombardo',
-    editorTitle: 'Editor-in-Chief',
-    editorImage: '/files/base/acbm/fcp/image/static/Jessica_Lombardo.png',
+    editor: 'Brandon Noel',
+    editorTitle: 'Editor',
+    editorImage: '/files/base/acbm/fcp/image/static/Brandon_Noel_circle.png',
   },
   'lube-report': {
     ...brands.fcp,
