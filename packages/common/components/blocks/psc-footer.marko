@@ -8,7 +8,7 @@ $ const newsletterConfig = config.get(newsletter.alias);
 
 $ const bgColor = get(newsletterConfig, "primaryColor");
 $ const footerText = defaultValue(input.footerText, {
-  "text-decoration": "none !important",
+  "text-decoration": "none",
   "color": "#ffffff",
   "font-size": "10px",
   "font-family": "Arial, Helvetica, sans-serif",
@@ -52,23 +52,23 @@ $ const companyName = defaultValue(input.companyName, "AC Business Media");
 <common-table width=630 border=0 cellpadding=0 cellspacing=0 class="main-footer" style="margin-top: 20px;color: #666666;">
   <common-table-spacer-element />
   <tr>
-    <td>
-      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 17px;">
+    <td align="center">
+      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 17px;text-decoration: none">
         <p style="margin:0px;margin-bottom:1em;">This email is being sent to
-          <a href="mailto:@{email name}@" style="text-decoration: underline !important;">@{email name}@</a>.
+          <a href="mailto:@{email name}@" style="text-decoration: none !important;color: #666666;">@{email name}@</a>.
         </p>
         <p style="margin:0px;margin-bottom:1em;">
           Please add news.acbmmail.com and marketing.acbmmail.com to your address book or safe sender list to receive our emails in your inbox.
         </p>
         <p style="margin:0px;margin-bottom:1em;">
-          <a href=get(newsletterConfig, "newsletterPrefLink") style="text-decoration: underline !important;">Manage Newsletter Subscriptions</a>
-          | <a href="@{forwardtoafriendlink}@" style="text-decoration: underline !important;">Forward to a Friend</a>
-          | <a href="@{confirmunsubscribelink}@" style="text-decoration: underline !important;">Unsubscribe</a>
-          | <a href=get(newsletterConfig, "contactUsLink") style="text-decoration: underline !important;">Request Customer Service</a>
-          | <a href=get(newsletterConfig, "privacyPolicyLink") style="text-decoration: underline !important;">Read Privacy Policy</a>
+          <a href=get(newsletterConfig, "newsletterPrefLink") style="text-decoration: none !important;color: #666666;">Manage Newsletter Subscriptions</a>
+          | <a href="@{forwardtoafriendlink}@" style="text-decoration: none !important;color: #666666;">Forward to a Friend</a>
+          | <a href="@{confirmunsubscribelink}@" style="text-decoration: none !important;color: #666666;">Unsubscribe</a>
+          | <a href=get(newsletterConfig, "contactUsLink") style="text-decoration: none !important;color: #666666;">Request Customer Service</a>
+          | <a href=get(newsletterConfig, "privacyPolicyLink") style="text-decoration: none !important;color: #666666;">Read Privacy Policy</a>
         </p>
         <p style="margin:0px;margin-bottom:1em;">
-          If this email was forwarded to you and you are interested in subscribing, please <a href=get(newsletterConfig, "newsletterPrefLink")>click here</a> to sign-up.
+          If this email was forwarded to you and you are interested in subscribing, please <a href=get(newsletterConfig, "newsletterPrefLink") style="text-decoration: none !important;color: #666666;">click here</a> to sign-up.
         </p>
         <p style="margin:0px;margin-bottom:1em;">
           If you have any questions or concerns, please contact us at 920-542-1131 or toll-free at 800-538-5544.
