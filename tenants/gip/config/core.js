@@ -65,7 +65,7 @@ module.exports = {
     tagline: 'Check out the latest products to get you through winter',
     name: 'SnowPro Product Showcase',
     headerLogoSrcLeft: '/files/base/acbm/gip/image/2018/09/snowpro_header1.5bacd64d7dbd4.png',
-    headerLogoSrcRight: '/files/base/acbm/gip/image/static/SnowPro_SIMA_header.png',
+    headerLogoSrcRight: '/files/base/acbm/gip/image/static/snowpro_header.png',
     primaryColor: '#0d77e6',
   },
   psc: {
