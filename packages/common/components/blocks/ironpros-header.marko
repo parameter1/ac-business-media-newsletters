@@ -59,14 +59,23 @@ $ const verticalBorderStyleThick = {
           <tr>
             <td valign="top">
               <table width="400px" border="0" cellspacing="0" cellpadding="0" align="left">
-                <common-table-spacer-element attributes={ colspan: 3} height=15 />
                 <tr>
-                  $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
+                  <td align="left" valign="center">
+                    <marko-newsletter-imgix
+                      src=`${newsletterConfig.newsletterLogo}`
+                      alt="logo"
+                      attrs={ width: 250 }
+                      class="resize_img2"
+                    >
+                      <@link href=website.get("origin") target="_blank" />
+                    </marko-newsletter-imgix>
+                  </td>
+                  <!-- $ const borderStyle = (longBorder) ? verticalBorderStyleThick : verticalBorderStyle;
                   <td align="left" valign="middle" class="mob_hide" style=borderStyle></td>
                   <td align="left" valign="middle" width="7" class="mob_hide"></td>
                   <td align="left" class="font7" valign="middle" style=sectionNameStyle>${nameFirst}&nbsp;
                     <span class="font7" style=sectionNameStyle2>${nameLast}</span>
-                  </td>
+                  </td> -->
                 </tr>
               </table>
               <table width="200px" border="0" cellspacing="0" cellpadding="0" align="right">
@@ -76,11 +85,11 @@ $ const verticalBorderStyleThick = {
                   </td>
                 </tr>
                 <tr>
-                  <td align="right" valign="center">
+                  <td align="right" valign="bottom">
                     <marko-newsletter-imgix
                       src=`${newsletterConfig.headerLogoSrc}`
                       alt="logo"
-                      attrs={ width: 150 }
+                      attrs={ height: 25, width: 150 }
                       class="resize_img2"
                     >
                       <@link href=website.get("origin") target="_blank" />
