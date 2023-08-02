@@ -22,6 +22,6 @@
     "@parameter1/base-cms-object-path": "^2.75.1",
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
-    "newrelic": "^5.11.0"
+    "newrelic": "^9.10.1"
   }
 }
