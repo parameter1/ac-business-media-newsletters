@@ -105,3 +105,4 @@ dist
 
 *.marko.js
 /tenants/.DS_Store
+.bash_history
