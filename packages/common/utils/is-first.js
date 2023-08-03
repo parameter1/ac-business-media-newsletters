@@ -1,1 +1,1 @@
-module.exports = index => index === 0;
+module.exports = (index) => index === 0;

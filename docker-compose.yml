@@ -3,7 +3,7 @@ version: '3.7'
 x-node-defaults: &node
   tty: true
   init: true
-  image: node:10.15
+  image: node:14.21
   entrypoint: ["node"]
   working_dir: /root
   restart: always
@@ -13,8 +13,9 @@ x-node-defaults: &node
     - yarn-cache:/.yarn-cache
 
 x-newsletter-command: &newsletter-cmd
-  entrypoint: ["node_modules/.bin/basecms-newsletters"]
-  command: ["dev", "index.js"]
+  <<: *node
+  entrypoint: ["yarn"]
+  command: ["dev"]
 
 x-env-defaults: &env
   YARN_CACHE_FOLDER: /.yarn-cache
@@ -41,7 +42,6 @@ services:
       <<: *env
 
   fcp:
-    <<: *node
     <<: *newsletter-cmd
     working_dir: /root/tenants/fcp
     environment:
@@ -56,7 +56,6 @@ services:
       - "31094:31094"
 
   scn:
-    <<: *node
     <<: *newsletter-cmd
     working_dir: /root/tenants/scn
     environment:
@@ -71,7 +70,6 @@ services:
       - "31095:31095"
 
   gip:
-    <<: *node
     <<: *newsletter-cmd
     working_dir: /root/tenants/gip
     environment:
@@ -86,7 +84,6 @@ services:
       - "31098:31098"
 
   ooh:
-    <<: *node
     <<: *newsletter-cmd
     working_dir: /root/tenants/ooh
     environment:
