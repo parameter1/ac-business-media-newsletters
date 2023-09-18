@@ -17,7 +17,7 @@ $ const tagline = get(newsletterConfig, "tagline");
         <common-psc-header-image-block
           newsletter=newsletter
           name=newsletter.name
-          href=get(newsletterConfig, "websiteSection")
+          href=get(newsletterConfig, "headerImgLinkUrl")
           image-src-left=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrcLeft}`
           image-src-right=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrcRight}`
         />
@@ -26,7 +26,7 @@ $ const tagline = get(newsletterConfig, "tagline");
         <common-psc-header-image-block
           newsletter=newsletter
           name=newsletter.name
-          href=get(newsletterConfig, "websiteSection")
+          href=get(newsletterConfig, "headerImgLinkUrl")
           image-src-left=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrcLeft}`
           image-src-right=null
         />
@@ -35,7 +35,7 @@ $ const tagline = get(newsletterConfig, "tagline");
        <common-psc-header-image-block
           newsletter=newsletter
           name=newsletter.name
-          href=get(newsletterConfig, "websiteSection")
+          href=get(newsletterConfig, "headerImgLinkUrl")
           image-src-left=null
           image-src-right=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrcRight}`
         />
