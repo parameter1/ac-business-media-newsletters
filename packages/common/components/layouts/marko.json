@@ -5,8 +5,8 @@
   "<common-psc-layout>": {
     "template": "./psc.marko"
   },
-  "<common-standard-2-layout>": {
-    "template": "./standard-2.marko"
+  "<common-simple-layout>": {
+    "template": "./simple.marko"
   },
   "<common-new-standard-layout>": {
     "template": "./new-standard.marko"
@@ -16,5 +16,8 @@
   },
   "<common-top-ad-standard-layout>": {
     "template": "./top-ad-standard.marko"
+  },
+  "<common-simple-top-ad-layout>": {
+    "template": "./simple-top-ad.marko"
   }
 }
