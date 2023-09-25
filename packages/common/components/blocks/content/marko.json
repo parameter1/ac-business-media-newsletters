@@ -396,5 +396,8 @@
   },
   "<common-content-simple-sponsored-block>": {
     "template": "./simple-sponsored.marko"
+  },
+  "<common-simple-economic-outlook-block>": {
+    "template": "./simple-economic-outlook.marko"
   }
 }
