@@ -22,22 +22,27 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td align="center" valign="top">
-          <common-new-standard-header-block data=input bgColor=primaryColor />
+          <common-simple-show-header-block data=input bgColor=primaryColor />
 
-          <common-content-new-featured-block
+          <common-content-simple-list-block
             data=data
             newsletter=newsletter
             date=date
             section-name="Featured"
             showBrand=false
+            with-image=false
+            with-section=true
+            limit=1
+            primary-color=primaryColor
           />
 
-          <common-content-new-sponsored-list-block
+          <common-content-simple-sponsored-block
             date=date
             newsletter=newsletter
             section-name="Sponsored"
             display-sponsored-section=true
             limit=1
+            primary-color=primaryColor
           />
 
           <if(newsletter.alias === "economic-market-outlook")>
@@ -47,78 +52,79 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
             />
           </if>
 
-          <common-content-new-mid-block
+          <common-content-simple-list-block
             data=data
             newsletter=newsletter
             date=date
             section-name="Mid"
+            with-image=false
+            with-section=true
+            primary-color=primaryColor
           />
 
-          <common-new-standard-advertisement-block
+          <common-advertisement-block
             date=date
             ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
             location="banner-1"
           />
 
-          <common-content-new-list-block
+          <common-content-simple-list-block
             data=data
             newsletter=newsletter
             date=date
             section-name="Lower"
-            display-section-name=true
-            limit=1
+            with-image=false
+            with-section=true
+            limit=2
             skip=0
+            primary-color=primaryColor
           />
 
-          <common-content-new-list-block
-            data=data
-            newsletter=newsletter
-            date=date
-            section-name="Lower"
-            display-section-name=false
-            limit=1
-            skip=1
-          />
-
-          <common-content-new-sponsored-list-block
+          <common-content-simple-sponsored-block
             date=date
             newsletter=newsletter
             section-name="Sponsors Secondary"
             display-sponsored-section=true
+            primary-color=primaryColor
           />
 
-          <common-content-new-list-block
+          <common-content-simple-list-block
             data=data
             newsletter=newsletter
             date=date
             section-name="Lower"
-            display-section-name=false
+            with-image=false
+            with-section=true
             skip=2
             limit=1
+            primary-color=primaryColor
           />
 
-          <common-new-standard-advertisement-block
+          <common-advertisement-block
             date=date
             ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
           />
 
-          <common-content-new-list-block
+          <common-content-simple-list-block
             data=data
             newsletter=newsletter
             date=date
             section-name="Lower"
-            display-section-name=false
+            with-image=false
+            with-section=true
             skip=3
+            primary-color=primaryColor
           />
 
-          <common-content-new-sponsored-list-block
+          <common-content-simple-sponsored-block
             date=date
             newsletter=newsletter
             section-name="Sponsors Tertiary"
             display-sponsored-section=true
+            primary-color=primaryColor
           />
 
-          <common-new-standard-footer-block data=input />
+          <common-simple-footer-block data=input />
         </td>
       </tr>
     </table>
