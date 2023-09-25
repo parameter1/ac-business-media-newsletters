@@ -35,5 +35,14 @@
   },
   "<common-ironpros-footer-block>": {
     "template": "./ironpros-footer.marko"
+  },
+  "<common-simple-footer-block>": {
+    "template": "./simple-footer.marko"
+  },
+  "<common-simple-header-block>": {
+    "template": "./simple-header.marko"
+  },
+  "<common-simple-show-header-block>": {
+    "template": "./simple-show-header.marko"
   }
 }
