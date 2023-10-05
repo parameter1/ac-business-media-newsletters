@@ -1,7 +1,11 @@
 module.exports = {
   fcp: {
     brandName: 'ForConstructionPros.com',
-    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/FCP_logo_White.png',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/FCP-logo-high-res.png',
+    attrs: {
+      height: 70,
+      width: 185,
+    },
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
@@ -18,7 +22,12 @@ module.exports = {
   },
   pavementMagazine: {
     brandName: 'Pavement',
-    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/Pavement_logo.png',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/PAVMNT.png',
+    attrs: {
+      height: 60,
+      width: 180,
+      fit: 'crop',
+    },
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
@@ -34,7 +43,11 @@ module.exports = {
   },
   equipmentToday: {
     brandName: 'Equipment Today',
-    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/EqupToday_logo.png',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/ET.png',
+    attrs: {
+      height: 70,
+      width: 145,
+    },
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
@@ -51,7 +64,11 @@ module.exports = {
   },
   rentalMagazine: {
     brandName: 'Rental Magazine',
-    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/Rental_logo.png',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/RNT.png',
+    attrs: {
+      height: 65,
+      width: 145,
+    },
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=RENTALprefs&r=@{encrypted_customer_id}@',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
@@ -67,7 +84,11 @@ module.exports = {
   },
   concreteContractor: {
     brandName: 'Concrete Contractor',
-    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/ConcreteContractor_logo.png',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/CONC.png',
+    attrs: {
+      height: 50,
+      width: 140,
+    },
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
@@ -83,7 +104,11 @@ module.exports = {
   },
   asphaltContractor: {
     brandName: 'Asphalt Contractor',
-    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/AsphaltContractor_logo.png',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/ACON.png',
+    attrs: {
+      height: 55,
+      width: 145,
+    },
     contactUsLink: 'https://www.forconstructionpros.com/contact-us',
     newsletterPrefLink: 'https://acbusiness.dragonforms.com/loading.do?omedasite=FCP_prefs_ProgReg',
     privacyPolicyLink: 'https://www.forconstructionpros.com/privacy-policy',
@@ -94,18 +119,6 @@ module.exports = {
         { provider: 'linkedin', href: 'https://www.linkedin.com/company/asphalt-contractor-magazine/' },
         { provider: 'twitter', href: 'https://twitter.com/AsphaltContrctr' },
         { provider: 'instagram', href: 'https://www.instagram.com/asphaltcontractor/' },
-      ],
-    },
-  },
-  sso: {
-    brandName: 'Safe & Secure Openings',
-    logoSrc: '/files/base/acbm/fcp/image/static/sso/logo.png',
-    socialMedia: {
-      imagePath: '/files/base/acbm/fcp/image/static/newsletter',
-      links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/fordsspros' },
-        { provider: 'linkedin', href: 'https://www.linkedin.com/company/fordsspros/' },
-        { provider: 'twitter', href: 'https://twitter.com/fordsspros' },
       ],
     },
   },
