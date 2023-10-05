@@ -32,6 +32,14 @@ module.exports = {
     editorTitle: 'Editor-in-Chief',
     editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
   },
+  'construction-and-workforce-management': {
+    ...brands.fcp,
+    name: 'Construction & Workforce Management',
+    primaryColor: '#f36422',
+    editor: 'Charles Rathmann',
+    editorTitle: 'Technology Editor',
+    editorImage: '/files/base/acbm/fcp/image/static/rathmann_headshot.png',
+  },
   'construction-technology': {
     ...brands.fcp,
     primaryColor: '#5db2d7',
@@ -49,6 +57,14 @@ module.exports = {
     editor: 'Gigi Wood',
     editorTitle: 'Managing Editor',
     editorImage: '/files/base/acbm/fcp/image/static/Gigi_Wood.png',
+  },
+  'crane-connection': {
+    ...brands.fcp,
+    name: 'Crane Connections',
+    primaryColor: '#e62725',
+    editor: 'Sarah Webb',
+    editorTitle: 'Editor',
+    editorImage: '/files/base/acbm/fcp/image/static/Sarah_Webb_headshot.png',
   },
   'elevating-safety': {
     ...brands.rentalMagazine,
@@ -176,6 +192,14 @@ module.exports = {
     editor: 'Lori Ditoro',
     editorTitle: 'Editor-in-Chief',
     editorImage: '/files/base/acbm/ooh/image/static/Lori_Ditoro.png',
+  },
+  'openings-news-views': {
+    primaryColor: '#004f75',
+    name: 'Openings News & Views',
+    description: 'Exclusive insight into the most impactful news and trends shaping the non-residential door and hardware industry',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/safesecure-enl-header.jpg',
+    displayPrimarySection: true,
+    ...brands.sso,
   },
   'show-report': {
     ...brands.fcp,
