@@ -23,6 +23,7 @@ module.exports = {
   pavementMagazine: {
     brandName: 'Pavement',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/PAVMNT.png',
+    headerImgLinkUrl: 'https://www.forconstructionpros.com/pavement-maintenance',
     attrs: {
       height: 60,
       width: 180,
@@ -44,6 +45,7 @@ module.exports = {
   equipmentToday: {
     brandName: 'Equipment Today',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/ET.png',
+    headerImgLinkUrl: 'https://www.forconstructionpros.com/equipment',
     attrs: {
       height: 70,
       width: 145,
@@ -65,6 +67,7 @@ module.exports = {
   rentalMagazine: {
     brandName: 'Rental Magazine',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/RNT.png',
+    headerImgLinkUrl: 'https://www.forconstructionpros.com/rental',
     attrs: {
       height: 65,
       width: 145,
@@ -85,6 +88,7 @@ module.exports = {
   concreteContractor: {
     brandName: 'Concrete Contractor',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/CONC.png',
+    headerImgLinkUrl: 'https://www.forconstructionpros.com/concrete',
     attrs: {
       height: 50,
       width: 140,
@@ -105,6 +109,7 @@ module.exports = {
   asphaltContractor: {
     brandName: 'Asphalt Contractor',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/ACON.png',
+    headerImgLinkUrl: 'https://www.forconstructionpros.com/asphalt',
     attrs: {
       height: 55,
       width: 145,
