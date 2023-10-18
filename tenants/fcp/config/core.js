@@ -42,6 +42,7 @@ module.exports = {
   },
   'construction-technology': {
     ...brands.fcp,
+    headerImgLinkUrl: 'https://www.forconstructionpros.com/construction-technology',
     primaryColor: '#5db2d7',
     nameFirst: 'Construction',
     nameLast: 'Technology',
@@ -77,6 +78,7 @@ module.exports = {
   },
   'fleet-maintenance-report': {
     ...brands.fcp,
+    headerImgLinkUrl: 'https://www.forconstructionpros.com/equipment/fleet-maintenance',
     nameFirst: 'Fleet',
     nameLast: 'Maintenance',
     primaryColor: '#f26522',
@@ -122,6 +124,7 @@ module.exports = {
   },
   'modern-fleet-management': {
     ...brands.fcp,
+    headerImgLinkUrl: 'https://www.forconstructionpros.com/equipment/fleet-maintenance',
     primaryColor: '#871937',
     nameFirst: 'Modern Fleet',
     nameLast: 'Management',
@@ -177,6 +180,7 @@ module.exports = {
   },
   'the-contractors-best-friend': {
     ...brands.fcp,
+    headerImgLinkUrl: 'https://www.forconstructionpros.com/profit-matters',
     nameFirst: "The Contractor's",
     nameLast: 'Best Friend',
     primaryColor: '#108BC4',
@@ -186,6 +190,7 @@ module.exports = {
   },
   'truck-report': {
     ...brands.fcp,
+    headerImgLinkUrl: 'https://www.forconstructionpros.com/trucks',
     nameFirst: 'The Truck',
     nameLast: 'Report',
     primaryColor: '#ffa200',
