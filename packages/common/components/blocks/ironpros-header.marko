@@ -92,7 +92,7 @@ $ const verticalBorderStyleThick = {
                       attrs={ height: 25, width: 150 }
                       class="resize_img2"
                     >
-                      <@link href=website.get("origin") target="_blank" />
+                      <@link href=get(newsletterConfig, "headerImgLinkUrl") target="_blank" />
                     </marko-newsletter-imgix>
                   </td>
                 </tr>
