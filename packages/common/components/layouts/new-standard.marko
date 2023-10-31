@@ -40,13 +40,6 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
             limit=1
           />
 
-          <if(newsletter.alias === "economic-market-outlook")>
-            <common-content-economic-outlook-block
-              date=date
-              newsletter=newsletter
-            />
-          </if>
-
           <common-content-new-mid-block
             data=data
             newsletter=newsletter
