@@ -72,6 +72,7 @@ module.exports = {
     nameFirst: 'Elevating',
     nameLast: 'Safety',
     primaryColor: '#365685',
+    headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/RPN_IPAF-Header.jpeg',
     editor: 'Sarah Webb',
     editorTitle: 'Editor',
     editorImage: '/files/base/acbm/fcp/image/static/Sarah_Webb_headshot.png',
