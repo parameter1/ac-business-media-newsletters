@@ -44,5 +44,8 @@
   },
   "<common-simple-show-header-block>": {
     "template": "./simple-show-header.marko"
+  },
+  "<common-header-block>": {
+    "template": "./header.marko"
   }
 }

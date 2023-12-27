@@ -1,0 +1,100 @@
+import { get } from  "@parameter1/base-cms-object-path";
+import moment from "moment";
+
+$ const { website, config } = out.global;
+$ const { newsletter, date, dateInfo, longBorder, headerImgLinkUrl } = input.data;
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const displayDate = moment(date).format("MMMM DD, YYYY");
+$ const nameFirst = get(newsletterConfig, "nameFirst");
+$ const nameLast = get(newsletterConfig, "nameLast");
+$ const primaryColor = get(newsletterConfig, "primaryColor");
+$ const attrs = get(newsletterConfig, "attrs");
+
+$ const textStyle = {
+  "font-family": "'Arial Narrow', Helvetica, sans-serif",
+  "color": "#06060c",
+  "font-weight": 700,
+  "letter-spacing": "0px",
+  "text-decoration": "none",
+};
+
+$ const poweredByStyle = {
+  ...textStyle,
+  "padding-right": "38px",
+  "font-size": "14px",
+};
+
+$ const sectionNameStyle = {
+  "font-family": "'Arial', sans-serif",
+  "font-size": "28px",
+  "line-height": "30px",
+  "font-weight": "bold",
+  "letter-spacing": "0",
+  "color": "#06060c",
+  "text-transform": "uppercase",
+};
+
+$ const sectionNameStyle2 = {
+  ...sectionNameStyle,
+  "color": primaryColor
+};
+
+$ const verticalBorderStyle = {
+  "text-align": "left",
+  "border-left": "3px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
+};
+
+$ const verticalBorderStyleThick = {
+  "text-align": "left",
+  "border-left": "5px solid",
+  "color": "#000000",
+  "border-color": primaryColor,
+};
+
+<table width="660" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap10">
+  <tr>
+    <td align="center" valign="top">
+      <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
+        <common-table-spacer-element height=48 />
+        <tr>
+          <td>
+            <marko-newsletter-imgix
+              src=`${newsletterConfig.headerLogoSrc}`
+              alt="logo"
+              attrs={ width: 600 }
+              class="resize_img1"
+            >
+              <if(newsletterConfig.headerImgLinkUrl)>
+                <@link href=get(newsletterConfig, "headerImgLinkUrl") target="_blank" />
+              </if>
+              <else>
+                <@link href=website.get("origin") target="_blank" />
+              </else>
+            </marko-newsletter-imgix>
+          </td>
+        </tr>
+      </table>
+      <table width="580" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap100">
+        <tr>
+          <td>
+            <span style="display:none !important;visibility:hidden;mso-hide:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"></span>
+            <!-- // Start Stealth Link // -->
+            <div name="divHrefB" style="display:none;height:0px;width:0px;overflow:hidden;visibility:hidden;mso-hide:all">
+              <a href="http://www.acbusinessmedia.com/Omeda">IRONMARKETS Info</a>
+            </div>
+            <!-- // End Stealth Link // -->
+          </td>
+          <td align="left" style=textStyle>
+            <a href="@{mv_online_version}@" target="_blank" class="font5" style=textStyle>View Email Online</a>
+          </td>
+          <td align="right" class="font5" style=textStyle>
+            ${displayDate}
+          </td>
+        </tr>
+        <common-table-spacer-element height=15 />
+      </table>
+    </td>
+  </tr>
+</table>
