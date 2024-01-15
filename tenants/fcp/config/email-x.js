@@ -238,18 +238,6 @@ config
       width: 600,
       height: 100,
     },
-    {
-      name: 'banner-3',
-      id: '63c055660507d49a2298394b',
-      width: 600,
-      height: 100,
-    },
-    {
-      name: 'banner-4',
-      id: '63c055860507d44f8b98395e',
-      width: 600,
-      height: 100,
-    },
   ])
   .setAdUnits('construction-and-workforce-management', [
     {
