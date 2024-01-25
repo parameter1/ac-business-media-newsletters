@@ -78,14 +78,6 @@ $ const verticalBorderStyle = {
             background="#ededee"
           />
 
-          <common-content-ironpros-sponsored-secondary-block
-            date=date
-            newsletter=newsletter
-            section-name="Sponsored Secondary"
-            display-sponsored-section=true
-            limit=1
-          />
-
           <common-content-simple-list-block
             data=data
             date=date
@@ -97,9 +89,12 @@ $ const verticalBorderStyle = {
             background="#ededee"
           />
 
-          <common-ironpros-advertisement-block
+          <common-content-ironpros-sponsored-secondary-block
             date=date
-            ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
+            newsletter=newsletter
+            section-name="Sponsored Secondary"
+            display-sponsored-section=true
+            limit=1
           />
 
           <common-content-simple-list-block
@@ -111,6 +106,11 @@ $ const verticalBorderStyle = {
             with-section=true
             primary-color="#c99227"
             background="#ededee"
+          />
+
+          <common-ironpros-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-2", alias: newsletter.alias })
           />
 
           <common-ironpros-footer-block data=data />
