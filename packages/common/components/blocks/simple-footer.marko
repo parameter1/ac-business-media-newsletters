@@ -7,6 +7,7 @@ $ const newsletterConfig = config.get(newsletter.alias);
 $ const primaryColor = get(newsletterConfig, "primaryColor");
 $ const socialMedia = get(newsletterConfig, "socialMedia");
 $ const socialMediaLinks = getAsArray(socialMedia, "links");
+$ const brandName = get(newsletterConfig, "brandName");
 
 $ const standardStyle = {
   "font-family": "'Arial', sans-serif",
@@ -71,11 +72,20 @@ $ const imageStyle = {
                 </td>
               </tr>
               <common-table-spacer-element height=3 />
-              <tr>
-                <td align="center"  class="align2" valign="middle" style=standardStyle>
-                  Please add news.ironmarketsmail.com and marketing.ironmarketsmail.com to your address book or safe sender list to receive our emails in your inbox.
-                </td>
-              </tr>
+              <if(brandName==="Supply & Demand Chain Executive")>
+                <tr>
+                  <td align="center"  class="align2" valign="middle" style=standardStyle>
+                    Please add news.sdcexec.com and marketing.sdcexec.com to your address book or safe sender list to receive our emails in your inbox.
+                  </td>
+                </tr>
+              </if>
+              <else>
+                <tr>
+                  <td align="center"  class="align2" valign="middle" style=standardStyle>
+                    Please add news.ironmarketsmail.com and marketing.ironmarketsmail.com to your address book or safe sender list to receive our emails in your inbox.
+                  </td>
+                </tr>
+              </else>
               <common-table-spacer-element height=3 />
               <tr>
                 <td align="center"  class="align3" valign="middle" style=standardStyle>
