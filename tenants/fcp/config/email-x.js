@@ -1,6 +1,6 @@
 const EmailXConfiguration = require('@parameter1/base-cms-marko-newsletters-email-x/config');
 
-const config = new EmailXConfiguration('https://acbm.serve.email-x.parameter1.com');
+const config = new EmailXConfiguration('https://delivery.mindfulcms.com/acbm/default/compat/email-banner');
 
 config
   .setAdUnits('crane-connection', [
