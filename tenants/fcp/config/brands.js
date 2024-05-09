@@ -139,4 +139,16 @@ module.exports = {
       ],
     },
   },
+  ironpros: {
+    socialMedia: {
+      imagePath: '/files/base/acbm/ironpros/image/static/newsletter',
+      links: [
+        { provider: 'facebook', href: 'https://www.facebook.com/IronProsResearch/' },
+        { provider: 'twitter', href: 'https://twitter.com/iron_pros/' },
+        { provider: 'instagram', href: 'https://www.instagram.com/iron_pros/' },
+        { provider: 'linkedin', href: 'https://www.linkedin.com/company/ironpros/' },
+        { provider: 'youtube', href: 'https://www.youtube.com/@ironpros' },
+      ],
+    },
+  },
 };
