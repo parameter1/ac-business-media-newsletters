@@ -217,10 +217,10 @@ module.exports = {
     editorImage: '/files/base/acbm/fcp/image/static/Gigi_Wood.png',
   },
   'breaking-ground-ironpros': {
-    ...brands.equipmentToday,
+    ...brands.ironpros,
     nameFirst: 'Breaking',
     nameLast: 'Ground',
-    subBrandName: 'IronPros',
+    subBrandName: 'IRONPROS',
     primaryColor: '#c99227',
     headerLogoSrc: '/files/base/acbm/fcp/image/static/logo/IP-logo-high-res.png',
     newsletterLogo: '/files/base/acbm/fcp/image/static/logo/logo-title-breaking-ground.png',
@@ -232,18 +232,9 @@ module.exports = {
     workwearImage: '/files/base/acbm/fcp/image/static/logo/workwear.png',
     editor: 'Wayne Grayson',
     editorImage: '/files/base/acbm/fcp/image/static/Wayne_B&W.jpg',
-    socialMedia: {
-      imagePath: '/files/base/acbm/fcp/image/static/newsletter',
-      links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/IronProsResearch/' },
-        { provider: 'linkedin', href: 'https://www.linkedin.com/company/ironpros/' },
-        { provider: 'twitter', href: 'https://twitter.com/iron_pros/' },
-        { provider: 'instagram', href: 'https://www.instagram.com/iron_pros/' },
-      ],
-    },
   },
   'headline-news-ironpros': {
-    ...brands.fcp,
+    ...brands.ironpros,
     nameFirst: 'IronPros',
     nameLast: 'Insights',
     subBrandName: 'IronPros',
@@ -258,15 +249,6 @@ module.exports = {
     workwearImage: '/files/base/acbm/fcp/image/static/logo/workwear.png',
     editor: 'Wayne Grayson',
     editorImage: '/files/base/acbm/fcp/image/static/Wayne_B&W.jpg',
-    socialMedia: {
-      imagePath: '/files/base/acbm/fcp/image/static/newsletter',
-      links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/IronProsResearch/' },
-        { provider: 'linkedin', href: 'https://www.linkedin.com/company/ironpros/' },
-        { provider: 'twitter', href: 'https://twitter.com/iron_pros/' },
-        { provider: 'instagram', href: 'https://www.instagram.com/iron_pros/' },
-      ],
-    },
   },
   'rental-psc': {
     ...brands.rentalMagazine,
