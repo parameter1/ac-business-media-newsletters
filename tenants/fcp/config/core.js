@@ -283,7 +283,7 @@ module.exports = {
     name: 'Concrete Contractor PSC',
     headerImgLinkUrl: 'https://www.forconstructionpros.com/concrete',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2021/04/cc_psc_left.608af211068ba.png',
-    headerLogoSrcRight: '/files/base/acbm/fcp/image/2021/04/cc_psc_right.608af215924c4.png',
+    headerLogoSrcRight: '/files/base/acbm/fcp/image/static/cc_psc_right.jpg',
     primaryColor: '#3432a9',
   },
   'asphalt-contractor-psc': {
@@ -292,7 +292,7 @@ module.exports = {
     name: 'Asphalt Contractor PSC',
     headerImgLinkUrl: 'https://www.forconstructionpros.com/asphalt',
     headerLogoSrcLeft: '/files/base/acbm/fcp/image/2019/11/ACON_PSC_1.5ddec1344916c.png',
-    headerLogoSrcRight: '/files/base/acbm/fcp/image/2022/08/MicrosoftTeams_image__22_.62f2a61d2e9a3.png',
+    headerLogoSrcRight: '/files/base/acbm/fcp/image/static/ACON_PSC_right.jpg',
     primaryColor: '#aa282e',
   },
 };
