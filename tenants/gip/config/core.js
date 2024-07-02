@@ -91,8 +91,8 @@ module.exports = {
     tagline: 'Check out the latest products to get you through winter',
     name: 'SnowPro Product Showcase',
     headerImgLinkUrl: 'https://www.greenindustrypros.com/snowpro',
-    headerLogoSrcLeft: '/files/base/acbm/gip/image/2018/09/snowpro_header1.5bacd64d7dbd4.png',
-    headerLogoSrcRight: '/files/base/acbm/gip/image/static/snowpro_header.png',
+    headerLogoSrcLeft: '/files/base/acbm/gip/image/static/snow[left].jpg',
+    headerLogoSrcRight: '/files/base/acbm/gip/image/static/snow[right].jpg',
     primaryColor: '#0d77e6',
   },
   psc: {
@@ -100,8 +100,8 @@ module.exports = {
     tagline: 'Check out the latest products to keep the grass greener on the other side',
     name: 'GIP Product Showcase',
     headerImgLinkUrl: 'https://www.greenindustrypros.com',
-    headerLogoSrcLeft: '/files/base/acbm/gip/image/2019/10/psc_col1.5d9ddd51f3caa.png',
-    headerLogoSrcRight: '/files/base/acbm/gip/image/2020/08/GIP_OG_PSCHeader.5f46b71d446ba.png',
+    headerLogoSrcLeft: '/files/base/acbm/gip/image/static/gip[left].jpg',
+    headerLogoSrcRight: '/files/base/acbm/gip/image/static/gip[right].jpg',
     primaryColor: '#006600',
   },
 };

@@ -158,8 +158,8 @@ module.exports = {
     name: 'OEM Product Showcase',
     tagline: 'New products and systems for heavy-duty equipment designs',
     headerImgLinkUrl: 'https://www.oemoffhighway.com/',
-    headerLogoSrcLeft: '/files/base/acbm/ooh/image/2019/01/header_part1.5c2e8bd3d06a3.png',
-    headerLogoSrcRight: '/files/base/acbm/ooh/image/2019/01/header_part2.5c2e8bd8be718.png',
+    headerLogoSrcLeft: '/files/base/acbm/ooh/image/static/ooh[left].jpg',
+    headerLogoSrcRight: '/files/base/acbm/ooh/image/static/ooh[right].jpg',
     primaryColor: '#000000',
   },
 };
