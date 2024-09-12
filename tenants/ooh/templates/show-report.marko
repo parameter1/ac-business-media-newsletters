@@ -24,6 +24,12 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
         <td align="center" valign="top">
           <common-simple-show-header-block data=input />
 
+          <common-advertisement-block
+            date=date
+            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
+            location="banner-1"
+          />
+
           <common-content-simple-list-block
             data=data
             newsletter=newsletter
@@ -53,12 +59,6 @@ $ const primaryColor = get(newsletterConfig, "primaryColor");
             with-image=false
             with-section=true
             primary-color=primaryColor
-          />
-
-          <common-advertisement-block
-            date=date
-            ad-unit=emailX.getAdUnit({ name: "banner-1", alias: newsletter.alias })
-            location="banner-1"
           />
 
           <common-content-simple-list-block
