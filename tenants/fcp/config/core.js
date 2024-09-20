@@ -255,8 +255,8 @@ module.exports = {
     tagline: '',
     name: 'Rental PSC',
     headerImgLinkUrl: 'https://www.forconstructionpros.com/rental',
-    headerLogoSrcLeft: '/files/base/acbm/fcp/image/static/rpn[left].jpg',
-    headerLogoSrcRight: '/files/base/acbm/fcp/image/static/rpn[right].jpg',
+    headerLogoSrcLeft: '/files/base/acbm/fcp/image/static/42330_092024_RPN_320x100(left).jpg',
+    headerLogoSrcRight: '/files/base/acbm/fcp/image/static/42330_092024_RPN_310x100(right).jpg',
     primaryColor: '#f9a71e',
   },
   'pavement-maintenance-reconstruction-psc': {
