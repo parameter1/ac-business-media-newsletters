@@ -273,8 +273,8 @@ module.exports = {
     tagline: '',
     name: 'Eqipment Today PSC',
     headerImgLinkUrl: 'https://www.forconstructionpros.com/equipment',
-    headerLogoSrcLeft: '/files/base/acbm/fcp/image/static/42344_ET[left].jpg',
-    headerLogoSrcRight: '/files/base/acbm/fcp/image/static/42344_ET[right].jpg',
+    headerLogoSrcLeft: '/files/base/acbm/fcp/image/static/et[left].jpg',
+    headerLogoSrcRight: '/files/base/acbm/fcp/image/static/et[right].jpg',
     primaryColor: '#f8a11c;',
   },
   'concrete-contractor-psc': {
