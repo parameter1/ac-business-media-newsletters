@@ -40,6 +40,14 @@ $ const tagline = get(newsletterConfig, "tagline");
           image-src-right=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrcRight}`
         />
       </else-if>
+      <else-if(!newsletterConfig.headerLogoSrcLeft && !newsletterConfig.headerLogoSrcRight && newsletterConfig.headerLogoSrcFull)>
+        <common-psc-header-image-block
+          newsletter=newsletter
+          name=newsletter.name
+          href=get(newsletterConfig, "headerImgLinkUrl")
+          image-src-full=`https://${newsletter.site.imageHost}${newsletterConfig.headerLogoSrcFull}`
+        />
+      </else-if>
     </td>
   </tr>
 </common-table>
