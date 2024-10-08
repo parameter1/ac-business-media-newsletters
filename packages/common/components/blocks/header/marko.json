@@ -22,6 +22,7 @@
     "@name": "string",
     "@image-src-left": "string",
     "@image-src-right": "string",
+    "@image-src-full": "string",
     "@href": "string"
   }
 }
