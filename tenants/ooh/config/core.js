@@ -160,7 +160,6 @@ module.exports = {
     headerImgLinkUrl: 'https://www.oemoffhighway.com/',
     headerLogoSrcLeft: '/files/base/acbm/ooh/image/static/42280_OEM[left].jpg',
     headerLogoSrcRight: '/files/base/acbm/ooh/image/static/42280_OEM[right].jpg',
-    // headerLogoSrcFull: '/files/base/acbm/ooh/image/static/42280-OEMTopProducts-630x100.jpg',
     primaryColor: '#000000',
   },
 };

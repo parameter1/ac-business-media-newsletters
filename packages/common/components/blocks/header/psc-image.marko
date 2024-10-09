@@ -4,42 +4,28 @@
   </tr>
   <tr>
 
-    <if(input.imageSrcFull)>
-      <td>
-        <a href=input.href style="line-height:0 !important;" target="_blank">
+    <td style="height:100px; width:320px;" align="right">
+      <if(input.imageSrcLeft)>
+        <a href=input.href align="right" style="line-height:0 !important;" target="_blank">
           <marko-newsletter-imgix
-            src=input.imageSrcFull
+            src=input.imageSrcLeft
             alt=input.name
-            attrs={ width: 630, height: 100 }
           />
         </a>
-      </td>
-    </if>
+      </if>
+    </td>
 
-    <else>
-      <td style="height:100px; width:320px;" align="right">
-        <if(input.imageSrcLeft)>
-          <a href=input.href align="right" style="line-height:0 !important;" target="_blank">
-            <marko-newsletter-imgix
-              src=input.imageSrcLeft
-              alt=input.name
-            />
-          </a>
-        </if>
-      </td>
-
-      <td class="mobileHide" style="height:100px; width:310px; background-color:#ffffff;" align="left">
-        <if(input.imageSrcRight)>
-          <a href=input.href align="left" style="line-height:0 !important;" target="_blank">
-            <marko-newsletter-imgix
-              src=input.imageSrcRight
-              alt=input.name
-              attrs={ width: 310, height: 100 }
-            />
-          </a>
-        </if>
-      </td>
-    </else>
+    <td class="mobileHide" style="height:100px; width:310px; background-color:#ffffff;" align="left">
+      <if(input.imageSrcRight)>
+        <a href=input.href align="left" style="line-height:0 !important;" target="_blank">
+          <marko-newsletter-imgix
+            src=input.imageSrcRight
+            alt=input.name
+            attrs={ width: 310, height: 100 }
+          />
+        </a>
+      </if>
+    </td>
 
   </tr>
   <tr>
