@@ -134,7 +134,7 @@ $ const verticalBorderStyle = {
                         <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0">
                           <tr>
                             <td align="left" class="font3" valign="middle">
-                              <marko-core-obj-text obj=node field="teaser" html=true attrs={ style: teaserStyle } />
+                              <marko-core-obj-text tag=div obj=node field="teaser" html=true attrs={ style: teaserStyle } class="teaser" />
                               <marko-core-text value="Read More...">
                                 <@link href=node.siteContext.url target="_blank" attrs={ style: linkStyle } />
                               </marko-core-text>
@@ -181,7 +181,7 @@ $ const verticalBorderStyle = {
                         <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0">
                           <tr>
                             <td align="left" class="font3" valign="middle">
-                              <marko-core-obj-text obj=node field="teaser" html=true attrs={ style: teaserStyle } />
+                              <marko-core-obj-text tag="div" obj=node field="teaser" html=true attrs={ style: teaserStyle } class="teaser" />
                               <marko-core-text value="Read More...">
                                 <@link href=node.siteContext.url target="_blank" attrs={ style: linkStyle } />
                               </marko-core-text>
