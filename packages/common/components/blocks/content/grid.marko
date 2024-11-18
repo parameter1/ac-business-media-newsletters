@@ -119,7 +119,7 @@ $ const contentLinkStyle = defaultValue(input.contentLinkStyle, {
                   <marko-core-obj-text obj=node field="name" attrs={ style: { "margin-top": "5px", "text-align": "left" } } >
                     <@link href=node.siteContext.url target="_blank" attrs={ style: contentLinkStyle } />
                   </marko-core-obj-text>
-                  <marko-core-obj-text tag="p" obj=node field="teaser" html=true attrs={ style: teaserStyle } />
+                  <marko-core-obj-text tag="div" obj=node field="teaser" html=true attrs={ style: teaserStyle } class="teaser" />
                   <if(input.showSocials)>
                     <div align="right">
                       <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.forconstructionpros.com/construction-technology/product/12090189/john-deere-construction-and-forestry-division-john-deere-creates-gopush-app-for-1050k-dozer-customers">
