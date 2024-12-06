@@ -5,6 +5,12 @@
   "repository": "https://github.com/parameter1/newsletter-ac-business-media/tree/master/tenants/scn",
   "license": "MIT",
   "private": true,
+  "newsletter": {
+    "account": "acbm",
+    "tenant": "scn",
+    "stack": "tauron",
+    "deploy": true
+  },
   "scripts": {
     "build": "yarn compile",
     "dev": "basecms-newsletters dev --compile-dir ../../packages --watch-dir ../../packages",
