@@ -5,6 +5,12 @@
   "repository": "https://github.com/parameter1/newsletter-ac-business-media/tree/master/tenants/fcp",
   "license": "MIT",
   "private": true,
+  "newsletter": {
+    "account": "acbm",
+    "tenant": "fcp",
+    "stack": "tauron",
+    "deploy": true
+  },
   "scripts": {
     "build": "yarn compile",
     "dev": "basecms-newsletters dev --compile-dir ../../packages --watch-dir ../../packages",
